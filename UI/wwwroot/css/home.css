@@ -1,0 +1,455 @@
+/* Genel Stiller */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f0e8;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+/* Ana Konteyner */
+.home-container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "top-section top-section"
+        "main-content sidebar";
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Üst Kısım */
+.top-section {
+    grid-area: top-section;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #86641f;
+    color: white;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+}
+
+.profile-menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid white;
+}
+
+.username {
+    font-weight: 500;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    min-width: 150px;
+    display: none;
+    z-index: 100;
+}
+
+.profile-menu:hover .dropdown-menu {
+    display: block;
+}
+
+.menu-item {
+    display: block;
+    padding: 8px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #f5f5f5;
+}
+
+.search-section {
+    padding: 20px;
+}
+
+.search-container h2 {
+    margin-bottom: 15px;
+    color: #86641f;
+    font-size: 1.5rem;
+}
+
+.search-form {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+.search-button {
+    padding: 12px 20px;
+    background-color: #86641f;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #6b4e18;
+}
+
+.search-filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* Ana İçerik */
+.main-content {
+    grid-area: main-content;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.content-header h2 {
+    color: #86641f;
+    font-size: 1.5rem;
+}
+
+.content-tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.tab-button {
+    padding: 8px 15px;
+    background-color: #f5f0e8;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.tab-button.active {
+    background-color: #86641f;
+    color: white;
+}
+
+.book-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.book-image {
+    width: 150px;
+    min-width: 150px;
+    height: 220px;
+}
+
+.book-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-info {
+    padding: 15px;
+    flex: 1;
+}
+
+.book-title {
+    margin: 0 0 5px;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.book-author {
+    margin: 0 0 10px;
+    color: #666;
+    font-style: italic;
+}
+
+.book-description {
+    margin: 0 0 15px;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.book-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.book-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    padding: 8px 15px;
+    background-color: #86641f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #6b4e18;
+}
+
+.action-button.secondary {
+    background-color: transparent;
+    color: #86641f;
+    border: 1px solid #86641f;
+}
+
+.action-button.secondary:hover {
+    background-color: #f5f0e8;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.page-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f0e8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.page-button.active {
+    background-color: #86641f;
+    color: white;
+}
+
+.page-button:last-child {
+    width: auto;
+    padding: 0 15px;
+}
+
+/* Yan Kenar */
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.sidebar-section h3 {
+    margin: 0 0 15px;
+    color: #86641f;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #86641f;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.recommended-books {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.recommended-book {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recommended-book img {
+    width: 50px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.recommended-book h4 {
+    margin: 0 0 5px;
+    font-size: 1rem;
+}
+
+.recommended-book p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* İkonlar */
+.icon-star::before {
+    content: "★";
+    color: gold;
+    margin-right: 3px;
+}
+
+.icon-comment::before {
+    content: "💬";
+    margin-right: 3px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 992px) {
+    .home-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "top-section"
+            "main-content"
+            "sidebar";
+    }
+}
+
+@media (max-width: 768px) {
+    .book-card {
+        flex-direction: column;
+    }
+    
+    .book-image {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .content-tabs {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

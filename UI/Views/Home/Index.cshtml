@@ -1,0 +1,203 @@
+﻿@model List<Entities.Book>
+
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<div class="home-container">
+    <!-- Üst Kısım - Arama ve Profil Bölümü -->
+    <div class="top-section">
+        <div class="header">
+            <div class="logo">
+                <h1>SAFHA</h1>
+                <p>Satır Aralarında Saklananlar</p>
+            </div>
+            <div class="profile-section">
+                <div class="profile-menu">
+                    <img src="/image/default-avatar.png" alt="Profil" class="profile-avatar" />
+                    <span class="username">@ViewBag.Username</span>
+                    <div class="dropdown-menu">
+                        <a href="#" class="menu-item">Profilim</a>
+                        <a href="#" class="menu-item">Kitaplarım</a>
+                        <a href="#" class="menu-item">Ayarlar</a>
+                        <a href="#" class="menu-item">Çıkış Yap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="search-section">
+            <div class="search-container">
+                <h2>Kitap Ara</h2>
+                <div class="search-form">
+                    <input type="text" class="search-input" placeholder="Kitap adı, yazar veya ISBN ara..." />
+                    <button class="search-button">Ara</button>
+                </div>
+                <div class="search-filters">
+                    <select class="filter-select">
+                        <option value="">Tüm Kategoriler</option>
+                        <option value="roman">Roman</option>
+                        <option value="siir">Şiir</option>
+                        <option value="bilim">Bilim</option>
+                        <option value="tarih">Tarih</option>
+                        <option value="felsefe">Felsefe</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="">Yayın Yılı</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="older">Daha Eski</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Ana İçerik - Genel Akış -->
+    <div class="main-content">
+        <div class="content-header">
+            <h2>Kitap Akışı</h2>
+            <div class="content-tabs">
+                <button class="tab-button active">En Yeniler</button>
+                <button class="tab-button">Popüler</button>
+                <button class="tab-button">Takip Ettiklerim</button>
+            </div>
+        </div>
+        
+        <div class="book-feed">
+            @if (Model != null && Model.Any())
+            {
+                foreach (var book in Model)
+                {
+                    <div class="book-card">
+                        <div class="book-image">
+                            <img src="/image/book-cover1.jpg" alt="Kitap Kapağı" />
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">@book.Title</h3>
+                            <p class="book-author">@book.Author</p>
+                            <p class="book-description">@book.Description</p>
+                            <div class="book-meta">
+                                <span class="meta-item"><i class="icon-star"></i> 4.5</span>
+                                <span class="meta-item"><i class="icon-comment"></i> 120 Yorum</span>
+                            </div>
+                            <div class="book-actions">
+                                <button class="action-button">Okumak İstiyorum</button>
+                                <button class="action-button secondary">İnceleme Yaz</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <!-- Kitap Kartı 1 -->
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="/image/book-cover1.jpg" alt="Kitap Kapağı" />
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">Suç ve Ceza</h3>
+                        <p class="book-author">Fyodor Dostoyevski</p>
+                        <p class="book-description">Rus edebiyatının en önemli eserlerinden biri olan bu roman, suç işlemenin psikolojik etkilerini ele alır...</p>
+                        <div class="book-meta">
+                            <span class="meta-item"><i class="icon-star"></i> 4.8</span>
+                            <span class="meta-item"><i class="icon-comment"></i> 156 Yorum</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="action-button">Okumak İstiyorum</button>
+                            <button class="action-button secondary">İnceleme Yaz</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kitap Kartı 2 -->
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="/image/book-cover2.jpg" alt="Kitap Kapağı" />
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">1984</h3>
+                        <p class="book-author">George Orwell</p>
+                        <p class="book-description">Distopik bir gelecekte geçen bu roman, totaliter bir rejimin birey üzerindeki etkilerini anlatır...</p>
+                        <div class="book-meta">
+                            <span class="meta-item"><i class="icon-star"></i> 4.7</span>
+                            <span class="meta-item"><i class="icon-comment"></i> 142 Yorum</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="action-button">Okumak İstiyorum</button>
+                            <button class="action-button secondary">İnceleme Yaz</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        
+        <div class="pagination">
+            <button class="page-button active">1</button>
+            <button class="page-button">2</button>
+            <button class="page-button">3</button>
+            <button class="page-button">4</button>
+            <button class="page-button">5</button>
+            <button class="page-button">İleri</button>
+        </div>
+    </div>
+    
+    <!-- Sağ Kenar - Öneriler ve İstatistikler -->
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <h3>Hoş Geldin, @ViewBag.Username</h3>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-value">12</span>
+                    <span class="stat-label">Okuduğun Kitaplar</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">5</span>
+                    <span class="stat-label">Okumak İstediklerin</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">8</span>
+                    <span class="stat-label">İncelemeler</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar-section">
+            <h3>Önerilen Kitaplar</h3>
+            <div class="recommended-books">
+                <div class="recommended-book">
+                    <img src="/image/book-cover4.jpg" alt="Kitap Kapağı" />
+                    <div>
+                        <h4>Sefiller</h4>
+                        <p>Victor Hugo</p>
+                    </div>
+                </div>
+                <div class="recommended-book">
+                    <img src="/image/book-cover5.jpg" alt="Kitap Kapağı" />
+                    <div>
+                        <h4>Küçük Prens</h4>
+                        <p>Antoine de Saint-Exupéry</p>
+                    </div>
+                </div>
+                <div class="recommended-book">
+                    <img src="/image/book-cover6.jpg" alt="Kitap Kapağı" />
+                    <div>
+                        <h4>Dönüşüm</h4>
+                        <p>Franz Kafka</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/home.css" />
+}
+
+@section Scripts {
+    <script src="~/js/home.js"></script>
+}

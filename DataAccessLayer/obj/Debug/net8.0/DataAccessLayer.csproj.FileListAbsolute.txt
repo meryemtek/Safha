@@ -1,0 +1,17 @@
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.deps.json
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.runtimeconfig.json
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.dll
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.pdb
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\bin\Debug\net8.0\Entities.dll
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\bin\Debug\net8.0\Entities.pdb
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\obj\Debug\net8.0\DataAcce.E67BD773.Up2Date
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.dll
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\obj\Debug\net8.0\refint\DataAccessLayer.dll
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.pdb
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\merye\Desktop\kitapp\DataAccessLayer\obj\Debug\net8.0\ref\DataAccessLayer.dll
