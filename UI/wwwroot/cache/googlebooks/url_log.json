@@ -1,0 +1,31 @@
+{
+  "createdAt": "2025-08-14T07:34:15.1982205Z",
+  "lastUpdated": "2025-08-14T07:34:45.7000356Z",
+  "totalRequests": 3,
+  "urlEntries": [
+    {
+      "url": "https://www.googleapis.com/books/v1/volumes?q=seyyid%20kutup\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "type": "search",
+      "query": "seyyid kutup",
+      "bookId": "",
+      "timestamp": "2025-08-14T07:34:24.5391385Z",
+      "cacheFileName": "search_seyyid kutup.json"
+    },
+    {
+      "url": "https://www.googleapis.com/books/v1/volumes?q=seyyid%20kutub\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "type": "search",
+      "query": "seyyid kutub",
+      "bookId": "",
+      "timestamp": "2025-08-14T07:34:32.6745368Z",
+      "cacheFileName": "search_seyyid kutub.json"
+    },
+    {
+      "url": "https://www.googleapis.com/books/v1/volumes?q=yoldaki%20i%C5%9Faretler\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "type": "search",
+      "query": "yoldaki i\u015Faretler",
+      "bookId": "",
+      "timestamp": "2025-08-14T07:34:45.7000145Z",
+      "cacheFileName": "search_yoldaki i\u015Faretler.json"
+    }
+  ]
+}

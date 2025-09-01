@@ -1,0 +1,30 @@
+{
+  "bookId": "NGLac6caQXoC",
+  "cachedAt": "2025-08-15T13:28:30.6962305Z",
+  "book": {
+    "id": "NGLac6caQXoC",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/NGLac6caQXoC",
+    "volumeInfo": {
+      "title": "Yoldaki i\u015Faretler",
+      "subtitle": "",
+      "authors": [
+        "Kaan Arslano\u011Flu"
+      ],
+      "publisher": "Ithaki Publishing",
+      "publishedDate": "2005",
+      "description": "",
+      "pageCount": 342,
+      "categories": null,
+      "averageRating": 0,
+      "ratingsCount": 0,
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=NGLac6caQXoC\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026imgtk=AFLRE725LwLqsZx8h1il8SEQ-GSSyX6G5kN6IOIHPEq-JDePTa_vukE-c5CdOLKYmstvO4X6hf_kBRKRlPTgJGdFwOiSAmiV2HXnM4OnJyfi8VsOGw8JcL3IhsvS15r3GKsWtkvi0YNE\u0026source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=NGLac6caQXoC\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026imgtk=AFLRE72OXpO7OvY8JB-a8MiL7nlgtVYsJa73LKJtU6ey_5KFt5QcEM0C8umXipzayM9dT_8wINeObtpUySAo6OSlavLSuq58npDuxVTUIKprLjmlsVmD4ogEyGrUb61_fTx8y4CUFrWF\u0026source=gbs_api"
+      },
+      "language": "tr",
+      "previewLink": "http://books.google.com.tr/books?id=NGLac6caQXoC\u0026hl=\u0026source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=NGLac6caQXoC\u0026source=gbs_api"
+    }
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes/NGLac6caQXoC?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

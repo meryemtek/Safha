@@ -1,0 +1,37 @@
+{
+  "bookId": "kTnuswEACAAJ",
+  "cachedAt": "2025-08-19T07:08:47.6631477Z",
+  "book": {
+    "id": "kTnuswEACAAJ",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/kTnuswEACAAJ",
+    "volumeInfo": {
+      "title": "Sems Tebrizi 1",
+      "subtitle": "Askin G\u00F6zyaslari 1",
+      "authors": [
+        "Sinan Yagmur"
+      ],
+      "publisher": "Kapi Yayinlari",
+      "publishedDate": "2018-05",
+      "description": "",
+      "pageCount": 240,
+      "categories": null,
+      "averageRating": 0,
+      "ratingsCount": 0,
+      "imageLinks": null,
+      "language": "tr",
+      "previewLink": "http://books.google.com.tr/books?id=kTnuswEACAAJ\u0026hl=\u0026source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=kTnuswEACAAJ\u0026source=gbs_api",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_10",
+          "identifier": "605514770X"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9786055147709"
+        }
+      ]
+    }
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes/kTnuswEACAAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

@@ -1,0 +1,55 @@
+@model List<Entities.User>
+@{
+    ViewData["Title"] = "Takipçiler";
+    Layout = "_Layout";
+}
+
+<div class="followers-container">
+    <div class="followers-header">
+        <h2><i class="fas fa-users"></i> Takipçiler</h2>
+        <a href="@Url.Action("Index", "Profile")" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Profile Dön
+        </a>
+    </div>
+    
+    @if (Model != null && Model.Any())
+    {
+        <div class="followers-list">
+            @foreach (var follower in Model)
+            {
+                <div class="follower-item">
+                    <div class="follower-avatar">
+                        <img src="@(string.IsNullOrEmpty(follower.ProfilePicture) ? "/image/default-avatar.jpg" : follower.ProfilePicture)" 
+                             alt="@follower.Username" />
+                    </div>
+                    <div class="follower-info">
+                        <h4 class="follower-name">@follower.Username</h4>
+                        <p class="follower-fullname">@follower.FirstName @follower.LastName</p>
+                        @if (!string.IsNullOrEmpty(follower.Bio))
+                        {
+                            <p class="follower-bio">@follower.Bio</p>
+                        }
+                    </div>
+                    <div class="follower-actions">
+                        <a href="@Url.Action("Index", "Profile", new { userId = follower.Id })" class="btn btn-primary btn-sm">
+                            <i class="fas fa-eye"></i> Profili Görüntüle
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="no-followers">
+            <div class="no-followers-icon">👥</div>
+            <h3>Henüz Takipçiniz Yok</h3>
+            <p>Henüz hiç takipçiniz bulunmuyor. Kitap paylaşımlarınız ve aktivitelerinizle takipçi kazanabilirsiniz!</p>
+        </div>
+    }
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/profile.css" />
+}
+

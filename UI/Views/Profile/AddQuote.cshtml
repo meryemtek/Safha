@@ -1,0 +1,104 @@
+@model UI.Models.AddQuoteViewModel
+
+@{
+    ViewData["Title"] = "Yeni Alıntı Ekle";
+    Layout = "_Layout";
+}
+
+<div class="add-quote-container">
+    <div class="add-quote-header">
+        <h1>Yeni Alıntı Ekle</h1>
+        <p>Kitaptan alıntı yapmak istediğiniz metni ve bilgileri girin</p>
+    </div>
+    
+    <div class="add-quote-form-container">
+        <form asp-action="AddQuote" method="post" class="add-quote-form">
+            @Html.AntiForgeryToken()
+            
+            <div class="form-section">
+                <h3>Alıntı Bilgileri</h3>
+                
+                <div class="form-group">
+                    <label asp-for="Content" class="form-label">Alıntı Metni *</label>
+                    <textarea asp-for="Content" class="form-control" rows="6" 
+                              placeholder="Kitaptan alıntı yapmak istediğiniz metni buraya yazın..." 
+                              maxlength="1000" required></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                    <div class="form-text">Maksimum 1000 karakter</div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3>Detay Bilgileri</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Author" class="form-label">Alıntı Yazarı</label>
+                        <input asp-for="Author" class="form-control" 
+                               placeholder="Alıntının yazarı (opsiyonel)" maxlength="100">
+                        <span asp-validation-for="Author" class="text-danger"></span>
+                        <div class="form-text">Maksimum 100 karakter</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Source" class="form-label">Kaynak</label>
+                        <input asp-for="Source" class="form-control" 
+                               placeholder="Alıntının kaynağı (opsiyonel)" maxlength="200">
+                        <span asp-validation-for="Source" class="text-danger"></span>
+                        <div class="form-text">Maksimum 200 karakter</div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="PageNumber" class="form-label">Sayfa Numarası</label>
+                        <input asp-for="PageNumber" class="form-control" type="number" 
+                               placeholder="Sayfa numarası (opsiyonel)" min="1" max="9999">
+                        <span asp-validation-for="PageNumber" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Notes" class="form-label">Notlar</label>
+                        <textarea asp-for="Notes" class="form-control" rows="3" 
+                                  placeholder="Alıntı hakkında notlarınız (opsiyonel)" maxlength="500"></textarea>
+                        <span asp-validation-for="Notes" class="text-danger"></span>
+                        <div class="form-text">Maksimum 500 karakter</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3>Kitap Seçimi</h3>
+                
+                <div class="form-group">
+                    <label asp-for="BookId" class="form-label">Kitap *</label>
+                    <select asp-for="BookId" class="form-control" required>
+                        <option value="">Kitap seçiniz...</option>
+                        @foreach (var book in Model.AvailableBooks)
+                        {
+                            <option value="@book.Id">@book.Title - @book.Author</option>
+                        }
+                    </select>
+                    <span asp-validation-for="BookId" class="text-danger"></span>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <a href="@Url.Action("Index", "Profile")" class="btn btn-secondary">
+                    <i class="icon">←</i> Geri Dön
+                </a>
+                <button type="submit" class="btn btn-primary">
+                    <i class="icon">💾</i> Alıntı Ekle
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/add-quote.css" />
+}
+
+@section Scripts {
+    <script src="~/js/add-quote.js"></script>
+}

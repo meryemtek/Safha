@@ -1,0 +1,822 @@
+.book-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+}
+
+.book-header {
+    margin-bottom: 20px;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: #fff;
+}
+
+.back-button i {
+    margin-right: 5px;
+}
+
+.book-detail {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.book-cover {
+    width: 300px;
+    min-width: 300px;
+}
+
+.book-cover img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.book-actions {
+    margin-top: 20px;
+}
+
+.add-to-library-options {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.add-to-library-options h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.current-status {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.status-badge.want-to-read {
+    background-color: rgba(0, 123, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(0, 123, 255, 0.3);
+}
+
+.status-badge.currently-reading {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.status-badge.read {
+    background-color: rgba(40, 167, 69, 0.2);
+    color: #fff;
+    border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+/* Bildirim stilleri */
+.status-notification {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.status-notification.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.status-notification.success {
+    background-color: rgba(40, 167, 69, 0.2);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.status-notification.error {
+    background-color: rgba(220, 53, 69, 0.2);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+.status-notification i {
+    font-size: 1.2rem;
+}
+
+.status-notification span {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Seçili durum animasyonu */
+.status-card.already-selected {
+    animation: pulse 0.8s ease;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.status-options {
+    margin: 20px 0;
+}
+
+.reading-status-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.status-form {
+    width: 100%;
+}
+
+.status-card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+}
+
+.status-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.status-card:hover::before {
+    opacity: 1;
+}
+
+.status-card[data-status="want-to-read"] {
+    background-color: rgba(0, 123, 255, 0.2);
+}
+
+.status-card[data-status="want-to-read"]:hover,
+.status-card[data-status="want-to-read"].active {
+    background-color: rgba(0, 123, 255, 0.3);
+    border-color: rgba(0, 123, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.status-card[data-status="currently-reading"] {
+    background-color: rgba(255, 193, 7, 0.2);
+}
+
+.status-card[data-status="currently-reading"]:hover,
+.status-card[data-status="currently-reading"].active {
+    background-color: rgba(255, 193, 7, 0.3);
+    border-color: rgba(255, 193, 7, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+.status-card[data-status="read"] {
+    background-color: rgba(40, 167, 69, 0.2);
+}
+
+.status-card[data-status="read"]:hover,
+.status-card[data-status="read"].active {
+    background-color: rgba(40, 167, 69, 0.3);
+    border-color: rgba(40, 167, 69, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.status-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.status-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.status-check {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.status-card.active .status-check {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.status-check i {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.library-link {
+    margin-top: 15px;
+}
+
+.btn-group-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-title {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.book-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: normal;
+}
+
+.book-meta {
+    margin-bottom: 30px;
+}
+
+.meta-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.meta-label {
+    width: 120px;
+    min-width: 120px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.meta-value {
+    flex: 1;
+    color: #fff;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating i {
+    color: #ffc107;
+    margin-right: 3px;
+}
+
+.rating span {
+    margin-left: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.book-description {
+    margin-bottom: 30px;
+}
+
+.book-description h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.description-text {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.book-links {
+    display: flex;
+    gap: 10px;
+}
+
+.book-tabs {
+    margin-top: 40px;
+}
+
+.tabs-header {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tab-button.active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.no-content-message {
+    text-align: center;
+    padding: 50px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.no-content-message p {
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .book-detail {
+        flex-direction: column;
+    }
+    
+    .book-cover {
+        width: 250px;
+        min-width: auto;
+        margin: 0 auto 30px;
+    }
+    
+    .reading-status-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .status-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 10px;
+        height: 100%;
+    }
+    
+    .status-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 2rem;
+    }
+    
+    .status-text {
+        font-size: 0.9rem;
+    }
+    
+    .status-check {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .book-title {
+        font-size: 1.8rem;
+    }
+    
+    .book-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .book-links {
+        flex-direction: column;
+    }
+    
+    .reading-status-cards {
+        gap: 10px;
+    }
+    
+    .status-card {
+        padding: 12px 8px;
+    }
+    
+    .status-icon {
+        font-size: 1.8rem;
+    }
+    
+    .status-text {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .tabs-header {
+        flex-wrap: wrap;
+    }
+    
+    .tab-button {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .reading-status-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .status-card {
+        flex-direction: row;
+        text-align: left;
+        padding: 12px 15px;
+    }
+    
+    .status-icon {
+        margin-right: 15px;
+        margin-bottom: 0;
+        font-size: 1.5rem;
+    }
+    
+    .status-check {
+        position: static;
+        margin-left: 10px;
+    }
+    
+    .status-notification {
+        padding: 10px;
+    }
+    
+    .status-notification span {
+        font-size: 0.85rem;
+    }
+}
+
+/* Alıntı Bölümü Stilleri */
+.quotes-section {
+    padding: 20px 0;
+}
+
+.quotes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.quotes-header h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.quotes-header .btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.quotes-header .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.quotes-list {
+    min-height: 200px;
+}
+
+.loading-quotes {
+    text-align: center;
+    padding: 40px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.loading-quotes p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Alıntı Kartları */
+.quote-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.quote-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.quote-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.quote-user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quote-user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.quote-user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-user-name {
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.quote-date {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.quote-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.quote-action-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.quote-action-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.quote-action-btn.delete:hover {
+    background: rgba(220, 53, 69, 0.2);
+    color: #ff6b6b;
+}
+
+.quote-content {
+    margin-bottom: 15px;
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fff;
+    font-style: italic;
+    margin: 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.quote-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.quote-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.quote-meta-icon {
+    font-size: 1rem;
+}
+
+.quote-notes {
+    background: rgba(255, 193, 7, 0.2);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 15px;
+}
+
+.quote-notes h5 {
+    margin: 0 0 8px 0;
+    color: #ffc107;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.quote-notes p {
+    margin: 0;
+    color: rgba(255, 193, 7, 0.9);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Boş Alıntı Durumu */
+.no-quotes {
+    text-align: center;
+    padding: 60px 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.no-quotes-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.no-quotes h4 {
+    margin: 0 0 10px 0;
+    color: #fff;
+    font-weight: 600;
+}
+
+.no-quotes p {
+    margin: 0 0 20px 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Loading Animasyonu */
+.loading-quotes {
+    position: relative;
+}
+
+.loading-quotes::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .quotes-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .quotes-header .btn {
+        width: 100%;
+    }
+    
+    .quote-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .quote-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/UI.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/sidebar.css" asp-append-version="true" />
     @await RenderSectionAsync("Styles", required: false)
     <style>
         :root {
-            --primary-color: #86641f;
-            --primary-hover: #6b4e18;
-            --light-bg: #f5f0e8;
+            --primary-color: #4a2002;
+            --primary-hover: #4a2002;
+            --light-bg: #4a2002;
         }
         
         body {
@@ -21,18 +23,47 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            color: white;
         }
         
-        main {
+        .main-container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .content-wrapper {
             flex: 1;
+            margin-left: 250px;
+            padding: 20px;
+            transition: margin-left 0.3s ease;
+        }
+    </style>
+    <!-- Mobil için CSS -->
+    <style>
+        @* Mobil cihazlar için stil *@
+        @@media (max-width: 768px) {
+            .content-wrapper {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <main role="main" class="py-4">
-            @RenderBody()
-        </main>
+    <!-- Mobil için hamburger menü butonu -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <div class="main-container">
+        <!-- Sol Menü -->
+        @await Html.PartialAsync("_SidebarPartial")
+        
+        <!-- Ana İçerik -->
+        <div class="content-wrapper">
+            <main role="main" class="py-3">
+                @RenderBody()
+            </main>
+        </div>
     </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

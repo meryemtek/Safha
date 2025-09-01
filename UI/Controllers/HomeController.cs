@@ -4,6 +4,8 @@ using DataAccessLayer.EntityFramework.Context;
 using Entities;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace UI.Controllers
 {
@@ -28,31 +30,6 @@ namespace UI.Controllers
                 fullName = User.FindFirst("FullName")?.Value ?? "";
             }
             
-            // Test verisi ekleyelim
-            if (!_context.Users.Any())
-            {
-                var user = new User
-                {
-                    Username = "testuser",
-                    FirstName = "Test",
-                    LastName = "User",
-                    Email = "test@example.com",
-                    PasswordHash = "test123"
-                };
-                _context.Users.Add(user);
-                _context.SaveChanges();
-
-                var book = new Book
-                {
-                    Title = "Test Kitap",
-                    Author = "Test Yazar",
-                    Description = "Bu bir test kitabıdır",
-                    UserId = user.Id
-                };
-                _context.Books.Add(book);
-                _context.SaveChanges();
-            }
-
             var books = _context.Books.Include(b => b.User).ToList();
             
             // ViewBag ile kullanıcı bilgilerini görünüme aktarıyoruz
@@ -71,6 +48,15 @@ namespace UI.Controllers
         public IActionResult Error()
         {
             return View();
+        }
+
+        private string HashPassword(string password)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return Convert.ToBase64String(hashedBytes);
+            }
         }
     }
 }

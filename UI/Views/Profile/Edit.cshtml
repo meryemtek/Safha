@@ -1,0 +1,175 @@
+@model UI.Models.ProfileEditViewModel
+
+@{
+    ViewData["Title"] = "Profil Düzenle";
+    Layout = "_Layout";
+}
+
+<div class="profile-edit-container">
+    <div class="edit-header">
+        <h1>✏️ Profil Düzenle</h1>
+        <p>Profil bilgilerinizi güncelleyin ve fotoğraflarınızı değiştirin</p>
+    </div>
+
+    <div class="edit-form-container">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data" class="edit-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="photo-upload-section">
+                <div class="upload-card">
+                    <h3>📷 Fotoğraflar</h3>
+                    
+                    <div class="cover-photo-upload">
+                        <label>Kapak Fotoğrafı</label>
+                        <div class="cover-photo-preview" id="coverPhotoPreview">
+                            <input type="file" name="CoverPhotoFile" id="coverPhotoInput" accept="image/*" />
+                            <div class="upload-overlay">
+                                <i class="icon">📷</i>
+                                <span>Fotoğraf ekle</span>
+                            </div>
+                        </div>
+                        <small>Önerilen boyut: 1200x300 piksel</small>
+                    </div>
+                    
+                    <div class="profile-photo-upload">
+                        <label>Profil Fotoğrafı</label>
+                        <div class="profile-photo-preview" id="profilePhotoPreview">
+                            <input type="file" name="ProfilePictureFile" id="profilePhotoInput" accept="image/*" />
+                            <div class="upload-overlay">
+                                <i class="icon">👤</i>
+                                <span>Fotoğraf ekle</span>
+                            </div>
+                        </div>
+                        <small>Önerilen boyut: 400x400 piksel</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-sections">
+                <div class="form-section">
+                    <h3>👤 Kişisel Bilgiler</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label asp-for="FirstName">Ad</label>
+                            <input asp-for="FirstName" class="form-control" placeholder="Adınızı girin" />
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label asp-for="LastName">Soyad</label>
+                            <input asp-for="LastName" class="form-control" placeholder="Soyadınızı girin" />
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Bio">Hakkımda</label>
+                        <textarea asp-for="Bio" class="form-control" rows="4" maxlength="500" 
+                                  placeholder="Kendiniz hakkında kısa bir açıklama yazın..."></textarea>
+                        <div class="char-counter">
+                            <span id="bioCharCount">0</span>/500
+                        </div>
+                        <span asp-validation-for="Bio" class="text-danger"></span>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>📚 Okuma Hedefleri</h3>
+                    
+                    <div class="form-group">
+                        <label asp-for="TargetBookCount">Yıllık Okuma Hedefi</label>
+                        <input asp-for="TargetBookCount" type="number" class="form-control" 
+                               min="1" max="1000" placeholder="Hedef kitap sayısı" />
+                        <small>Bu yıl kaç kitap okumayı hedefliyorsunuz?</small>
+                        <span asp-validation-for="TargetBookCount" class="text-danger"></span>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>📞 İletişim Bilgileri</h3>
+                    
+                    <div class="form-group">
+                        <label asp-for="PhoneNumber">Telefon Numarası</label>
+                        <input asp-for="PhoneNumber" class="form-control" placeholder="+90 5XX XXX XX XX" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Address">Adres</label>
+                        <textarea asp-for="Address" class="form-control" rows="3" 
+                                  placeholder="Adres bilgilerinizi girin"></textarea>
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <a href="@Url.Action("Index", "Profile")" class="btn btn-cancel">
+                    <i class="icon">❌</i> İptal
+                </a>
+                <button type="submit" class="btn btn-save">
+                    <i class="icon">💾</i> Kaydet
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/profile-edit.css" />
+}
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Profil fotoğrafı önizleme
+            const profileInput = document.getElementById('profilePhotoInput');
+            const profilePreview = document.getElementById('profilePhotoPreview');
+            
+            profileInput.addEventListener('change', function() {
+                if (this.files && this.files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        profilePreview.style.backgroundImage = `url(${e.target.result})`;
+                        profilePreview.classList.add('has-image');
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+            
+            // Kapak fotoğrafı önizleme
+            const coverInput = document.getElementById('coverPhotoInput');
+            const coverPreview = document.getElementById('coverPhotoPreview');
+            
+            coverInput.addEventListener('change', function() {
+                if (this.files && this.files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        coverPreview.style.backgroundImage = `url(${e.target.result})`;
+                        coverPreview.classList.add('has-image');
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+            
+            // Biyografi karakter sayacı
+            const bioTextarea = document.getElementById('Bio');
+            const bioCharCount = document.getElementById('bioCharCount');
+            
+            bioTextarea.addEventListener('input', function() {
+                const currentLength = this.value.length;
+                bioCharCount.textContent = currentLength;
+                
+                if (currentLength > 450) {
+                    bioCharCount.classList.add('text-warning');
+                } else {
+                    bioCharCount.classList.remove('text-warning');
+                }
+            });
+            
+            // Sayfa yüklendiğinde mevcut biyografi uzunluğunu göster
+            bioCharCount.textContent = bioTextarea.value.length;
+        });
+    </script>
+}

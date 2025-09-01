@@ -1,0 +1,282 @@
+{
+  "query": "seyyid kutub",
+  "cachedAt": "2025-08-14T07:34:32.6713165Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "V4xQEQAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/V4xQEQAAQBAJ",
+        "volumeInfo": {
+          "title": "Seyyid Kutup Siyasal Teoloji F\u0131k\u0131h ve Tarihsellik",
+          "subtitle": "",
+          "authors": [
+            "Yasin Aktay"
+          ],
+          "publisher": "P\u0131nar Yay\u0131nlar\u0131",
+          "publishedDate": "2018-02-16",
+          "description": "Seyyid Kutub, edebiyattan siyasete, tefsirden Bat\u0131 alg\u0131s\u0131na kadar \u00E7a\u011Fda\u015F \u0130slam d\u00FC\u015F\u00FCncesinin bir\u00E7ok alan\u0131n\u0131 derinden etkileyen, son y\u00FCzy\u0131la damgas\u0131n\u0131 vurmu\u015F sembol isimlerden biri. \u0130slam\u00B7, yirminci y\u00FCzy\u0131l d\u00FCnya g\u00FCndemine yeniden, farkl\u0131 bir dil ve \u00FCslupla sunan Seyyid Kutub\u0027un m\u00FCcadelesi \u0130slam aleminde yeniden bir silkinme yaratt\u0131. Buna kar\u015F\u0131n Bat\u0131\u0027n\u0131n g\u00F6z\u00FCnde bilhassa Sovyet blokunun \u00E7\u00F6k\u00FC\u015F\u00FC sonras\u0131 ciddi bir tehdit unsuru olarak da g\u00F6r\u00FCld\u00FC. Yasin Aktay\u0027\u0131n derledi\u011Fi Seyyid Kutub: Siyasal Teoloji, F\u0131k\u0131h ve Tarihsellik adl\u0131 kitap, Seyyid Kutub ve eseri \u00FCzerine tekrar d\u00FC\u015F\u00FCnmeyi sa\u011Flamak \u00FCzere haz\u0131rlanan bir \u00E7al\u0131\u015Fma. Seyyid Kutub\u0027un eserlerindeki temel meseleleri \u00E7e\u015Fitli ba\u015Fl\u0131klar ve temalar alt\u0131nda inceleyen makaleler Seyyid Kutub\u0027u daha yak\u0131ndan tan\u0131may\u0131, d\u00FC\u015F\u00FCncede ve pratikte M\u00FCsl\u00FCmanlar \u00FCzerinde b\u0131rakt\u0131\u011F\u0131 etkiyi anlayabilmeyi sa\u011Fl\u0131yor. Onun temel kavramlar\u0131n\u0131 hem \u0130slamc\u0131 g\u00F6z\u00FCyle gerek savunu gerek \u00F6zele\u015Ftiri zemininden okumay\u0131, hem de Kutub\u0027un d\u00FC\u015F\u00FCncesinin Bat\u0131 d\u00FC\u015F\u00FCncesinde hangi izleklere u\u011Frad\u0131\u011F\u0131n\u0131 takip etme imkan\u0131 sunuyor. Ele\u015Ftirel metinleri de i\u00E7eren derleme Kutub\u0027un etkisi \u00FCzerinde nas\u0131l bir de\u011Ferlendirme veya alg\u0131 \u00E7e\u015Fitlili\u011Finin reva\u00E7ta oldu\u011Funu g\u00F6stermeyi ba\u015Farmas\u0131yla da \u00F6ne \u00E7\u0131k\u0131yor. \u015Euras\u0131 a\u00E7\u0131kt\u0131r ki \u0130slam alemi art\u0131k neyin \u0130slam olmad\u0131\u011F\u0131na dair kanaatimizce kolay sorunun yerini neyin \u0130slam oldu\u011Fu zor sorusuyla kar\u015F\u0131 kar\u015F\u0131yad\u0131r. \u00D6n\u00FCm\u00FCzdeki esas soru \u015Fudur: M\u00FCsl\u00FCmanlar d\u00FCnyaya ne sunuyor? Bunu ciddiyetle ele almak M\u00FCsl\u00FCmanlar\u0131n ayn\u0131 zamanda neyin \u0130slam d\u0131\u015F\u0131 oldu\u011Funa dair \u00F6nceki varsay\u0131mlar\u0131n\u0131 da yeniden g\u00F6zden ge\u00E7irmelerini zaruri k\u0131lacakt\u0131r. Hi\u00E7 \u015F\u00FCphesiz Seyyid Kutub\u0027un ve teorik-pratik miras\u0131n\u0131n a\u00E7\u0131k fikirlilikle tart\u0131\u015F\u0131lmas\u0131 bu iki sorunun tutarl\u0131 bir b\u00FCt\u00FCnl\u00FCk kazanmas\u0131nda merkezi \u00F6nemdedir. Elinizdeki \u00E7al\u0131\u015Fma bu minvaldeki tart\u0131\u015Fmalar\u0131n olanca \u015Fiddetiyle devam etti\u011Fi g\u00FCn\u00FCm\u00FCzde bu \u00E7abaya m\u00FCtevaz\u0131 bir katk\u0131 niteli\u011Findedir.",
+          "pageCount": 290,
+          "categories": [
+            "Social Science"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=V4xQEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=V4xQEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=V4xQEQAAQBAJ\u0026printsec=frontcover\u0026dq=seyyid\u002Bkutub\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=V4xQEQAAQBAJ\u0026source=gbs_api"
+        }
+      },
+      {
+        "id": "HWiUswEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/HWiUswEACAAJ",
+        "volumeInfo": {
+          "title": "Seyyid Kutub Siyasal Teoloji Fikih ve Tarihsellik",
+          "subtitle": "",
+          "authors": [
+            "Yasin Aktay"
+          ],
+          "publisher": "",
+          "publishedDate": "2018-02",
+          "description": "",
+          "pageCount": 582,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": null,
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=HWiUswEACAAJ\u0026dq=seyyid\u002Bkutub\u0026hl=\u0026cd=2\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=HWiUswEACAAJ\u0026dq=seyyid\u002Bkutub\u0026hl=\u0026source=gbs_api"
+        }
+      },
+      {
+        "id": "BKpbMwAACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/BKpbMwAACAAJ",
+        "volumeInfo": {
+          "title": "Seyyid Kutub. Isl\u00E2m ve medeniyetin problemleri (al-Isl\u0101m wa mu\u0161kil\u0101t al-had\u0101ra, t\u00FCrk.)",
+          "subtitle": "",
+          "authors": [
+            "Saiyid Qu\u1E6Db"
+          ],
+          "publisher": "",
+          "publishedDate": "1967",
+          "description": "",
+          "pageCount": 0,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": null,
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=BKpbMwAACAAJ\u0026dq=seyyid\u002Bkutub\u0026hl=\u0026cd=3\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=BKpbMwAACAAJ\u0026dq=seyyid\u002Bkutub\u0026hl=\u0026source=gbs_api"
+        }
+      },
+      {
+        "id": "qMNoEQAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/qMNoEQAAQBAJ",
+        "volumeInfo": {
+          "title": "Hat\u0131ralarla \u0130sl\u00E2mi M\u00FCcadelede Sab\u0131r ve Direni\u015F (Duru\u015F Yay\u0131nlar\u0131)",
+          "subtitle": "",
+          "authors": [
+            "Ahmet A\u011F\u0131rak\u00E7a"
+          ],
+          "publisher": "Duru\u015F Yay\u0131nlar\u0131",
+          "publishedDate": "2023-03-02",
+          "description": "\u201CKulluk Allah\u2019\u0131n insanlar i\u00E7in koydu\u011Fu emirlere ve kurallara uymakla bir de\u011Fer kazan\u0131r. \u0130sl\u00E2m\u2019\u0131n kurallar\u0131na uymamak bedbahtl\u0131k oldu\u011Fu gibi ki\u015Fiyi insanl\u0131\u011F\u0131n sahip olmas\u0131 gereken anlam ve \u00F6zelliklerden de uzak tutar. \u0130nsanlar \u00F6ncelikle imana ve imandan ne\u015Fet eden ahl\u00E2ka sahip olurlar. Bu ahl\u00E2k ve iman sahibi insanlar bir araya gelerek toplumu olu\u015Ftururlar. Bu toplum siyasi bir iradeyi olu\u015Fturur. B\u00F6ylelikle t\u00FCm insanl\u0131k i\u00E7in bir kurtulu\u015F umudu olabilir. Bizim nesille birlikte dava adam\u0131 diyebilece\u011Fimiz bir kesim yeti\u015Fmi\u015F ve her t\u00FCrl\u00FC fedak\u00E2rl\u0131\u011Fa haz\u0131r, her t\u00FCrl\u00FC s\u0131k\u0131nt\u0131y\u0131 \u00E7ekmeye raz\u0131 olan bu gen\u00E7lik \u0130sl\u00E2m\u2019\u0131 ya\u015Faman\u0131n zevkine var\u0131p hem bu hayat tarz\u0131 ile mutlu olmu\u015F hem de bu zevki ve mutlulu\u011Fu b\u00FCt\u00FCn insanl\u0131\u011Fa tatt\u0131rmaya \u00E7al\u0131\u015Fm\u0131\u015Ft\u0131r.\u201D 28 \u015Eubat d\u00F6neminin en yak\u0131n tan\u0131klar\u0131ndan Ahmet A\u011F\u0131rak\u00E7a hat\u0131rat\u0131n\u0131n bu ikinci cildinde 1989-2000 y\u0131llar\u0131 aras\u0131nda ya\u015Fad\u0131klar\u0131n\u0131 ve kar\u015F\u0131la\u015Ft\u0131klar\u0131n\u0131 anlatarak bu karma\u015F\u0131k d\u00F6nemin perdesini aral\u0131yor. Kimi zaman g\u00FCl\u00FCmseten, kimi zaman \u015Fa\u015F\u0131rtan olaylar\u0131n arka plan\u0131nda hi\u00E7 eksilmeyen h\u00FCz\u00FCnl\u00FC g\u00FCnleri b\u00FCt\u00FCn ger\u00E7ekli\u011Fi ve samimiyetiyle kaleme al\u0131yor. HATIRALARLA \u0130SL\u00C2M\u0130 M\u00DCCADELEDE Sab\u0131r ve Direni\u015F bir neslin kar\u015F\u0131la\u015Ft\u0131\u011F\u0131 zul\u00FCmleri, gasbedilen haklar\u0131n\u0131, \u00F6nlerine konulan engelleri ve en \u00E7ok da hi\u00E7 vazge\u00E7medikleri azmi g\u00F6stermesi bak\u0131m\u0131ndan yak\u0131n d\u00F6nemi anlamak i\u00E7in bir ba\u015Fucu kayna\u011F\u0131.",
+          "pageCount": 464,
+          "categories": [
+            "Religion"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=qMNoEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=qMNoEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=qMNoEQAAQBAJ\u0026pg=PT181\u0026dq=seyyid\u002Bkutub\u0026hl=\u0026cd=4\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=qMNoEQAAQBAJ\u0026source=gbs_api"
+        }
+      },
+      {
+        "id": "XlswjwEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/XlswjwEACAAJ",
+        "volumeInfo": {
+          "title": "\u0130stikbal \u0130slam\u0131nd\u0131r",
+          "subtitle": "Seyyid Kutub; terc\u00FCme Nurettin Demir; tashih Nusreddin Bolelli",
+          "authors": [
+            "Sayyid Qutb"
+          ],
+          "publisher": "",
+          "publishedDate": "1989",
+          "description": "",
+          "pageCount": 0,
+          "categories": [
+            "Islam"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": null,
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=XlswjwEACAAJ\u0026dq=seyyid\u002Bkutub\u0026hl=\u0026cd=5\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=XlswjwEACAAJ\u0026dq=seyyid\u002Bkutub\u0026hl=\u0026source=gbs_api"
+        }
+      },
+      {
+        "id": "xsJoEQAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/xsJoEQAAQBAJ",
+        "volumeInfo": {
+          "title": "Hat\u0131ralarla \u0130slami M\u00FCcadelede Azim ve Ba\u015Far\u0131 (Duru\u015F Yay\u0131nlar\u0131)",
+          "subtitle": "",
+          "authors": [
+            "Ahmet A\u011F\u0131rak\u00E7a"
+          ],
+          "publisher": "Duru\u015F Yay\u0131nlar\u0131",
+          "publishedDate": "2024-04-01",
+          "description": "\u00DC\u00E7 seriden olu\u015Fan bu Kitap\u2019\u0131n bu serisinde m\u00FCellifin, 28 \u015Eubat y\u00F6netimi taraf\u0131ndan generallerin \u00FCniversitelerdeki ba\u015F\u00F6rt\u00FCs\u00FC yasa\u011F\u0131na dair verdikleri kararlara kar\u015F\u0131 direni\u015Flerin sonunda kamu g\u00F6revinden ihra\u00E7 cezas\u0131 ile cezaland\u0131r\u0131lmas\u0131ndan sonra yine de pe\u015Fini b\u0131rakmay\u0131p kovalamalar\u0131 sonunda yurt d\u0131\u015F\u0131na \u00E7\u0131kmak zorunda kald\u0131\u011F\u0131 ve Almanya ile Hollanda\u2019da ya\u015Fad\u0131klar\u0131yla ba\u015Flay\u0131p tekrar T\u00FCrkiye\u2019ye d\u00F6n\u00FC\u015F\u00FCnden ve devam eden zaman diliminde ba\u015F\u00F6rt\u00FCs\u00FC yasa\u011F\u0131na kar\u015F\u0131 verdi\u011Fi m\u00FCcadeleden, \u00FCniversiteye geri d\u00F6n\u00FC\u015F\u00FCnden sonra hi\u00E7 beklemedi\u011Fi halde Mardin Artuklu \u00DCniversitesine Rekt\u00F6r olu\u015Fu ve 2000-2023 y\u0131llar\u0131 aras\u0131ndaki olaylardan s\u00F6z etmektedir.",
+          "pageCount": 532,
+          "categories": [
+            "Biography \u0026 Autobiography"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=xsJoEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=xsJoEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=xsJoEQAAQBAJ\u0026pg=RA1-PT417\u0026dq=seyyid\u002Bkutub\u0026hl=\u0026cd=6\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=xsJoEQAAQBAJ\u0026source=gbs_api"
+        }
+      },
+      {
+        "id": "ARX9CAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/ARX9CAAAQBAJ",
+        "volumeInfo": {
+          "title": "Ne T\u00FCrk \u0130slam, Ne K\u00FCrt \u0130slam Sentezi SADECE \u0130SLAM",
+          "subtitle": "H\u00FCk\u00FCm Dergisi 2. Say\u0131s\u0131",
+          "authors": [
+            "\u0130hsan \u015Eenocak",
+            "Halid \u0130stanbullu",
+            "Mahmud Sami G\u00FClc\u00FC",
+            "Abdullah Karg\u0131l\u0131",
+            "Murat T\u00FCrker",
+            "Ahmet Buharal\u0131",
+            "Ahmet Yaz\u0131c\u0131",
+            "Selim Seyhan",
+            "Selahaddin Sancaktar",
+            "Erdal Erkan",
+            "Abdullah Kad\u0131o\u011Flu",
+            "Muhammed Fatih Demirt\u00FCrk",
+            "Recep Y\u0131ld\u0131z",
+            "Muhammed Ma\u015Fal\u0131",
+            "n\u00FBn Ajans | www.nunajans.com"
+          ],
+          "publisher": "H\u00DCK\u00DCM Dergisi",
+          "publishedDate": "2013-02-01",
+          "description": "H\u00FCk\u00FCm Dergisinin e-Kitap s\u00FCr\u00FCm\u00FCd\u00FCr. Bu e-Kitap \u00FCcretsizdir. Kitap\u0027a Ekle se\u00E7ene\u011Fini se\u00E7tikten sonra kredi kart\u0131 bilgilerinizi isteyecektir. Bu bilgileri Google kendisi istemektedir ve herhangi bir \u00FCcret \u00E7ekimi yapmayacakt\u0131r. H\u00FCk\u00FCm\u0027den Kalemi tutmaya ba\u015Flad\u0131\u011F\u0131m\u0131z o ilk g\u00FCn\u00FCn \u00FCzerinden \u015Fu kadar zaman ge\u00E7ti. Hadiseler, muhataplar, devirler de\u011Fi\u015Fti. Kimi, Hamurk\u00E2r(sallallahu aleyhi ve sellem)\u2019a teslimiyetle y\u00FCceldi, kimi s\u0131\u011F bir hayata dal\u0131p kayboldu. Kimi, \u0130slam\u2019a hizmet kasd\u0131yla \u00E7\u0131kt\u0131\u011F\u0131 yolda Bat\u0131\u2019n\u0131n fikir ve heva labirentlerine dald\u0131, geri d\u00F6nd\u00FC\u011F\u00FCnde ise ne biz ondan ne de o bizden haz ald\u0131. Oysa ki daha d\u00FCne kadar onunla ayn\u0131 mekanlarda oturur, ayn\u0131 kitaplar\u0131 okur, \u201CB\u00FCy\u00FCk \u0130slam Destan\u0131\u2019na d\u00FC\u015F\u00FClen ara noktas\u0131 nas\u0131l kalkar?\u201D diye birlikte kafa yorard\u0131k. Ba\u011Fdat\u2019a, Kabil\u2019e, Gazze\u2019ye bomba d\u00FC\u015Ft\u00FC\u011F\u00FCnde ders \u00E7\u0131k\u0131\u015F\u0131 duvarlara \u201Ckahrolsun emperyalizm\u201D diye birlikte yazard\u0131k. Cava Adalar\u0131ndan Cebel-i Tar\u0131k\u2019a bu \u00FCmmetin fikir ve siyaset birli\u011Fi i\u00E7in \u00E7al\u0131\u015Fman\u0131n farz oldu\u011Funu s\u00F6yler, M\u00FCsl\u00FCmanl\u0131\u011F\u0131m\u0131z\u0131 ayn\u0131 zamanda anti emperyalist, antisiyonist olmakla tarif ederdik. Ne var ki Bat\u0131\u2019n\u0131n labirentlerinde onun midesine, sonra g\u00F6z\u00FCne ve hepsinden \u00F6nemlisi fikrine haram de\u011Fdi. \u201CYeniden \u0130slam\u201D \u00E7a\u011Fr\u0131s\u0131n\u0131 b\u0131rak\u0131p, yerine \u201Cyeni \u0130slam\u201D dedi. Allah Resul\u00FC muhtemel sapmalar\u0131n \u00F6n\u00FCne ge\u00E7mek i\u00E7in yolun i\u015Faretlerini bizzat kendisi tayin etmi\u015Fti. \u015Eu kadar zaman inkar ya\u011Fd\u0131, nifak ya\u011Fd\u0131, y\u00FCrekler buzland\u0131, ak\u0131llar durdu. Fakat Hz. Muhammed\u2019in yoldaki i\u015Faretlerinde en k\u00FC\u00E7\u00FCk bir f\u00FCt\u00FCr has\u0131l olmad\u0131. Eb\u00FB Hanife, Selahaddin Eyyub\u00EE, \u0130mam Kevser\u00EE, Hasan el-Benn\u00E2, \u00DCstat Necip Faz\u0131l da milyonlar\u0131n aras\u0131na kar\u0131\u015F\u0131p o yolda y\u00FCr\u00FCd\u00FC. \u0130\u015Fte H\u00FCk\u00FCm en az ellibin M\u00FCsl\u00FCman gence \u0130slam yolunun ilim, fikir ve hareket i\u015Faretlerinin ilk g\u00FCnk\u00FC ihti\u015Fama sahip oldu\u011Funu s\u00F6ylemek i\u00E7in \u00E7\u0131kt\u0131. \u201CYeni \u0130slam\u201D diyenlere kar\u015F\u0131, yeniden ve sadece \u0130slam dedi. Her sat\u0131r\u0131nda \u0130slami dirili\u015Fin kodlar\u0131n\u0131 ta\u015F\u0131yan yaz\u0131lar\u0131 okunduk\u00E7a, \u0130mam-Hatip Okullar\u0131ndan \u00DCniversitelerdeki M\u00FCsl\u00FCman gen\u00E7lere, \u00E7ayc\u0131dan, m\u00FChendise, \u0130slam kad\u0131n\u0131ndan, ak sar\u0131kl\u0131 ihtiyara, \u201CBiz de ayn\u0131 ikrar \u00FCzereyiz ve sizinle birlikteyiz.\u201D mesajlar\u0131 ya\u011Fd\u0131. Telefonda, mailde yiti\u011Fini bulan insanlar\u0131n sevinci vard\u0131. Hayat\u0131m\u0131zda duymad\u0131\u011F\u0131m\u0131z dua c\u00FCmlelerine muhatap olduk. Otuz be\u015F bin dergiyi da\u011F\u0131t\u0131m \u015Firketine vermi\u015F, \u201COn be\u015F bini elden da\u011F\u0131t\u0131r, bir k\u0131sm\u0131n\u0131 da hediye ederiz.\u201D demi\u015Ftik. Fakat H\u00FCkm\u00FC okuyan M\u00FCsl\u00FCman gen\u00E7ler da\u011F\u0131t\u0131m m\u00FCmessilimizi aray\u0131p, \u201CBen \u015Fu yaz\u0131lar\u0131 okul da, yurtta ya da i\u015F yerinde mutlaka okutmal\u0131y\u0131m, bana yirmi, otuz, k\u0131rk dergi, \u2026 g\u00F6nderir misiniz.\u201D dedi. Bir bekledi\u011Fimiz yerden y\u00FCz dergi talebi geldi. Elhamd\u00FClillah. Ay\u0131n son \u00FC\u00E7te birine girdi\u011Fimizde elimizde dergi kalmad\u0131. Tiraj\u0131m\u0131z\u0131n ne kadar oldu\u011Funu ise da\u011F\u0131t\u0131m \u015Firketi raporlar\u0131na g\u00F6re belirlemi\u015F olaca\u011F\u0131z. Bundan sonra H\u00FCkm\u00FC Turkuaz bayilerinde bulabilecek, size hangi bayinin daha yak\u0131n oldu\u011Funu ise www. facebook.com/hukumdergisi adresimizde yer alan \u201CH\u00FCk\u00FCm Bayileri\u201D linkine bast\u0131\u011F\u0131n\u0131zda g\u00F6receksiniz. Allah\u2019a emanet olunuz. Enes G\u00DCR",
+          "pageCount": 32,
+          "categories": [
+            "Religion"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=ARX9CAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=ARX9CAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=ARX9CAAAQBAJ\u0026pg=PA30\u0026dq=seyyid\u002Bkutub\u0026hl=\u0026cd=7\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=ARX9CAAAQBAJ\u0026source=gbs_api"
+        }
+      },
+      {
+        "id": "K82pDwAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/K82pDwAAQBAJ",
+        "volumeInfo": {
+          "title": "K\u00D6YDEN B\u0130R \u00C7OCUK",
+          "subtitle": "",
+          "authors": [
+            "Seyyid Kutub"
+          ],
+          "publisher": "\u0130nk\u0131l\u00E2b Bas\u0131m Yay\u0131m",
+          "publishedDate": "",
+          "description": "T\u0131fl mine\u2019l-karye, bug\u00FCnk\u00FC M\u0131s\u0131r\u2019\u0131n olu\u015Fmas\u0131nda son derece \u00F6nemli etkiye sahip bir d\u00F6nemin belgesidir. \u0130lk defa 1946\u2019da Kahire\u2019de yay\u0131nlanan bu kitapta Kutub, \u00E7ocukluk h\u00E2t\u0131ralar\u0131n\u0131 son derece hassasiyet ile yazm\u0131\u015Ft\u0131r. Kitap, yirminci y\u00FCzy\u0131l\u0131n ba\u015Flar\u0131nda M\u0131s\u0131r k\u00F6y hayat\u0131n\u0131n \u00F6rf ve \u00E2detleri, sosyal hayat\u0131, e\u011Fitim sistemi, din\u00EE bayramlar\u0131 ve merkez\u00EE h\u00FCk\u00FCmet ile ili\u015Fkilerini a\u00E7\u0131k bir dille sunmaktad\u0131r. Seyyid Kutub, \u00FCniversite y\u0131llar\u0131nda, fikirlerinden etkilendi\u011Fi Abbas Mahmud Akkad ile tan\u0131\u015Ft\u0131. O, M\u0131s\u0131r\u2019\u0131n b\u00FCy\u00FCk edebiyat\u00E7\u0131s\u0131 Taha H\u00FCseyin ve Nobel \u00F6d\u00FCll\u00FC Necip Mahfuz\u2019un da \u00E7a\u011Fda\u015F\u0131d\u0131r. \u0130sl\u00E2m\u2019da Sosyal Adalet onun ilk din\u00EE, sosyal teorik ara\u015Ft\u0131rma kitab\u0131d\u0131r. B\u00FCt\u00FCn \u0130sl\u00E2m d\u00FCnyas\u0131nda \u00E7a\u011Fda\u015F M\u00FCsl\u00FCman m\u00FCnevverler i\u00E7in \u00F6nemli bir d\u00FC\u015F\u00FCn\u00FCr ve aksiyon adam\u0131 olarak tan\u0131nan Seyyid Kutub, 1953\u2019te M\u00FCsl\u00FCman Karde\u015Fler\u2019e kat\u0131ld\u0131. 1954\u2019te Cemal Abdunn\u00E2s\u0131r\u2019a kar\u015F\u0131 giri\u015Filen ba\u015Far\u0131s\u0131z suikasttan sorumlu tutulan \u0130hv\u00E2n y\u00F6neticileriyle birlikte tutukland\u0131. May\u0131s 1964\u2019teki tahliyesine kadar hapiste Fi Z\u0131l\u00E2li\u2019l-Kur\u2019\u00E2n adl\u0131 tefsiri \u00FCzerinde \u00E7al\u0131\u015Ft\u0131. Hapisten \u00E7\u0131k\u0131nca Me\u2018\u00E2lim fi\u2019t-tar\u00EEk\u2019\u0131 [Yoldaki \u0130\u015Faretler] yazd\u0131. Bu eserdeki g\u00F6r\u00FC\u015Fleri ve \u0130hv\u00E2n-\u0131 M\u00FCslim\u00EEn\u2019i yeniden canland\u0131rma faaliyetlerine kat\u0131lmas\u0131 sebebiyle A\u011Fustos 1965\u2019te tekrar tutukland\u0131. Uzun s\u00FCren g\u00F6stermelik duru\u015Fmalar\u0131n sonunda idama mahk\u00FBm edildi ve 29 A\u011Fustos 1966\u2019da cezas\u0131 infaz edildi. Sosyal ve siyas\u00EE de\u011Fi\u015Fimde \u0130sl\u00E2m\u00EE esaslar\u0131n rol\u00FC \u00FCzerine ara\u015Ft\u0131rmalar\u0131yla tan\u0131nan Kutub, eserleriyle cihad, cahiliyye, \u00FCmmet gibi \u0130sl\u00E2m\u00EE kavramlar\u0131n alg\u0131lan\u0131\u015F\u0131nda \u00F6nemli katk\u0131larda bulunmu\u015Ftur.",
+          "pageCount": 145,
+          "categories": [
+            "Biography \u0026 Autobiography"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=K82pDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=K82pDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=K82pDwAAQBAJ\u0026printsec=frontcover\u0026dq=seyyid\u002Bkutub\u0026hl=\u0026cd=8\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=K82pDwAAQBAJ\u0026source=gbs_api"
+        }
+      },
+      {
+        "id": "uYbgDwAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/uYbgDwAAQBAJ",
+        "volumeInfo": {
+          "title": "\u0130slami Kimlik \u2013 M\u00FCcadele ve Muhasebe",
+          "subtitle": "",
+          "authors": [
+            "R\u0131dvan Kaya"
+          ],
+          "publisher": "Ekin Yay\u0131nlar\u0131",
+          "publishedDate": "2014-03-01",
+          "description": "Ya\u015Fad\u0131\u011F\u0131mz \u00FClkede y\u0131llad\u0131r \u00E7ok farkl\u0131 y\u00F6ntemler ve ara\u00E7lar kullan\u0131larak ortaya konulan d\u00FC\u015F\u00FCncelerin, \u00E7abalar\u0131n, eylemlerin, olu\u015Fturdu\u011Fu bir birikim mevcut. Ama ayn\u0131 zamanda t\u00FCm bu birikimi kimlik d\u00FCzeyinde sahih; ilkesel a\u00E7\u0131dan tutarl\u0131 ve hedefler noktas\u0131na geli\u015Ftirici bir manzara sunmuyor bizlere. Ni\u00E7in b\u00F6yle? Neden egemenleri korkutan bu manzara, i\u00E7inden bakanlarda yeterince bir itminan duygusu olu\u015Fturmuyor? \u015E\u00FCphesiz bu sorular s\u00FCrekli g\u00FCndemimizde olmas\u0131 gereken sorular. Daha \u00F6nemlisi bu zemini tart\u0131\u015Farak, \u00FCzerinde kafa yorarak geli\u015Ftirmek gerekiyor. Ya\u015Fanan s\u00FCre\u00E7 daha pek \u00E7ok \u015Fey yan\u0131nda tart\u0131\u015Fmas\u0131z bi\u00E7imde g\u00F6stermi\u015F olmal\u0131 ki, yanl\u0131\u015F sorular ka\u00E7\u0131n\u0131lmaz bi\u00E7imde yanl\u0131\u015F cevaplara yol a\u00E7makta. Ve \u00F6zellikle de egemenler ellerinde bulunduklar\u0131 devasa propaganda ayg\u0131tlar\u0131 marifetiyle bu olumsuzlu\u011Fu son y\u0131llarda bir hayli beslediler..Dolay\u0131s\u0131yla \u00FCzerinde mutabakata var\u0131ld\u0131\u011F\u0131 izlenimi olu\u015Fturulmaya \u00E7al\u0131\u015F\u0131lan kimi kal\u0131plar\u0131n sorgulanmas\u0131yla i\u015Fe ba\u015Flaman\u0131n \u00F6nemine bir kere daha dikkat \u00E7ekiyoruz.",
+          "pageCount": 216,
+          "categories": [
+            "Religion"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=uYbgDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=uYbgDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=uYbgDwAAQBAJ\u0026pg=RA1-PT143\u0026dq=seyyid\u002Bkutub\u0026hl=\u0026cd=9\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=uYbgDwAAQBAJ\u0026source=gbs_api"
+        }
+      },
+      {
+        "id": "NFUzEQAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/NFUzEQAAQBAJ",
+        "volumeInfo": {
+          "title": "\u0130slam\u2019\u0131n Hareket Metodu",
+          "subtitle": "",
+          "authors": [
+            "Seyyid Kutub"
+          ],
+          "publisher": "Hak Yay\u0131nlar\u0131",
+          "publishedDate": "2020-06-01",
+          "description": "\u0130slam\u2019\u0131 kendisine dava edinmi\u015F, \u0130slam d\u0131\u015F\u0131ndaki hayati sistemlerin oyunca\u011F\u0131 olmak istemeyen ve sadece Rabbe kullu\u011Fu gaye edinen t\u00FCm nefislerin \u015Fu ger\u00E7e\u011Fi \u00E7ok iyi kavramalar\u0131 gerekir. \u201CBu din nas\u0131l Allah\u2019tan bir din ise onun hareket metodu da tamamen Allah\u2019tand\u0131r\u2026. Be\u015Feri hareket metodlar\u0131 ancak bir tak\u0131m insanlar\u0131n kendi nefsi hedeflerine ula\u015Fmalar\u0131n\u0131 sa\u011Flayabilir. Fakat bizim Allah (c.c)\u2019den gelen nizam\u0131m\u0131z\u0131 hayata hakim k\u0131lmas\u0131 imkans\u0131zd\u0131r\u2026\u201D \u0130\u015Fte okuyaca\u011F\u0131n\u0131z bu eser; bu temel ger\u00E7e\u011Fi Kur\u2019an\u2019dan delilleriyle ortaya koyarak dava adamlar\u0131n\u0131n yollar\u0131n\u0131 ayd\u0131nlatmaktad\u0131r. Yay\u0131nevimizin daha \u00F6nce de sunmu\u015F oldu\u011Fu bu eseri; kendisini rahmetle and\u0131\u011F\u0131m\u0131z Seyyid Kutub\u2019un k\u0131saca hayat\u0131, ona yap\u0131lan baz\u0131 iftiralar, ithamlar, bunlara verilen cevablar ve faydas\u0131 olaca\u011F\u0131n\u0131 umdu\u011Fumuz g\u00FCncel baz\u0131 meselelerle daha da geni\u015Fleterek sizlere tekrar sunduk. B\u00F6yle de\u011Ferli bir eser hakk\u0131nda okumadan karar vermeyin\u2026",
+          "pageCount": 256,
+          "categories": [
+            "Religion"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=NFUzEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=NFUzEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=NFUzEQAAQBAJ\u0026printsec=frontcover\u0026dq=seyyid\u002Bkutub\u0026hl=\u0026cd=10\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=NFUzEQAAQBAJ\u0026source=gbs_api"
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=seyyid%20kutub\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

@@ -1,0 +1,37 @@
+{
+  "bookId": "cjCZzgEACAAJ",
+  "cachedAt": "2025-08-22T13:00:11.7702863Z",
+  "book": {
+    "id": "cjCZzgEACAAJ",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/cjCZzgEACAAJ",
+    "volumeInfo": {
+      "title": "Var Misin?",
+      "subtitle": "...Kendini Kesfetmeye, Zorluklarla Basa Cikmaya - Bir Yasam Icin \u00D6neriler",
+      "authors": [
+        "Do\u011Fan C\u00FCcelo\u011Flu"
+      ],
+      "publisher": "Kronik Kitap",
+      "publishedDate": "2021",
+      "description": "\u0022Gen\u00E7li\u011Fimde gergin, stresli, mutsuz g\u00FCnlerim \u00E7ok oldu. Kendimi su\u00E7lu hissetti\u011Fim, de\u011Fersiz g\u00F6rd\u00FC\u011F\u00FCm d\u00F6nemler ya\u015Fad\u0131m. \u015Eimdi hayat\u0131m anlaml\u0131, co\u015Fkulu ve \u015F\u00FCk\u00FCr duygusuyla dopdolu... Neden? \u0130\u00E7inde ya\u015Fad\u0131\u011F\u0131m ko\u015Fullar\u0131n iyile\u015Fmesinden mi? Geli\u015Ftirdi\u011Fim fark\u0131ndal\u0131klar\u0131n sonucu mu? ... Do\u011Fan C\u00FCcelo\u011Flu, yaln\u0131zca psikoloji kariyeriyle de\u011Fil, insan hayat\u0131na dokunan ve insana dair her hikayeden \u015Fifa \u00E7\u0131karabilen bilgeli\u011Fiyle bu co\u011Frafyan\u0131n en \u00F6nemli ilim insanlar\u0131ndan biri. Seksen y\u0131l\u0131 a\u015Fk\u0131n \u00F6mr\u00FCn\u00FCn bir birikimi olarak, \u015Fimdi herkesin merak etti\u011Fi \u0022hayati\u0022 sorulara en samimi cevaplar\u0131n\u0131 sunuyor. Herkes gibi asl\u0131nda o da hala sava\u015F\u0131yor, ke\u015Ffediyor, hayata de\u011Fer kat\u0131yor.\u0022--Back cover.",
+      "pageCount": 317,
+      "categories": null,
+      "averageRating": 0,
+      "ratingsCount": 0,
+      "imageLinks": null,
+      "language": "tr",
+      "previewLink": "http://books.google.com.tr/books?id=cjCZzgEACAAJ\u0026hl=\u0026source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=cjCZzgEACAAJ\u0026source=gbs_api",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_10",
+          "identifier": "6057635833"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9786057635839"
+        }
+      ]
+    }
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes/cjCZzgEACAAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

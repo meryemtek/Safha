@@ -1,0 +1,253 @@
+@model UI.Models.BookLibraryViewModel
+
+@{
+    ViewData["Title"] = "Kitaplığım";
+    Layout = "_Layout";
+}
+
+<div class="library-container">
+    <!-- Ana Başlık -->
+    <div class="library-header">
+        <div class="header-content">
+            <div class="header-text">
+                <h1 class="main-title">
+                    <i class="fas fa-book-open"></i>
+                    @if (Model.IsCurrentUser)
+                    {
+                        @if (Model.StatusFilter.HasValue)
+                        {
+                            <span>
+                                @(Model.StatusFilter switch
+                                {
+                                    1 => "Okuyacaklarım",
+                                    2 => "Okuyorum",
+                                    3 => "Okuduklarım",
+                                    _ => "Kitaplığım"
+                                })
+                            </span>
+                        }
+                        else
+                        {
+                            <span>Kitaplığım</span>
+                        }
+                    }
+                    else
+                    {
+                        <span>Kullanıcının Kitapları</span>
+                    }
+                </h1>
+                <p class="subtitle">
+                    @if (Model.IsCurrentUser)
+                    {
+                        @if (Model.StatusFilter.HasValue)
+                        {
+                            @(Model.StatusFilter switch
+                            {
+                                1 => "Okumayı planladığınız kitaplar",
+                                2 => "Şu anda okuduğunuz kitaplar",
+                                3 => "Tamamladığınız kitaplar",
+                                _ => "Okuma yolculuğunuzu keşfedin ve yönetin"
+                            })
+                        }
+                        else
+                        {
+                            <span>Okuma yolculuğunuzu keşfedin ve yönetin</span>
+                        }
+                    }
+                    else
+                    {
+                        <span>Bu kullanıcının kitap koleksiyonu</span>
+                    }
+                </p>
+            </div>
+            @if (Model.IsCurrentUser)
+            {
+                <div class="header-actions">
+                    <button class="btn btn-primary btn-search-books" onclick="openSearchModal()">
+                        <i class="fas fa-search"></i>
+                        Kitap Ara ve Ekle
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Bildirimler -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            <i class="fas fa-check-circle"></i>
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <i class="fas fa-exclamation-triangle"></i>
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <!-- Kitaplık İstatistikleri -->
+    <div class="library-stats">
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-book"></i>
+            </div>
+            <div class="stat-content">
+                <span class="stat-number">@Model.TotalBooks</span>
+                <span class="stat-label">
+                    @if (Model.StatusFilter.HasValue)
+                    {
+                        @(Model.StatusFilter switch
+                        {
+                            1 => "Okuyacaklarım",
+                            2 => "Okuyorum",
+                            3 => "Okuduklarım",
+                            _ => "Toplam Kitap"
+                        })
+                    }
+                    else
+                    {
+                        <span>Toplam Kitap</span>
+                    }
+                </span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon reading">
+                <i class="fas fa-book-reader"></i>
+            </div>
+            <div class="stat-content">
+                <span class="stat-number">@Model.CurrentlyReadingCount</span>
+                <span class="stat-label">Okuyorum</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon to-read">
+                <i class="fas fa-bookmark"></i>
+            </div>
+            <div class="stat-content">
+                <span class="stat-number">@Model.WantToReadCount</span>
+                <span class="stat-label">Okuyacaklarım</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon completed">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="stat-content">
+                <span class="stat-number">@Model.ReadCount</span>
+                <span class="stat-label">Okuduklarım</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kitaplık Sekmeleri -->
+    <div class="library-tabs">
+        <ul class="nav nav-tabs" id="bookStatusTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link @(!Model.StatusFilter.HasValue ? "active" : "")" id="all-tab" href="/Book/MyBooks" role="tab">
+                    <i class="fas fa-th-large"></i>
+                    Tümü
+                </a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link @(Model.StatusFilter == 2 ? "active" : "")" id="reading-tab" href="/Book/MyBooks?statusFilter=2" role="tab">
+                    <i class="fas fa-book-reader"></i>
+                    Okuyorum
+                </a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link @(Model.StatusFilter == 1 ? "active" : "")" id="to-read-tab" href="/Book/MyBooks?statusFilter=1" role="tab">
+                    <i class="fas fa-bookmark"></i>
+                    Okuyacaklarım
+                </a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link @(Model.StatusFilter == 3 ? "active" : "")" id="read-tab" href="/Book/MyBooks?statusFilter=3" role="tab">
+                    <i class="fas fa-check-circle"></i>
+                    Okuduklarım
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Kitap İçeriği -->
+    <div class="book-content">
+        @if (Model.Books != null && Model.Books.Any())
+        {
+            <div class="books-grid">
+                @foreach (var book in Model.Books)
+                {
+                    <partial name="_BookCard" model='new { Book = book, Model = Model }' />
+                }
+            </div>
+        }
+        else
+        {
+            <div class="empty-state">
+                <div class="empty-icon">
+                    @if (Model.StatusFilter == 1)
+                    {
+                        <i class="fas fa-bookmark"></i>
+                        <h3>Henüz okumayı planladığınız kitap yok</h3>
+                        <p>Okumak istediğiniz kitapları buraya ekleyin!</p>
+                    }
+                    else if (Model.StatusFilter == 2)
+                    {
+                        <i class="fas fa-book-reader"></i>
+                        <h3>Henüz okumaya başladığınız kitap yok</h3>
+                        <p>Şu anda okuduğunuz kitapları buraya ekleyin!</p>
+                    }
+                    else if (Model.StatusFilter == 3)
+                    {
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Henüz okuduğunuz kitap yok</h3>
+                        <p>Okuduğunuz kitapları buraya ekleyin!</p>
+                    }
+                    else
+                    {
+                        <i class="fas fa-book"></i>
+                        <h3>Henüz kitap eklenmemiş</h3>
+                        <p>Kitaplığınıza kitap ekleyerek başlayın!</p>
+                    }
+                </div>
+                <button class="btn btn-primary btn-add-book" onclick="openSearchModal()">
+                    <i class="fas fa-search"></i> Kitap Ara ve Ekle
+                </button>
+            </div>
+        }
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/my-books.css" />
+}
+
+@section Scripts {
+    <script>
+        // Modal açma fonksiyonu
+        function openSearchModal() {
+            $('#searchModal').modal('show');
+        }
+        
+        // Kitap silme fonksiyonu
+        function deleteBook(bookId) {
+            if (confirm('Bu kitabı silmek istediğinizden emin misiniz?')) {
+                // Silme işlemi burada yapılacak
+            }
+        }
+        
+        // Kitap düzenleme fonksiyonu
+        function editBook(bookId) {
+            window.location.href = '/Book/Edit/' + bookId;
+        }
+        
+        // Kitap durumu güncelleme fonksiyonu
+        function updateBookStatus(bookId, status) {
+            // Durum güncelleme işlemi burada yapılacak
+        }
+    </script>
+} 

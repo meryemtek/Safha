@@ -1,0 +1,339 @@
+{
+  "query": "zaman\u0131n zeynebi",
+  "cachedAt": "2025-08-18T11:04:17.9101945Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "lWZ0oAEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/lWZ0oAEACAAJ",
+        "volumeInfo": {
+          "title": "Zamanin Zeynebi",
+          "subtitle": "",
+          "authors": [
+            "Sabiha Ates Alpat"
+          ],
+          "publisher": "",
+          "publishedDate": "2000-10-01",
+          "description": "",
+          "pageCount": 208,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=lWZ0oAEACAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=lWZ0oAEACAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=lWZ0oAEACAAJ\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=lWZ0oAEACAAJ\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "9757561622"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9789757561620"
+            }
+          ]
+        }
+      },
+      {
+        "id": "T2xnYgEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/T2xnYgEACAAJ",
+        "volumeInfo": {
+          "title": "Zaman\u0131n Zeynebi",
+          "subtitle": "",
+          "authors": [
+            "Sabiha Ate\u015F Alpat"
+          ],
+          "publisher": "",
+          "publishedDate": "2000",
+          "description": "",
+          "pageCount": 208,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": null,
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=T2xnYgEACAAJ\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026cd=2\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=T2xnYgEACAAJ\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "OCLC:223098400"
+            }
+          ]
+        }
+      },
+      {
+        "id": "RrirGwAACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/RrirGwAACAAJ",
+        "volumeInfo": {
+          "title": "Zaman\u0131n Zeynebi",
+          "subtitle": "",
+          "authors": [
+            "Zaynab Bur\u016Bjird\u012B",
+            "Zafer F\u0131rat"
+          ],
+          "publisher": "",
+          "publishedDate": "1988",
+          "description": "",
+          "pageCount": 95,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": null,
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=RrirGwAACAAJ\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026cd=3\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=RrirGwAACAAJ\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "OCLC:51831187"
+            }
+          ]
+        }
+      },
+      {
+        "id": "vhl-EAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/vhl-EAAAQBAJ",
+        "volumeInfo": {
+          "title": "Tarihsel ve G\u00FCncel Boyutlar\u0131yla Selefilik-Vehhabilik ve T\u00FCrkiye\u0027de Selefilik",
+          "subtitle": "",
+          "authors": [
+            "Bekir Altun "
+          ],
+          "publisher": "Yeni Balkan Yay\u0131nevi",
+          "publishedDate": "2022-03-01",
+          "description": "Selef\u00EElik-Vehh\u00E2b\u00EElik, Osmanl\u0131 hakimiyet s\u0131n\u0131rlar\u0131 i\u00E7erisinde bulunan Arap Yar\u0131madas\u0131\u2019n\u0131n Necd \u00E7\u00F6l\u00FCnde, Muhammed b. Abd\u00FClvehh\u00E2b ve Muhammed b. Su\u00FBd\u2019un 1744 y\u0131l\u0131nda anla\u015Fmas\u0131 sonucu ortaya \u00E7\u0131km\u0131\u015F din\u00EE-siyas\u00EE bir harekettir. Vehh\u00E2b\u00EEler, Osmanl\u0131\u2019n\u0131n t\u00FCm m\u00FCdahalelerine ra\u011Fmen I. D\u00FCnya Sava\u015F\u0131\u2019n\u0131n ard\u0131ndan bu b\u00F6lgede \u0130ngilizlerin de yard\u0131m\u0131yla bir Vehh\u00E2b\u00EE devleti kurmay\u0131 ba\u015Farm\u0131\u015Flard\u0131r. 1970\u2019li y\u0131llardan itibaren d\u00FCnyaya a\u00E7\u0131lm\u0131\u015Flar ve davet \u00E7al\u0131\u015Fmas\u0131 ad\u0131 alt\u0131nda gittikleri \u00FClkelerde kurumsalla\u015Fmaya ba\u015Flam\u0131\u015Flard\u0131r. T\u00FCrkiye\u2019de kurumsalla\u015Fmaya ba\u015Flamas\u0131 ise 1990\u2019l\u0131 y\u0131llar\u0131n ba\u015F\u0131ndan itibaren yurtd\u0131\u015F\u0131ndan gelen yabanc\u0131 ve yurtd\u0131\u015F\u0131nda Selef\u00EE d\u00FC\u015F\u00FCnceyi \u00F6\u011Frenip T\u00FCrkiye\u2019ye d\u00F6nen yerli Selef\u00EEler arac\u0131l\u0131\u011F\u0131yla olmu\u015Ftur. \u00D6zellikle 2002 y\u0131l\u0131ndan sonra m\u00FCntesiplerini h\u0131zla artt\u0131ran Selef\u00EEler, buradan ald\u0131klar\u0131 g\u00FC\u00E7le T\u00FCrkiye\u2019nin d\u00F6rt bir yan\u0131nda yay\u0131nevleri, dernekler, Kur\u2019an kurslar\u0131 ve medreseler a\u00E7m\u0131\u015Flard\u0131r. Elinizdeki bu \u00E7al\u0131\u015Fma Selef\u00EElik-Vehh\u00E2b\u00EElik hareketinin tarih\u00EE arka plan\u0131n\u0131, te\u015Fekk\u00FCl s\u00FCrecini, g\u00FCn\u00FCm\u00FCzdeki durumunu, kurucu lideri Muhammed b. Abd\u00FClvehh\u00E2b\u2019\u0131n hayat\u0131n\u0131 ve fikirlerini, hareketin T\u00FCrkiye\u2019ye ge\u00E7i\u015Fini, T\u00FCrkiye\u2019deki faaliyetlerini ve grupla\u015Fmalar\u0131n\u0131 ele almaktad\u0131r. Bunlar\u0131n yan\u0131 s\u0131ra okuyuculara T\u00FCrkiye\u2019de Selef\u00EElik-Vehh\u00E2b\u00EElik hareketinin gelece\u011Fi ile ilgili baz\u0131 \u00F6nemli ipu\u00E7lar\u0131 da sunmaktad\u0131r. Eser, T\u00FCrkiye\u2019deki Selef\u00EEleri incelemesi y\u00F6n\u00FCyle bu alanda yap\u0131lan ilk akademik \u00E7al\u0131\u015Fma olma \u00F6zelli\u011Fi ta\u015F\u0131maktad\u0131r.",
+          "pageCount": 202,
+          "categories": [
+            "Religion"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=vhl-EAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=vhl-EAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=vhl-EAAAQBAJ\u0026pg=PT44\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026cd=4\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=vhl-EAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786084763895"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6084763898"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Ck1MAQAAIAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/Ck1MAQAAIAAJ",
+        "volumeInfo": {
+          "title": "T\u00FCrkiye bibliyo\u011Frafyas\u0131",
+          "subtitle": "",
+          "authors": null,
+          "publisher": "",
+          "publishedDate": "2000",
+          "description": "",
+          "pageCount": 1262,
+          "categories": [
+            "Turkey"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=Ck1MAQAAIAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=Ck1MAQAAIAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=Ck1MAQAAIAAJ\u0026q=zaman%C4%B1n\u002Bzeynebi\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026cd=5\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=Ck1MAQAAIAAJ\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "UCAL:B5100238"
+            }
+          ]
+        }
+      },
+      {
+        "id": "FzVlEQAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/FzVlEQAAQBAJ",
+        "volumeInfo": {
+          "title": "\u0130slamda Alevilik",
+          "subtitle": "",
+          "authors": [
+            "Mahmut Aky\u00FCz"
+          ],
+          "publisher": "Mi Yay\u0131nlar\u0131",
+          "publishedDate": "2025-06-12",
+          "description": "Alevi inanc\u0131n\u0131n tarihsel k\u00F6klerine ve \u0130slam i\u00E7indeki konumuna \u0131\u015F\u0131k tutan bu eser, Kur\u2019an ayetleri ve sahih hadisler e\u015Fli\u011Finde Ehlibeyt sevgisini merkezine al\u0131yor. \u0130mam Ali\u2019den On \u0130ki \u0130mamlar\u2019a, Cem ibadetlerinden d\u00F6rt kap\u0131 k\u0131rk makam \u00F6\u011Fretisine kadar Alevili\u011Fin inan\u00E7 sistemi yal\u0131n ve anla\u015F\u0131l\u0131r bir dille aktar\u0131l\u0131yor. Alevilik bir din midir, mezhep midir, tarikat m\u0131d\u0131r? sorular\u0131na samimi ve a\u00E7\u0131k cevaplar sunan kitap; ge\u00E7mi\u015Fin izlerini bug\u00FCn\u00FCn sorular\u0131yla bulu\u015Fturuyor. \u0130nanc\u0131n\u0131 sorgulayan, k\u00F6klerini arayan herkes i\u00E7in bir ba\u015Fvuru niteli\u011Finde.",
+          "pageCount": 158,
+          "categories": [
+            "Young Adult Nonfiction"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=FzVlEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=FzVlEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=FzVlEQAAQBAJ\u0026pg=PT94\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026cd=6\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=FzVlEQAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786256136533"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6256136535"
+            }
+          ]
+        }
+      },
+      {
+        "id": "xsMuEQAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/xsMuEQAAQBAJ",
+        "volumeInfo": {
+          "title": "Bedi\u00FCzzaman Said Nursi\u0027den F\u0131khi Tespitler",
+          "subtitle": "",
+          "authors": [
+            "\u015Eadi Eren"
+          ],
+          "publisher": "Foliant Yay\u0131nlar\u0131",
+          "publishedDate": "2022-06-15",
+          "description": "Bedi\u00FCzzaman\u2019\u0131n eserlerinde Tefsir ve Kelam ilmi a\u011F\u0131rl\u0131ktad\u0131r. Ama O, F\u0131kh\u0131n hemen her alan\u0131nda da bir \u015Feyler s\u00F6ylemi\u015Ftir. O\u2019nun bu alanda s\u00F6yledikleri de s\u0131radan de\u011Fil, \u201CBedi\u00FCzzaman: Zaman\u0131n harikas\u0131\u201D unvan\u0131na uygun olarak s\u0131ra d\u0131\u015F\u0131 olmu\u015Ftur. O, her \u015Feyden \u00F6nce \u201CF\u0131khu\u2019l-Ekber: En b\u00FCy\u00FCk F\u0131k\u0131h\u201D denilen \u00EEm\u00E2n\u00EE konularda s\u00F6z s\u00F6ylemi\u015Ftir. \u00C7\u00FCnk\u00FC meselenin kayyumu imand\u0131r. Her amel\u00EE i\u015Fin bir iman\u00EE boyutu da vard\u0131r. Bir i\u015Fi yapmas\u0131 gerekti\u011Fine inanmayan biri, onu yapmayacakt\u0131r. \u0130badetlerin nas\u0131l yap\u0131laca\u011F\u0131 \u0130lmihal kitaplar\u0131nda anlat\u0131l\u0131r. Bedi\u00FCzzaman, ibadetlerin, \u201Cni\u00E7in\u201D yap\u0131lmas\u0131 gerekti\u011Fi \u00FCzerinde durmu\u015Ftur. Bedi\u00FCzzaman\u2019\u0131n F\u0131kh\u0131n\u0131, \u201CF\u0131khu\u2019l-evleviy\u00E2t\u201D \u015Feklinde niteleyebiliriz. O, mesaisini, herkesin her zaman muhta\u00E7 oldu\u011Fu \u00F6nceli\u011Fi olan konulara tahsis etmi\u015Ftir. Bunu, \u201Cehemmi m\u00FChimme tercih\u201D, yani \u201Cdaha \u00F6nemli olanlara \u00F6ncelik vermek\u201D olarak g\u00F6rebiliriz. Elinizdeki kitap Bedi\u00FCzzaman\u2019\u0131n f\u0131kh\u00EE meselelere nas\u0131l yakla\u015Ft\u0131\u011F\u0131n\u0131n \u00E7ok dikkat \u00E7ekici \u00F6rnekleri ile doludur. Kitab\u0131n sat\u0131rlar\u0131 aras\u0131nda nice akt\u00FCel sorular\u0131n\u0131za cevap bulabilecek ve verilen \u00F6l\u00E7\u00FClerden hareketle burada ele al\u0131nmayan yeni meseleleri sa\u011Fl\u0131kl\u0131 bir \u015Fekilde tahlil edebileceksiniz. \u00D6yle umuyoruz ki, bu \u00E7al\u0131\u015Fma muhatap olan herkesin F\u0131k\u0131h d\u00FCnyas\u0131n\u0131 \u00E7ok zenginle\u015Ftirecek, Dr. \u0130hsan \u015Eenocak Hocam\u0131z\u0131n takdim yaz\u0131s\u0131nda ifade etti\u011Fi \u00FCzere \u00F6zellikle \u201CMedrese talebelerinin Risale-i Nur\u2019a alakas\u0131n\u0131 art\u0131racak, Risale-i Nur talebelerinin de belli f\u0131khi meseleleri daha ku\u015Fat\u0131c\u0131 anlamalar\u0131na vesile olacakt\u0131r.\u201D",
+          "pageCount": 277,
+          "categories": [
+            "Religion"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=xsMuEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=xsMuEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=xsMuEQAAQBAJ\u0026pg=PT68\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026cd=7\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=xsMuEQAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786259518602"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6259518609"
+            }
+          ]
+        }
+      },
+      {
+        "id": "9ntlDwAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/9ntlDwAAQBAJ",
+        "volumeInfo": {
+          "title": "Mektubat",
+          "subtitle": "Risale-i Nur",
+          "authors": [
+            "Bedi\u00FCzzaman Said Nursi"
+          ],
+          "publisher": "Npublish Yay\u0131nc\u0131l\u0131k",
+          "publishedDate": "",
+          "description": "\u015Eu d\u00FCnya hayat\u0131nda en bahtiyar odur ki: D\u00FCnyay\u0131 bir misafirhane-i asker\u00EE telakki etsin ve \u00F6yle de iz\u0027an etsin ve ona g\u00F6re hareket etsin. Ve o telakki ile, en b\u00FCy\u00FCk mertebe olan mertebe-i r\u0131zay\u0131 \u00E7abuk elde edebilir. K\u0131r\u0131lacak \u015Fi\u015Fe pahas\u0131na, daim\u00EE bir elmas\u0131n fiat\u0131n\u0131 vermez; istikamet ve lezzetle hayat\u0131n\u0131 ge\u00E7irir. Evet d\u00FCnyaya ait i\u015Fler, k\u0131r\u0131lma\u011Fa mahk\u00FBm \u015Fi\u015Feler h\u00FCkm\u00FCndedir; b\u00E2ki um\u00FBr-u uhreviye ise, gayet sa\u011Flam elmaslar k\u0131ymetindedir. \u0130nsan\u0131n f\u0131trat\u0131ndaki \u015Fiddetli merak ve hararetli muhabbet ve deh\u015Fetli h\u0131rs ve inadl\u0131 taleb ve h\u00E2keza \u015Fedid hissiyatlar, um\u00FBr-u uhreviyeyi kazanmak i\u00E7in verilmi\u015Ftir. O hissiyat\u0131, \u015Fiddetli bir surette f\u00E2ni um\u00FBr-u d\u00FCnyeviyeye tevcih etmek, f\u00E2ni ve k\u0131r\u0131lacak \u015Fi\u015Felere, b\u00E2ki elmas fiatlar\u0131n\u0131 vermek demektir.",
+          "pageCount": 554,
+          "categories": null,
+          "averageRating": 5,
+          "ratingsCount": 1,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=9ntlDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=9ntlDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=9ntlDwAAQBAJ\u0026pg=PT25\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026cd=8\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=9ntlDwAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786059699709"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6059699707"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Ber4AgAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/Ber4AgAAQBAJ",
+        "volumeInfo": {
+          "title": "Han\u0131mlar Rehberi",
+          "subtitle": "",
+          "authors": [
+            "Bediuzzaman Said Nursi"
+          ],
+          "publisher": "Risale Press",
+          "publishedDate": "2014-03-05",
+          "description": "Dinimizin gerekllerine uygun bir aile hayat\u0131na sahip olmak isteyen han\u0131mlar i\u00E7in rehber niteli\u011Finde e\u015Fsiz bir eser.",
+          "pageCount": 113,
+          "categories": [
+            "Religion"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=Ber4AgAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=Ber4AgAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=Ber4AgAAQBAJ\u0026pg=PT36\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026cd=9\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=Ber4AgAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": null
+        }
+      },
+      {
+        "id": "qn1IAQAAIAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/qn1IAQAAIAAJ",
+        "volumeInfo": {
+          "title": "Abd\u00FClhak H\u00E2mit",
+          "subtitle": "monografi",
+          "authors": [
+            "As\u0131m Bezirci"
+          ],
+          "publisher": "",
+          "publishedDate": "2000",
+          "description": "",
+          "pageCount": 260,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=qn1IAQAAIAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=qn1IAQAAIAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=qn1IAQAAIAAJ\u0026q=zaman%C4%B1n\u002Bzeynebi\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026cd=10\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=qn1IAQAAIAAJ\u0026dq=zaman%C4%B1n\u002Bzeynebi\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "STANFORD:36105215786596"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=zaman%C4%B1n%20zeynebi\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

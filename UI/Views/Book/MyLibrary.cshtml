@@ -1,0 +1,342 @@
+@model UI.Models.MyLibraryViewModel
+
+@{
+    ViewData["Title"] = "Kitaplığım";
+    Layout = "_Layout";
+}
+
+<div class="library-container">
+    <div class="library-header">
+        <h1>📚 Kitaplığım</h1>
+        <p>Kişisel kitap koleksiyonunuz</p>
+    </div>
+
+    <div class="library-actions">
+        <div class="search-box">
+            <form method="get" action="/Book/MyLibrary">
+                <input type="text" name="searchQuery" value="@Model.SearchQuery" placeholder="Kitaplığınızda arayın..." />
+                <button type="submit">
+                    <i class="icon">🔍</i>
+                </button>
+            </form>
+        </div>
+        <a href="/Book/Create" class="btn btn-primary btn-add-book">
+            <i class="icon">➕</i> Yeni Kitap Ekle
+        </a>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            <i class="fas fa-check-circle"></i>
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <i class="fas fa-exclamation-triangle"></i>
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <div class="library-tabs">
+        <ul class="nav nav-tabs" id="libraryTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="currently-reading-tab" data-bs-toggle="tab" data-bs-target="#currently-reading" type="button" role="tab" aria-controls="currently-reading" aria-selected="true">
+                    <i class="icon">📖</i> Şu an Okuduklarım
+                    <span class="badge">@Model.CurrentlyReadingBooks.Count</span>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="want-to-read-tab" data-bs-toggle="tab" data-bs-target="#want-to-read" type="button" role="tab" aria-controls="want-to-read" aria-selected="false">
+                    <i class="icon">📚</i> Okuyacaklarım
+                    <span class="badge">@Model.WantToReadBooks.Count</span>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="read-tab" data-bs-toggle="tab" data-bs-target="#read" type="button" role="tab" aria-controls="read" aria-selected="false">
+                    <i class="icon">✅</i> Okuduklarım
+                    <span class="badge">@Model.ReadBooks.Count</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tab-content" id="libraryTabsContent">
+        <!-- Şu an Okuduklarım Tab -->
+        <div class="tab-pane fade show active" id="currently-reading" role="tabpanel" aria-labelledby="currently-reading-tab">
+            @if (Model.CurrentlyReadingBooks.Any())
+            {
+                <div class="books-grid">
+                    @foreach (var bookWithStatus in Model.CurrentlyReadingBooks)
+                    {
+                        <div class="book-card">
+                            <div class="book-cover">
+                                <img src="@(string.IsNullOrEmpty(bookWithStatus.Book.CoverImage) ? "/image/default-book-cover.jpg" : bookWithStatus.Book.CoverImage)" 
+                                     alt="@bookWithStatus.Book.Title" />
+                                <div class="book-overlay">
+                                    <div class="book-actions">
+                                        <a href="/Book/Detail/@bookWithStatus.Book.Id" class="btn btn-view" title="Detaylar">
+                                            <i class="icon">👁️</i>
+                                        </a>
+                                        <button class="btn btn-status" onclick="changeStatus(@bookWithStatus.Book.Id, 3)" title="Okundu olarak işaretle">
+                                            <i class="icon">✅</i>
+                                        </button>
+                                        <button class="btn btn-status" onclick="changeStatus(@bookWithStatus.Book.Id, 1)" title="Okuyacaklarıma Taşı">
+                                            <i class="icon">📚</i>
+                                        </button>
+                                        <button class="btn btn-delete" onclick="deleteBookStatus(@bookWithStatus.Book.Id)" title="Kitaplıktan Kaldır">
+                                            <i class="icon">🗑️</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">@bookWithStatus.Book.Title</h3>
+                                <p class="book-author">@bookWithStatus.Book.Author</p>
+                                @if (bookWithStatus.Book.Pages.HasValue && bookWithStatus.Status.CurrentPage.HasValue)
+                                {
+                                    <div class="reading-progress">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" 
+                                                 style="width: @(bookWithStatus.Status.CurrentPage * 100 / bookWithStatus.Book.Pages)%" 
+                                                 aria-valuenow="@bookWithStatus.Status.CurrentPage" 
+                                                 aria-valuemin="0" 
+                                                 aria-valuemax="@bookWithStatus.Book.Pages">
+                                            </div>
+                                        </div>
+                                        <span class="progress-text">@bookWithStatus.Status.CurrentPage / @bookWithStatus.Book.Pages sayfa</span>
+                                    </div>
+                                }
+                                <div class="book-meta">
+                                    <span class="meta-item">
+                                        <i class="icon">📅</i> @bookWithStatus.Status.StartedReadingDate?.ToString("dd MMM yyyy")
+                                    </span>
+                                </div>
+                                <button class="btn btn-sm btn-update-progress" onclick="updateProgress(@bookWithStatus.Book.Id, @bookWithStatus.Status.CurrentPage)">
+                                    <i class="icon">📝</i> İlerleme Güncelle
+                                </button>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="empty-state">
+                    <div class="empty-icon">📖</div>
+                    <h3>Şu an okuduğunuz kitap yok</h3>
+                    <p>Okumaya başladığınız kitapları buraya ekleyin!</p>
+                    <a href="/Book/Search" class="btn btn-primary">
+                        <i class="icon">🔍</i> Kitap Ara
+                    </a>
+                </div>
+            }
+        </div>
+
+        <!-- Okuyacaklarım Tab -->
+        <div class="tab-pane fade" id="want-to-read" role="tabpanel" aria-labelledby="want-to-read-tab">
+            @if (Model.WantToReadBooks.Any())
+            {
+                <div class="books-grid">
+                    @foreach (var bookWithStatus in Model.WantToReadBooks)
+                    {
+                        <div class="book-card">
+                            <div class="book-cover">
+                                <img src="@(string.IsNullOrEmpty(bookWithStatus.Book.CoverImage) ? "/image/default-book-cover.jpg" : bookWithStatus.Book.CoverImage)" 
+                                     alt="@bookWithStatus.Book.Title" />
+                                <div class="book-overlay">
+                                    <div class="book-actions">
+                                        <a href="/Book/Detail/@bookWithStatus.Book.Id" class="btn btn-view" title="Detaylar">
+                                            <i class="icon">👁️</i>
+                                        </a>
+                                        <button class="btn btn-status" onclick="changeStatus(@bookWithStatus.Book.Id, 2)" title="Okumaya Başla">
+                                            <i class="icon">📖</i>
+                                        </button>
+                                        <button class="btn btn-status" onclick="changeStatus(@bookWithStatus.Book.Id, 3)" title="Okundu olarak işaretle">
+                                            <i class="icon">✅</i>
+                                        </button>
+                                        <button class="btn btn-delete" onclick="deleteBookStatus(@bookWithStatus.Book.Id)" title="Kitaplıktan Kaldır">
+                                            <i class="icon">🗑️</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">@bookWithStatus.Book.Title</h3>
+                                <p class="book-author">@bookWithStatus.Book.Author</p>
+                                @if (!string.IsNullOrEmpty(bookWithStatus.Book.Genre))
+                                {
+                                    <span class="book-genre">@bookWithStatus.Book.Genre</span>
+                                }
+                                <div class="book-meta">
+                                    <span class="meta-item">
+                                        <i class="icon">📅</i> @bookWithStatus.Status.CreatedAt.ToString("dd MMM yyyy")
+                                    </span>
+                                    @if (bookWithStatus.Book.Pages.HasValue)
+                                    {
+                                        <span class="meta-item">
+                                            <i class="icon">📖</i> @bookWithStatus.Book.Pages sayfa
+                                        </span>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="empty-state">
+                    <div class="empty-icon">📚</div>
+                    <h3>Okumak istediğiniz kitap yok</h3>
+                    <p>Okumayı planladığınız kitapları buraya ekleyin!</p>
+                    <a href="/Book/Search" class="btn btn-primary">
+                        <i class="icon">🔍</i> Kitap Ara
+                    </a>
+                </div>
+            }
+        </div>
+
+        <!-- Okuduklarım Tab -->
+        <div class="tab-pane fade" id="read" role="tabpanel" aria-labelledby="read-tab">
+            @if (Model.ReadBooks.Any())
+            {
+                <div class="books-grid">
+                    @foreach (var bookWithStatus in Model.ReadBooks)
+                    {
+                        <div class="book-card">
+                            <div class="book-cover">
+                                <img src="@(string.IsNullOrEmpty(bookWithStatus.Book.CoverImage) ? "/image/default-book-cover.jpg" : bookWithStatus.Book.CoverImage)" 
+                                     alt="@bookWithStatus.Book.Title" />
+                                <div class="book-overlay">
+                                    <div class="book-actions">
+                                        <a href="/Book/Detail/@bookWithStatus.Book.Id" class="btn btn-view" title="Detaylar">
+                                            <i class="icon">👁️</i>
+                                        </a>
+                                        <button class="btn btn-status" onclick="changeStatus(@bookWithStatus.Book.Id, 2)" title="Tekrar Okumaya Başla">
+                                            <i class="icon">📖</i>
+                                        </button>
+                                        <a href="/Profile/AddReview?bookId=@bookWithStatus.Book.Id" class="btn btn-review" title="İnceleme Ekle">
+                                            <i class="icon">✍️</i>
+                                        </a>
+                                        <button class="btn btn-delete" onclick="deleteBookStatus(@bookWithStatus.Book.Id)" title="Kitaplıktan Kaldır">
+                                            <i class="icon">🗑️</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">@bookWithStatus.Book.Title</h3>
+                                <p class="book-author">@bookWithStatus.Book.Author</p>
+                                @if (!string.IsNullOrEmpty(bookWithStatus.Book.Genre))
+                                {
+                                    <span class="book-genre">@bookWithStatus.Book.Genre</span>
+                                }
+                                <div class="book-meta">
+                                    <span class="meta-item">
+                                        <i class="icon">📅</i> Bitiş: @bookWithStatus.Status.FinishedReadingDate?.ToString("dd MMM yyyy")
+                                    </span>
+                                    @if (bookWithStatus.Book.Pages.HasValue)
+                                    {
+                                        <span class="meta-item">
+                                            <i class="icon">📖</i> @bookWithStatus.Book.Pages sayfa
+                                        </span>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="empty-state">
+                    <div class="empty-icon">✅</div>
+                    <h3>Okuduğunuz kitap yok</h3>
+                    <p>Okuduğunuz kitaplar burada listelenecek!</p>
+                    <a href="/Book/Search" class="btn btn-primary">
+                        <i class="icon">🔍</i> Kitap Ara
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- İlerleme Güncelleme Modal -->
+<div class="modal fade" id="updateProgressModal" tabindex="-1" aria-labelledby="updateProgressModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateProgressModalLabel">Okuma İlerlemesi</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="updateProgressForm" method="post" action="/Book/UpdateProgress">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" id="bookId" name="bookId" />
+                    <div class="mb-3">
+                        <label for="currentPage" class="form-label">Şu anki sayfa</label>
+                        <input type="number" class="form-control" id="currentPage" name="currentPage" min="1" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">Notlar (İsteğe bağlı)</label>
+                        <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Durum Değiştirme Form -->
+<form id="changeStatusForm" method="post" action="/Book/ChangeStatus" style="display: none;">
+    @Html.AntiForgeryToken()
+    <input type="hidden" id="statusBookId" name="bookId" />
+    <input type="hidden" id="newStatus" name="status" />
+</form>
+
+<!-- Kitaplıktan Kaldırma Form -->
+<form id="deleteStatusForm" method="post" action="/Book/DeleteFromLibrary" style="display: none;">
+    @Html.AntiForgeryToken()
+    <input type="hidden" id="deleteBookId" name="bookId" />
+</form>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/my-library.css" />
+}
+
+@section Scripts {
+    <script>
+        function updateProgress(bookId, currentPage) {
+            document.getElementById('bookId').value = bookId;
+            document.getElementById('currentPage').value = currentPage || 1;
+            document.getElementById('notes').value = '';
+            
+            var modal = new bootstrap.Modal(document.getElementById('updateProgressModal'));
+            modal.show();
+        }
+        
+        function changeStatus(bookId, status) {
+            if (confirm('Kitap durumunu değiştirmek istediğinizden emin misiniz?')) {
+                document.getElementById('statusBookId').value = bookId;
+                document.getElementById('newStatus').value = status;
+                document.getElementById('changeStatusForm').submit();
+            }
+        }
+        
+        function deleteBookStatus(bookId) {
+            if (confirm('Bu kitabı kitaplığınızdan kaldırmak istediğinizden emin misiniz?')) {
+                document.getElementById('deleteBookId').value = bookId;
+                document.getElementById('deleteStatusForm').submit();
+            }
+        }
+    </script>
+}

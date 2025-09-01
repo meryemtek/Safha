@@ -1,0 +1,118 @@
+@model List<Entities.User>
+@{
+    ViewData["Title"] = "Takip Edilenler";
+    Layout = "_Layout";
+}
+
+<div class="following-container">
+    <div class="following-header">
+        <h2><i class="fas fa-user-friends"></i> Takip Edilenler</h2>
+        <a href="@Url.Action("Index", "Profile")" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Profile Dön
+        </a>
+    </div>
+    
+    @if (Model != null && Model.Any())
+    {
+        <div class="following-list">
+            @foreach (var following in Model)
+            {
+                <div class="following-item">
+                    <div class="following-avatar">
+                        <img src="@(string.IsNullOrEmpty(following.ProfilePicture) ? "/image/default-avatar.jpg" : following.ProfilePicture)" 
+                             alt="@following.Username" />
+                    </div>
+                    <div class="following-info">
+                        <h4 class="following-name">@following.Username</h4>
+                        <p class="following-fullname">@following.FirstName @following.LastName</p>
+                        @if (!string.IsNullOrEmpty(following.Bio))
+                        {
+                            <p class="following-bio">@following.Bio</p>
+                        }
+                    </div>
+                    <div class="following-actions">
+                        <a href="@Url.Action("Index", "Profile", new { userId = following.Id })" class="btn btn-primary btn-sm">
+                            <i class="fas fa-eye"></i> Profili Görüntüle
+                        </a>
+                        <button class="btn btn-danger btn-sm unfollow-btn" data-user-id="@following.Id">
+                            <i class="fas fa-user-minus"></i> Takibi Bırak
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="no-following">
+            <div class="no-following-icon">👤</div>
+            <h3>Henüz Kimseyi Takip Etmiyorsunuz</h3>
+            <p>Henüz hiç kimseyi takip etmiyorsunuz. İlginizi çeken kullanıcıları takip ederek onların aktivitelerini takip edebilirsiniz!</p>
+        </div>
+    }
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/profile.css" />
+}
+
+@section Scripts {
+    <script>
+        // Takibi bırak butonlarına event listener ekle
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.unfollow-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const userId = this.dataset.userId;
+                    unfollowUser(userId, this);
+                });
+            });
+        });
+
+        function unfollowUser(userId, button) {
+            if (!confirm('Bu kullanıcıyı takipten çıkarmak istediğinizden emin misiniz?')) {
+                return;
+            }
+
+            const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
+            if (!token) {
+                alert('Güvenlik token\'ı bulunamadı.');
+                return;
+            }
+
+            fetch('/Profile/Unfollow', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: `userId=${userId}&__RequestVerificationToken=${token}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Takip edilen öğeyi listeden kaldır
+                    const followingItem = button.closest('.following-item');
+                    followingItem.style.animation = 'fadeOut 0.3s ease-out';
+                    setTimeout(() => {
+                        followingItem.remove();
+                        
+                        // Eğer hiç takip edilen kalmadıysa boş durumu göster
+                        const remainingFollowing = document.querySelectorAll('.following-item');
+                        if (remainingFollowing.length === 0) {
+                            location.reload();
+                        }
+                    }, 300);
+                    
+                    alert(data.message);
+                } else {
+                    alert(data.message || 'Takip bırakılırken bir hata oluştu.');
+                }
+            })
+            .catch(error => {
+                console.error('Takip bırakılırken hata:', error);
+                alert('Takip bırakılırken bir hata oluştu.');
+            });
+        }
+    </script>
+}
+

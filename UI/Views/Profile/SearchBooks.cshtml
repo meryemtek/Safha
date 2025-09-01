@@ -1,0 +1,301 @@
+@{
+    ViewData["Title"] = "Kitap Ara ve Ekle";
+    Layout = "_Layout";
+}
+
+<div class="search-books-container">
+    <div class="search-books-header">
+        <h1>🔍 Kitap Ara ve Ekle</h1>
+        <p>Google Books'tan kitap arayın ve kütüphanenize ekleyin</p>
+        <a href="/Profile/Index" class="btn btn-secondary btn-back">
+            <i class="icon">⬅️</i> Profile Dön
+        </a>
+    </div>
+
+    <!-- Arama Formu -->
+    <div class="search-form-container">
+        <div class="search-form">
+            <div class="search-input-group">
+                <input type="text" id="searchQuery" class="form-control search-input" 
+                       placeholder="Kitap adı, yazar veya konu arayın..." />
+                <button type="button" id="searchBtn" class="btn btn-primary btn-search">
+                    <i class="icon">🔍</i> Ara
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Arama Sonuçları -->
+    <div id="searchResults" class="search-results" style="display: none;">
+        <div class="results-header">
+            <h3>📚 Arama Sonuçları</h3>
+            <div class="results-info">
+                <span id="totalResults"></span>
+                <div class="pagination-info">
+                    <span id="currentPage"></span> / <span id="totalPages"></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="booksGrid" class="books-grid">
+            <!-- Kitaplar buraya yüklenecek -->
+        </div>
+
+        <!-- Sayfalama -->
+        <div id="pagination" class="pagination" style="display: none;">
+            <button id="prevPage" class="btn btn-secondary btn-page">
+                <i class="icon">⬅️</i> Önceki
+            </button>
+            <span class="page-info">
+                Sayfa <span id="pageNumber"></span> / <span id="totalPageCount"></span>
+            </span>
+            <button id="nextPage" class="btn btn-secondary btn-page">
+                Sonraki <i class="icon">➡️</i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Yükleniyor -->
+    <div id="loading" class="loading" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>Kitaplar aranıyor...</p>
+    </div>
+
+    <!-- Hata Mesajı -->
+    <div id="errorMessage" class="error-message" style="display: none;">
+        <div class="error-icon">⚠️</div>
+        <p id="errorText"></p>
+    </div>
+
+    <!-- Başarı Mesajı -->
+    <div id="successMessage" class="success-message" style="display: none;">
+        <div class="success-icon">✅</div>
+        <p id="successText"></p>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/search-books.css" />
+}
+
+@section Scripts {
+    <script>
+        let currentPage = 1;
+        let totalPages = 0;
+        let currentQuery = '';
+
+        // Arama yap
+        document.getElementById('searchBtn').addEventListener('click', performSearch);
+        document.getElementById('searchQuery').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        // Sayfalama
+        document.getElementById('prevPage').addEventListener('click', () => changePage(-1));
+        document.getElementById('nextPage').addEventListener('click', () => changePage(1));
+
+        function performSearch() {
+            const query = document.getElementById('searchQuery').value.trim();
+            if (!query) {
+                showError('Lütfen bir arama terimi girin');
+                return;
+            }
+
+            currentQuery = query;
+            currentPage = 1;
+            searchBooks(query, 1);
+        }
+
+        function searchBooks(query, page) {
+            showLoading();
+            hideResults();
+            hideError();
+            hideSuccess();
+
+            fetch('/Profile/SearchBooks', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `query=${encodeURIComponent(query)}&page=${page}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                hideLoading();
+                if (data.success) {
+                    displayResults(data);
+                } else {
+                    showError(data.message);
+                }
+            })
+            .catch(error => {
+                hideLoading();
+                showError('Arama sırasında hata oluştu: ' + error.message);
+            });
+        }
+
+        function displayResults(data) {
+            const booksGrid = document.getElementById('booksGrid');
+            const totalResults = document.getElementById('totalResults');
+            const currentPageSpan = document.getElementById('currentPage');
+            const totalPagesSpan = document.getElementById('totalPages');
+
+            // Sonuç bilgilerini güncelle
+            totalResults.textContent = `${data.totalItems} kitap bulundu`;
+            currentPageSpan.textContent = data.currentPage;
+            totalPagesSpan.textContent = data.totalPages;
+
+            // Kitapları göster
+            booksGrid.innerHTML = '';
+            data.books.forEach(book => {
+                const bookCard = createBookCard(book);
+                booksGrid.appendChild(bookCard);
+            });
+
+            // Sayfalama
+            currentPage = data.currentPage;
+            totalPages = data.totalPages;
+            updatePagination();
+
+            // Sonuçları göster
+            document.getElementById('searchResults').style.display = 'block';
+        }
+
+        function createBookCard(book) {
+            const card = document.createElement('div');
+            card.className = 'book-card';
+            
+            const coverImage = book.volumeInfo.imageLinks?.thumbnail || '/image/default-book-cover.jpg';
+            const title = book.volumeInfo.title || 'Başlık Yok';
+            const author = book.volumeInfo.authors?.join(', ') || 'Yazar Bilgisi Yok';
+            const description = book.volumeInfo.description || 'Açıklama bulunmuyor';
+            const publishedDate = book.volumeInfo.publishedDate ? 
+                new Date(book.volumeInfo.publishedDate).getFullYear() : 'Tarih Yok';
+            const pageCount = book.volumeInfo.pageCount || 'Sayfa bilgisi yok';
+
+            card.innerHTML = `
+                <div class="book-cover">
+                    <img src="${coverImage}" alt="${title}" />
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">${title}</h3>
+                    <p class="book-author">${author}</p>
+                    <p class="book-year">${publishedDate} • ${pageCount} sayfa</p>
+                    <p class="book-description">${description.length > 150 ? description.substring(0, 150) + '...' : description}</p>
+                    <button class="btn btn-primary btn-add-to-library" onclick="addBookToLibrary('${book.id}')">
+                        <i class="icon">➕</i> Kütüphaneye Ekle
+                    </button>
+                </div>
+            `;
+
+            return card;
+        }
+
+        function addBookToLibrary(googleBookId) {
+            const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
+            if (!token) {
+                showError('Güvenlik token\'ı bulunamadı. Sayfayı yenileyin.');
+                return;
+            }
+
+            // Butonu devre dışı bırak
+            const button = event.target.closest('.btn-add-to-library');
+            button.disabled = true;
+            button.innerHTML = '<i class="icon">⏳</i> Ekleniyor...';
+
+            fetch('/Profile/AddBookFromAPI', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `googleBookId=${encodeURIComponent(googleBookId)}&__RequestVerificationToken=${token}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showSuccess(data.message);
+                    button.innerHTML = '<i class="icon">✅</i> Eklendi';
+                    button.className = 'btn btn-success btn-added';
+                } else {
+                    showError(data.message);
+                    button.disabled = false;
+                    button.innerHTML = '<i class="icon">➕</i> Kütüphaneye Ekle';
+                }
+            })
+            .catch(error => {
+                showError('Kitap eklenirken hata oluştu: ' + error.message);
+                button.disabled = false;
+                button.innerHTML = '<i class="icon">➕</i> Kütüphaneye Ekle';
+            });
+        }
+
+        function changePage(direction) {
+            const newPage = currentPage + direction;
+            if (newPage >= 1 && newPage <= totalPages) {
+                searchBooks(currentQuery, newPage);
+            }
+        }
+
+        function updatePagination() {
+            const pagination = document.getElementById('pagination');
+            const prevBtn = document.getElementById('prevPage');
+            const nextBtn = document.getElementById('nextPage');
+            const pageNumber = document.getElementById('pageNumber');
+            const totalPageCount = document.getElementById('totalPageCount');
+
+            if (totalPages > 1) {
+                pagination.style.display = 'flex';
+                prevBtn.disabled = currentPage <= 1;
+                nextBtn.disabled = currentPage >= totalPages;
+                pageNumber.textContent = currentPage;
+                totalPageCount.textContent = totalPages;
+            } else {
+                pagination.style.display = 'none';
+            }
+        }
+
+        // UI Helper fonksiyonları
+        function showLoading() {
+            document.getElementById('loading').style.display = 'flex';
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+        }
+
+        function showResults() {
+            document.getElementById('searchResults').style.display = 'block';
+        }
+
+        function hideResults() {
+            document.getElementById('searchResults').style.display = 'none';
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            const errorText = document.getElementById('errorText');
+            errorText.textContent = message;
+            errorDiv.style.display = 'flex';
+            setTimeout(() => errorDiv.style.display = 'none', 5000);
+        }
+
+        function hideError() {
+            document.getElementById('errorMessage').style.display = 'none';
+        }
+
+        function showSuccess(message) {
+            const successDiv = document.getElementById('successMessage');
+            const successText = document.getElementById('successText');
+            successText.textContent = message;
+            successDiv.style.display = 'flex';
+            setTimeout(() => successDiv.style.display = 'none', 5000);
+        }
+
+        function hideSuccess() {
+            document.getElementById('successMessage').style.display = 'none';
+        }
+    </script>
+}
+

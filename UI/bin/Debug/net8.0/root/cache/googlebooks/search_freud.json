@@ -1,0 +1,387 @@
+{
+  "query": "freud",
+  "cachedAt": "2025-08-25T21:09:07.3042698Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "dH3oDwAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/dH3oDwAAQBAJ",
+        "volumeInfo": {
+          "title": "Sigmund Freud - Ruh ve Haz",
+          "subtitle": "",
+          "authors": [
+            "Emine Ebru"
+          ],
+          "publisher": "KAFEK\u00DCLT\u00DCR YAYINCILIK",
+          "publishedDate": "2014",
+          "description": "Psikanaliz\u0027in kurucusu Sigmund Freud, 6 May\u0131s 1856\u2019da Avusturya-Macaristan \u0130mparatorlu\u011Fu\u2019nda, Pribor\u2019da do\u011Fdu. Babas\u0131, Jacob Freud, k\u00FC\u00E7\u00FCk bir esnaft\u0131 ve annesi onun ikinci kar\u0131s\u0131yd\u0131. Freud\u2019un kendisinden yakla\u015F\u0131k yirmi ya\u015F b\u00FCy\u00FCk iki \u00FCvey a\u011Fabeyi ve kendinden k\u00FC\u00E7\u00FCk yedi karde\u015Fi vard\u0131. Ailesi, 1938\u2019e kadar ya\u015Fayaca\u011F\u0131 Viyana\u2019ya ta\u015F\u0131nd\u0131\u011F\u0131nda Freud hen\u00FCz d\u00F6rt ya\u015F\u0131ndayd\u0131. Yahudi aileden olan Freud\u2019un babas\u0131 \u00F6zg\u00FCr d\u00FC\u015F\u00FCnceli biriydi, Freud sonradan kendisinin ateist oldu\u011Funu a\u00E7\u0131klad\u0131\u011F\u0131nda o\u011Flunun karar\u0131na sayg\u0131 g\u00F6sterdi. O d\u00F6nemde Yahudiler yaln\u0131zca t\u0131p ve hukuk alan\u0131nda \u00E7al\u0131\u015Fabiliyorlard\u0131, Freud da, bilimle ilgilendi\u011Fi i\u00E7in, 1873\u2019te Viyana \u00DCniversitesi T\u0131p Fak\u00FCltesine girdi. Asl\u0131nda n\u00F6ropsikoloji ara\u015Ft\u0131rmalar\u0131 yapmak istiyordu ama zengin olmad\u0131\u011F\u0131 i\u00E7in n\u00F6roloji \u00FCzerine \u00E7al\u0131\u015Fmaya ba\u015Flad\u0131. Daha sonralar\u0131 birlikte \u00E7al\u0131\u015Fmalar yapt\u0131\u011F\u0131 Josef Breuer\u2019le bu d\u00F6nemde tan\u0131\u015Ft\u0131. Breuer ve Freud, konu\u015Fma k\u00FCr\u00FCn\u00FC birlikte yaratt\u0131lar. 1882-83\u2019te Theodor Meynert Psikiyatri Klini\u011Finde i\u015Fe girdi. Kokain \u00FCzerine pek \u00E7ok \u00E7al\u0131\u015Fma yapt\u0131. Daha sonra Jean-Martin Charcot adl\u0131 \u00FCnl\u00FC n\u00F6rologla, hipnoz ve histeri \u00FCzerine \u00E7al\u0131\u015Fmalar yapmak i\u00E7in Paris\u2019e gitti. 1886\u2019da Viyana\u2019ya d\u00F6n\u00FCp muayenehane a\u00E7t\u0131 ve evlendi. \u00D6zellikle hastalar\u0131n\u0131n tedavisinde hipnoz kullan\u0131yordu ama zamanla bunun yeterli olmad\u0131\u011F\u0131n\u0131 anlay\u0131p muayeneyi b\u0131rakt\u0131. 1900\u2019de R\u00FCyalar\u0131n Yorumu\u2019nu yay\u0131nlad\u0131, 1901\u2019de de G\u00FCndelik Ya\u015Fam\u0131n Psikopatolojisi\u2019ni. 1905\u2019te yay\u0131nlamaya ba\u015Flad\u0131\u011F\u0131 cinsellik \u00FCzerine \u00E7al\u0131\u015Fmalar\u0131 yank\u0131 uyand\u0131rd\u0131. \u00C7ocukluk d\u00F6nemi tecr\u00FCbelerinin \u00F6nemi ve Oedipus kompleksi teorilerini \u00F6ne s\u00FCrd\u00FC. 1902\u2019de Viyana \u00DCniversitesi\u2019nde profes\u00F6r oldu. 1906\u2019da Psikanalitik Toplulu\u011Fu\u2019nu kurdu. Bu toplulu\u011Fun kurulu\u015Fundan sonra benzerleri giderek \u00E7o\u011Fald\u0131. 1909\u2019da Massachusetts\u2019deki Clark \u00DCniversitesinde ilk uluslararas\u0131 konu\u015Fmas\u0131n\u0131 yapt\u0131. 1923\u2019te sigara ba\u011F\u0131ml\u0131l\u0131\u011F\u0131ndan dolay\u0131, \u00E7ene kanseri te\u015Fhisi kondu. Bu hastal\u0131k, 16 y\u0131l i\u00E7inde 33 ameliyat ge\u00E7irmesine neden oldu. Tam o y\u0131llarda da Avrupa\u2019da Nazi bask\u0131s\u0131 ba\u015Flam\u0131\u015Ft\u0131. Freud\u2019un yazd\u0131klar\u0131 da ba\u015Fkalar\u0131n\u0131nkilerle birlikte yasaklan\u0131yor yak\u0131l\u0131yordu. 1938\u2019de Almanya, Avusturya\u2019y\u0131 i\u015Fgal etti. Kar\u0131s\u0131yla \u0130ngiltere\u2019ye ka\u00E7t\u0131 ve 23 Eyl\u00FCl 1939\u2019da orada \u00F6ld\u00FC.",
+          "pageCount": 304,
+          "categories": [
+            "Juvenile Nonfiction"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=dH3oDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=dH3oDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=dH3oDwAAQBAJ\u0026printsec=frontcover\u0026dq=freud\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=dH3oDwAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786051431116"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "605143111X"
+            }
+          ]
+        }
+      },
+      {
+        "id": "xvkgEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/xvkgEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Sigmund Freud",
+          "subtitle": "",
+          "authors": [
+            "Alan Porter"
+          ],
+          "publisher": "ilksat\u0131r Yay\u0131nevi",
+          "publishedDate": "2021-01-28",
+          "description": "Sigmund Freud\u2019un bilin\u00E7d\u0131\u015F\u0131 hakk\u0131ndaki teorileri insan davran\u0131\u015F\u0131na yakla\u015F\u0131m\u0131m\u0131zda bir devrim yaratt\u0131. Freud\u2019un ya\u015Fam\u0131n\u0131n ilk y\u0131llar\u0131ndan g\u00FCn\u00FCm\u00FCze uzanan bu kapsaml\u0131 inceleme, psikanalizin do\u011Fu\u015Funu, geli\u015Fimini, bir harekete d\u00F6n\u00FC\u015F\u00FCm\u00FCn\u00FC, i\u00E7inde ya\u015Fanan hiziple\u015Fme ve kopu\u015Flar\u0131, ald\u0131\u011F\u0131 ele\u015Ftirileri merak uyand\u0131r\u0131c\u0131 ve kolay anla\u015F\u0131l\u0131r bir dille sunuyor. Psikoseks\u00FCel geli\u015Fim, id, ego, s\u00FCperego, r\u00FCya analizi, serbest \u00E7a\u011Fr\u0131\u015F\u0131m, Oidipus kompleksi ve daha pek \u00E7ok kavram ve teoriyi ayr\u0131nt\u0131lar\u0131yla a\u00E7\u0131kl\u0131yor. Bu ezber bozan b\u00FCy\u00FCk psikanalistin \u00F6zel ve mesleki ya\u015Fam\u0131na yak\u0131ndan bakmak, bug\u00FCn h\u00E2l\u00E2 etkili olan kavram ve teorileriyle tan\u0131\u015Fmak i\u00E7in harika bir rehber!",
+          "pageCount": 250,
+          "categories": [
+            "Philosophy"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=xvkgEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=xvkgEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=xvkgEAAAQBAJ\u0026pg=PT187\u0026dq=freud\u0026hl=\u0026cd=2\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=xvkgEAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786057017819"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6057017811"
+            }
+          ]
+        }
+      },
+      {
+        "id": "QdoZEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/QdoZEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Kad\u0131nlar ve Sigmund Freud",
+          "subtitle": "",
+          "authors": [
+            "Emine Ebru"
+          ],
+          "publisher": "KAFEK\u00DCLT\u00DCR YAYINCILIK",
+          "publishedDate": "",
+          "description": "Sigmund Freud, belki de babas\u0131 say\u0131ld\u0131\u011F\u0131 psikanalize en \u00E7ok ihtiya\u00E7 duyan ki\u015Filerden biriydi. Bir\u00E7ok korkusu, nevrozu, hastal\u0131\u011F\u0131 vard\u0131. \u00D6zellikle de elinden bir t\u00FCrl\u00FC d\u00FC\u015F\u00FCrmedi\u011Fi, neticede onu kanser eden purodan da vazge\u00E7emedi. Freud\u0027un tuhaf ya\u015Fant\u0131s\u0131n\u0131n ve belki de bir tek kendisinin anlayabilece\u011Fi garip d\u00FC\u015F\u00FCnce yap\u0131s\u0131n\u0131n, hayat\u0131n\u0131n her alan\u0131nda yans\u0131mas\u0131n\u0131 g\u00F6rmek m\u00FCmk\u00FCn. Kad\u0131nlara ili\u015Fkin ara\u015Ft\u0131rmalarda da onun kadar g\u00FC\u00E7l\u00FC bir iradeye az rastlan\u0131r ve hi\u00E7biri hem kad\u0131nl\u0131k teorileri hem de ki\u015Fisel \u00F6nyarg\u0131y\u0131 evrensel beyana y\u00FCkseltti\u011Fi iddias\u0131yla bu kadar \u015Fiddetli bir \u015Fekilde sald\u0131r\u0131ya u\u011Framam\u0131\u015Ft\u0131r. Freud, kad\u0131n\u0131n geli\u015Fimini kuramla\u015Ft\u0131r\u0131rken analiz etti\u011Fi yeti\u015Fkin kad\u0131n klinik vakalar\u0131ndan yola \u00E7\u0131karak, aktar\u0131m arac\u0131l\u0131\u011F\u0131yla yorumlad\u0131\u011F\u0131 ve ya\u015Fam \u00F6yk\u00FClerinden soyutlad\u0131\u011F\u0131 genel ve standart bir kad\u0131n \u00F6znelli\u011Fi kurmu\u015F, ama kuramla\u015Ft\u0131rd\u0131\u011F\u0131 kad\u0131n\u0131n geli\u015Fimini g\u00F6zlemlememi\u015Ftir.",
+          "pageCount": 64,
+          "categories": [
+            "Psychology"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=QdoZEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=QdoZEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=QdoZEAAAQBAJ\u0026pg=PA62\u0026dq=freud\u0026hl=\u0026cd=3\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=QdoZEAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": null
+        }
+      },
+      {
+        "id": "7LZ0EAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/7LZ0EAAAQBAJ",
+        "volumeInfo": {
+          "title": "Didik Didik Freud",
+          "subtitle": "",
+          "authors": [
+            "Serol Teber",
+            "\u015Eenol Ayla"
+          ],
+          "publisher": "Can Yay\u0131nlar\u0131",
+          "publishedDate": "2022-02-01",
+          "description": "A\u00E7\u0131k Radyo\u2019nun 19. yay\u0131n d\u00F6neminde ger\u00E7ekle\u015Fen Didik Didik Freud program\u0131nda Serol Teber ve \u015Eenol Ayla, Teber\u2019in Bilimsel Bir Peri Masal\u0131: Freud\u2019un Aile ve Tarihsel Roman\u0131\u2019ndan yola \u00E7\u0131karak, Sigmund Freud\u2019un e\u015Fsiz ya\u015Fam\u00F6yk\u00FCs\u00FCn\u00FCn pe\u015Fine d\u00FC\u015F\u00FCyor ve \u00E7a\u011Fda\u015F\u0131 Tevfik Fikret\u2019le ortak melankolik d\u00FCnyalar\u0131n\u0131n eserlerine yans\u0131malar\u0131n\u0131 ele\u015Ftirel/alternatif tarih yaz\u0131m\u0131n\u0131n b\u00FCy\u00FCteci alt\u0131nda didikliyorlar. Serol Teber, psikoloji, davran\u0131\u015F bilimi ve arkeoloji aras\u0131nda disiplinleraras\u0131 bir dil olu\u015Fturarak antikiteden Orta\u00E7a\u011F\u2019a kadar hastal\u0131k, sapk\u0131nl\u0131k, g\u00FCnah kabul edilen melankoliyi ve bug\u00FCn bile \u00FCretim-t\u00FCketim d\u00FCzeninin aksak par\u00E7as\u0131 say\u0131lan melankolik ki\u015Fili\u011Fi \u201Catomize\u201D ederek, nevi \u015Fahs\u0131na m\u00FCnhas\u0131r mizah duygusu ve ironisiyle arkeo-psikoloji alan\u0131n\u0131n ilk ve en \u00F6nemli yerli kaynaklar\u0131ndan bir tanesini arma\u011Fan ediyor bizlere. \u201CBize \u00F6\u011Fretildi\u011Fi gibi, d\u00FCnya ciddiye al\u0131nd\u0131\u011F\u0131 \u00F6l\u00E7\u00FCde g\u00FCzelle\u015Fmektedir. \u00DCzerleri metafizik bulutlarla kapl\u0131 pek \u00E7ok \u015Fey, \u015Fimdi, bilimsel y\u00F6ntemin \u0131\u015F\u0131\u011F\u0131 alt\u0131nda a\u00E7\u0131k se\u00E7ik parlamaktad\u0131r. Olaylar\u0131n bu denli ger\u00E7ek\u00E7i g\u00F6r\u00FCn\u00FCm\u00FC bizlerde hi\u00E7 de d\u00FC\u015F k\u0131r\u0131kl\u0131\u011F\u0131 yaratm\u0131yor. Tersine, p\u0131r\u0131l p\u0131r\u0131l, yepyeni bir d\u00FCnyay\u0131 g\u00F6rmenin mutlulu\u011Fu i\u00E7indeyiz\u2026\u201D Serol Teber, \u201C\u00D6ns\u00F6z\u201D, Davran\u0131\u015Flar\u0131m\u0131z\u0131n K\u00F6keni",
+          "pageCount": 200,
+          "categories": [
+            "Antiques \u0026 Collectibles"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=7LZ0EAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=7LZ0EAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=7LZ0EAAAQBAJ\u0026pg=PA1931\u0026dq=freud\u0026hl=\u0026cd=4\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=7LZ0EAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9789750755545"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "9750755545"
+            }
+          ]
+        }
+      },
+      {
+        "id": "mrE2EQAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/mrE2EQAAQBAJ",
+        "volumeInfo": {
+          "title": "Freud\u2019dan Lacan\u2019a Vaka \u0130ncelemeleri ve Psikanalitik De\u011Ferlendirmeler: Cilt 3",
+          "subtitle": "",
+          "authors": [
+            "T\u00FClin Gen\u00E7\u00F6z",
+            "Ece \u00D6zcan",
+            "Eyl\u00FCl Ceren Demir Hekimo\u011Flu",
+            "Fatma Girgin Karde\u015F",
+            "Fazilet Canbolat",
+            "I\u015F\u0131l Necef",
+            "M\u00FCnevver Zuhal Bilik",
+            "Nurten \u00D6z\u00FCor\u00E7un K\u00FC\u00E7\u00FCkertan",
+            "Selin U\u00E7ar \u00D6zsoy",
+            "Sema Yurdu\u015Fen",
+            "Ya\u011Fmur Sakl\u0131 Demirba\u015F"
+          ],
+          "publisher": "Nobel Akademik Yay\u0131nc\u0131l\u0131k",
+          "publishedDate": "",
+          "description": "Psikanalitik kuram\u0131 tan\u0131tmay\u0131 ama\u00E7layan Freud\u0027dan Lacan\u0027a Vaka \u0130ncelemeleri ve Psikanalitik De\u011Ferlendirmeler serisi, ilk iki cildinin yay\u0131nlanmas\u0131ndan bu yana g\u00F6rd\u00FC\u011F\u00FC yo\u011Fun ilgi nedeniyle, Lacanyen kuram\u0131 geni\u015F bir perspektiften ele ald\u0131\u011F\u0131 yeni ciltleriyle okuyucusuyla bulu\u015Fmaya devam etmektedir. Lacanyen kuram\u0131, uygulamalar\u0131n\u0131, g\u00FCncel temalar\u0131 i\u00E7eren bu seri geni\u015F bir yelpazede ele ald\u0131\u011F\u0131 konular itibariyle, psikanaliz \u00E7al\u0131\u015Fmalar\u0131 ba\u015Fta olmak \u00FCzere ilgili alanlar i\u00E7in de kapsaml\u0131 bir kavramsal derleme sunmaktad\u0131r. Okuyucuya sundu\u011Fumuz bu \u00FC\u00E7\u00FCnc\u00FC ciltte, ikinci ciltte oldu\u011Fu gibi farkl\u0131 vakalarla y\u00FCr\u00FCt\u00FClen psikanalitik \u00E7al\u0131\u015Fmalar\u0131n incelenmesinin yan\u0131 s\u0131ra, d\u00FCnya klasi\u011Fi olmu\u015F edebiyat eserleri ve g\u00FCncel eserler ile Lacanyen kuram\u0131n kavramlar\u0131n\u0131 tan\u0131tan b\u00F6l\u00FCmlere yer verilmi\u015Ftir. Bu kapsamda; annelik, ayna evresi, borromean d\u00FC\u011F\u00FCm\u00FC, das Ding, kad\u0131nl\u0131k, otizm, r\u00FCya analizi, semptom, sinthome, s\u00FCblimasyon gibi kavramlar kuram temelinde detayland\u0131r\u0131larak bilin\u00E7d\u0131\u015F\u0131n\u0131n bu kavramlarla nas\u0131l \u00F6rt\u00FC\u015Ft\u00FC\u011F\u00FCn\u00FCn \u00F6rneklerle tan\u0131t\u0131lmas\u0131 ama\u00E7lanm\u0131\u015Ft\u0131r. Bilin\u00E7d\u0131\u015F\u0131n\u0131n g\u00FCncel hayat\u0131m\u0131zdaki yerini anlamay\u0131 ama\u00E7layan bu kitap serisinin hem kendi yolcu\u011Fumuzu anlamland\u0131rmada hem de y\u00FCr\u00FCtt\u00FC\u011F\u00FCm\u00FCz klinik \u00E7al\u0131\u015Fmalarda yol g\u00F6sterici ve perspektif geni\u015Fletici olmas\u0131 dileklerimizle\u2026",
+          "pageCount": 378,
+          "categories": [
+            "Education"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=mrE2EQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=mrE2EQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=mrE2EQAAQBAJ\u0026pg=PA54\u0026dq=freud\u0026hl=\u0026cd=5\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=mrE2EQAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786253971779"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6253971778"
+            }
+          ]
+        }
+      },
+      {
+        "id": "MoJVEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/MoJVEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Sigmund Freud B\u00FCt\u00FCn Eserleri 1",
+          "subtitle": "",
+          "authors": [
+            "Sigmund Freud"
+          ],
+          "publisher": "KAFEK\u00DCLT\u00DCR YAYINCILIK",
+          "publishedDate": "",
+          "description": "Sigmund Freud B\u00FCt\u00FCn Eserleri I Din Kokain Einstein\u0027a Mektup Kad\u0131nlar ve Sigmund Freud",
+          "pageCount": 328,
+          "categories": [
+            "Psychology"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=MoJVEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=MoJVEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=MoJVEAAAQBAJ\u0026pg=RA2-PA12\u0026dq=freud\u0026hl=\u0026cd=6\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=MoJVEAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": null
+        }
+      },
+      {
+        "id": "xeo2EQAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/xeo2EQAAQBAJ",
+        "volumeInfo": {
+          "title": "Freud\u2019dan Lacan\u2019a Vaka \u0130ncelemeleri ve Psikanalitik De\u011Ferlendirmeler: Cilt 4",
+          "subtitle": "",
+          "authors": [
+            "T\u00FClin Gen\u00E7\u00F6z",
+            "Berke Ta\u015F",
+            "Burcu P\u0131nar Bulut",
+            "Demet Can",
+            "Derya \u00D6zbek \u015Eim\u015Fek",
+            "Elif Emiro\u011Flu Demirel",
+            "Eyl\u00FCl Ceren Demir Hekimo\u011Flu",
+            "Kemal \u00D6zkul",
+            "M\u00FCnevver Zuhal Baydar",
+            "Neli Gagua",
+            "S. Berfin U\u00E7urum",
+            "Sinem Baltac\u0131",
+            "Su Polat",
+            "Ya\u011Fmur Sakl\u0131 Demirba\u015F"
+          ],
+          "publisher": "Nobel Akademik Yay\u0131nc\u0131l\u0131k",
+          "publishedDate": "",
+          "description": "Psikanalitik kuram\u0131 tan\u0131tmay\u0131 ama\u00E7layan Freud\u0027dan Lacan\u0027a Vaka \u0130ncelemeleri ve Psikanalitik De\u011Ferlendirmeler serisi, g\u00F6rd\u00FC\u011F\u00FC yo\u011Fun ilgi nedeniyle Lacanyen kuram\u0131 geni\u015F bir perspektiften ele ald\u0131\u011F\u0131 yeni ciltleriyle okuyucusuyla bulu\u015Fmaya devam etmektedir. Lacanyen kuram\u0131, uygulamalar\u0131n\u0131, g\u00FCncel temalar\u0131n\u0131 i\u00E7eren bu seri, geni\u015F bir yelpazede ele ald\u0131\u011F\u0131 konular itibariyla psikanaliz \u00E7al\u0131\u015Fmalar\u0131 ba\u015Fta olmak \u00FCzere ilgili alanlar i\u00E7in de kapsaml\u0131 bir derleme sunmaktad\u0131r. Okuyucuya sundu\u011Fumuz bu d\u00F6rd\u00FCnc\u00FC ciltte, di\u011Fer ciltlerde oldu\u011Fu gibi vakalarla y\u00FCr\u00FCt\u00FClen psikanalitik \u00E7al\u0131\u015Fmalar\u0131n incelenmesinin yan\u0131 s\u0131ra d\u00FCnya klasi\u011Fi olmu\u015F edebiyat eserleri ve mitler ile Lacanyen kuram\u0131n kavramlar\u0131n\u0131 tan\u0131tan b\u00F6l\u00FCmlere yer verilmi\u015Ftir. Bu kapsamda; anoreksiya nervoza, a\u015Fk, automaton, bak\u0131\u015F, cinsiyetlenme, ensest yasas\u0131, fantezi, fobi, ilkel baba, intihar, kad\u0131nl\u0131k, kayg\u0131, lalangue, melankoli, m\u00FCzik, narsisizm, nesne ili\u015Fkileri, \u00F6l\u00FCm d\u00FCrt\u00FCs\u00FC, s\u00FCblimasyon, tekinsiz, travma, tukhe, yamyaml\u0131k, yas gibi kavramlar, kuram temelinde detayland\u0131r\u0131lm\u0131\u015F ve bilin\u00E7d\u0131\u015F\u0131n\u0131n bu kavramlarla nas\u0131l \u00F6rt\u00FC\u015Ft\u00FC\u011F\u00FCn\u00FCn \u00F6rneklerle tan\u0131t\u0131lmas\u0131 ama\u00E7lanm\u0131\u015Ft\u0131r. Bilin\u00E7d\u0131\u015F\u0131n\u0131n g\u00FCncel hayat\u0131m\u0131zdaki yerini anlamay\u0131 ama\u00E7layan bu kitap serisinin hem kendi yolculu\u011Fumuzu anlamland\u0131rmada hem de y\u00FCr\u00FCtt\u00FC\u011F\u00FCm\u00FCz klinik \u00E7al\u0131\u015Fmalarda yol g\u00F6sterici ve perspektif geni\u015Fletici olmas\u0131 dileklerimizle\u2026",
+          "pageCount": 380,
+          "categories": [
+            "Education"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=xeo2EQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=xeo2EQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=xeo2EQAAQBAJ\u0026pg=PA242\u0026dq=freud\u0026hl=\u0026cd=7\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=xeo2EQAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786253971755"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6253971751"
+            }
+          ]
+        }
+      },
+      {
+        "id": "v_IkEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/v_IkEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Anna Freud- Bakire \u00D6len Bir Anne",
+          "subtitle": "",
+          "authors": [
+            "\u015Eehnaz Tuna"
+          ],
+          "publisher": "Destek Publishing and Media Group",
+          "publishedDate": "2021-03-20",
+          "description": "\u201CHareketlerimize h\u00FCkmeden \u015Fey, ke\u015Fif ruhunun verdi\u011Fi ne\u015Fe ve canl\u0131l\u0131kt\u0131.\u201D Psikanalizin kurucusu Sigmund Freud\u2019un alt\u0131 \u00E7ocu\u011Funun aras\u0131ndan taht\u0131n\u0131 devredece\u011Fi tek v\u00E2risi olarak g\u00F6rd\u00FC\u011F\u00FC ki\u015Fiydi Anna Freud, \u00F6yle de oldu. Anna Freud, babas\u0131ndan devrald\u0131\u011F\u0131 tac\u0131n hakk\u0131n\u0131 sonuna kadar verdi. Hayat\u0131n\u0131 babas\u0131 Freud\u2019a ve onun \u00F6\u011Fretilerine adad\u0131. Psikanalizi \u00F6l\u00FCms\u00FCzle\u015Ftirmeye adeta ant i\u00E7mi\u015F bu gen\u00E7 kad\u0131n \u00C7ocuk Psikanalizi ve Benlik Psikolojisi ekollerini geli\u015Ftirdi, psikanalitik ilkelerin \u00E7ocuk terapisine uygulanmas\u0131na \u00F6nc\u00FCl\u00FCk etti. Hi\u00E7 evlenmedi ama hem \u00E7ok sevdi hem de \u00E7ok sevildi. Hayat arkada\u015F\u0131 Dorothy ile beraber kurucusu oldu\u011Fu okullar ve enstit\u00FCler sayesinde say\u0131s\u0131z \u00E7ocu\u011Fa ev verdi, onlar\u0131 korudu, her birine annelik yapt\u0131. Psikanaliz d\u00FCnyas\u0131ndaki paha bi\u00E7ilemez katk\u0131lar\u0131na ra\u011Fmen hep g\u00F6lgede kalmay\u0131 tercih etti. \u015E\u00F6hreti ve \u015Fovu hayat\u0131 boyunca reddetti. Bu y\u00FCzden ismi \u00E7ok an\u0131lmad\u0131\u011F\u0131 halde g\u00FCn\u00FCm\u00FCzde bile halen \u00E7ocuk ruh sa\u011Fl\u0131\u011F\u0131na dair yap\u0131lan t\u00FCm \u00E7al\u0131\u015Fmalarda onun dokunu\u015Flar\u0131 vard\u0131r. D\u00FCnyaya geldi\u011Finden beri ba\u015Fkalar\u0131n\u0131n sevgisini kazanmak i\u00E7in u\u011Fra\u015Fan, babas\u0131na \u00E2\u015F\u0131k, \u00E7ocuklardan ve hayvanlardan hi\u00E7 vazge\u00E7meyen bir bilim kad\u0131n\u0131n\u0131n hik\u00E2yesini okuyacaks\u0131n\u0131z bu kitapta...",
+          "pageCount": 118,
+          "categories": [
+            "Biography \u0026 Autobiography"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=v_IkEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=v_IkEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=v_IkEAAAQBAJ\u0026pg=PT4\u0026dq=freud\u0026hl=\u0026cd=8\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=v_IkEAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786254411793"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6254411792"
+            }
+          ]
+        }
+      },
+      {
+        "id": "xhSMDAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/xhSMDAAAQBAJ",
+        "volumeInfo": {
+          "title": "Uygarl\u0131\u011Fa Dair Ho\u015Fnutsuzlu\u011Fumuz",
+          "subtitle": "",
+          "authors": [
+            "Sigmund Freud"
+          ],
+          "publisher": "Epsilon Yayincilik Ltd. Sti",
+          "publishedDate": "2015-02-05",
+          "description": "Sigmund Freud insan\u0131n kendi i\u00E7 d\u00FCnyas\u0131na bak\u0131\u015F\u0131nda bir Kopernik devrimi yaparak \u201Cinsan\u0131n kendi evinin efendisi olmad\u0131\u011F\u0131\u201D n\u0131 vurgulam\u0131\u015F ve bize i\u00E7 d\u00FCnyalar\u0131m\u0131za yapaca\u011F\u0131m\u0131z yolculuklar i\u00E7in ilk haritay\u0131 sunmu\u015Ftur. Freud, olgunluk d\u00F6neminde yazd\u0131\u011F\u0131 bu kitap ile hayat\u0131 boyunca geli\u015Ftirdi\u011Fi, kendi d\u00FC\u015F\u00FCnce ak\u0131\u015F\u0131 i\u00E7inde \u00E7evrilen ve bug\u00FCnk\u00FC psikanalitik \u00E7er\u00E7evenin temelini olu\u015Fturan neredeyse t\u00FCm \u00F6nemli kavram ve kuramlar\u0131 okuruna bir sohbet havas\u0131nda tan\u0131t\u0131yor. Tarih boyunca baz\u0131 kitaplar d\u00FCnyay\u0131 de\u011Fi\u015Ftirdi. Bununla kalmay\u0131p; bizleri ve birbirimizi g\u00F6rme bi\u00E7imimizi etkiledi. O kitaplar ki tart\u0131\u015Fmalara, muhalif fikirlere, sava\u015F ve devrimlere esin kayna\u011F\u0131 oldular. Ayd\u0131nlatt\u0131lar, harekete ge\u00E7irdiler, k\u0131\u015Fk\u0131rtt\u0131lar, teselli ettiler. Ya\u015Fam\u0131m\u0131z\u0131 zenginle\u015Ftirdiler ve bizleri ayr\u0131 ayr\u0131 kendi ya\u015Famlar\u0131m\u0131z\u0131 sorgulamaya y\u00F6nelttiler. \u015Eimdi Kafka Kitap sizlere uygarl\u0131\u011F\u0131 sarsan, insanl\u0131k tarihine y\u00F6n veren ve kendimizi ke\u015Ffetmemize yard\u0131m eden fikirleriyle; b\u00FCy\u00FCk d\u00FC\u015F\u00FCn\u00FCrlerin, \u00E7\u0131\u011F\u0131r a\u00E7anlar\u0131n, radikallerin ve ileriyi g\u00F6renlerin eserlerini sunuyor.",
+          "pageCount": 63,
+          "categories": [
+            "Psychology"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=xhSMDAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=xhSMDAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=xhSMDAAAQBAJ\u0026printsec=frontcover\u0026dq=freud\u0026hl=\u0026cd=9\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=xhSMDAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786054820139"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6054820133"
+            }
+          ]
+        }
+      },
+      {
+        "id": "haAqEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/haAqEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Anti - Freud",
+          "subtitle": "Karl Kraus\u0027 un Psikanaliz ile Psikiyatri Ele\u015Ftirisi",
+          "authors": [
+            "Thomas Szasz"
+          ],
+          "publisher": "Hece Yay\u0131nlar\u0131 ve Dergileri",
+          "publishedDate": "",
+          "description": "\u201CThomas Szasz\u2019\u0131n cesur tabu y\u0131k\u0131c\u0131l\u0131\u011F\u0131n\u0131n yan\u0131 s\u0131ra Karl Kraus\u2019un ba\u015F d\u00F6ndu\u0308ru\u0308cu\u0308 hicvini g\u00F6rmek ger\u00E7ekten bu\u0308yu\u0308k bir zevk.\u201D Paul Roazen, Freud and His Followers\u2019\u0131n yazar\u0131 \u201CMedeniyeti yozla\u015Ft\u0131ran \u2018kara bu\u0308yu\u0308\u2019nu\u0308n g\u00F6sterisinde Karl Kraus\u2019un psikanalize kar\u015F\u0131 u\u0308stlendi\u011Fi rolu\u0308 -ilk defa b\u00F6yle bir derleme ile- g\u00F6stermek Dr. Szasz\u2019\u0131n kitab\u0131n\u0131n bu\u0308yu\u0308k erdemidir.\u201D Erich Heller, The Disinherited Mind\u2019\u0131n yazar\u0131. \u201CYazar\u0131n Kraus\u2019a atfetti\u011Fi gu\u0308\u00E7lu\u0308 ve ilgi uyand\u0131ran berrakl\u0131k, istemsiz te\u015Fhise ve tedaviye kar\u015F\u0131 verdi\u011Fi sava\u015Fa devam ettik\u00E7e Thomas Szasz\u2019\u0131n kelimelerinde de kendini g\u00F6steriyor.\u201D Booklist",
+          "pageCount": 230,
+          "categories": [
+            "Biography \u0026 Autobiography"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=haAqEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=haAqEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=haAqEAAAQBAJ\u0026pg=PA216\u0026dq=freud\u0026hl=\u0026cd=10\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=haAqEAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786059556217"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6059556213"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=freud\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

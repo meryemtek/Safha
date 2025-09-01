@@ -1,0 +1,1465 @@
+@model UI.Models.BookLibraryViewModel
+
+@{
+    ViewData["Title"] = "Kitaplığım";
+    Layout = "_Layout";
+}
+
+<div class="library-container">
+    <!-- Ana Başlık ve Arama Bölümü -->
+    <div class="library-header">
+        <div class="header-content">
+            <div class="header-text">
+                <h1 class="main-title">
+                    <i class="fas fa-book-open"></i>
+                    @if (Model.IsCurrentUser)
+                    {
+                        <span>Kitaplığım</span>
+                    }
+                    else
+                    {
+                        <span>Kullanıcının Kitapları</span>
+                    }
+                </h1>
+                @if (Model.IsCurrentUser)
+                {
+                    <p class="subtitle">Okuma yolculuğunuzu keşfedin ve yönetin</p>
+                }
+                else
+                {
+                    <p class="subtitle">Bu kullanıcının kitap koleksiyonu</p>
+                }
+            </div>
+            @if (Model.IsCurrentUser)
+            {
+                <div class="header-actions">
+                    <button class="btn btn-primary btn-search-books" onclick="openSearchModal()">
+                        <i class="fas fa-search"></i>
+                        Kitap Ara ve Ekle
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Bildirimler -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            <i class="fas fa-check-circle"></i>
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <i class="fas fa-exclamation-triangle"></i>
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <!-- Kitaplık İstatistikleri -->
+    <div class="library-stats">
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-book"></i>
+            </div>
+            <div class="stat-content">
+                <span class="stat-number">@(Model.Books?.Count() ?? 0)</span>
+                <span class="stat-label">Toplam Kitap</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon reading">
+                <i class="fas fa-book-reader"></i>
+            </div>
+            <div class="stat-content">
+                <span class="stat-number">@(Model.GetCurrentlyReadingBooks()?.Count() ?? 0)</span>
+                <span class="stat-label">Okuyorum</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon to-read">
+                <i class="fas fa-bookmark"></i>
+            </div>
+            <div class="stat-content">
+                <span class="stat-number">@(Model.GetWantToReadBooks()?.Count() ?? 0)</span>
+                <span class="stat-label">Okuyacaklarım</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon completed">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="stat-content">
+                <span class="stat-number">@(Model.GetReadBooks()?.Count() ?? 0)</span>
+                <span class="stat-label">Okuduklarım</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kitaplık Sekmeleri -->
+    <div class="library-tabs">
+        <ul class="nav nav-tabs" id="bookStatusTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-books" type="button" role="tab" aria-controls="all-books" aria-selected="true">
+                    <i class="fas fa-th-large"></i>
+                    Tümü
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="reading-tab" data-bs-toggle="tab" data-bs-target="#reading-books" type="button" role="tab" aria-controls="reading-books" aria-selected="false">
+                    <i class="fas fa-book-reader"></i>
+                    Okuyorum
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="to-read-tab" data-bs-toggle="tab" data-bs-target="#to-read-books" type="button" role="tab" aria-controls="to-read-books" aria-selected="false">
+                    <i class="fas fa-bookmark"></i>
+                    Okuyacaklarım
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="read-tab" data-bs-toggle="tab" data-bs-target="#read-books" type="button" role="tab" aria-controls="read-books" aria-selected="false">
+                    <i class="fas fa-check-circle"></i>
+                    Okuduklarım
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Sekme İçerikleri -->
+    <div class="tab-content" id="bookStatusTabsContent">
+        <!-- Tüm Kitaplar -->
+        <div class="tab-pane fade show active" id="all-books" role="tabpanel" aria-labelledby="all-tab">
+            @if (Model.Books != null && Model.Books.Any())
+            {
+                <div class="books-grid">
+                    @foreach (var book in Model.Books)
+                    {
+                        <div class="book-card" data-id="@book.Id" data-book-id="@book.Id">
+                            <div class="book-cover">
+                                <img src="@(string.IsNullOrEmpty(book.CoverImage) ? "/image/default-book-cover.jpg" : book.CoverImage)" 
+                                     alt="@book.Title" />
+                                <div class="book-overlay">
+                                    <div class="book-actions">
+                                        @if (Model.IsCurrentUser)
+                                        {
+                                            <button class="btn btn-edit" onclick="editBook(@book.Id)" title="Düzenle">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="btn btn-delete" onclick="deleteBook(@book.Id)" title="Sil">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        }
+                                        <div class="dropdown">
+                                            @if (Model.IsCurrentUser)
+                                            {
+                                                <button class="btn btn-status dropdown-toggle" type="button" id="statusDropdown@(book.Id)" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <span class="status-icon">@GetStatusIcon(Model.GetBookStatus(book.Id))</span>
+                                                    <span class="status-text d-none d-md-inline">@GetStatusText(Model.GetBookStatus(book.Id))</span>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="statusDropdown@(book.Id)">
+                                            }
+                                            else
+                                            {
+                                                <span class="btn btn-status">
+                                                    <span class="status-icon">@GetStatusIcon(Model.GetBookStatus(book.Id))</span>
+                                                    <span class="status-text d-md-inline">@GetStatusText(Model.GetBookStatus(book.Id))</span>
+                                                </span>
+                                                <ul class="dropdown-menu d-none" aria-labelledby="statusDropdown@(book.Id)">
+                                            }
+                                                    <li><button class="dropdown-item @(Model.GetBookStatus(book.Id) == Entities.ReadingStatus.WantToRead ? "active" : "")" 
+                                                               onclick="updateBookStatus(@book.Id, @((int)Entities.ReadingStatus.WantToRead))" 
+                                                               data-status="@((int)Entities.ReadingStatus.WantToRead)">
+                                                        <i class="fas fa-bookmark"></i> Okuyacaklarım
+                                                    </button></li>
+                                                    <li><button class="dropdown-item @(Model.GetBookStatus(book.Id) == Entities.ReadingStatus.CurrentlyReading ? "active" : "")" 
+                                                               onclick="updateBookStatus(@book.Id, @((int)Entities.ReadingStatus.CurrentlyReading))" 
+                                                               data-status="@((int)Entities.ReadingStatus.CurrentlyReading)">
+                                                        <i class="fas fa-book-reader"></i> Okuyorum
+                                                    </button></li>
+                                                    <li><button class="dropdown-item @(Model.GetBookStatus(book.Id) == Entities.ReadingStatus.Read ? "active" : "")" 
+                                                               onclick="updateBookStatus(@book.Id, @((int)Entities.ReadingStatus.Read))" 
+                                                               data-status="@((int)Entities.ReadingStatus.Read)">
+                                                        <i class="fas fa-check-circle"></i> Okuduklarım
+                                                    </button></li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">@book.Title</h3>
+                                <p class="book-author">@book.Author</p>
+                                @if (!string.IsNullOrEmpty(book.Genre))
+                                {
+                                    <span class="book-genre">@book.Genre</span>
+                                }
+                                @if (book.PublicationYear.HasValue)
+                                {
+                                    <p class="book-year">@book.PublicationYear</p>
+                                }
+                                @if (!string.IsNullOrEmpty(book.Description))
+                                {
+                                    <p class="book-description">
+                                        @(book.Description.Length > 100 ? book.Description.Substring(0, 100) + "..." : book.Description)
+                                    </p>
+                                }
+                                <div class="book-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i> @book.CreatedAt.ToString("dd MMM yyyy")
+                                    </span>
+                                    @if (book.Pages.HasValue)
+                                    {
+                                        <span class="meta-item">
+                                            <i class="fas fa-file-alt"></i> @book.Pages sayfa
+                                        </span>
+                                    }
+                                    @if (Model.GetBookStatus(book.Id).HasValue)
+                                    {
+                                        <span class="meta-item book-status">
+                                            @GetStatusIcon(Model.GetBookStatus(book.Id)) @GetStatusText(Model.GetBookStatus(book.Id))
+                                        </span>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="empty-state" style="display: none;">
+                    <!-- Boş durum mesajı kaldırıldı -->
+                </div>
+            }
+        </div>
+
+        <!-- Okuyorum -->
+        <div class="tab-pane fade" id="reading-books" role="tabpanel" aria-labelledby="reading-tab">
+            @{
+                var readingBooks = Model.GetCurrentlyReadingBooks();
+            }
+            @if (readingBooks.Any())
+            {
+                <div class="books-grid">
+                    @foreach (var book in readingBooks)
+                    {
+                        <div class="book-card reading-status" data-book-id="@book.Id">
+                            <div class="book-cover">
+                                <img src="@(string.IsNullOrEmpty(book.CoverImage) ? "/image/default-book-cover.jpg" : book.CoverImage)" 
+                                     alt="@book.Title" />
+                                <div class="book-overlay">
+                                    <div class="book-actions">
+                                        @if (Model.IsCurrentUser)
+                                        {
+                                            <button class="btn btn-edit" onclick="editBook(@book.Id)" title="Düzenle">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="btn btn-delete" onclick="deleteBook(@book.Id)" title="Sil">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        }
+                                        <div class="dropdown">
+                                            @if (Model.IsCurrentUser)
+                                            {
+                                                <button class="btn btn-status dropdown-toggle" type="button" id="statusDropdown@(book.Id)" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <span class="status-icon">@GetStatusIcon(Model.GetBookStatus(book.Id))</span>
+                                                    <span class="status-text d-none d-md-inline">@GetStatusText(Model.GetBookStatus(book.Id))</span>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="statusDropdown@(book.Id)">
+                                            }
+                                            else
+                                            {
+                                                <span class="btn btn-status">
+                                                    <span class="status-icon">@GetStatusIcon(Model.GetBookStatus(book.Id))</span>
+                                                    <span class="status-text d-md-inline">@GetStatusText(Model.GetBookStatus(book.Id))</span>
+                                                </span>
+                                                <ul class="dropdown-menu d-none" aria-labelledby="statusDropdown@(book.Id)">
+                                            }
+                                                    <li><button class="dropdown-item @(Model.GetBookStatus(book.Id) == Entities.ReadingStatus.WantToRead ? "active" : "")" 
+                                                               onclick="updateBookStatus(@book.Id, @((int)Entities.ReadingStatus.WantToRead))" 
+                                                               data-status="@((int)Entities.ReadingStatus.WantToRead)">
+                                                        <i class="fas fa-bookmark"></i> Okuyacaklarım
+                                                    </button></li>
+                                                    <li><button class="dropdown-item @(Model.GetBookStatus(book.Id) == Entities.ReadingStatus.CurrentlyReading ? "active" : "")" 
+                                                               onclick="updateBookStatus(@book.Id, @((int)Entities.ReadingStatus.CurrentlyReading))" 
+                                                               data-status="@((int)Entities.ReadingStatus.CurrentlyReading)">
+                                                        <i class="fas fa-book-reader"></i> Okuyorum
+                                                    </button></li>
+                                                    <li><button class="dropdown-item @(Model.GetBookStatus(book.Id) == Entities.ReadingStatus.Read ? "active" : "")" 
+                                                               onclick="updateBookStatus(@book.Id, @((int)Entities.ReadingStatus.Read))" 
+                                                               data-status="@((int)Entities.ReadingStatus.Read)">
+                                                        <i class="fas fa-check-circle"></i> Okuduklarım
+                                                    </button></li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">@book.Title</h3>
+                                <p class="book-author">@book.Author</p>
+                                @if (!string.IsNullOrEmpty(book.Genre))
+                                {
+                                    <span class="book-genre">@book.Genre</span>
+                                }
+                                @if (book.PublicationYear.HasValue)
+                                {
+                                    <p class="book-year">@book.PublicationYear</p>
+                                }
+                                @if (!string.IsNullOrEmpty(book.Description))
+                                {
+                                    <p class="book-description">
+                                        @(book.Description.Length > 100 ? book.Description.Substring(0, 100) + "..." : book.Description)
+                                    </p>
+                                }
+                                <div class="book-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i> @book.CreatedAt.ToString("dd MMM yyyy")
+                                    </span>
+                                    @if (book.Pages.HasValue)
+                                    {
+                                        <span class="meta-item">
+                                            <i class="fas fa-file-alt"></i> @book.Pages sayfa
+                                        </span>
+                                    }
+                                    <span class="meta-item book-status">
+                                        @GetStatusIcon(Model.GetBookStatus(book.Id)) @GetStatusText(Model.GetBookStatus(book.Id))
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="empty-state" style="display: none;">
+                    <!-- Boş durum mesajı kaldırıldı -->
+                </div>
+            }
+        </div>
+
+        <!-- Okuyacaklarım -->
+        <div class="tab-pane fade" id="to-read-books" role="tabpanel" aria-labelledby="to-read-tab">
+            @{
+                var toReadBooks = Model.GetWantToReadBooks();
+            }
+            @if (toReadBooks.Any())
+            {
+                <div class="books-grid">
+                    @foreach (var book in toReadBooks)
+                    {
+                        <div class="book-card to-read-status" data-book-id="@book.Id">
+                            <div class="book-cover">
+                                <img src="@(string.IsNullOrEmpty(book.CoverImage) ? "/image/default-book-cover.jpg" : book.CoverImage)" 
+                                     alt="@book.Title" />
+                                <div class="book-overlay">
+                                    <div class="book-actions">
+                                        @if (Model.IsCurrentUser)
+                                        {
+                                            <button class="btn btn-edit" onclick="editBook(@book.Id)" title="Düzenle">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="btn btn-delete" onclick="deleteBook(@book.Id)" title="Sil">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        }
+                                        <div class="dropdown">
+                                            @if (Model.IsCurrentUser)
+                                            {
+                                                <button class="btn btn-status dropdown-toggle" type="button" id="statusDropdown@(book.Id)" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <span class="status-icon">@GetStatusIcon(Model.GetBookStatus(book.Id))</span>
+                                                    <span class="status-text d-none d-md-inline">@GetStatusText(Model.GetBookStatus(book.Id))</span>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="statusDropdown@(book.Id)">
+                                            }
+                                            else
+                                            {
+                                                <span class="btn btn-status">
+                                                    <span class="status-icon">@GetStatusIcon(Model.GetBookStatus(book.Id))</span>
+                                                    <span class="status-text d-md-inline">@GetStatusText(Model.GetBookStatus(book.Id))</span>
+                                                </span>
+                                                <ul class="dropdown-menu d-none" aria-labelledby="statusDropdown@(book.Id)">
+                                            }
+                                                    <li><button class="dropdown-item @(Model.GetBookStatus(book.Id) == Entities.ReadingStatus.WantToRead ? "active" : "")" 
+                                                               onclick="updateBookStatus(@book.Id, @((int)Entities.ReadingStatus.WantToRead))" 
+                                                               data-status="@((int)Entities.ReadingStatus.WantToRead)">
+                                                        <i class="fas fa-bookmark"></i> Okuyacaklarım
+                                                    </button></li>
+                                                    <li><button class="dropdown-item @(Model.GetBookStatus(book.Id) == Entities.ReadingStatus.CurrentlyReading ? "active" : "")" 
+                                                               onclick="updateBookStatus(@book.Id, @((int)Entities.ReadingStatus.CurrentlyReading))" 
+                                                               data-status="@((int)Entities.ReadingStatus.CurrentlyReading)">
+                                                        <i class="fas fa-book-reader"></i> Okuyorum
+                                                    </button></li>
+                                                    <li><button class="dropdown-item @(Model.GetBookStatus(book.Id) == Entities.ReadingStatus.Read ? "active" : "")" 
+                                                               onclick="updateBookStatus(@book.Id, @((int)Entities.ReadingStatus.Read))" 
+                                                               data-status="@((int)Entities.ReadingStatus.Read)">
+                                                        <i class="fas fa-check-circle"></i> Okuduklarım
+                                                    </button></li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">@book.Title</h3>
+                                <p class="book-author">@book.Author</p>
+                                @if (!string.IsNullOrEmpty(book.Genre))
+                                {
+                                    <span class="book-genre">@book.Genre</span>
+                                }
+                                @if (book.PublicationYear.HasValue)
+                                {
+                                    <p class="book-year">@book.PublicationYear</p>
+                                }
+                                @if (!string.IsNullOrEmpty(book.Description))
+                                {
+                                    <p class="book-description">
+                                        @(book.Description.Length > 100 ? book.Description.Substring(0, 100) + "..." : book.Description)
+                                    </p>
+                                }
+                                <div class="book-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i> @book.CreatedAt.ToString("dd MMM yyyy")
+                                    </span>
+                                    @if (book.Pages.HasValue)
+                                    {
+                                        <span class="meta-item">
+                                            <i class="fas fa-file-alt"></i> @book.Pages sayfa
+                                        </span>
+                                    }
+                                    <span class="meta-item book-status">
+                                        @GetStatusIcon(Model.GetBookStatus(book.Id)) @GetStatusText(Model.GetBookStatus(book.Id))
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="empty-state" style="display: none;">
+                    <!-- Boş durum mesajı kaldırıldı -->
+                </div>
+            }
+        </div>
+
+        <!-- Okuduklarım -->
+        <div class="tab-pane fade" id="read-books" role="tabpanel" aria-labelledby="read-tab">
+            @{
+                var readBooks = Model.GetReadBooks();
+            }
+            @if (readBooks.Any())
+            {
+                <div class="books-grid">
+                    @foreach (var book in readBooks)
+                    {
+                        <div class="book-card completed-status" data-book-id="@book.Id">
+                            <div class="book-cover">
+                                <img src="@(string.IsNullOrEmpty(book.CoverImage) ? "/image/default-book-cover.jpg" : book.CoverImage)" 
+                                     alt="@book.Title" />
+                                <div class="book-overlay">
+                                    <div class="book-actions">
+                                        @if (Model.IsCurrentUser)
+                                        {
+                                            <button class="btn btn-edit" onclick="editBook(@book.Id)" title="Düzenle">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="btn btn-delete" onclick="deleteBook(@book.Id)" title="Sil">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        }
+                                        <div class="dropdown">
+                                            @if (Model.IsCurrentUser)
+                                            {
+                                                <button class="btn btn-status dropdown-toggle" type="button" id="statusDropdown@(book.Id)" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <span class="status-icon">@GetStatusIcon(Model.GetBookStatus(book.Id))</span>
+                                                    <span class="status-text d-none d-md-inline">@GetStatusText(Model.GetBookStatus(book.Id))</span>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="statusDropdown@(book.Id)">
+                                            }
+                                            else
+                                            {
+                                                <span class="btn btn-status">
+                                                    <span class="status-icon">@GetStatusIcon(Model.GetBookStatus(book.Id))</span>
+                                                    <span class="status-text d-md-inline">@GetStatusText(Model.GetBookStatus(book.Id))</span>
+                                                </span>
+                                                <ul class="dropdown-menu d-none" aria-labelledby="statusDropdown@(book.Id)">
+                                            }
+                                                    <li><button class="dropdown-item @(Model.GetBookStatus(book.Id) == Entities.ReadingStatus.WantToRead ? "active" : "")" 
+                                                               onclick="updateBookStatus(@book.Id, @((int)Entities.ReadingStatus.WantToRead))" 
+                                                               data-status="@((int)Entities.ReadingStatus.WantToRead)">
+                                                        <i class="fas fa-bookmark"></i> Okuyacaklarım
+                                                    </button></li>
+                                                    <li><button class="dropdown-item @(Model.GetBookStatus(book.Id) == Entities.ReadingStatus.CurrentlyReading ? "active" : "")" 
+                                                               onclick="updateBookStatus(@book.Id, @((int)Entities.ReadingStatus.CurrentlyReading))" 
+                                                               data-status="@((int)Entities.ReadingStatus.CurrentlyReading)">
+                                                        <i class="fas fa-book-reader"></i> Okuyorum
+                                                    </button></li>
+                                                    <li><button class="dropdown-item @(Model.GetBookStatus(book.Id) == Entities.ReadingStatus.Read ? "active" : "")" 
+                                                               onclick="updateBookStatus(@book.Id, @((int)Entities.ReadingStatus.Read))" 
+                                                               data-status="@((int)Entities.ReadingStatus.Read)">
+                                                        <i class="fas fa-check-circle"></i> Okuduklarım
+                                                    </button></li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">@book.Title</h3>
+                                <p class="book-author">@book.Author</p>
+                                @if (!string.IsNullOrEmpty(book.Genre))
+                                {
+                                    <span class="book-genre">@book.Genre</span>
+                                }
+                                @if (book.PublicationYear.HasValue)
+                                {
+                                    <p class="book-year">@book.PublicationYear</p>
+                                }
+                                @if (!string.IsNullOrEmpty(book.Description))
+                                {
+                                    <p class="book-description">
+                                        @(book.Description.Length > 100 ? book.Description.Substring(0, 100) + "..." : book.Description)
+                                    </p>
+                                }
+                                <div class="book-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i> @book.CreatedAt.ToString("dd MMM yyyy")
+                                    </span>
+                                    @if (book.Pages.HasValue)
+                                    {
+                                        <span class="meta-item">
+                                            <i class="fas fa-file-alt"></i> @book.Pages sayfa
+                                        </span>
+                                    }
+                                    <span class="meta-item book-status">
+                                        @GetStatusIcon(Model.GetBookStatus(book.Id)) @GetStatusText(Model.GetBookStatus(book.Id))
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Henüz okuduğunuz kitap yok</h3>
+                    <p>Okuduğunuz kitapları buraya ekleyin!</p>
+                    <button class="btn btn-primary btn-add-book" onclick="openSearchModal()">
+                        <i class="fas fa-search"></i> Kitap Ara ve Ekle
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Kitap Arama Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">
+                    <i class="fas fa-search"></i> Kitap Ara ve Ekle
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="search-container">
+                    <div class="search-input-group">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Kitap adı, yazar veya ISBN girin..." />
+                        <button class="btn btn-primary" onclick="searchBooks()">
+                            <i class="fas fa-search"></i> Ara
+                        </button>
+                    </div>
+                    
+                    <div id="searchResults" class="search-results" style="display: none;">
+                        <div class="results-header">
+                            <h6>Arama Sonuçları</h6>
+                            <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Aranıyor...
+                            </div>
+                        </div>
+                        <div id="booksList" class="books-list">
+                            <!-- Arama sonuçları buraya gelecek -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Silme Onay Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">
+                    <i class="fas fa-exclamation-triangle"></i> Kitap Silme Onayı
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Bu kitabı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                <form id="deleteForm" method="post" style="display: inline;">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Sil
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/my-books.css" />
+}
+
+@section Scripts {
+    <script>
+        // Modal açma fonksiyonu
+        function openSearchModal() {
+            $('#searchModal').modal('show');
+            document.getElementById('searchInput').focus();
+        }
+        
+        // Kitap arama fonksiyonu
+        function searchBooks() {
+            const query = document.getElementById('searchInput').value.trim();
+            if (!query) {
+                alert('Lütfen bir arama terimi girin.');
+                return;
+            }
+            
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            const searchResults = document.getElementById('searchResults');
+            const booksList = document.getElementById('booksList');
+            
+            loadingSpinner.style.display = 'block';
+            searchResults.style.display = 'block';
+            booksList.innerHTML = '';
+            
+            // AJAX isteği ile kitap arama
+            fetch(`/Book/Search?query=${encodeURIComponent(query)}`, {
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Sunucu hatası');
+                }
+                return response.json();
+            })
+            .then(data => {
+                loadingSpinner.style.display = 'none';
+                displaySearchResults(data);
+            })
+            .catch(error => {
+                loadingSpinner.style.display = 'none';
+                booksList.innerHTML = `<div class="alert alert-danger">Arama sırasında hata oluştu: ${error.message}</div>`;
+                console.error('Arama hatası:', error);
+            });
+        }
+        
+        // Arama sonuçlarını gösterme fonksiyonu
+        function displaySearchResults(data) {
+            const booksList = document.getElementById('booksList');
+            
+            if (!data.items || data.items.length === 0) {
+                booksList.innerHTML = '<div class="no-results">Arama sonucu bulunamadı.</div>';
+                return;
+            }
+            
+            let html = '';
+            data.items.forEach(book => {
+                const coverImage = book.volumeInfo.imageLinks?.thumbnail || '/image/default-book-cover.jpg';
+                const title = book.volumeInfo.title || 'Başlık bulunamadı';
+                const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Yazar bulunamadı';
+                const description = book.volumeInfo.description || 'Açıklama bulunamadı';
+                const publishedDate = book.volumeInfo.publishedDate ? book.volumeInfo.publishedDate.split('-')[0] : '';
+                const pageCount = book.volumeInfo.pageCount || '';
+                
+                html += `
+                    <div class="search-book-item">
+                        <div class="book-cover">
+                            <img src="${coverImage}" alt="${title}" />
+                        </div>
+                        <div class="book-details">
+                            <h6 class="book-title">${title}</h6>
+                            <p class="book-author">${authors}</p>
+                            
+                            <div class="book-meta-info">
+                                ${publishedDate ? `<span class="book-year"><i class="fas fa-calendar-alt"></i> ${publishedDate}</span>` : ''}
+                                ${pageCount ? `<span class="book-pages"><i class="fas fa-file-alt"></i> ${pageCount} sayfa</span>` : ''}
+                            </div>
+                            
+                            <p class="book-description">${description.length > 150 ? description.substring(0, 150) + '...' : description}</p>
+                            
+                            <div class="book-actions search-book-actions">
+                                <div class="status-buttons">
+                                    <button class="btn btn-sm status-btn want-to-read" onclick="addBookToLibrary('${book.id}', 1)" title="Okuyacaklarım">
+                                        <span class="status-icon">📚</span>
+                                        <span class="status-text">Okuyacaklarım</span>
+                                    </button>
+                                    <button class="btn btn-sm status-btn currently-reading" onclick="addBookToLibrary('${book.id}', 2)" title="Okuyorum">
+                                        <span class="status-icon">📖</span>
+                                        <span class="status-text">Okuyorum</span>
+                                    </button>
+                                    <button class="btn btn-sm status-btn read" onclick="addBookToLibrary('${book.id}', 3)" title="Okuduklarım">
+                                        <span class="status-icon">✅</span>
+                                        <span class="status-text">Okuduklarım</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            booksList.innerHTML = html;
+        }
+        
+        // Kitabı kitaplığa ekleme fonksiyonu
+        function addBookToLibrary(googleBookId, readingStatus) {
+            // Tıklanan butonu bul ve yükleniyor durumunu göster
+            const clickedButton = event.target.closest('button');
+            const originalContent = clickedButton.innerHTML;
+            clickedButton.disabled = true;
+            clickedButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> İşleniyor...';
+            
+            // Aynı kitap için tüm butonları devre dışı bırak
+            const bookItem = clickedButton.closest('.search-book-item');
+            const allButtons = bookItem.querySelectorAll('button');
+            allButtons.forEach(btn => {
+                if (btn !== clickedButton) btn.disabled = true;
+            });
+            
+            // AJAX ile kitap ekleme isteği
+            const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+            
+            fetch('/Book/AddToLibrary', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: `googleBookId=${googleBookId}&readingStatus=${readingStatus}&__RequestVerificationToken=${token}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Başarılı ekleme
+                    
+                    // Kitap kartı oluştur ve kitaplığa ekle
+                    const bookCard = createBookCardFromData(data);
+                    
+                    // Uygun sekmeye kitap kartını ekle
+                    addBookCardToTabs(bookCard, data.status);
+                    
+                    // İstatistikleri güncelle
+                    updateStatsAfterAddition(data.status);
+                    
+                    // Modal'ı kapat
+                    $('#searchModal').modal('hide');
+                    
+                    // Başarı mesajı göster
+                    const alertDiv = document.createElement('div');
+                    alertDiv.className = 'alert alert-success alert-dismissible fade show';
+                    alertDiv.innerHTML = `
+                        <i class="fas fa-check-circle"></i> ${data.message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    `;
+                    
+                    document.querySelector('.library-container').prepend(alertDiv);
+                    
+                    // 3 saniye sonra uyarıyı kaldır
+                    setTimeout(() => {
+                        alertDiv.remove();
+                    }, 3000);
+                    
+                    // Butonları normale döndür
+                    clickedButton.innerHTML = originalContent;
+                    allButtons.forEach(btn => btn.disabled = false);
+                    
+                    // Seçilen durumu vurgula
+                    allButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        if (btn === clickedButton) {
+                            btn.classList.add('active');
+                        }
+                    });
+                } else {
+                    // Hata durumu
+                    clickedButton.innerHTML = originalContent;
+                    clickedButton.disabled = false;
+                    allButtons.forEach(btn => btn.disabled = false);
+                    
+                    alert('Kitap eklenirken bir hata oluştu: ' + (data.error || 'Bilinmeyen hata'));
+                }
+            })
+            .catch(error => {
+                console.error('Kitap ekleme hatası:', error);
+                
+                clickedButton.innerHTML = originalContent;
+                clickedButton.disabled = false;
+                allButtons.forEach(btn => btn.disabled = false);
+                
+                alert('Kitap eklenirken bir hata oluştu.');
+            });
+        }
+        
+        // Kitap verilerinden kitap kartı oluştur
+        function createBookCardFromData(data) {
+            const bookCard = document.createElement('div');
+            bookCard.className = `book-card`;
+            bookCard.setAttribute('data-id', data.book.id);
+            
+            // Duruma göre sınıf ekle
+            if (data.status === 1) {
+                bookCard.classList.add('to-read-status');
+            } else if (data.status === 2) {
+                bookCard.classList.add('reading-status');
+            } else if (data.status === 3) {
+                bookCard.classList.add('completed-status');
+            }
+            
+            // Kitap kartı içeriği
+            bookCard.innerHTML = `
+                <div class="book-cover">
+                    <img src="${data.book.coverImage}" alt="${data.book.title}" />
+                    <div class="book-overlay">
+                        <div class="book-actions">
+                            <button class="btn btn-edit" onclick="editBook(${data.book.id})" title="Düzenle">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-delete" onclick="deleteBook(${data.book.id})" title="Sil">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                            <div class="dropdown">
+                                <button class="btn btn-status dropdown-toggle" type="button" id="statusDropdown${data.book.id}" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="status-icon">${data.statusIcon}</span>
+                                    <span class="status-text d-none d-md-inline">${data.statusText}</span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="statusDropdown${data.book.id}">
+                                    <li><button class="dropdown-item ${data.status === 1 ? 'active' : ''}" 
+                                               onclick="updateBookStatus(${data.book.id}, 1)" 
+                                               data-status="1">
+                                        <i class="fas fa-bookmark"></i> Okuyacaklarım
+                                    </button></li>
+                                    <li><button class="dropdown-item ${data.status === 2 ? 'active' : ''}" 
+                                               onclick="updateBookStatus(${data.book.id}, 2)" 
+                                               data-status="2">
+                                        <i class="fas fa-book-reader"></i> Okuyorum
+                                    </button></li>
+                                    <li><button class="dropdown-item ${data.status === 3 ? 'active' : ''}" 
+                                               onclick="updateBookStatus(${data.book.id}, 3)" 
+                                               data-status="3">
+                                        <i class="fas fa-check-circle"></i> Okuduklarım
+                                    </button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">${data.book.title}</h3>
+                    <p class="book-author">${data.book.author}</p>
+                    ${data.book.genre ? `<span class="book-genre">${data.book.genre}</span>` : ''}
+                    ${data.book.publicationYear ? `<p class="book-year">${data.book.publicationYear}</p>` : ''}
+                    ${data.book.description ? `
+                        <p class="book-description">
+                            ${data.book.description.length > 100 ? data.book.description.substring(0, 100) + '...' : data.book.description}
+                        </p>
+                    ` : ''}
+                    <div class="book-meta">
+                        <span class="meta-item">
+                            <i class="fas fa-calendar"></i> ${new Date().toLocaleDateString('tr-TR', { day: '2-digit', month: 'short', year: 'numeric' })}
+                        </span>
+                        ${data.book.pages ? `
+                            <span class="meta-item">
+                                <i class="fas fa-file-alt"></i> ${data.book.pages} sayfa
+                            </span>
+                        ` : ''}
+                        <span class="meta-item book-status">
+                            ${data.statusIcon} ${data.statusText}
+                        </span>
+                    </div>
+                </div>
+            `;
+            
+            // Animasyon efekti
+            bookCard.style.opacity = '0';
+            bookCard.style.transform = 'translateY(20px)';
+            
+            return bookCard;
+        }
+        
+        // Kitap kartını ilgili sekmelere ekle
+        function addBookCardToTabs(bookCard, status) {
+            // Tüm kitaplar sekmesine ekle
+            const allBooksTab = document.querySelector('#all-books .books-grid');
+            if (allBooksTab) {
+                const clonedCard = bookCard.cloneNode(true);
+                allBooksTab.prepend(clonedCard);
+                setTimeout(() => {
+                    clonedCard.style.transition = 'all 0.5s ease';
+                    clonedCard.style.opacity = '1';
+                    clonedCard.style.transform = 'translateY(0)';
+                }, 10);
+            }
+            
+            // Duruma göre ilgili sekmeye ekle
+            let targetTab = null;
+            if (status === 1) {
+                targetTab = document.querySelector('#to-read-books .books-grid');
+            } else if (status === 2) {
+                targetTab = document.querySelector('#reading-books .books-grid');
+            } else if (status === 3) {
+                targetTab = document.querySelector('#read-books .books-grid');
+            }
+            
+            if (targetTab) {
+                const clonedCard = bookCard.cloneNode(true);
+                
+                // Sekme boşsa ve boş durum mesajı varsa kaldır
+                const emptyState = targetTab.closest('.tab-pane').querySelector('.empty-state');
+                if (emptyState) {
+                    emptyState.remove();
+                    
+                    // Yeni grid oluştur
+                    const newGrid = document.createElement('div');
+                    newGrid.className = 'books-grid';
+                    targetTab.closest('.tab-pane').appendChild(newGrid);
+                    targetTab = newGrid;
+                }
+                
+                targetTab.prepend(clonedCard);
+                setTimeout(() => {
+                    clonedCard.style.transition = 'all 0.5s ease';
+                    clonedCard.style.opacity = '1';
+                    clonedCard.style.transform = 'translateY(0)';
+                }, 10);
+            }
+        }
+        
+        // İstatistikleri güncelle
+        function updateStatsAfterAddition(status) {
+            // Mevcut sayıları al
+            const totalCountElement = document.querySelector('.stat-card:nth-child(1) .stat-number');
+            const readingCountElement = document.querySelector('.stat-card:nth-child(2) .stat-number');
+            const toReadCountElement = document.querySelector('.stat-card:nth-child(3) .stat-number');
+            const readCountElement = document.querySelector('.stat-card:nth-child(4) .stat-number');
+            
+            if (totalCountElement) {
+                const totalCount = parseInt(totalCountElement.textContent);
+                totalCountElement.textContent = totalCount + 1;
+            }
+            
+            if (status === 2 && readingCountElement) {
+                const readingCount = parseInt(readingCountElement.textContent);
+                readingCountElement.textContent = readingCount + 1;
+            } else if (status === 1 && toReadCountElement) {
+                const toReadCount = parseInt(toReadCountElement.textContent);
+                toReadCountElement.textContent = toReadCount + 1;
+            } else if (status === 3 && readCountElement) {
+                const readCount = parseInt(readCountElement.textContent);
+                readCountElement.textContent = readCount + 1;
+            }
+            
+            // İstatistik kartlarına animasyon efekti ekle
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach(card => {
+                card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+                card.style.transform = 'scale(1.05)';
+                card.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.15)';
+                
+                setTimeout(() => {
+                    card.style.transform = '';
+                    card.style.boxShadow = '';
+                }, 500);
+            });
+        }
+        
+        // Kitap silme fonksiyonu
+        function deleteBook(bookId) {
+            if (confirm('Bu kitabı silmek istediğinizden emin misiniz?')) {
+                const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+                
+                fetch(`/Book/Delete/${bookId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    body: `__RequestVerificationToken=${token}`
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Silinen kitap kartını animasyonla kaldır
+                        const bookCard = document.querySelector(`.book-card[data-id="${bookId}"]`);
+                        if (bookCard) {
+                            bookCard.style.opacity = '0';
+                            bookCard.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                bookCard.remove();
+                                
+                                // Eğer bu kategoride başka kitap kalmadıysa boş durum mesajını göster
+                                const currentTab = document.querySelector('.tab-pane.active');
+                                const remainingBooks = currentTab.querySelectorAll('.book-card');
+                                if (remainingBooks.length === 0) {
+                                    const emptyState = createEmptyState(currentTab.id);
+                                    currentTab.innerHTML = '';
+                                    currentTab.appendChild(emptyState);
+                                }
+                                
+                                // İstatistikleri güncelle
+                                updateStats();
+                            }, 300);
+                        }
+                        
+                        // Başarı mesajı göster
+                        const alertDiv = document.createElement('div');
+                        alertDiv.className = 'alert alert-success alert-dismissible fade show';
+                        alertDiv.innerHTML = `
+                            <i class="fas fa-check-circle"></i> ${data.message}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        `;
+                        document.querySelector('.library-container').prepend(alertDiv);
+                        
+                        // 5 saniye sonra uyarıyı kaldır
+                        setTimeout(() => {
+                            alertDiv.remove();
+                        }, 5000);
+                    } else {
+                        alert('Kitap silinirken bir hata oluştu: ' + (data.error || 'Bilinmeyen hata'));
+                    }
+                })
+                .catch(error => {
+                    console.error('Kitap silme hatası:', error);
+                    alert('Kitap silinirken bir hata oluştu.');
+                });
+            }
+        }
+        
+        // Kitap düzenleme fonksiyonu
+        function editBook(bookId) {
+            window.location.href = '/Book/Edit/' + bookId;
+        }
+        
+        // Kitap durumu güncelleme fonksiyonu
+        function updateBookStatus(bookId, status) {
+            // Güncelleme başlamadan önce yükleniyor animasyonu göster
+            const bookCard = document.querySelector(`.book-card[data-id="${bookId}"]`);
+            const statusButton = bookCard ? bookCard.querySelector('.btn-status') : null;
+            const statusMeta = bookCard ? bookCard.querySelector('.book-meta .book-status') : null;
+            
+            if (statusButton) {
+                const originalContent = statusButton.innerHTML;
+                statusButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+                statusButton.disabled = true;
+            }
+            
+            const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+            
+            fetch('/Book/UpdateReadingStatus', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: `bookId=${bookId}&readingStatus=${status}&__RequestVerificationToken=${token}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Başarılı güncelleme
+                    
+                    // Durum düğmesini güncelle
+                    if (statusButton) {
+                        statusButton.innerHTML = `
+                            <span class="status-icon">${data.statusIcon}</span>
+                            <span class="status-text d-none d-md-inline">${data.statusText}</span>
+                        `;
+                        statusButton.disabled = false;
+                        
+                        // Dropdown menüdeki aktif durumu güncelle
+                        const dropdownItems = bookCard.querySelectorAll('.dropdown-item');
+                        dropdownItems.forEach(item => {
+                            if (parseInt(item.dataset.status) === data.status) {
+                                item.classList.add('active');
+                            } else {
+                                item.classList.remove('active');
+                            }
+                        });
+                    }
+                    
+                    // Meta bilgisini güncelle
+                    if (statusMeta) {
+                        statusMeta.innerHTML = `${data.statusIcon} ${data.statusText}`;
+                    }
+                    
+                    // Kitap kartının durumuna göre sınıflarını güncelle
+                    if (bookCard) {
+                        bookCard.classList.remove('reading-status', 'to-read-status', 'completed-status');
+                        
+                        if (data.status === 1) { // WantToRead
+                            bookCard.classList.add('to-read-status');
+                        } else if (data.status === 2) { // CurrentlyReading
+                            bookCard.classList.add('reading-status');
+                        } else if (data.status === 3) { // Read
+                            bookCard.classList.add('completed-status');
+                        }
+                        
+                        // Animasyon efekti
+                        bookCard.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease';
+                        bookCard.style.transform = 'scale(1.03)';
+                        bookCard.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.15)';
+                        
+                        setTimeout(() => {
+                            bookCard.style.transform = '';
+                            bookCard.style.boxShadow = '';
+                        }, 500);
+                    }
+                    
+                    // Başarı mesajı göster
+                    const alertDiv = document.createElement('div');
+                    alertDiv.className = 'alert alert-success alert-dismissible fade show';
+                    alertDiv.innerHTML = `
+                        <i class="fas fa-check-circle"></i> ${data.message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    `;
+                    document.querySelector('.library-container').prepend(alertDiv);
+                    
+                    // 3 saniye sonra uyarıyı kaldır
+                    setTimeout(() => {
+                        alertDiv.remove();
+                    }, 3000);
+                    
+                    // İstatistikleri güncelle
+                    updateStatsAfterStatusChange(status);
+                    
+                    // Eğer sekme değişikliği gerekiyorsa ve kitap mevcut sekmede görünmemesi gerekiyorsa
+                    // kitabı mevcut sekmeden kaldır
+                    const activeTab = document.querySelector('.tab-pane.active');
+                    if (activeTab) {
+                        const tabId = activeTab.id;
+                        
+                        // Eğer aktif sekme ile kitap durumu uyuşmuyorsa, kitabı gizle
+                        if ((tabId === 'reading-books' && data.status !== 2) || 
+                            (tabId === 'to-read-books' && data.status !== 1) || 
+                            (tabId === 'read-books' && data.status !== 3)) {
+                            
+                            if (bookCard && activeTab !== document.getElementById('all-books')) {
+                                // Animasyonla kitabı kaldır
+                                bookCard.style.opacity = '0';
+                                bookCard.style.transform = 'scale(0.8)';
+                                
+                                setTimeout(() => {
+                                    bookCard.remove();
+                                    
+                                    // Eğer bu kategoride başka kitap kalmadıysa boş durum mesajını göster
+                                    const remainingBooks = activeTab.querySelectorAll('.book-card');
+                                    if (remainingBooks.length === 0) {
+                                        const emptyState = createEmptyState(activeTab.id);
+                                        activeTab.innerHTML = '';
+                                        activeTab.appendChild(emptyState);
+                                    }
+                                }, 300);
+                            }
+                        }
+                    }
+                    
+                } else {
+                    // Hata durumu
+                    if (statusButton) {
+                        statusButton.innerHTML = `<span class="status-icon">📚</span>`;
+                        statusButton.disabled = false;
+                    }
+                    
+                    alert('Kitap durumu güncellenirken bir hata oluştu: ' + (data.error || 'Bilinmeyen hata'));
+                }
+            })
+            .catch(error => {
+                console.error('Durum güncelleme hatası:', error);
+                
+                if (statusButton) {
+                    statusButton.innerHTML = `<span class="status-icon">📚</span>`;
+                    statusButton.disabled = false;
+                }
+                
+                alert('Kitap durumu güncellenirken bir hata oluştu.');
+            });
+        }
+        
+        // Durum değişikliğinden sonra istatistikleri güncelleme
+        function updateStatsAfterStatusChange(newStatus) {
+            // Önce yerel istatistikleri güncelle
+            const readingBooks = document.querySelectorAll('#reading-books .book-card').length;
+            const toReadBooks = document.querySelectorAll('#to-read-books .book-card').length;
+            const readBooks = document.querySelectorAll('#read-books .book-card').length;
+            
+            // İstatistikleri güncelle
+            document.querySelector('.stat-card:nth-child(2) .stat-number').textContent = readingBooks;
+            document.querySelector('.stat-card:nth-child(3) .stat-number').textContent = toReadBooks;
+            document.querySelector('.stat-card:nth-child(4) .stat-number').textContent = readBooks;
+            
+            // İstatistik kartlarına animasyon efekti ekle
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach(card => {
+                card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+                card.style.transform = 'scale(1.05)';
+                card.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.15)';
+                
+                setTimeout(() => {
+                    card.style.transform = '';
+                    card.style.boxShadow = '';
+                }, 500);
+            });
+            
+            // Sunucudan güncel verileri al ve istatistikleri senkronize et
+            setTimeout(() => {
+                refreshStats();
+            }, 1000); // 1 saniye sonra güncelle
+        }
+        
+        // Boş durum mesajı oluşturma
+        function createEmptyState(tabId) {
+            const emptyState = document.createElement('div');
+            emptyState.className = 'empty-state';
+            emptyState.style.display = 'none'; // Boş durum mesajları gizlendi
+            
+            return emptyState;
+        }
+        
+        // İstatistikleri güncelleme
+        function updateStats() {
+            const totalCount = document.querySelectorAll('#all-books .book-card').length;
+            const readingCount = document.querySelectorAll('#reading-books .book-card').length;
+            const toReadCount = document.querySelectorAll('#to-read-books .book-card').length;
+            const readCount = document.querySelectorAll('#read-books .book-card').length;
+            
+            document.querySelector('.stat-card:nth-child(1) .stat-number').textContent = totalCount;
+            document.querySelector('.stat-card:nth-child(2) .stat-number').textContent = readingCount;
+            document.querySelector('.stat-card:nth-child(3) .stat-number').textContent = toReadCount;
+            document.querySelector('.stat-card:nth-child(4) .stat-number').textContent = readCount;
+        }
+        
+        // Enter tuşu ile arama
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchBooks();
+            }
+        });
+        
+        // Sayfa yüklendiğinde çalışacak fonksiyonlar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Kitap durumu butonlarına hover efekti ekle
+            document.querySelectorAll('.btn-status').forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    const statusText = this.querySelector('.status-text');
+                    if (statusText) {
+                        statusText.classList.remove('d-none', 'd-md-inline');
+                        statusText.classList.add('d-inline');
+                    }
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    const statusText = this.querySelector('.status-text');
+                    if (statusText) {
+                        statusText.classList.add('d-none', 'd-md-inline');
+                        statusText.classList.remove('d-inline');
+                    }
+                });
+            });
+            
+            // Sekme değişikliğinde animasyon ekle
+            const tabButtons = document.querySelectorAll('.nav-tabs .nav-link');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-bs-target').substring(1);
+                    const targetPane = document.getElementById(targetId);
+                    
+                    if (targetPane) {
+                        const allBooks = targetPane.querySelectorAll('.book-card');
+                        allBooks.forEach((book, index) => {
+                            book.style.opacity = '0';
+                            book.style.transform = 'translateY(20px)';
+                            
+                            setTimeout(() => {
+                                book.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                                book.style.opacity = '1';
+                                book.style.transform = 'translateY(0)';
+                            }, 50 * index); // Her kitap için kademeli animasyon
+                        });
+                    }
+                });
+            });
+            
+            // Sayfa yüklendiğinde istatistikleri güncelle
+            updateStats();
+            
+            // Profil sayfasından gelen güncellemeleri dinle
+            setupProfileUpdateListener();
+        });
+        
+        // Profil sayfasından gelen güncellemeleri dinle
+        function setupProfileUpdateListener() {
+            window.addEventListener('message', function(event) {
+                if (event.data.type === 'BOOK_STATUS_UPDATED') {
+                    // Profil sayfasından kitap durumu güncellendi
+                    updateBookFromProfile(event.data.bookId, event.data.newStatus, event.data.statusIcon, event.data.statusText);
+                }
+            });
+        }
+        
+        // Profil sayfasından gelen güncellemeleri uygula
+        function updateBookFromProfile(bookId, newStatus, statusIcon, statusText) {
+            // Tüm kitaplık sekmelerindeki kitap kartlarını bul
+            const allBookCards = document.querySelectorAll('.book-card[data-book-id="' + bookId + '"]');
+            
+            allBookCards.forEach(bookCard => {
+                // Kitap durumunu güncelle
+                bookCard.className = `book-card status-${newStatus}`;
+                
+                // Durum butonunu güncelle
+                const statusButton = bookCard.querySelector('.btn-status');
+                if (statusButton) {
+                    statusButton.innerHTML = `
+                        <span class="status-icon">${statusIcon}</span>
+                        <span class="status-text d-none d-md-inline">${statusText}</span>
+                    `;
+                }
+                
+                // Dropdown menüdeki aktif durumu güncelle
+                const dropdownItems = bookCard.querySelectorAll('.dropdown-item');
+                dropdownItems.forEach(item => {
+                    if (parseInt(item.dataset.status) === newStatus) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+                
+                // Kitap kartının görünürlüğünü güncelle
+                updateBookVisibility(bookCard, newStatus);
+            });
+            
+            // İstatistikleri güncelle
+            setTimeout(() => {
+                refreshStats();
+            }, 500);
+        }
+        
+        // Kitap kartının görünürlüğünü güncelle
+        function updateBookVisibility(bookCard, newStatus) {
+            // Aktif sekme hangisi kontrol et
+            const activeTab = document.querySelector('.tab-pane.active');
+            if (!activeTab) return;
+            
+            const tabId = activeTab.id;
+            
+            // Eğer aktif sekme ile kitap durumu uyuşmuyorsa, kitabı gizle
+            if ((tabId === 'reading-books' && newStatus !== 2) || 
+                (tabId === 'to-read-books' && newStatus !== 1) || 
+                (tabId === 'read-books' && newStatus !== 3)) {
+                
+                if (activeTab !== document.getElementById('all-books')) {
+                    // Animasyonla kitabı kaldır
+                    bookCard.style.opacity = '0';
+                    bookCard.style.transform = 'scale(0.8)';
+                    
+                    setTimeout(() => {
+                        bookCard.remove();
+                        
+                        // Boş durum mesajını kontrol et
+                        checkEmptyState(tabId);
+                    }, 300);
+                }
+            }
+        }
+        
+        // Boş durum mesajını kontrol et
+        function checkEmptyState(tabId) {
+            const tabPane = document.getElementById(tabId);
+            if (tabPane && tabPane.querySelectorAll('.book-card').length === 0) {
+                // Boş durum mesajı göster
+                const emptyState = tabPane.querySelector('.empty-state');
+                if (emptyState) {
+                    emptyState.style.display = 'block';
+                }
+            }
+        }
+        
+        // Kitap durumu güncellendiğinde istatistikleri yenile
+        function refreshStats() {
+            // AJAX ile güncel verileri al
+            fetch('/Book/GetLibraryStats', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // İstatistikleri güncelle
+                    document.querySelector('.stat-card:nth-child(1) .stat-number').textContent = data.totalBooks;
+                    document.querySelector('.stat-card:nth-child(2) .stat-number').textContent = data.currentlyReadingCount;
+                    document.querySelector('.stat-card:nth-child(3) .stat-number').textContent = data.wantToReadCount;
+                    document.querySelector('.stat-card:nth-child(4) .stat-number').textContent = data.readCount;
+                }
+            })
+            .catch(error => {
+                console.error('İstatistikler alınırken hata:', error);
+            });
+        }
+    </script>
+}
+
+@functions {
+    string GetStatusIcon(Entities.ReadingStatus? status)
+    {
+        if (!status.HasValue)
+            return "📚";
+            
+        return status switch
+        {
+            Entities.ReadingStatus.WantToRead => "📚",
+            Entities.ReadingStatus.CurrentlyReading => "📖",
+            Entities.ReadingStatus.Read => "✅",
+            _ => "📚"
+        };
+    }
+    
+    string GetStatusText(Entities.ReadingStatus? status)
+    {
+        if (!status.HasValue)
+            return "";
+            
+        return status switch
+        {
+            Entities.ReadingStatus.WantToRead => "Okuyacaklarım",
+            Entities.ReadingStatus.CurrentlyReading => "Okuyorum",
+            Entities.ReadingStatus.Read => "Okuduklarım",
+            _ => ""
+        };
+    }
+}
+

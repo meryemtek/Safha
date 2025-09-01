@@ -1,0 +1,275 @@
+@model UI.Models.GoogleBooks.VolumesResponse
+
+@{
+    ViewData["Title"] = "Kitap Arama";
+}
+
+<div class="search-page-container">
+    <div class="search-header">
+        <h1>Kitap Arama</h1>
+        <div class="search-form">
+            <form method="get" action="/Book/Search" class="d-flex">
+                <input type="text" name="query" value="@ViewBag.Query" class="form-control search-input" placeholder="Kitap adı, yazar veya ISBN ara..." required />
+                <button type="submit" class="btn btn-primary search-button">Ara</button>
+            </form>
+        </div>
+    </div>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <i class="fas fa-exclamation-triangle"></i>
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            <i class="fas fa-check-circle"></i>
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (Model?.Items != null && Model.Items.Any())
+    {
+        <div class="search-results">
+            <div class="result-header">
+                <h2>Arama Sonuçları</h2>
+                <p>Toplam @Model.TotalItems sonuç bulundu</p>
+            </div>
+
+            <div class="book-list">
+                @foreach (var book in Model.Items)
+                {
+                    <div class="book-card">
+                        <div class="book-image">
+                            <img src="@(book.VolumeInfo.ImageLinks?.Thumbnail ?? "/image/book-cover1.jpg")" alt="@book.VolumeInfo.Title" />
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">@book.VolumeInfo.Title</h3>
+                            @if (!string.IsNullOrEmpty(book.VolumeInfo.Subtitle))
+                            {
+                                <h4 class="book-subtitle">@book.VolumeInfo.Subtitle</h4>
+                            }
+                            <p class="book-author">
+                                @if (book.VolumeInfo.Authors != null && book.VolumeInfo.Authors.Any())
+                                {
+                                    @string.Join(", ", book.VolumeInfo.Authors)
+                                }
+                                else
+                                {
+                                    <span>Bilinmeyen Yazar</span>
+                                }
+                            </p>
+                            <p class="book-publisher">
+                                @if (!string.IsNullOrEmpty(book.VolumeInfo.Publisher))
+                                {
+                                    <span>@book.VolumeInfo.Publisher</span>
+                                    if (!string.IsNullOrEmpty(book.VolumeInfo.PublishedDate))
+                                    {
+                                        <span> - @book.VolumeInfo.PublishedDate</span>
+                                    }
+                                }
+                            </p>
+                            <p class="book-description">
+                                @if (!string.IsNullOrEmpty(book.VolumeInfo.Description))
+                                {
+                                    @(book.VolumeInfo.Description.Length > 200 
+                                        ? book.VolumeInfo.Description.Substring(0, 200) + "..." 
+                                        : book.VolumeInfo.Description)
+                                }
+                            </p>
+                            <div class="book-meta">
+                                @if (book.VolumeInfo.AverageRating > 0)
+                                {
+                                    <span class="meta-item"><i class="icon-star"></i> @book.VolumeInfo.AverageRating</span>
+                                }
+                                @if (book.VolumeInfo.PageCount > 0)
+                                {
+                                    <span class="meta-item"><i class="icon-book"></i> @book.VolumeInfo.PageCount sayfa</span>
+                                }
+                            </div>
+                            <div class="book-actions">
+                                <a href="/Book/Detail/@book.Id" class="btn btn-primary">Detaylar</a>
+                                <div class="btn-group">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="statusDropdown@(book.Id)" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Kitaplığa Ekle
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="statusDropdown@(book.Id)">
+                                        <li>
+                                            <form method="post" action="/Book/AddToLibrary">
+                                                <input type="hidden" name="googleBookId" value="@book.Id" />
+                                                <input type="hidden" name="readingStatus" value="1" />
+                                                @Html.AntiForgeryToken()
+                                                <button type="submit" class="dropdown-item">📚 Okuyacaklarım</button>
+                                            </form>
+                                        </li>
+                                        <li>
+                                            <form method="post" action="/Book/AddToLibrary">
+                                                <input type="hidden" name="googleBookId" value="@book.Id" />
+                                                <input type="hidden" name="readingStatus" value="2" />
+                                                @Html.AntiForgeryToken()
+                                                <button type="submit" class="dropdown-item">📖 Okuyorum</button>
+                                            </form>
+                                        </li>
+                                        <li>
+                                            <form method="post" action="/Book/AddToLibrary">
+                                                <input type="hidden" name="googleBookId" value="@book.Id" />
+                                                <input type="hidden" name="readingStatus" value="3" />
+                                                @Html.AntiForgeryToken()
+                                                <button type="submit" class="dropdown-item">✅ Okuduklarım</button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            @if (ViewBag.TotalPages > 1)
+            {
+                <div class="pagination">
+                    @if (ViewBag.CurrentPage > 1)
+                    {
+                        <a href="/Book/Search?query=@ViewBag.Query&page=@(ViewBag.CurrentPage - 1)" class="page-link">&laquo; Önceki</a>
+                    }
+
+                    @for (int i = Math.Max(1, ViewBag.CurrentPage - 2); i <= Math.Min(ViewBag.TotalPages, ViewBag.CurrentPage + 2); i++)
+                    {
+                        if (i == ViewBag.CurrentPage)
+                        {
+                            <span class="page-link active">@i</span>
+                        }
+                        else
+                        {
+                            <a href="/Book/Search?query=@ViewBag.Query&page=@i" class="page-link">@i</a>
+                        }
+                    }
+
+                    @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                    {
+                        <a href="/Book/Search?query=@ViewBag.Query&page=@(ViewBag.CurrentPage + 1)" class="page-link">Sonraki &raquo;</a>
+                    }
+                </div>
+            }
+        </div>
+    }
+    else if (!string.IsNullOrEmpty(ViewBag.Query))
+    {
+        <div class="no-results">
+            <h3>Sonuç Bulunamadı</h3>
+            <p>"@ViewBag.Query" için arama sonucu bulunamadı.</p>
+            <p>Farklı anahtar kelimeler deneyebilir veya daha genel terimler kullanabilirsiniz.</p>
+        </div>
+    }
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/book-search.css" />
+}
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Kitap ekleme formlarına AJAX işlemi ekle
+            const addBookForms = document.querySelectorAll('.book-actions form');
+            
+            addBookForms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Form verilerini al
+                    const formData = new FormData(form);
+                    const googleBookId = formData.get('googleBookId');
+                    const readingStatus = formData.get('readingStatus');
+                    const token = form.querySelector('input[name="__RequestVerificationToken"]').value;
+                    
+                    // Butonun içeriğini yükleniyor animasyonuyla değiştir
+                    const submitButton = form.querySelector('button');
+                    const originalButtonText = submitButton.innerHTML;
+                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Ekleniyor...';
+                    submitButton.disabled = true;
+                    
+                    // AJAX isteği gönder
+                    fetch('/Book/AddToLibrary', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                            'X-Requested-With': 'XMLHttpRequest'
+                        },
+                        body: `googleBookId=${googleBookId}&readingStatus=${readingStatus}&__RequestVerificationToken=${token}`
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            // Başarılı ekleme
+                            showAlert('success', data.message);
+                            
+                            // Kitap kartını güncelle
+                            const bookCard = form.closest('.book-card');
+                            bookCard.classList.add('added-to-library');
+                            
+                            // Tüm butonları devre dışı bırak
+                            const allButtons = bookCard.querySelectorAll('button');
+                            allButtons.forEach(btn => {
+                                btn.disabled = true;
+                            });
+                            
+                            // Dropdown butonunu güncelle
+                            const dropdownButton = bookCard.querySelector('.dropdown-toggle');
+                            if (dropdownButton) {
+                                dropdownButton.innerHTML = `${data.statusIcon} ${data.statusText}`;
+                                dropdownButton.classList.remove('btn-secondary');
+                                dropdownButton.classList.add('btn-success');
+                                dropdownButton.disabled = true;
+                            }
+                            
+                            // 2 saniye sonra kitaplık sayfasına yönlendir
+                            setTimeout(() => {
+                                window.location.href = '/Book/MyBooks';
+                            }, 2000);
+                        } else {
+                            // Hata durumu
+                            showAlert('danger', data.message);
+                            submitButton.innerHTML = originalButtonText;
+                            submitButton.disabled = false;
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Kitap ekleme hatası:', error);
+                        showAlert('danger', 'Kitap eklenirken bir hata oluştu.');
+                        submitButton.innerHTML = originalButtonText;
+                        submitButton.disabled = false;
+                    });
+                });
+            });
+        });
+        
+        // Bildirim gösterme fonksiyonu
+        function showAlert(type, message) {
+            // Varsa önceki bildirimleri kaldır
+            const existingAlerts = document.querySelectorAll('.alert');
+            existingAlerts.forEach(alert => alert.remove());
+            
+            // Yeni bildirim oluştur
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+            alertDiv.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-triangle'}"></i> ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            `;
+            
+            // Sayfanın başına ekle
+            const container = document.querySelector('.search-page-container');
+            container.insertBefore(alertDiv, container.firstChild);
+            
+            // 3 saniye sonra otomatik kapat
+            setTimeout(() => {
+                alertDiv.remove();
+            }, 3000);
+        }
+    </script>
+}

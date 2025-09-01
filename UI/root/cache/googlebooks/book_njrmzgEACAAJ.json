@@ -1,0 +1,37 @@
+{
+  "bookId": "njrmzgEACAAJ",
+  "cachedAt": "2025-08-21T11:32:07.8314266Z",
+  "book": {
+    "id": "njrmzgEACAAJ",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/njrmzgEACAAJ",
+    "volumeInfo": {
+      "title": "Iyi Ki",
+      "subtitle": "Bir G\u00F6n\u00FCl Insani Dogan C\u00FCceloglu ile Anilar",
+      "authors": [
+        "Yildiz Hacievliyagil C\u00FCceloglu"
+      ],
+      "publisher": "Kronik Kitap",
+      "publishedDate": "2022-02",
+      "description": "Bu kitap, Do\u011Fan C\u00FCcelo\u011Flu\u0027nun \u00E7ok \u00F6nem verdi\u011Fi \u0022de\u011Ferler listesi\u0022ni \u0022hocan\u0131n dedi\u011Fini yap, yapt\u0131\u011F\u0131n\u0131 yapma\u0022 s\u00F6z\u00FCn\u00FCn aksine, hayat\u0131na uygulamas\u0131na \u015Fahit olan ve bizzat onu tan\u0131yan ki\u015Filerin an\u0131lar\u0131ndan olu\u015Fuyor. Onun eliyle yaz\u0131p masas\u0131na yap\u0131\u015Ft\u0131rd\u0131\u011F\u0131 de\u011Ferler listesi; 1. Merak duygusu 2. Hakkaniyet 3. D\u00FCr\u00FCstl\u00FCk 4. Sorumluluk 5. Halden anlamak 6. Sayg\u0131-S\u0131n\u0131rlara 7. Sevgi 8. \u0130\u015F birli\u011Fi -- publisher\u0027s web- site.",
+      "pageCount": 296,
+      "categories": null,
+      "averageRating": 0,
+      "ratingsCount": 0,
+      "imageLinks": null,
+      "language": "tr",
+      "previewLink": "http://books.google.com.tr/books?id=njrmzgEACAAJ\u0026hl=\u0026source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=njrmzgEACAAJ\u0026source=gbs_api",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_10",
+          "identifier": "6258431186"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9786258431186"
+        }
+      ]
+    }
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes/njrmzgEACAAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

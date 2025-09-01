@@ -1,0 +1,44 @@
+{
+  "bookId": "BFl9DwAAQBAJ",
+  "cachedAt": "2025-08-18T14:55:42.6484608Z",
+  "book": {
+    "id": "BFl9DwAAQBAJ",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/BFl9DwAAQBAJ",
+    "volumeInfo": {
+      "title": "Su\u00E7 ve Ceza",
+      "subtitle": "",
+      "authors": [
+        "Fyodor Dostoyevski "
+      ],
+      "publisher": "YORDAM K\u0130TAP",
+      "publishedDate": "2019-11-15",
+      "description": "\u003Cp\u003E\u201CHemen \u015Fimdi bir \u015Feyler yapmak gerek,\u201D diye s\u00F6ylenir Raskolnikov. \u201CNe olursa olsun bir \u015Feyler yapmak i\u00E7in karar vermek ya da b\u00FCsb\u00FCt\u00FCn ya\u015Famaktan vazge\u00E7mek...\u201D\u003C/p\u003E\u003Cp\u003EYoksul ve onurlu Raskolnikov\u2019un tavan aras\u0131ndaki \u00F6\u011Frenci odas\u0131nda ya\u015Fad\u0131\u011F\u0131 ikilem ve sonras\u0131nda tasarlad\u0131\u011F\u0131 cinayet Rusya\u2019da bir f\u0131rt\u0131nan\u0131n kopmas\u0131na neden olmu\u015Ftu.\u003C/p\u003E\u003Cp\u003ESu\u00E7 ve Ceza\u00A0farkl\u0131\u00A0\u00A0dillere \u00E7evrildi\u011Finde, yazar\u0131 Dostoyevski\u2019yi d\u00FCnya edebiyat\u0131n\u0131n zirvesine ta\u015F\u0131d\u0131. Y\u00FCz elli y\u0131ll\u0131k bu ba\u015Fyap\u0131t h\u00E2l\u00E2 en \u00E7ok sevilen ve en \u00E7ok okunan romanlar aras\u0131nda. \u00C7\u00FCnk\u00FC zaman,\u00A0Su\u00E7 ve Ceza\u2019n\u0131n ele ald\u0131\u011F\u0131 meseleleri eskitemedi.\u003C/p\u003E\u003Cp\u003E\u0130yi ile k\u00F6t\u00FC aras\u0131ndaki sava\u015F bug\u00FCn de s\u00FCr\u00FCyor ve bir zamanlar Raskolnikov\u2019un yapt\u0131\u011F\u0131 gibi, modern d\u00FCnyada insan olman\u0131n anlam\u0131 ve eylemlerimizin ahlaki sonu\u00E7lar\u0131 \u00FCzerinde d\u00FC\u015F\u00FCnmeyi s\u00FCrd\u00FCr\u00FCyoruz. S\u00F6z\u00FCm ona y\u00FCce bir ama\u00E7 u\u011Fruna her t\u00FCrl\u00FC fenal\u0131\u011F\u0131, en ufak bir pi\u015Fmanl\u0131k duymadan yapmaya haz\u0131r olanlar\u0131 g\u00F6rd\u00FCk\u00E7e sahici bir y\u00FCzle\u015Fmenin de\u011Ferini bir kez daha kavr\u0131yoruz.\u00A0\u00A0\u00A0\u003C/p\u003E\u003Cp\u003EYordam Edebiyat,\u00A0Su\u00E7 ve Ceza\u2019y\u0131 usta \u00E7evirmen Hasan \u00C2li Ediz\u2019in Rus\u00E7a asl\u0131ndan yapt\u0131\u011F\u0131 \u00E7eviriyle sunuyor.\u003C/p\u003E",
+      "pageCount": 688,
+      "categories": [
+        "Fiction / Literary",
+        "Literary Collections / Russian \u0026 Former Soviet Union",
+        "Drama / Russian \u0026 Former Soviet Union"
+      ],
+      "averageRating": 0,
+      "ratingsCount": 0,
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/publisher/content?id=BFl9DwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026imgtk=AFLRE70fflQcIGnAo-gj8XCL6w5xgcv52NmQIm8S5vlR1stqMddlzL2FjWX3tbximzZNIhetB5QqIyiC3mZst5wkwrZ_iIcg9u2-t7iPBAkUV805nqJsDe1zAXcF7eX1s-OZJ6c6yzgQ\u0026source=gbs_api",
+        "thumbnail": "http://books.google.com/books/publisher/content?id=BFl9DwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026imgtk=AFLRE73dh_k9gArtE7vqR1qG40G6bkGOMCIRvM2vdM__7pSEEPbKHcrF8vXcwpiKfqrM2zjRIF-1m7AAIim-GKz_58i2XPp0xxWVocoaPHzR06eAo9O_DXZLfrAShIJoY27RVLbo8Zcu\u0026source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com.tr/books?id=BFl9DwAAQBAJ\u0026hl=\u0026source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=BFl9DwAAQBAJ\u0026source=gbs_api",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_10",
+          "identifier": "6051721517"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9786051721514"
+        }
+      ]
+    }
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes/BFl9DwAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

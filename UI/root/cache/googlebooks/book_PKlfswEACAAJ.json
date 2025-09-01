@@ -1,0 +1,28 @@
+{
+  "bookId": "PKlfswEACAAJ",
+  "cachedAt": "2025-08-18T11:37:10.182749Z",
+  "book": {
+    "id": "PKlfswEACAAJ",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/PKlfswEACAAJ",
+    "volumeInfo": {
+      "title": "Yoldaki i\u015Faretler",
+      "subtitle": "",
+      "authors": [
+        "Seyyid Kutub"
+      ],
+      "publisher": "Hicret Yay\u0131nlar\u0131",
+      "publishedDate": "1977",
+      "description": "",
+      "pageCount": 0,
+      "categories": null,
+      "averageRating": 0,
+      "ratingsCount": 0,
+      "imageLinks": null,
+      "language": "tr",
+      "previewLink": "http://books.google.com.tr/books?id=PKlfswEACAAJ\u0026hl=\u0026source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=PKlfswEACAAJ\u0026source=gbs_api",
+      "industryIdentifiers": null
+    }
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes/PKlfswEACAAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

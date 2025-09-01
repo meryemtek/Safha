@@ -1,0 +1,372 @@
+{
+  "query": "a\u015Fk\u0131n g\u00F6zya\u015Flar\u0131",
+  "cachedAt": "2025-08-19T07:08:30.210061Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "zxagEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/zxagEAAAQBAJ",
+        "volumeInfo": {
+          "title": "A\u015EKIN G\u00D6ZYA\u015ELARI",
+          "subtitle": "",
+          "authors": [
+            "Halil \u015Eim\u015Fek"
+          ],
+          "publisher": "T\u0131ls\u0131m Yay\u0131nevi",
+          "publishedDate": "",
+          "description": "Elimizdeki kitab\u0131n yazar\u0131 Halil \u015Eim\u015Fek\u2019i (Bekta\u015F) k\u00F6y\u00FC Ulup\u0131nar\u2019da \u00F6\u011Fretmenlik yapt\u0131\u011F\u0131m y\u0131llarda tan\u0131d\u0131m. Bir a\u011Fabey olarak ili\u015Fkimiz samimi olarak hep devam etti. K\u00F6yde oldu\u011Fu gibi \u0130stanbul\u2019da da dostlu\u011Fumuz devam etti. Halil \u015Eim\u015Fek (Bekta\u015F): Konya ili, Bozk\u0131r il\u00E7esi Ulup\u0131nar k\u00F6y\u00FC do\u011Fumludur. \u00C7ocuklu\u011Fu k\u00F6y\u00FCnde ge\u00E7mi\u015Ftir. \u0130lkokulu k\u00F6y\u00FCnde \u00FC\u00E7\u00FCnc\u00FC s\u0131n\u0131fa kadar e\u011Fitmenli bir okulda okumu\u015Ftur. Ba\u015Fka bir e\u011Fitim alamam\u0131\u015Ft\u0131r. \u00C7obanl\u0131k, \u00E7ift\u00E7ilik, Ege\u2019de pamuk \u00E7apas\u0131 \u0131rgatl\u0131\u011F\u0131, \u0130stanbul\u2019da seyyar sat\u0131c\u0131l\u0131k, Almanya-Fransa gibi yurt d\u0131\u015F\u0131nda i\u015F\u00E7ilik, ayakkab\u0131 tamircili\u011Fi yapm\u0131\u015Ft\u0131r. Evinin ihtiyac\u0131n\u0131 kar\u015F\u0131lamak ve kimseye muhta\u00E7 olmamak i\u00E7in i\u015F se\u00E7imi yapmam\u0131\u015F. \u00D6n\u00FCne \u00E7\u0131kan her i\u015Fi ba\u015Far\u0131 ile yapm\u0131\u015Ft\u0131r. Yazar\u0131m\u0131z; \u015Fair, halk bilgesi, n\u00FCktedan, esprili, arif ki\u015Fi, ho\u015F sohbet birisidir. Yazar\u0131m\u0131z\u0131 belirtti\u011Fim vas\u0131flar\u0131yla tan\u0131d\u0131m. Hayat\u0131mda tan\u0131d\u0131\u011F\u0131m ki\u015Filer aras\u0131nda ayr\u0131 bir yeri oldu. \u015Eiirler, f\u0131kralar yazd\u0131\u011F\u0131n\u0131; masallar anlatt\u0131\u011F\u0131n\u0131 biliyordum. Bir g\u00FCn konu\u015Furken \u201CBu s\u00F6ylediklerini, yazd\u0131klar\u0131n\u0131 toparla, kitap olarak bast\u0131r, gelece\u011Fe bir miras\u0131n kals\u0131n\u201D dedim. \u00DCr\u00FCnlerini iki b\u00FCy\u00FCk defter, y\u00FCz dosya ka\u011F\u0131d\u0131 dolusu olarak bana getirdi. \u201CBunlar\u0131 d\u00FCzenleyiver, bast\u0131ral\u0131m,\u201D dedi.",
+          "pageCount": 273,
+          "categories": [
+            "Juvenile Nonfiction"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=zxagEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=zxagEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=zxagEAAAQBAJ\u0026pg=PA3\u0026dq=a%C5%9Fk%C4%B1n\u002Bg%C3%B6zya%C5%9Flar%C4%B1\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=zxagEAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786057129284"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6057129288"
+            }
+          ]
+        }
+      },
+      {
+        "id": "qmYUEQAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/qmYUEQAAQBAJ",
+        "volumeInfo": {
+          "title": "A\u015EKIN G\u00D6ZYA\u015ELARI",
+          "subtitle": "",
+          "authors": [
+            "Cemalettin Hakverdi"
+          ],
+          "publisher": "Crab Publishing_301340226",
+          "publishedDate": "2024-07-16",
+          "description": "A\u015EK\u2026 \u0130nsanl\u0131k tarihi kadar eski ve kadim kavram. \u0130nsan nesli varl\u0131\u011F\u0131n\u0131 devam ettirdi\u011Fi s\u00FCrece de hayat\u0131m\u0131z\u0131 anlamland\u0131rmaya ve de\u011Fer katmaya devam edecek. \u015E\u0130\u0130R\u2026 Sevgiliye kar\u015F\u0131 hissedilen a\u015Fk\u0131 ifade etmede en s\u0131k ba\u015Fvurulan y\u00F6ntem. \u015Eiirler, g\u00F6n\u00FCl terc\u00FCman\u0131 olarak ak\u0131t\u0131rlar i\u00E7imize her \u015Feyi... Bu i\u00E7e d\u00F6n\u00FCk ak\u0131\u015Fta ve \u00F6z\u00FCmseme sonunda ortaya \u00E7\u0131kan erimede d\u00FC\u015F\u00FCncelere kar\u015F\u0131 tek savunma arg\u00FCman\u0131d\u0131r \u015Fiirler. \u015EA\u0130R\u2026 Herkesin harc\u0131 de\u011Fil \u015Fair olmak. A\u015Fka dair g\u00F6nl\u00FCn\u00FCn derinliklerinden kopup gelenleri dile getirirken d\u00FC\u015F\u00FCncenin hi\u00E7bir zaman duygular\u0131n\u0131n \u00F6n\u00FCne ge\u00E7memesi gerekir \u015Fairin. Kitab\u0131n sayfalar\u0131nda gezinirken bu konuda g\u00F6sterilen \u00F6zen sat\u0131r aralar\u0131nda hep kendini hissettiriyor. Ama duygunun da bizi bizden koparacak h\u00E2le d\u00F6n\u00FC\u015Fmemesini temenni etme arzusu da her daim hissedilmekte. Kitapta yer alan \u015Fiirler okundu\u011Funda Yunus\u2019un, Mevlana\u2019n\u0131n yolunda \u201Cbenim dinim a\u015Fkt\u0131r\u201D, \u201Cben sevi/sevgi i\u00E7in geldim, benim i\u015Fim davi/dava de\u011Fildir\u201D diyen bir k\u00FClt\u00FCr\u00FCn insan\u0131n\u0131n kaleminden damlad\u0131\u011F\u0131 hep belirgin. Asl\u0131nda \u015Fair; duyup hisseden ancak kelimelere d\u00F6kemeyenlere adeta terc\u00FCman olma sorumlulu\u011Funu da i\u00E7 d\u00FCnyas\u0131nda hep bar\u0131nd\u0131ran bir g\u00F6n\u00FCl insan\u0131 de\u011Fil midir? \u0130\u015Fte \u015Fiirlerin kaleme al\u0131n\u0131\u015F\u0131nda sadece kendisi i\u00E7in de\u011Fil okuyucular\u0131n ruhuna merhem olmas\u0131n\u0131, onlar\u0131n d\u00FC\u015F\u00FCnce iklimlerini derun\u00EE s\u00F6yle\u015Fmelerle \u201Ca\u015Fk\u201D duygusu ba\u011Flam\u0131nda zenginle\u015Ftirmesine de gayret g\u00F6steriyor her m\u0131sra\u0131nda. Baz\u0131 m\u0131sralarda zaman zaman anla\u015F\u0131lmas\u0131 g\u00FC\u00E7 olgular da yok de\u011Fil ama Ahmet Ha\u015Fim, \u2018Piyale\u2019 kitab\u0131nda poetikas\u0131nda tam da buna i\u015Faret ederek: \u201C\u015Eiir anla\u015F\u0131lmak i\u00E7in de\u011Fil, duyulmak i\u00E7indir\u201D demiyor muydu, baz\u0131 gizemleri bar\u0131nd\u0131rd\u0131\u011F\u0131na i\u015Faret ederek. Bu kitab\u0131, hayat\u0131n\u0131n her y\u00F6n\u00FCn\u00FC anlamland\u0131ran, s\u00FCk\u00FBnet ve dinginli\u011Fi i\u00E7ine monte eden hayat arkada\u015F\u0131na ithaf edilmesi ne kadar anlaml\u0131. \u0130lk \u015Fiirden sonuncusuna kadar her m\u0131sras\u0131nda ona olan a\u015Fk\u0131n\u0131 ve yer yer hasretini ifade ediyor. Onun, y\u00FCre\u011Finin derinliklerinde olu\u015Fturdu\u011Fu vaha ile i\u00E7indeki bozk\u0131rlar\u0131 ye\u015Fertmesiyle bu \u015Fiirlerini kaleme almas\u0131nda ilham kayna\u011F\u0131 oldu\u011Fu apa\u00E7\u0131k. Bu co\u015Fkunlu\u011Fa katk\u0131da bulunan bir g\u00FCzel \u00E7ehre daha var ki o da hayat arkada\u015F\u0131yla birlikte koyulduklar\u0131 bu uzun yolculukta ya\u015Famlar\u0131na renk katan biricik k\u0131zlar\u0131 Zehra. Tertemiz kalbinde biriktirdi\u011Fi sevgi damlalar\u0131 ile bu \u015Fiirlerin \u2018a\u015Fk\u0131n g\u00F6zya\u015F\u0131 damlac\u0131klar\u0131\u2019 haline gelmesine yard\u0131m etmi\u015Fti \u00E7\u00FCnk\u00FC o da. Bazen h\u00FCz\u00FCn bazen hasret ve bazen sevin\u00E7 duygular\u0131yla y\u00FCkl\u00FC\u2026 His ve hayal d\u00FCnyas\u0131nda ya\u015Fad\u0131\u011F\u0131 duygular\u0131n sadece bir b\u00F6l\u00FCm\u00FCn\u00FC s\u0131\u011Fd\u0131rabildi bu kitab\u0131n s\u0131n\u0131rl\u0131 sayfalar\u0131 aras\u0131na. \u0130nan\u0131yorum ki arkas\u0131 gelecek ve bizleri yeni \u015Fiir kitaplar\u0131yla bulu\u015Fturacak en yak\u0131n zamanda. De\u011Ferli dost , g\u00F6nl\u00FCne sa\u011Fl\u0131k\u2026 Mehmet Hayalo\u011Flu",
+          "pageCount": 258,
+          "categories": [
+            "Poetry"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=qmYUEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=qmYUEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=qmYUEQAAQBAJ\u0026pg=PT1\u0026dq=a%C5%9Fk%C4%B1n\u002Bg%C3%B6zya%C5%9Flar%C4%B1\u0026hl=\u0026cd=2\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=qmYUEQAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9798224776900"
+            }
+          ]
+        }
+      },
+      {
+        "id": "kTnuswEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/kTnuswEACAAJ",
+        "volumeInfo": {
+          "title": "Sems Tebrizi 1",
+          "subtitle": "Askin G\u00F6zyaslari 1",
+          "authors": [
+            "Sinan Yagmur"
+          ],
+          "publisher": "",
+          "publishedDate": "2000",
+          "description": "",
+          "pageCount": 239,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": null,
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=kTnuswEACAAJ\u0026dq=a%C5%9Fk%C4%B1n\u002Bg%C3%B6zya%C5%9Flar%C4%B1\u0026hl=\u0026cd=3\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=kTnuswEACAAJ\u0026dq=a%C5%9Fk%C4%B1n\u002Bg%C3%B6zya%C5%9Flar%C4%B1\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "605514770X"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9786055147709"
+            }
+          ]
+        }
+      },
+      {
+        "id": "xbXgYgEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/xbXgYgEACAAJ",
+        "volumeInfo": {
+          "title": "A\u015Fk\u0131n g\u00F6zya\u015Flar\u0131",
+          "subtitle": "",
+          "authors": [
+            "Sinan Ya\u011Fmur"
+          ],
+          "publisher": "",
+          "publishedDate": "2010",
+          "description": "",
+          "pageCount": 240,
+          "categories": [
+            "Biographical fiction"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=xbXgYgEACAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=xbXgYgEACAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=xbXgYgEACAAJ\u0026dq=a%C5%9Fk%C4%B1n\u002Bg%C3%B6zya%C5%9Flar%C4%B1\u0026hl=\u0026cd=4\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=xbXgYgEACAAJ\u0026dq=a%C5%9Fk%C4%B1n\u002Bg%C3%B6zya%C5%9Flar%C4%B1\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "6051130292"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9786051130293"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2DtNkKUDij8C",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/2DtNkKUDij8C",
+        "volumeInfo": {
+          "title": "Ya\u015Famak hat\u0131rlamakt\u0131r",
+          "subtitle": "an\u0131lar kitab\u0131",
+          "authors": [
+            "\u00DClk\u00FC Tamer"
+          ],
+          "publisher": "Kitap Yayinevi Ltd.",
+          "publishedDate": "2005",
+          "description": "",
+          "pageCount": 346,
+          "categories": [
+            "Turkish fiction"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=2DtNkKUDij8C\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=2DtNkKUDij8C\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=2DtNkKUDij8C\u0026pg=PA49\u0026dq=a%C5%9Fk%C4%B1n\u002Bg%C3%B6zya%C5%9Flar%C4%B1\u0026hl=\u0026cd=5\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=2DtNkKUDij8C\u0026dq=a%C5%9Fk%C4%B1n\u002Bg%C3%B6zya%C5%9Flar%C4%B1\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9789758704958"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "9758704958"
+            }
+          ]
+        }
+      },
+      {
+        "id": "g3JWDwAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/g3JWDwAAQBAJ",
+        "volumeInfo": {
+          "title": "\u0130lahi A\u015Fk Tek ve Ger\u00E7ek Din",
+          "subtitle": "",
+          "authors": [
+            "Murat Uz"
+          ],
+          "publisher": "Murat Uz",
+          "publishedDate": "2018-02",
+          "description": "\u0130lahi A\u015Fk ve \u0130lahi bilgeli\u011Fe ula\u015Fmak i\u00E7in; https://www.dr.com.tr/Kitap/Ilahi-Ask-Tek-Ve-Gercek-Din/Edebiyat/Siir/Turk-Siiri/urunno=0001747105001",
+          "pageCount": 44,
+          "categories": [
+            "Philosophy"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=g3JWDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=g3JWDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=g3JWDwAAQBAJ\u0026pg=PT13\u0026dq=a%C5%9Fk%C4%B1n\u002Bg%C3%B6zya%C5%9Flar%C4%B1\u0026hl=\u0026cd=6\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=g3JWDwAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786052966112"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6052966114"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ObpnDQAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/ObpnDQAAQBAJ",
+        "volumeInfo": {
+          "title": "A\u015Fk\u0131n Suskunlu\u011Fu",
+          "subtitle": "",
+          "authors": [
+            "Venhar Sa\u011F\u0131ro\u011Flu"
+          ],
+          "publisher": "Nesil Bas\u0131m Yay\u0131n G\u0131da Ticaret ve Sanayi A.\u015E",
+          "publishedDate": "2016-10-31",
+          "description": "@page { margin: 2cm } p { margin-bottom: 0.25cm; direction: ltr; color: #000000; line-height: 120%; widows: 2; orphans: 2 } p.western { font-family: \u0022Times New Roman\u0022, serif; font-size: 12pt; so-language: tr-TR } p.cjk { font-family: \u0022Times New Roman\u0022, serif; font-size: 12pt; so-language: zh-CN } p.ctl { font-family: \u0022Times New Roman\u0022, serif; font-size: 12pt; so-language: ar-SA } An\u0131lar\u0131m\u0131z\u0131n bir k\u0131sm\u0131 haf\u0131zam\u0131z\u0131n gizli k\u00F6\u015Felerinde saklanm\u0131\u015F gibi dursa da, hayatta kar\u015F\u0131la\u015Ft\u0131\u011F\u0131m\u0131z birtak\u0131m olaylar bu gizli hazinelerin yeniden can bulmas\u0131na vesile olur. Murat, ge\u00E7mi\u015Fte zihnine yerle\u015Fen ama bir t\u00FCrl\u00FC a\u00E7\u0131\u011Fa \u00E7\u0131karamad\u0131\u011F\u0131 baz\u0131 an\u0131lar\u0131n pe\u015Fine d\u00FC\u015Fer. S\u00FCrprizlerle dolu bu an\u0131 yolculu\u011Funda Murat\u2019\u0131n en \u00F6nde gelen ilham kayna\u011F\u0131, rahmetli Ali dedesi ve k\u00FC\u00E7\u00FCkken ya\u015Fad\u0131\u011F\u0131 ah\u015Fap konakt\u0131r. An\u0131lar\u0131n\u0131 tazeleme yolculu\u011Funda Ali dedenin ruhaniyeti her daim Murat\u2019a bilgelik ve hikmet dolu rehberli\u011Fine devam edecektir. Ali dede ile G\u00FClnihal\u2019in zaman\u0131n \u00F6tesine ge\u00E7en vefa ve sadakat dolu a\u015Fk\u0131 da g\u00F6n\u00FCl d\u00FCnyas\u0131na \u0131\u015F\u0131k olacakt\u0131r. Murat\u2019\u0131n \u201CYine Bir G\u00FClnihal\u201D \u015Fark\u0131s\u0131yla k\u0131v\u0131lc\u0131mlanan bu an\u0131 yolculu\u011Funda \u0130stanbul\u2019a ve \u00F6zellikle Ey\u00FCp Sultan semtine dair bir\u00E7ok bilinmeyeni ke\u015Ffedece\u011Finiz gibi, kalbe ve ruha a\u015Fk sa\u011Fanaklar\u0131n\u0131 besteleriyle ya\u011Fd\u0131ran \u0130smail Dede Efendi, Zek\u00E2i Dede Efendi gibi g\u00F6n\u00FCl ehli Allah dostlar\u0131n\u0131 da tan\u0131ma f\u0131rsat\u0131 bulacaks\u0131n\u0131z. Bu kitapta, s\u0131k\u0131nt\u0131l\u0131 ruh h\u00E2llerinin \u00E7epe\u00E7evre sard\u0131\u011F\u0131 zamanlarda \u015F\u00FCkretmenin ne kadar b\u00FCy\u00FCk bir teselli kayna\u011F\u0131 oldu\u011Funu g\u00F6recek, s\u0131k\u0131nt\u0131 imtihan\u0131n\u0131 sab\u0131r \u00E7i\u00E7e\u011Fiyle s\u00FCslemenin tatl\u0131l\u0131\u011F\u0131n\u0131 hissedeceksiniz.",
+          "pageCount": 109,
+          "categories": [
+            "Fiction"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=ObpnDQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=ObpnDQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=ObpnDQAAQBAJ\u0026pg=PT4\u0026dq=a%C5%9Fk%C4%B1n\u002Bg%C3%B6zya%C5%9Flar%C4%B1\u0026hl=\u0026cd=7\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=ObpnDQAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786051831923"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6051831924"
+            }
+          ]
+        }
+      },
+      {
+        "id": "PYq1ngEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/PYq1ngEACAAJ",
+        "volumeInfo": {
+          "title": "Askin G\u00F6zyaslari 1",
+          "subtitle": "Tebrizli Sems Sesli Kitap",
+          "authors": [
+            "Sinan Yagmur"
+          ],
+          "publisher": "",
+          "publishedDate": "2011-12",
+          "description": "",
+          "pageCount": 0,
+          "categories": [
+            "Mevleviyeh"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=PYq1ngEACAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=PYq1ngEACAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=PYq1ngEACAAJ\u0026dq=a%C5%9Fk%C4%B1n\u002Bg%C3%B6zya%C5%9Flar%C4%B1\u0026hl=\u0026cd=8\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=PYq1ngEACAAJ\u0026dq=a%C5%9Fk%C4%B1n\u002Bg%C3%B6zya%C5%9Flar%C4%B1\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "6055571463"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9786055571467"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Bg6SDwAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/Bg6SDwAAQBAJ",
+        "volumeInfo": {
+          "title": "\u00D6zlemek Sevmekse, \u00D6zl\u00FCyorum Seni",
+          "subtitle": "",
+          "authors": [
+            "Cengiz \u00C7etik"
+          ],
+          "publisher": "eKitap Projesi \u0026 Cheapest Books",
+          "publishedDate": "2018-07-11",
+          "description": "B\u0130R DAMLA SEVG\u0130YLE MERHABA Dokunan hafif bir esinti, bir damla ya\u015F, bir k\u00FC\u00E7\u00FCk ka\u00E7amak bak\u0131\u015Ftan ve bir tatl\u0131 s\u00F6zden sonra y\u00FCre\u011Fin \u00E7eperlerine yap\u0131\u015F\u0131p kalan a\u015Fk\u0131n izleriyle dolu ya\u015Famakt\u0131r belki de istenilen... \u00D6zlemek sevgiyle y\u00FCre\u011Fe dokunmaksa; bir tatl\u0131 s\u00F6z, bir gidenin ard\u0131ndan kalan iz, bir h\u00FCz\u00FCn i\u00E7indeki umutsuzluklarda bile, umut arayan kalple var olmakt\u0131r kimbilir belki de i\u00E7imizde kalan... \u00D6zlemek; a\u015Fk\u0131n g\u00F6zya\u015Flar\u0131nda, yar\u0131n\u0131 olmayan a\u015Fklarda ve bir garip a\u015Fk\u0131n i\u00E7inde bile mutlulu\u011Fu, sevginin kanatlar\u0131nda \u00F6zlemle arayarak yazmakt\u0131r belki de sayfalarda saklanan... Kim bilir belki de sevgiyi i\u00E7inde bularak kanatlanmakt\u0131r, kanats\u0131z hallerinde bile \u00F6zlemle a\u015Fka u\u00E7makt\u0131r... Her okunan \u015Fiirin i\u00E7inde hissedebilmektir belki de; tarifi olmayan, tarifsiz o duyguyu, y\u00FCre\u011Findeki bir k\u0131v\u0131lc\u0131m ate\u015Fiyle canland\u0131r\u0131p ya\u015Fatabilmektir belki de arzulanan... Sevgiyle dolu sayfalarda, hissettiklerinizi bulup dolu dolu ya\u015Faman\u0131z dile\u011Fiyle... Cengiz \u00C7ET\u0130K 1964 y\u0131l\u0131nda Konya/Karap\u0131nar do\u011Fdu. \u0130lkokulu Emirgazi il\u00E7esinde okudu. Ortaokulu ve liseyi Karap\u0131nar\u2019da okudu. End\u00FCstri Meslek Lisesi Torna tesviye\u2019den mezun oldu. 1989 y\u0131l\u0131nda Burdur E\u011Fitim Y\u00FCksek Okulu\u2019ndan S\u0131n\u0131f \u00D6\u011Fretmeni olarak mezun olduktan sonra 1990 y\u0131l\u0131ndan bu yana zaman zaman idarecilik yapsa da \u015Fu an Uzman S\u0131n\u0131f \u00D6\u011Fretmeni olarak \u00E7al\u0131\u015Fmakta olup iki k\u0131z babas\u0131d\u0131r. 1986 y\u0131l\u0131nda ilk \u00F6yk\u00FCs\u00FC \u201Csonun Ba\u015Flang\u0131c\u0131\u201D bir sinema dergisinin a\u00E7t\u0131\u011F\u0131 yar\u0131\u015Fmada birinci gelmi\u015Ftir. Finike yerel gazetelerinde 2005 y\u0131l\u0131ndan sonra bir\u00E7ok k\u00F6\u015Fe yaz\u0131lar\u0131 yay\u0131nland\u0131. 2006 y\u0131l\u0131nda ilk \u015Fiir kitab\u0131 \u201CSon S\u00F6z\u00FCm Sana G\u00FCl\u00FCm\u201D yay\u0131nlad\u0131. \u0130kinci kitab\u0131 \u201CSiyahlarday\u0131m Alev Bak\u0131\u015Fl\u0131m\u201D 2008 y\u0131l\u0131nda yay\u0131nland\u0131. Ayr\u0131ca g\u00FCfte halinde \u201C Siyahlarday\u0131m\u201D 2010 y\u0131l\u0131nda ve \u201CVazge\u00E7 G\u00F6nl\u00FCm\u201D 2016 y\u0131l\u0131nda iki \u015Fiiri bestelenip \u015Fark\u0131 olarak hayat bulmu\u015Ftur. 2017 y\u0131l\u0131 son ay\u0131nda ilk bilimkurgu roman\u0131 \u201CPokentranl\u0131 G\u00F6kmen\u201D okurlar\u0131yla tan\u0131\u015Ft\u0131.",
+          "pageCount": 102,
+          "categories": [
+            "Poetry"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=Bg6SDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=Bg6SDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=Bg6SDwAAQBAJ\u0026pg=PT66\u0026dq=a%C5%9Fk%C4%B1n\u002Bg%C3%B6zya%C5%9Flar%C4%B1\u0026hl=\u0026cd=9\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=Bg6SDwAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786056860829"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6056860825"
+            }
+          ]
+        }
+      },
+      {
+        "id": "MoMlEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/MoMlEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Ortado\u011Fu \u00DClkelerinin Kamu Diplomasisi Faaliyetleri \u0130srail-Filistin-\u0130ran- T\u00FCrkiye-M\u0131s\u0131r-Suudi Arabistan-BAE-Katar \u00D6rne\u011Fi - P\u0131nar \u00D6ZDEN CANKARA \u0026 Yavuz CANKARA",
+          "subtitle": "",
+          "authors": [
+            "P\u0131nar \u00D6ZDEN CANKARA \u0026 Yavuz CANKARA"
+          ],
+          "publisher": "Efe Akademi Yay\u0131nlar\u0131",
+          "publishedDate": "2021-01-01",
+          "description": "",
+          "pageCount": 343,
+          "categories": [
+            "Antiques \u0026 Collectibles"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=MoMlEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=MoMlEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=MoMlEAAAQBAJ\u0026pg=PA257\u0026dq=a%C5%9Fk%C4%B1n\u002Bg%C3%B6zya%C5%9Flar%C4%B1\u0026hl=\u0026cd=10\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=MoMlEAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786257664110"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "625766411X"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=a%C5%9Fk%C4%B1n%20g%C3%B6zya%C5%9Flar%C4%B1\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

@@ -1,0 +1,66 @@
+@{
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+}
+
+<div class="sidebar">
+    <div class="sidebar-header">
+        <h2>SAFHA</h2>
+        <p>Kitap Dünyası</p>
+    </div>
+    
+    <nav class="sidebar-nav">
+        <ul>
+            <li class="nav-item @(currentController == "Home" && currentAction == "Index" ? "active" : "")">
+                <a href="/Home/Index">
+                    <i class="nav-icon">🏠</i>
+                    <span>Anasayfa</span>
+                </a>
+            </li>
+            <li class="nav-item @(currentController == "Book" && currentAction == "Search" ? "active" : "")">
+                <a href="/Book/Search">
+                    <i class="nav-icon">📚</i>
+                    <span>Kitaplar</span>
+                </a>
+            </li>
+            <li class="nav-item @(currentController == "Book" && currentAction == "MyBooks" ? "active" : "")">
+                <a href="/Book/MyBooks">
+                    <i class="nav-icon">📖</i>
+                    <span>Kitaplığım</span>
+                </a>
+            </li>
+            <li class="nav-item @(currentController == "Profile" ? "active" : "")">
+                <a href="/Profile/Index">
+                    <i class="nav-icon">👤</i>
+                    <span>Profil</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="sidebar-footer">
+        @if (User.Identity != null && User.Identity.IsAuthenticated)
+        {
+            <form method="post" action="/Auth/Logout">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-logout">
+                    <i class="nav-icon">🚪</i>
+                    <span>Çıkış Yap</span>
+                </button>
+            </form>
+        }
+        else
+        {
+            <div class="auth-buttons">
+                <a href="/Auth/Login" class="btn btn-login">
+                    <i class="nav-icon">🔑</i>
+                    <span>Giriş Yap</span>
+                </a>
+                <a href="/Auth/Register" class="btn btn-register">
+                    <i class="nav-icon">📝</i>
+                    <span>Kayıt Ol</span>
+                </a>
+            </div>
+        }
+    </div>
+</div>

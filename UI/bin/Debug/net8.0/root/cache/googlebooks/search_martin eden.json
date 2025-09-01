@@ -1,0 +1,364 @@
+{
+  "query": "martin eden",
+  "cachedAt": "2025-08-20T09:01:44.6375787Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "fwcnCgAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/fwcnCgAAQBAJ",
+        "volumeInfo": {
+          "title": "Martin Eden",
+          "subtitle": "",
+          "authors": [
+            "Jack London"
+          ],
+          "publisher": "Can Yay\u0131nlar\u0131",
+          "publishedDate": "",
+          "description": "",
+          "pageCount": 348,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=fwcnCgAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=fwcnCgAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=fwcnCgAAQBAJ\u0026printsec=frontcover\u0026dq=martin\u002Beden\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=fwcnCgAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9789750723902"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "9750723902"
+            }
+          ]
+        }
+      },
+      {
+        "id": "VJReDwAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/VJReDwAAQBAJ",
+        "volumeInfo": {
+          "title": "T\u00FCrk\u00E7e \u00C7eviriler Bibliyografyas\u0131 D\u00FCnya Edebiyat\u0131ndan \u00C7eviriler",
+          "subtitle": "",
+          "authors": [
+            "Mehmet Tahir \u00D6nc\u00FC"
+          ],
+          "publisher": "Hiperlink e\u011Fit.ilet.yay.san.tic.ve ltd.sti.",
+          "publishedDate": "2017-01-01",
+          "description": "",
+          "pageCount": 567,
+          "categories": [
+            "Reference"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=VJReDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=VJReDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=VJReDwAAQBAJ\u0026pg=PA255\u0026dq=martin\u002Beden\u0026hl=\u0026cd=2\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=VJReDwAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786052015537"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6052015535"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rrxmEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/rrxmEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Jack London and the Sea",
+          "subtitle": "",
+          "authors": [
+            "Anita Duneer"
+          ],
+          "publisher": "University of Alabama Press",
+          "publishedDate": "2022-09-06",
+          "description": "The call of the sea -- The maritime romantic ideal on the San Francisco Bay -- Hell-ships and seafaring women -- Crafting the sea in Martin Eden -- The specter of survival cannibalism -- Trading in imperialism-- Local history and colonial complexities.",
+          "pageCount": 241,
+          "categories": [
+            "Literary Criticism"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=rrxmEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=rrxmEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=rrxmEAAAQBAJ\u0026pg=PA185\u0026dq=martin\u002Beden\u0026hl=\u0026cd=3\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=rrxmEAAAQBAJ\u0026dq=martin\u002Beden\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9780817321253"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "081732125X"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Gki8EAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/Gki8EAAAQBAJ",
+        "volumeInfo": {
+          "title": "Notos \u00D6yk\u00FC 96 - En \u00D6nemli 40 Polisiye Roman",
+          "subtitle": "May\u0131s-Haziran 2023",
+          "authors": [
+            "Kolektif"
+          ],
+          "publisher": "Notos Kitap Yay\u0131nc\u0131l\u0131k E\u011Fitim Dan\u0131\u015Fmanl\u0131k ve Sanal Hizmetler Tic. Ltd. \u015Eti.",
+          "publishedDate": "2023-04-29",
+          "description": "EN \u00D6NEML\u0130 40 POL\u0130S\u0130YE ROMANI NOTOS\u2019UN 17. B\u00DCY\u00DCK SORU\u015ETURMASI \u2022 Ian Fleming ve Raymond Chandler s\u00F6yle\u015Fisi: \u201CBir cinayet nas\u0131l tasarlan\u0131yor?\u201D \u2022 Kadire Bozkurt ile s\u00F6yle\u015Fi: \u201CHik\u00E2ye ancak d\u00FCzen bozulunca ba\u015Flar.\u201D \u2022 James Joyce: R\u00F6nesans\u0131n Evrensel Edebi Etkisi Notos her y\u0131l farkl\u0131 bir konuda d\u00FCzenledi\u011Fi geleneksel y\u0131ll\u0131k soru\u015Fturmalar\u0131n\u0131n on yedincisinin sonu\u00E7lar\u0131n\u0131 May\u0131s-Haziran, 96. say\u0131s\u0131nda a\u00E7\u0131klad\u0131. Bu y\u0131lki soru\u015Fturman\u0131n konusu edebiyat t\u00FCrleri aras\u0131nda \u00F6teden beri ilgi g\u00F6ren polisiye t\u00FCr\u00FCnde yay\u0131mlanm\u0131\u015F romanlarla ilgili. Soru\u015Fturman\u0131n sonunda ortaya b\u00FCt\u00FCn merakl\u0131lar\u0131 i\u00E7in bak\u0131lacak, izlenecek, de\u011Ferlendirilecek bir liste, bir k\u0131lavuz \u00E7\u0131kt\u0131. Polisiye edebiyat\u0131n\u0131n son y\u00FCzy\u0131l\u0131ndan biraz daha uzun ge\u00E7mi\u015Fini kapsayan En \u00D6nemli 40 Polisiye Roman\u0131 soru\u015Fturmas\u0131 319 yazar, ara\u015Ft\u0131rmac\u0131, \u00E7evirmen ve edit\u00F6r\u00FCn yer ald\u0131\u011F\u0131 \u00F6nemli bir kamuoyunun se\u00E7imlerini yans\u0131t\u0131yor. Dosya kapsam\u0131nda Erol \u00DCyepazarc\u0131, Suphi Var\u0131m, Ercan Akbay, Aykut Do\u011Fan ve G.K. Chesterton\u2019\u0131n yaz\u0131lar\u0131; Vuslat \u00C7amkerten ve Virginia Elena Patrone\u2019nin desenleri yer al\u0131yor. Notos\u2019un bu say\u0131s\u0131nda polisiye t\u00FCr\u00FCn\u00FCn en uzun \u00F6m\u00FCrl\u00FC kahramanlar\u0131ndan James Bond\u2019un yarat\u0131c\u0131s\u0131 Ian Fleming ile Philip Marlowe\u2019un yarat\u0131c\u0131s\u0131 Raymond Chandler\u2019\u0131n s\u00F6yle\u015Fisi var. Notos\u2019un ikinci s\u00F6yle\u015Fisi Buzkandilleri ve Ate\u015Fle Yakla\u015Fma\u2019n\u0131n yazar\u0131 Kadire Bozkurt ile. Aganta b\u00F6l\u00FCm\u00FCnde g\u00FCn\u00FCm\u00FCz edebiyat d\u00FCnyas\u0131na ve g\u00FCncel kitaplara dair yaz\u0131lar\u0131yla Alper G\u00FCng\u00F6r, Cansu Eyl\u00FCl Yap\u0131c\u0131, Esin Ak\u015Far, Fulya K\u0131l\u0131n\u00E7arslan ve \u00D6zge K\u0131l\u0131\u00E7o\u011Flu yer al\u0131yor. Bir Yazar\u0131n Se\u00E7tikleri b\u00F6l\u00FCm\u00FCnde Buket Uzuner okunmas\u0131n\u0131 zorunlu g\u00F6rd\u00FC\u011F\u00FC kitaplar\u0131, Halil Y\u00F6r\u00FCko\u011Flu ise en \u00E7ok etkilendi\u011Fi yazar\u0131 nedenleriyle birlikte Notos\u2019a anlat\u0131yor. \u015Eenay Ero\u011Flu Aksoy, Bahri Vardarl\u0131lar ve \u00C7a\u011Fda\u015F K\u00FC\u00E7\u00FCk k\u0131sa sorulara k\u0131sa yan\u0131tlarla kendi yazarl\u0131k ser\u00FCvenlerini ve yay\u0131mlanan son kitaplar\u0131n\u0131 anlat\u0131yor. Foto\u011Fraf-Yaz\u0131 b\u00F6l\u00FCm\u00FCnde Alp Sime\u2019nin foto\u011Fraf\u0131n\u0131 \u00D6zlem Ak\u0131nc\u0131 k\u0131sa bir anlat\u0131yla yorumluyor. Kitapl\u0131k b\u00F6l\u00FCm\u00FCnde Banu Y\u0131ld\u0131ran Gen\u00E7 2022 Ya\u015Far Nabi Nay\u0131r \u00D6yk\u00FC \u00D6d\u00FCl\u00FC\u2019n\u00FC kazanan Mehmet Fazl\u0131 G\u00F6k\u2019\u00FCn kitapla\u015Fan \u00F6yk\u00FCleri \u00C7irkin Sevgilim\u2019i, Esra Ertan Taleb Alrefai\u2019nin Kaptan adl\u0131 k\u0131sa roman\u0131n\u0131, Damla Karaku\u015F Mehmet \u00C7imen\u2019in ilk kitab\u0131 Her \u015Eeyin Bi\u2019 \u015Eeyi Vard\u0131r\u2019\u0131, \u015Eenay Ero\u011Flu Aksoy Aylin Balbao\u2019nun Bu Hik\u00E2ye Senden B\u00FCy\u00FCk Osman adl\u0131 \u00F6yk\u00FC kitab\u0131n\u0131, Serkan Parlak El\u00E7in Poyrazlar\u2019\u0131n Kay\u0131p Y\u00FCz adl\u0131 feminist polisiyesini inceliyor. Notos\u2019un bu say\u0131s\u0131nda \u00F6yk\u00FCleriyle yer alan yazarlar: Liam O\u2019Flaherty, \u00D6zlem Dike\u00E7ligil, H\u00FCseyin Peker, Do\u011Fu\u015F Benli, Erkut \u00D6zal, Emel Kaya, Hilal \u00D6zdemir, I\u015F\u0131l Madak, Zelal Arslan, Ay\u015Fe \u00DCn\u00FCvar, Deniz Dursun, Evrim \u00D6ktem. Notos May\u0131s-Haziran 2023, 96 #NotosKitap #Notos\u00D6yk\u00FCDergisi",
+          "pageCount": 145,
+          "categories": [
+            "Literary Criticism"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=Gki8EAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=Gki8EAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=Gki8EAAAQBAJ\u0026pg=PA18\u0026dq=martin\u002Beden\u0026hl=\u0026cd=4\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=Gki8EAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": null
+        }
+      },
+      {
+        "id": "mOtCEQAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/mOtCEQAAQBAJ",
+        "volumeInfo": {
+          "title": "The Story of Sonechka",
+          "subtitle": "",
+          "authors": [
+            "Marina Tsvetaeva"
+          ],
+          "publisher": "Academic Studies PRess",
+          "publishedDate": "2025-04-29",
+          "description": "It is 1918 in Moscow. The communist revolution is in full swing. Food is scarce, living conditions harsh. Two women meet on the stage of an empty theater. One is the now famous twenty-six-year-old poet Maria Tsvetaeva, the other the twenty-four-year-old actress Sonia Holliday (Sonechka). The Story of Sonechka, written almost twenty years later, is a vivid account, at once comic and tragic, of their love for each other. A previously untranslated masterpiece (Dmitry Bikov calls it \u201Cone of the five best books in world literature\u201D), it stands as a testament to the artistry with which Tsvetaeva wrote prose; the vicissitudes of her life, love, and work; and the intense dynamics of Moscow culture in the wake of the Revolution. It also constitutes an exceedingly rare and early example of queer prose literature originally written in Russian.",
+          "pageCount": 160,
+          "categories": [
+            "Biography \u0026 Autobiography"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=mOtCEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=mOtCEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=mOtCEQAAQBAJ\u0026pg=RA1-PT12\u0026dq=martin\u002Beden\u0026hl=\u0026cd=5\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=mOtCEQAAQBAJ\u0026dq=martin\u002Beden\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9798887198071"
+            }
+          ]
+        }
+      },
+      {
+        "id": "R4vpCgAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/R4vpCgAAQBAJ",
+        "volumeInfo": {
+          "title": "Call of the Atlantic",
+          "subtitle": "Jack London\u0027s Publishing Odyssey Overseas, 1902-1916",
+          "authors": [
+            "Joseph McAleer"
+          ],
+          "publisher": "Oxford University Press",
+          "publishedDate": "2016",
+          "description": "Uses fresh archival material to explore Jack London\u0027s publishing career outside of North America, illuminating the relationships with publishers and agents, principally in Britain, as a key to understanding the character, drive, and international success of this popular figure of twentieth-century American letters.",
+          "pageCount": 202,
+          "categories": [
+            "History"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=R4vpCgAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=R4vpCgAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=R4vpCgAAQBAJ\u0026pg=PA81\u0026dq=martin\u002Beden\u0026hl=\u0026cd=6\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=R4vpCgAAQBAJ\u0026dq=martin\u002Beden\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9780198747819"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "0198747810"
+            }
+          ]
+        }
+      },
+      {
+        "id": "3GjCzBhcs_cC",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/3GjCzBhcs_cC",
+        "volumeInfo": {
+          "title": "Raggedy Man",
+          "subtitle": "",
+          "authors": [
+            "David Rosenfeld"
+          ],
+          "publisher": "AuthorHouse",
+          "publishedDate": "2009-07-01",
+          "description": "These poems are varied in most respects except in their authorship and use of the English language. Sometimes brimming with love, yet not always glad; in spaces haunted by hatred or ugliness, yet confounded by shy mysteries of innocence; and with sarcastic atheism threatening more than the life and the light of the universe, the reader will come away from these experiences feeling different than from before. The better ones celebrate the resilience of life. The best ones remain up to you. All of these are alive with the reader, continuing to exist and to triumph with glory, through the vicissitudes of our enduring fate.",
+          "pageCount": 250,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=3GjCzBhcs_cC\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=3GjCzBhcs_cC\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=3GjCzBhcs_cC\u0026pg=PA55\u0026dq=martin\u002Beden\u0026hl=\u0026cd=7\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=3GjCzBhcs_cC\u0026dq=martin\u002Beden\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781438956046"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1438956045"
+            }
+          ]
+        }
+      },
+      {
+        "id": "6G-ADwAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/6G-ADwAAQBAJ",
+        "volumeInfo": {
+          "title": "Approaches to Teaching the Works of Jack London",
+          "subtitle": "",
+          "authors": [
+            "Jeanne Campbell Reesman"
+          ],
+          "publisher": "Modern Language Association",
+          "publishedDate": "2015-10-01",
+          "description": "A prolific and enduringly popular author--and an icon of American fiction--Jack London is a rewarding choice for inclusion in classrooms from middle school to graduate programs. London\u0027s biography and the role played by celebrity have garnered considerable attention, but the breadth of his personal experiences and political views and the many historical and cultural contexts that shaped his work are key to gaining a nuanced view of London\u0027s corpus of works, as this volume\u0027s wide-ranging perspectives and examples attest. The first section of this volume, \u0022Materials,\u0022 surveys the many resources available for teaching London, including editions of his works, sources for his photography, and audiovisual aids. In part 2, \u0022Approaches,\u0022 contributors recommend practices for teaching London\u0027s works through the lenses of socialism and class, race, gender, ecocriticism and animal studies, theories of evolution, legal theory, and regional history, both in frequently taught texts such as The Call of the Wild, \u0022To Build a Fire,\u0022 and Martin Eden and in his lesser-known works.",
+          "pageCount": 322,
+          "categories": [
+            "Language Arts \u0026 Disciplines"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=6G-ADwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=6G-ADwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=6G-ADwAAQBAJ\u0026pg=PT332\u0026dq=martin\u002Beden\u0026hl=\u0026cd=8\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=6G-ADwAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781603291811"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1603291814"
+            }
+          ]
+        }
+      },
+      {
+        "id": "H05S0W4KafcC",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/H05S0W4KafcC",
+        "volumeInfo": {
+          "title": "Modern Methods of Teaching Moral Values",
+          "subtitle": "",
+          "authors": [
+            "Tara Chand Sharma"
+          ],
+          "publisher": "Sarup \u0026 Sons",
+          "publishedDate": "2002",
+          "description": "",
+          "pageCount": 204,
+          "categories": [
+            "Moral education"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=H05S0W4KafcC\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=H05S0W4KafcC\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=H05S0W4KafcC\u0026pg=PA111\u0026dq=martin\u002Beden\u0026hl=\u0026cd=9\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=H05S0W4KafcC\u0026dq=martin\u002Beden\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "8176253022"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9788176253024"
+            }
+          ]
+        }
+      },
+      {
+        "id": "bhr_EAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/bhr_EAAAQBAJ",
+        "volumeInfo": {
+          "title": "J.S. Bach",
+          "subtitle": "The Organ Works",
+          "authors": [
+            "George B. Stauffer"
+          ],
+          "publisher": "Oxford University Press",
+          "publishedDate": "2024",
+          "description": "",
+          "pageCount": 289,
+          "categories": [
+            "Art"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=bhr_EAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=bhr_EAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=bhr_EAAAQBAJ\u0026pg=PA162\u0026dq=martin\u002Beden\u0026hl=\u0026cd=10\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=bhr_EAAAQBAJ\u0026dq=martin\u002Beden\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9780197558058"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "0197558054"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=martin%20eden\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

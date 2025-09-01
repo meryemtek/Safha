@@ -1,0 +1,42 @@
+{
+  "bookId": "VJReDwAAQBAJ",
+  "cachedAt": "2025-08-20T09:01:57.2348067Z",
+  "book": {
+    "id": "VJReDwAAQBAJ",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/VJReDwAAQBAJ",
+    "volumeInfo": {
+      "title": "T\u00FCrk\u00E7e \u00C7eviriler Bibliyografyas\u0131 D\u00FCnya Edebiyat\u0131ndan \u00C7eviriler",
+      "subtitle": "",
+      "authors": [
+        "Mehmet Tahir \u00D6nc\u00FC"
+      ],
+      "publisher": "Hiperlink e\u011Fit.ilet.yay.san.tic.ve ltd.sti.",
+      "publishedDate": "2017-01-01",
+      "description": "",
+      "pageCount": 566,
+      "categories": [
+        "Reference / Bibliographies \u0026 Indexes"
+      ],
+      "averageRating": 0,
+      "ratingsCount": 0,
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/publisher/content?id=VJReDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026imgtk=AFLRE73QE7OwGPJhNN1X3mGifYsZOW7IME7fKJI783wt6DCH9F9zz8ql4EACWuf1aXRyBX173FDqnY2pL337uV8a_IGaKw6qxPyDBCbPpBizzE0HyLIf2qp7_x-pgcmV-Djb5d5BL4ES\u0026source=gbs_api",
+        "thumbnail": "http://books.google.com/books/publisher/content?id=VJReDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026imgtk=AFLRE71RnFdKJVUruTyoJsyIEVcmE8zgRWHoNH9ALbwyfm8BRuVC-khGIypErthHkMHFeFvA6cf7yuT7G-_ExcleFgIRhS9nKMn7C4EiCNyG0v4ojhO93yTLt17oNvTusQG7DgVtzf3x\u0026source=gbs_api"
+      },
+      "language": "tr",
+      "previewLink": "http://books.google.com.tr/books?id=VJReDwAAQBAJ\u0026hl=\u0026source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=VJReDwAAQBAJ\u0026source=gbs_api",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_10",
+          "identifier": "6052015535"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9786052015537"
+        }
+      ]
+    }
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes/VJReDwAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

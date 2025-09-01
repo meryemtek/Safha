@@ -1,0 +1,351 @@
+@model UI.Models.GoogleBooks.Volume
+
+@{
+    ViewData["Title"] = Model.VolumeInfo.Title;
+}
+
+<div class="book-detail-container">
+    <div class="book-header">
+        <a href="javascript:history.back()" class="back-button">
+            <i class="icon-arrow-left"></i> Geri
+        </a>
+    </div>
+
+    <div class="book-detail">
+        <div class="book-cover">
+            <img src="@(Model.VolumeInfo.ImageLinks?.Thumbnail ?? "/image/book-cover1.jpg")" alt="@Model.VolumeInfo.Title" />
+            
+            <div class="book-actions">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="add-to-library-options">
+                        <h4>Kitaplığınıza Ekleyin</h4>
+                        
+                        @if (ViewBag.LibraryStatus != null)
+                        {
+                            <div class="current-status">
+                                @switch (ViewBag.LibraryStatus)
+                                {
+                                    case 1:
+                                        <span class="status-badge want-to-read">Mevcut Durum: Okuyacaklarım</span>
+                                        break;
+                                    case 2:
+                                        <span class="status-badge currently-reading">Mevcut Durum: Okuyorum</span>
+                                        break;
+                                    case 3:
+                                        <span class="status-badge read">Mevcut Durum: Okuduklarım</span>
+                                        break;
+                                }
+                            </div>
+                        }
+                        
+                        <div class="status-options">
+                            <div class="reading-status-cards">
+                                <form method="post" action="/Book/AddToLibrary" class="status-form">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="googleBookId" value="@Model.Id" />
+                                    <input type="hidden" name="readingStatus" value="1" />
+                                    <button type="submit" class="status-card @(ViewBag.LibraryStatus == 1 ? "active" : "")" data-status="want-to-read">
+                                        <div class="status-icon">📚</div>
+                                        <div class="status-text">Okuyacaklarım</div>
+                                        <div class="status-check"><i class="fas fa-check-circle"></i></div>
+                                    </button>
+                                </form>
+                                
+                                <form method="post" action="/Book/AddToLibrary" class="status-form">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="googleBookId" value="@Model.Id" />
+                                    <input type="hidden" name="readingStatus" value="2" />
+                                    <button type="submit" class="status-card @(ViewBag.LibraryStatus == 2 ? "active" : "")" data-status="currently-reading">
+                                        <div class="status-icon">📖</div>
+                                        <div class="status-text">Okuyorum</div>
+                                        <div class="status-check"><i class="fas fa-check-circle"></i></div>
+                                    </button>
+                                </form>
+                                
+                                <form method="post" action="/Book/AddToLibrary" class="status-form">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="googleBookId" value="@Model.Id" />
+                                    <input type="hidden" name="readingStatus" value="3" />
+                                    <button type="submit" class="status-card @(ViewBag.LibraryStatus == 3 ? "active" : "")" data-status="read">
+                                        <div class="status-icon">✅</div>
+                                        <div class="status-text">Okuduklarım</div>
+                                        <div class="status-check"><i class="fas fa-check-circle"></i></div>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        @if (ViewBag.LibraryStatus != null)
+                        {
+                            <div class="library-link">
+                                <a href="/Book/MyBooks" class="btn btn-outline btn-block">
+                                    <i class="icon">📚</i> Kitaplığımı Görüntüle
+                                </a>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <a href="/Auth/Login" class="btn btn-primary btn-block">Giriş Yap</a>
+                    <p class="text-center mt-2">Kitaplığınıza eklemek için giriş yapın</p>
+                }
+            </div>
+        </div>
+        
+        <div class="book-info">
+            <h1 class="book-title">@Model.VolumeInfo.Title</h1>
+            
+            @if (!string.IsNullOrEmpty(Model.VolumeInfo.Subtitle))
+            {
+                <h2 class="book-subtitle">@Model.VolumeInfo.Subtitle</h2>
+            }
+            
+            <div class="book-meta">
+                <div class="meta-row">
+                    <span class="meta-label">Yazar:</span>
+                    <span class="meta-value">
+                        @if (Model.VolumeInfo.Authors != null && Model.VolumeInfo.Authors.Any())
+                        {
+                            @string.Join(", ", Model.VolumeInfo.Authors)
+                        }
+                        else
+                        {
+                            <span>Bilinmeyen Yazar</span>
+                        }
+                    </span>
+                </div>
+                
+                @if (!string.IsNullOrEmpty(Model.VolumeInfo.Publisher))
+                {
+                    <div class="meta-row">
+                        <span class="meta-label">Yayınevi:</span>
+                        <span class="meta-value">@Model.VolumeInfo.Publisher</span>
+                    </div>
+                }
+                
+                @if (!string.IsNullOrEmpty(Model.VolumeInfo.PublishedDate))
+                {
+                    <div class="meta-row">
+                        <span class="meta-label">Yayın Tarihi:</span>
+                        <span class="meta-value">@Model.VolumeInfo.PublishedDate</span>
+                    </div>
+                }
+                
+                @if (Model.VolumeInfo.PageCount > 0)
+                {
+                    <div class="meta-row">
+                        <span class="meta-label">Sayfa Sayısı:</span>
+                        <span class="meta-value">@Model.VolumeInfo.PageCount</span>
+                    </div>
+                }
+                
+                @if (Model.VolumeInfo.Categories != null && Model.VolumeInfo.Categories.Any())
+                {
+                    <div class="meta-row">
+                        <span class="meta-label">Kategoriler:</span>
+                        <span class="meta-value">@string.Join(", ", Model.VolumeInfo.Categories)</span>
+                    </div>
+                }
+                
+                @if (Model.VolumeInfo.AverageRating > 0)
+                {
+                    <div class="meta-row">
+                        <span class="meta-label">Puan:</span>
+                        <span class="meta-value">
+                            <div class="rating">
+                                @for (int i = 1; i <= 5; i++)
+                                {
+                                    if (i <= Math.Floor(Model.VolumeInfo.AverageRating))
+                                    {
+                                        <i class="icon-star-filled"></i>
+                                    }
+                                    else if (i - 0.5 <= Model.VolumeInfo.AverageRating)
+                                    {
+                                        <i class="icon-star-half"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="icon-star-empty"></i>
+                                    }
+                                }
+                                <span>@Model.VolumeInfo.AverageRating (@Model.VolumeInfo.RatingsCount değerlendirme)</span>
+                            </div>
+                        </span>
+                    </div>
+                }
+                
+                @if (!string.IsNullOrEmpty(Model.VolumeInfo.Language))
+                {
+                    <div class="meta-row">
+                        <span class="meta-label">Dil:</span>
+                        <span class="meta-value">
+                            @(Model.VolumeInfo.Language.ToLower() == "tr" ? "Türkçe" : 
+                              Model.VolumeInfo.Language.ToLower() == "en" ? "İngilizce" : 
+                              Model.VolumeInfo.Language)
+                        </span>
+                    </div>
+                }
+                
+                <div class="meta-row">
+                    <span class="meta-label">Google Books ID:</span>
+                    <span class="meta-value">@Model.Id</span>
+                </div>
+            </div>
+            
+            <div class="book-description">
+                <h3>Kitap Açıklaması</h3>
+                @if (!string.IsNullOrEmpty(Model.VolumeInfo.Description))
+                {
+                    <div class="description-text">@Html.Raw(Model.VolumeInfo.Description)</div>
+                }
+                else
+                {
+                    <p>Bu kitap için açıklama bulunmamaktadır.</p>
+                }
+            </div>
+            
+            <div class="book-links">
+                @if (!string.IsNullOrEmpty(Model.VolumeInfo.PreviewLink))
+                {
+                    <a href="@Model.VolumeInfo.PreviewLink" target="_blank" class="btn btn-outline">
+                        <i class="icon-eye"></i> Google Books'ta Önizle
+                    </a>
+                }
+                
+                @if (!string.IsNullOrEmpty(Model.VolumeInfo.InfoLink))
+                {
+                    <a href="@Model.VolumeInfo.InfoLink" target="_blank" class="btn btn-outline">
+                        <i class="icon-info"></i> Google Books'ta Daha Fazla Bilgi
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+    
+    <div class="book-tabs">
+        <div class="tabs-header">
+            <button class="tab-button active" data-tab="quotes">Alıntılar</button>
+            <button class="tab-button" data-tab="reviews">İncelemeler</button>
+            <button class="tab-button" data-tab="similar">Benzer Kitaplar</button>
+            <button class="tab-button" data-tab="discussions">Tartışmalar</button>
+        </div>
+        
+        <div class="tab-content active" id="quotes">
+            <div class="quotes-section">
+                <div class="quotes-header">
+                    <h3>Kitap Alıntıları</h3>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <button class="btn btn-primary" onclick="showAddQuoteModal()">
+                            <i class="icon">✏️</i> Alıntı Ekle
+                        </button>
+                    }
+                </div>
+                
+                <div class="quotes-list" id="quotesList">
+                    <div class="loading-quotes">
+                        <p>Alıntılar yükleniyor...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="reviews">
+            <div class="no-content-message">
+                <p>Bu kitap için henüz inceleme bulunmamaktadır.</p>
+                <button class="btn btn-primary">İlk İncelemeyi Yaz</button>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="similar">
+            <div class="no-content-message">
+                <p>Benzer kitaplar yükleniyor...</p>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="discussions">
+            <div class="no-content-message">
+                <p>Bu kitap için henüz tartışma bulunmamaktadır.</p>
+                <button class="btn btn-primary">Tartışma Başlat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Alıntı Ekleme Modal -->
+<div class="modal fade" id="addQuoteModal" tabindex="-1" aria-labelledby="addQuoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addQuoteModalLabel">Yeni Alıntı Ekle</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="addQuoteForm">
+                <div class="modal-body">
+                    <div class="form-group mb-3">
+                        <label for="quoteContent" class="form-label">Alıntı Metni *</label>
+                        <textarea class="form-control" id="quoteContent" name="Content" rows="4" 
+                                  placeholder="Kitaptan alıntı yapmak istediğiniz metni buraya yazın..." 
+                                  maxlength="1000" required></textarea>
+                        <div class="form-text">Maksimum 1000 karakter</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="quoteAuthor" class="form-label">Alıntı Yazarı</label>
+                                <input type="text" class="form-control" id="quoteAuthor" name="Author" 
+                                       placeholder="Alıntının yazarı (opsiyonel)" maxlength="100">
+                                <div class="form-text">Maksimum 100 karakter</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="quoteSource" class="form-label">Kaynak</label>
+                                <input type="text" class="form-control" id="quoteSource" name="Source" 
+                                       placeholder="Alıntının kaynağı (opsiyonel)" maxlength="200">
+                                <div class="form-text">Maksimum 200 karakter</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="quotePageNumber" class="form-label">Sayfa Numarası</label>
+                                <input type="number" class="form-control" id="quotePageNumber" name="PageNumber" 
+                                       placeholder="Sayfa numarası (opsiyonel)" min="1" max="9999">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="quoteNotes" class="form-label">Notlar</label>
+                                <textarea class="form-control" id="quoteNotes" name="Notes" rows="2" 
+                                          placeholder="Alıntı hakkında notlarınız (opsiyonel)" maxlength="500"></textarea>
+                                <div class="form-text">Maksimum 500 karakter</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" id="quoteBookId" name="BookId" value="@ViewBag.DbBookId" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                    <button type="submit" class="btn btn-primary">Alıntı Ekle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/book-detail.css" />
+    <link rel="stylesheet" href="~/css/add-quote.css" />
+}
+
+@section Scripts {
+    <script src="~/js/book-detail.js"></script>
+    <script src="~/js/add-quote.js"></script>
+}

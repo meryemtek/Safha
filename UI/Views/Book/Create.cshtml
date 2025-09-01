@@ -1,0 +1,135 @@
+@model Entities.Book
+
+@{
+    ViewData["Title"] = "Kitap Ekle";
+    Layout = "_Layout";
+}
+
+<div class="create-book-container">
+    <div class="create-book-card">
+        <div class="create-book-header">
+            <h1>📚 Yeni Kitap Ekle</h1>
+            <p>Kütüphanenize yeni bir kitap ekleyin</p>
+        </div>
+        
+        <div class="create-book-body">
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+                
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Title">Kitap Adı *</label>
+                        <input asp-for="Title" class="form-control" placeholder="Kitap adını girin" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Author">Yazar *</label>
+                        <input asp-for="Author" class="form-control" placeholder="Yazar adını girin" />
+                        <span asp-validation-for="Author" class="text-danger"></span>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="ISBN">ISBN</label>
+                        <input asp-for="ISBN" class="form-control" placeholder="ISBN numarası (opsiyonel)" />
+                        <span asp-validation-for="ISBN" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="PublicationYear">Yayın Yılı</label>
+                        <input asp-for="PublicationYear" class="form-control" type="number" min="1800" max="@DateTime.Now.Year" placeholder="Yayın yılı" />
+                        <span asp-validation-for="PublicationYear" class="text-danger"></span>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Publisher">Yayınevi</label>
+                        <input asp-for="Publisher" class="form-control" placeholder="Yayınevi adı" />
+                        <span asp-validation-for="Publisher" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Pages">Sayfa Sayısı</label>
+                        <input asp-for="Pages" class="form-control" type="number" min="1" placeholder="Sayfa sayısı" />
+                        <span asp-validation-for="Pages" class="text-danger"></span>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Genre">Tür</label>
+                        <select asp-for="Genre" class="form-control">
+                            <option value="">Tür seçin</option>
+                            <option value="Roman">Roman</option>
+                            <option value="Bilim Kurgu">Bilim Kurgu</option>
+                            <option value="Fantastik">Fantastik</option>
+                            <option value="Polisiye">Polisiye</option>
+                            <option value="Tarih">Tarih</option>
+                            <option value="Biyografi">Biyografi</option>
+                            <option value="Felsefe">Felsefe</option>
+                            <option value="Bilim">Bilim</option>
+                            <option value="Çocuk">Çocuk</option>
+                            <option value="Gençlik">Gençlik</option>
+                            <option value="Şiir">Şiir</option>
+                            <option value="Tiyatro">Tiyatro</option>
+                            <option value="Deneme">Deneme</option>
+                            <option value="Diğer">Diğer</option>
+                        </select>
+                        <span asp-validation-for="Genre" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Language">Dil</label>
+                        <select asp-for="Language" class="form-control">
+                            <option value="">Dil seçin</option>
+                            <option value="Türkçe">Türkçe</option>
+                            <option value="İngilizce">İngilizce</option>
+                            <option value="Almanca">Almanca</option>
+                            <option value="Fransızca">Fransızca</option>
+                            <option value="İspanyolca">İspanyolca</option>
+                            <option value="İtalyanca">İtalyanca</option>
+                            <option value="Rusça">Rusça</option>
+                            <option value="Japonca">Japonca</option>
+                            <option value="Korece">Korece</option>
+                            <option value="Çince">Çince</option>
+                            <option value="Arapça">Arapça</option>
+                            <option value="Diğer">Diğer</option>
+                        </select>
+                        <span asp-validation-for="Language" class="text-danger"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="Description">Açıklama</label>
+                    <textarea asp-for="Description" class="form-control" rows="4" placeholder="Kitap hakkında kısa bir açıklama yazın..."></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="coverImageFile">Kapak Resmi</label>
+                    <input type="file" id="coverImageFile" name="coverImageFile" class="form-control" accept="image/*" />
+                    <small class="form-text text-muted">JPG, PNG veya GIF formatında resim yükleyebilirsiniz. Maksimum boyut: 5MB</small>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-create">📚 Kitap Ekle</button>
+                    <a href="/Profile/Index" class="btn btn-secondary btn-cancel">❌ İptal</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/create-book.css" />
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

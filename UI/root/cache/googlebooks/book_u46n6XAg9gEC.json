@@ -1,0 +1,40 @@
+{
+  "bookId": "u46n6XAg9gEC",
+  "cachedAt": "2025-08-22T13:41:46.7463966Z",
+  "book": {
+    "id": "u46n6XAg9gEC",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/u46n6XAg9gEC",
+    "volumeInfo": {
+      "title": "Sultan Icin Bir Saat, Yakindoguda Avrupa Saat ve Saatcileri",
+      "subtitle": "",
+      "authors": [
+        "Otto Kurz"
+      ],
+      "publisher": "Kitap Yayinevi Ltd.",
+      "publishedDate": "1975",
+      "description": "",
+      "pageCount": 136,
+      "categories": null,
+      "averageRating": 0,
+      "ratingsCount": 0,
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=u46n6XAg9gEC\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026imgtk=AFLRE734yiKWmGIhaTG6Hp8HpjyrIPLtMWx_jyXHpPSc9c0o2v7NiJLRN5xtNKTMkNyDSxXipUoH2Tldls8jD4LhA7YsvnzDCaBhRp-UOt15oV9notn0OGh-aga9BpDqU3pdDx0_intx\u0026source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=u46n6XAg9gEC\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026imgtk=AFLRE7107XqwewUak5SzZ0nuCCklkHaX6W8LLyxMmaEO44hH4lVMZCCFKS9GDhe6dwfFhThuslEhvDAZkvfUwjhJ-z69Gs-0rD0R4ZunUyjj45vVcvgL0lQigYOpxEX0gIzqJXX6tktb\u0026source=gbs_api"
+      },
+      "language": "tr",
+      "previewLink": "http://books.google.com.tr/books?id=u46n6XAg9gEC\u0026hl=\u0026source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=u46n6XAg9gEC\u0026source=gbs_api",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_10",
+          "identifier": "9758704818"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9789758704811"
+        }
+      ]
+    }
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes/u46n6XAg9gEC?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

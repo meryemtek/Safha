@@ -1,0 +1,360 @@
+{
+  "query": "franz kafka",
+  "cachedAt": "2025-08-25T21:00:57.7482781Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "tPkyEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/tPkyEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Franz Kafka - D\u00F6n\u00FC\u015F\u00FCm - D\u00FCnya klasikleri",
+          "subtitle": "",
+          "authors": [
+            "FRANZ KAFKA"
+          ],
+          "publisher": "S. K.",
+          "publishedDate": "2021-06-25",
+          "description": "FRANZ KAFKA\u0027n\u0131n d\u00FCnyaca \u00E7ok okunan eserlerinden D\u00D6N\u00DC\u015E\u00DCM Google Book\u0027da siz de\u011Ferli okuyucularla bulu\u015Ftu.",
+          "pageCount": 40,
+          "categories": [
+            "Fiction"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=tPkyEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=tPkyEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=tPkyEAAAQBAJ\u0026printsec=frontcover\u0026dq=franz\u002Bkafka\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=tPkyEAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": null
+        }
+      },
+      {
+        "id": "CiLlAwAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/CiLlAwAAQBAJ",
+        "volumeInfo": {
+          "title": "D\u00F6nu\u0308\u015Fu\u0308m",
+          "subtitle": "",
+          "authors": [
+            "Franz Kafka"
+          ],
+          "publisher": "Can Yay\u0131nlar\u0131",
+          "publishedDate": "2014-06-26",
+          "description": "Franz Kafka\u0027n\u0131n 1915\u0027te yay\u0131mlanan D\u00F6n\u00FC\u015F\u00FCm adl\u0131 \u00F6yk\u00FCs\u00FC, yazar\u0131n, anlat\u0131m sanat\u0131n\u0131n doru\u011Funa ula\u015Ft\u0131\u011F\u0131 bir eseridir. K\u00FC\u00E7\u00FCk burjuva \u00E7evrelerindeki yozla\u015Fm\u0131\u015F aile ili\u015Fkilerini en ince ayr\u0131nt\u0131lar\u0131na kadar irdeleyen bu uzun \u00F6yk\u00FC, ayn\u0131 zamanda toplumun dayatt\u0131\u011F\u0131, i\u015Flevini \u00E7oktan yitirmi\u015F kal\u0131plara bilin\u00E7 d\u00FCzeyinde ba\u015Fkald\u0131ran bireyin tragedyas\u0131n\u0131 \u00E7arp\u0131c\u0131 bir bi\u00E7imde dile getirir. Kitab\u0131n De\u011Fi\u015Fim olarak bilinen ad\u0131n\u0131n ger\u00E7ekte D\u00F6n\u00FC\u015F\u00FCm oldu\u011Fu, ifadesini Ahmet Cemal\u0027in a\u00E7\u0131klamas\u0131nda bulur: \u0022Gregor Samsa\u0027n\u0131n bir sabah kendini yata\u011F\u0131nda bir b\u00F6cek olarak bulmas\u0131, salt bir de\u011Fi\u015Fim de\u011Fil fakat \u0027ba\u015Fkala\u015F\u0131m\u0027d\u0131r O, insanl\u0131\u011F\u0131n\u0131 koruyarak baz\u0131 de\u011Fi\u015Fiklikler ge\u00E7irmemi\u015Ftir; art\u0131k farkl\u0131 bir canl\u0131 t\u00FCr\u00FC olmu\u015Ftur.\u0022 Bu a\u00E7\u0131klama, Kafka\u0027n\u0131n eserini tan\u0131mlarken kulland\u0131\u011F\u0131 ifadeyle de \u00F6rt\u00FC\u015F\u00FCr: \u0022Herkes, beraberinde ta\u015F\u0131d\u0131\u011F\u0131 bir parmakl\u0131\u011F\u0131n ard\u0131nda ya\u015F\u0131yor. \u015Eimdi hayvanlarla ilgili bunca \u015Fey yaz\u0131lmas\u0131n\u0131n nedeni de bu. \u00D6zg\u00FCr ve do\u011Fal bir ya\u015Fama duyulan \u00F6zlemin ifadesi. Oysa insanlar i\u00E7in do\u011Fal ya\u015Fam, insanca ya\u015Famd\u0131r. Ama bunu anlam\u0131yorlar. Anlamak istemiyorlar. \u0130nsan gibi ya\u015Famak \u00E7ok g\u00FC\u00E7, o nedenle hi\u00E7 olmazsa kurgusal d\u00FCzeyde bundan kurtulma iste\u011Fi var... Hayvana geri d\u00F6n\u00FCl\u00FCyor. B\u00F6ylesi, insanca ya\u015Famaktan \u00E7ok daha kolay.\u0022 (Tan\u0131t\u0131m B\u00FClteninden)",
+          "pageCount": 66,
+          "categories": null,
+          "averageRating": 4,
+          "ratingsCount": 1,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=CiLlAwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=CiLlAwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=CiLlAwAAQBAJ\u0026printsec=frontcover\u0026dq=franz\u002Bkafka\u0026hl=\u0026cd=2\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=CiLlAwAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9789750716560"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "9750716566"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Vf4szwEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/Vf4szwEACAAJ",
+        "volumeInfo": {
+          "title": "Franz Kafka - B\u00FCt\u00FCn \u00D6yk\u00FCler Ciltli",
+          "subtitle": "",
+          "authors": [
+            "Franz Kafka"
+          ],
+          "publisher": "",
+          "publishedDate": "2021-12",
+          "description": "",
+          "pageCount": 616,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": null,
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=Vf4szwEACAAJ\u0026dq=franz\u002Bkafka\u0026hl=\u0026cd=3\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=Vf4szwEACAAJ\u0026dq=franz\u002Bkafka\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "625804901X"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9786258049015"
+            }
+          ]
+        }
+      },
+      {
+        "id": "w7-XDQAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/w7-XDQAAQBAJ",
+        "volumeInfo": {
+          "title": "Dava",
+          "subtitle": "",
+          "authors": [
+            "Franz Kafka"
+          ],
+          "publisher": "Epsilon Yayincilik Ltd. Sti",
+          "publishedDate": "2016-09-01",
+          "description": "\u0027Kafka\u0027n\u0131n kitaplar\u0131\u2026 \u00E7a\u011F\u0131n en saf ve e\u015Fsiz edebi eserleri aras\u0131nda.\u0027 Yirminci y\u00FCzy\u0131l\u0131n en \u00F6nemli romanlar\u0131ndan say\u0131lan Dava, kendi halinde bir banka \u015Fefi olan Josef K.\u0027n\u0131n bir sabah uyan\u0131r uyanmaz tutuklanmas\u0131yla ba\u015Flar. Ne var ki i\u015Fledi\u011Fi su\u00E7 bir t\u00FCrl\u00FC a\u00E7\u0131klanmaz ve bunu K.\u0027n\u0131n bo\u011Fucu mahkeme kalemlerine, tan\u0131d\u0131k avukatlara yapt\u0131\u011F\u0131 bitmek t\u00FCkenmek bilmeyen, sonu\u00E7suz ziyaretler takip eder. \u00C7e\u015Fitli tavsiyelerde bulunan ya da onu bu esrarengiz yarg\u0131lamadan kurtarabilirmi\u015F gibi g\u00F6r\u00FCnen insanlar\u0131n olu\u015Fturdu\u011Fu karanl\u0131k bir girdab\u0131n tam ortas\u0131nda kalan K., gitgide \u00FCzerine \u00E7\u00F6ken m\u00FCphem bir hukuk sisteminin alt\u0131nda ezilir ve kendini temize \u00E7\u0131karmaya \u00E7al\u0131\u015Ft\u0131k\u00E7a sistemin karmakar\u0131\u015F\u0131k, abs\u00FCrt a\u011Flar\u0131na daha fazla dolan\u0131r. Bug\u00FCn, Franz Kafka\u0027n\u0131n vasiyetine uymay\u0131p eserlerini yay\u0131nlamaya karar veren yak\u0131n arkada\u015F\u0131 Max Brod sayesinde okuyabildi\u011Fimiz Dava, b\u00FCrokrasinin ya da otoritenin bireye belirsizli\u011Fiyle azap \u00E7ektiren do\u011Fas\u0131na dair bir ele\u015Ftiri olarak okunabilece\u011Fi gibi, varolu\u015F\u00E7u bir k\u0131s\u0131r d\u00F6ng\u00FCn\u00FCn kara mizahla harmanlanm\u0131\u015F bir temsili olarak da g\u00F6r\u00FClebilir.",
+          "pageCount": 205,
+          "categories": [
+            "Fiction"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=w7-XDQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=w7-XDQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=w7-XDQAAQBAJ\u0026printsec=frontcover\u0026dq=franz\u002Bkafka\u0026hl=\u0026cd=4\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=w7-XDQAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786054820313"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6054820311"
+            }
+          ]
+        }
+      },
+      {
+        "id": "VJReDwAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/VJReDwAAQBAJ",
+        "volumeInfo": {
+          "title": "T\u00FCrk\u00E7e \u00C7eviriler Bibliyografyas\u0131 D\u00FCnya Edebiyat\u0131ndan \u00C7eviriler",
+          "subtitle": "",
+          "authors": [
+            "Mehmet Tahir \u00D6nc\u00FC"
+          ],
+          "publisher": "Hiperlink e\u011Fit.ilet.yay.san.tic.ve ltd.sti.",
+          "publishedDate": "2017-01-01",
+          "description": "",
+          "pageCount": 567,
+          "categories": [
+            "Reference"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=VJReDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=VJReDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=VJReDwAAQBAJ\u0026pg=PA26\u0026dq=franz\u002Bkafka\u0026hl=\u0026cd=5\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=VJReDwAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786052015537"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6052015535"
+            }
+          ]
+        }
+      },
+      {
+        "id": "6-7-ikxwXZYC",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/6-7-ikxwXZYC",
+        "volumeInfo": {
+          "title": "Franz Kafka\u0027s the Metamorphosis",
+          "subtitle": "",
+          "authors": [
+            "Sterling Professor of Humanities Harold Bloom"
+          ],
+          "publisher": "Infobase Publishing",
+          "publishedDate": "2009",
+          "description": "Presents a collection of critical essays about Kafka\u0027s The metamorphosis.",
+          "pageCount": 199,
+          "categories": [
+            "Literary Criticism"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=6-7-ikxwXZYC\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=6-7-ikxwXZYC\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=6-7-ikxwXZYC\u0026pg=PA183\u0026dq=franz\u002Bkafka\u0026hl=\u0026cd=6\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=6-7-ikxwXZYC\u0026dq=franz\u002Bkafka\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781438114026"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1438114028"
+            }
+          ]
+        }
+      },
+      {
+        "id": "V-viEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/V-viEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Ottla\u0027ya ve Ailesine Mektuplar",
+          "subtitle": "",
+          "authors": [
+            "Franz Kafka"
+          ],
+          "publisher": "Do\u011Fan Yay\u0131nlar\u0131",
+          "publishedDate": "2023-11-10",
+          "description": "OTTLA\u0027YA VE A\u0130LES\u0130NE MEKTUPLAR Franz Kafka\u0027n\u0131n 1909 ile 1924 tarihleri aras\u0131nda, k\u0131z karde\u015Fi Ottla\u0027ya ve ailesi Julie ve Hermann Kafka\u0027ya yazd\u0131\u011F\u0131 baz\u0131 mektuplar\u0131 i\u00E7erir. Auschwitz Toplama Kamp\u0131\u0027nda \u00F6ld\u00FCr\u00FClen Ottla\u0027n\u0131n mektuplar\u0131n\u0131 e\u015Fi ve \u00E7ocuklar\u0131 saklam\u0131\u015F ve bu mektuplar 1974 y\u0131l\u0131nda bas\u0131lm\u0131\u015Ft\u0131r.",
+          "pageCount": 138,
+          "categories": [
+            "Fiction"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=V-viEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=V-viEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=V-viEAAAQBAJ\u0026printsec=frontcover\u0026dq=franz\u002Bkafka\u0026hl=\u0026cd=7\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=V-viEAAAQBAJ\u0026dq=franz\u002Bkafka\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786256843509"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6256843509"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hmybzQEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/hmybzQEACAAJ",
+        "volumeInfo": {
+          "title": "Franz Kafka Seti",
+          "subtitle": "",
+          "authors": [
+            "Franz Kafka"
+          ],
+          "publisher": "",
+          "publishedDate": "2020-06",
+          "description": "",
+          "pageCount": 1316,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": null,
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=hmybzQEACAAJ\u0026dq=franz\u002Bkafka\u0026hl=\u0026cd=8\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=hmybzQEACAAJ\u0026dq=franz\u002Bkafka\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "6057906845"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9786057906847"
+            }
+          ]
+        }
+      },
+      {
+        "id": "YFY5EQAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/YFY5EQAAQBAJ",
+        "volumeInfo": {
+          "title": "D\u00F6n\u00FC\u015F\u00FCm Ve Di\u011Fer Hikayeler",
+          "subtitle": "",
+          "authors": [
+            "Franz Kafka"
+          ],
+          "publisher": "Do\u011Fan Yay\u0131nlar\u0131",
+          "publishedDate": "2024-05-09",
+          "description": "\u0022Gregor Samsa kanatlar\u0131n\u0131n fark\u0131nda olmad\u0131\u011F\u0131ndan kozas\u0131n\u0131 delememi\u015F, yani odan\u0131n-evin d\u0131\u015F\u0131na \u00E7\u0131kamam\u0131\u015F; dolay\u0131s\u0131yla d\u00F6n\u00FC\u015F\u00FCm d\u00F6ng\u00FCs\u00FCn\u00FC tamamlayamadan, devam etmekten vazge\u00E7ip \u00F6lm\u00FC\u015Ft\u00FCr.\u0022 \u2014 \u0130brahim Y\u0131ld\u0131r\u0131m \u0022Yazmak ve b\u00FCro birbiriyle uyu\u015Fmaz\u0022 diyen Kafka, s\u0131radan, zavall\u0131 memur hayat\u0131ndan, s\u0131k\u0131c\u0131 k\u00FC\u00E7\u00FCk burjuva ailesi ya\u015Fant\u0131s\u0131ndan bir hamamb\u00F6ce\u011Fi olarak uyanan Gregor Samsa\u0027y\u0131 yaratt\u0131. Ve yarat\u0131c\u0131l\u0131k ile otomatla\u015Fma, ba\u015Fkald\u0131r\u0131 ile itaat aras\u0131ndaki amans\u0131z \u00E7eli\u015Fkiyle v\u00FCcut bulan bir \u00E7a\u011F\u0131n kahramanlar\u0131n\u0131...",
+          "pageCount": 180,
+          "categories": [
+            "Fiction"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=YFY5EQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=YFY5EQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=YFY5EQAAQBAJ\u0026printsec=frontcover\u0026dq=franz\u002Bkafka\u0026hl=\u0026cd=9\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=YFY5EQAAQBAJ\u0026dq=franz\u002Bkafka\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786256198401"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6256198409"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tXohEQAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/tXohEQAAQBAJ",
+        "volumeInfo": {
+          "title": "The Remnant: Franz Kafka\u2019s Letter",
+          "subtitle": "A Study on the Margins of Judaism",
+          "authors": [
+            "Eli Schonfeld"
+          ],
+          "publisher": "Walter de Gruyter GmbH \u0026 Co KG",
+          "publishedDate": "2024-09-23",
+          "description": "As a Jew, Kafka received nothing in inheritance from his father. Nevertheless, throughout his \u0153uvre, subtly, remnants of Jewish words can be deciphered. Hence, the question at the heart of this book: what remains when what\u2019s left is a \u0022nothing of Judaism\u0022 (Letter to the Father)? This question necessitates a philosophical and Jewish reading of his work, prompting a reconsideration of the intricate relationships between the Jew and the West and the Jew and modernity. Thus, this book proposes an examination of Kafka\u0027s oeuvre to uncover what remains Jewish therein \u2013 at the heart of Europe, amidst modernity \u2013 where nothing remains: the enigma of the Letter.",
+          "pageCount": 176,
+          "categories": [
+            "History"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=tXohEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=tXohEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=tXohEQAAQBAJ\u0026pg=PA111\u0026dq=franz\u002Bkafka\u0026hl=\u0026cd=10\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=tXohEQAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9783111442938"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "3111442934"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=franz%20kafka\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

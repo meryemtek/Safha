@@ -1,0 +1,632 @@
+@model UI.Models.ProfileViewModel
+
+@{
+    ViewData["Title"] = $"{Model.DisplayName} - Profil";
+    Layout = "_Layout";
+}
+
+<div class="profile-container">
+        <!-- Üst Profil Kartı -->
+        <div class="profile-header-card">
+            <div class="profile-cover">
+                <div class="cover-image" style="background-image: url('@(string.IsNullOrEmpty(Model.CoverPhoto) ? "/image/default-cover.jpg" : Model.CoverPhoto)')">
+                    <div class="cover-overlay">
+                        <button class="btn btn-edit-cover" onclick="document.getElementById('coverPhotoInput').click()">
+                            <i class="icon">📷</i> Kapak Fotoğrafını Değiştir
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-info-section">
+                <div class="profile-avatar-container">
+                    <div class="profile-avatar" onclick="document.getElementById('profilePhotoInput').click()">
+                        <img src="@(string.IsNullOrEmpty(Model.ProfilePicture) ? "/image/default-avatar.jpg" : Model.ProfilePicture)" 
+                             alt="@Model.DisplayName" class="avatar-image" />
+                        <div class="avatar-edit-overlay">
+                            <i class="icon">✏️</i>
+                            <span>Düzenle</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="profile-details">
+                    <h1 class="profile-name">@Model.DisplayName</h1>
+                    <p class="profile-username">@@@Model.Username</p>
+                    
+                    @if (!string.IsNullOrEmpty(Model.Bio))
+                    {
+                        <p class="profile-bio">@Model.Bio</p>
+                    }
+                    
+                    <div class="profile-meta">
+                        <span class="join-date">
+                            <i class="icon">📅</i> @Model.MemberSince tarihinde katıldı
+                        </span>
+                    </div>
+                    
+                    <!-- Takip İstatistikleri -->
+                    <div class="follow-stats">
+                        <a href="@Url.Action("Followers", "Profile", new { userId = Model.Id })" class="follow-stat-item">
+                            <span class="follow-count">@Model.FollowerCount</span>
+                            <span class="follow-label">Takipçi</span>
+                        </a>
+                        <a href="@Url.Action("Following", "Profile", new { userId = Model.Id })" class="follow-stat-item">
+                            <span class="follow-count">@Model.FollowingCount</span>
+                            <span class="follow-label">Takip Edilen</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="profile-actions">
+                    <a href="@Url.Action("Edit", "Profile")" class="btn btn-edit-profile">
+                        <i class="icon">✏️</i> Profili Düzenle
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Okuma Hedefi -->
+        <div class="reading-goal-section">
+            <div class="goal-header">
+                <h3><i class="fas fa-bullseye"></i> 2025 Okuma Hedefi</h3>
+                <span class="goal-progress">@Model.ReadBookCount / @Model.TargetBookCount kitap</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: @Model.ReadingProgress%"></div>
+            </div>
+            <div class="goal-percentage">%@Model.ReadingProgress tamamlandı</div>
+        </div>
+        
+        <!-- Kitap Durumu Kartları -->
+        <div class="book-status-section">
+            <div class="status-header">
+                <h3><i class="fas fa-book"></i> Kitap Durumlarım</h3>
+            </div>
+            <div class="status-cards">
+                <div class="status-card reading">
+                    <div class="status-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="status-content">
+                        <h4>Okuyorum</h4>
+                        <div class="status-count">@Model.CurrentlyReadingCount</div>
+                        <a href="@Url.Action("MyBooks", "Book", new { statusFilter = 2 })" class="status-link">
+                            Kitapları Görüntüle <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="status-card to-read">
+                    <div class="status-icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                    <div class="status-content">
+                        <h4>Okuyacaklarım</h4>
+                        <div class="status-count">@Model.WantToReadCount</div>
+                        <a href="@Url.Action("MyBooks", "Book", new { statusFilter = 1 })" class="status-link">
+                            Kitapları Görüntüle <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="status-card completed">
+                    <div class="status-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="status-content">
+                        <h4>Okuduklarım</h4>
+                        <div class="status-count">@Model.ReadBookCount</div>
+                        <a href="@Url.Action("MyBooks", "Book", new { statusFilter = 3 })" class="status-link">
+                            Kitapları Görüntüle <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+        <div class="tab-content" id="activity-tab">
+            <div class="activity-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">📖</div>
+                    <div class="timeline-content">
+                        <h4>Kitap Eklendi</h4>
+                        <p>Yeni bir kitap kütüphanenize eklendi</p>
+                        <span class="timeline-date">@DateTime.Now.AddDays(-1).ToString("dd MMM yyyy")</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">⭐</div>
+                    <div class="timeline-content">
+                        <h4>Değerlendirme</h4>
+                        <p>Bir kitap için değerlendirme yapıldı</p>
+                        <span class="timeline-date">@DateTime.Now.AddDays(-3).ToString("dd MMM yyyy")</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="about-tab">
+            <div class="about-section">
+                <div class="about-item">
+                    <div class="about-icon">📧</div>
+                    <div class="about-content">
+                        <h4>E-posta</h4>
+                        <p>@Model.Email</p>
+                    </div>
+                </div>
+                
+                @if (!string.IsNullOrEmpty(Model.PhoneNumber))
+                {
+                    <div class="about-item">
+                        <div class="about-icon">📱</div>
+                        <div class="about-content">
+                            <h4>Telefon</h4>
+                            <p>@Model.PhoneNumber</p>
+                        </div>
+                    </div>
+                }
+                
+                @if (!string.IsNullOrEmpty(Model.Address))
+                {
+                    <div class="about-item">
+                        <div class="about-icon">📍</div>
+                        <div class="about-content">
+                            <h4>Adres</h4>
+                            <p>@Model.Address</p>
+                        </div>
+                    </div>
+                }
+                
+                <div class="about-item">
+                    <div class="about-icon">📅</div>
+                    <div class="about-content">
+                        <h4>Üyelik Tarihi</h4>
+                        <p>@Model.CreatedAt.ToString("dd MMMM yyyy")</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Alıntılar Bölümü -->
+        <div class="quotes-section-profile">
+            <div class="quotes-header">
+                <h3><i class="fas fa-quote-left"></i> Alıntılarım</h3>
+                <a href="@Url.Action("AddQuote", "Profile")" class="btn btn-primary">
+                    <i class="icon">✏️</i> Yeni Alıntı Ekle
+                </a>
+            </div>
+            
+            <div class="quotes-list" id="userQuotesList">
+                <div class="loading-quotes">
+                    <p>Alıntılar yükleniyor...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Gizli dosya input'ları -->
+<input type="file" id="profilePhotoInput" accept="image/*" style="display: none;" onchange="uploadPhoto(this, 'profile')" />
+<input type="file" id="coverPhotoInput" accept="image/*" style="display: none;" onchange="uploadPhoto(this, 'cover')" />
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/profile.css" />
+}
+
+@section Scripts {
+    <script src="~/js/profile.js"></script>
+    <script>
+        // Profil sayfası yüklendiğinde kitap durumlarını senkronize et
+        document.addEventListener('DOMContentLoaded', function() {
+            // Kitap durumu sayılarını güncelle
+            updateBookStatusCounts();
+            
+            // Kitap durumu güncelleme butonlarına event listener ekle
+            setupBookStatusControls();
+            
+            // Kullanıcının alıntılarını yükle
+            loadUserQuotes();
+        });
+
+
+
+        // Şuan okuyor bölümü kaldırıldı
+
+        function updateBookStatusCounts() {
+            // AJAX ile güncel kitap durumu sayılarını al
+            fetch('/Profile/GetBookStatusCounts', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Sayıları güncelle
+                    document.querySelector('.status-card.reading .status-count').textContent = data.currentlyReadingCount;
+                    document.querySelector('.status-card.to-read .status-count').textContent = data.wantToReadCount;
+                    document.querySelector('.status-card.completed .status-count').textContent = data.readCount;
+                    
+                    // Şuan okuyor bölümü kaldırıldı
+                    
+                    // Okuma hedefi ilerlemesini güncelle
+                    const targetBookCount = @Model.TargetBookCount;
+                    const readCount = data.readCount;
+                    const progress = targetBookCount > 0 ? Math.round((readCount * 100) / targetBookCount) : 0;
+                    
+                    document.querySelector('.goal-progress').textContent = `${readCount} / ${targetBookCount} kitap`;
+                    document.querySelector('.progress-fill').style.width = `${progress}%`;
+                    document.querySelector('.goal-percentage').textContent = `%${progress} tamamlandı`;
+                }
+            })
+            .catch(error => {
+                console.error('Kitap durumu sayıları alınırken hata:', error);
+            });
+        }
+
+        function setupBookStatusControls() {
+            // Kitap durumu güncelleme dropdown'larına event listener ekle
+            document.querySelectorAll('.dropdown-item[data-status]').forEach(item => {
+                // Önce mevcut event listener'ları kaldır
+                item.removeEventListener('click', handleStatusUpdate);
+                // Yeni event listener ekle
+                item.addEventListener('click', handleStatusUpdate);
+            });
+        }
+
+        // Kitap durumu güncelleme event handler'ı
+        function handleStatusUpdate(e) {
+            e.preventDefault();
+            const bookId = parseInt(this.dataset.bookId);
+            const status = parseInt(this.dataset.status);
+            updateBookStatus(bookId, status, this);
+        }
+
+        function updateBookStatus(bookId, status, clickedItem) {
+            const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+            
+            fetch('/Book/UpdateReadingStatus', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: `bookId=${bookId}&readingStatus=${status}&__RequestVerificationToken=${token}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Dropdown menüdeki aktif durumu güncelle
+                    const dropdownItems = clickedItem.closest('.dropdown-menu').querySelectorAll('.dropdown-item');
+                    dropdownItems.forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    clickedItem.classList.add('active');
+                    
+                    // Kitap kartının durumunu güncelle
+                    const bookCard = clickedItem.closest('.book-card');
+                    if (bookCard) {
+                        bookCard.className = `book-card status-${status}`;
+                        
+                        // Durum butonunu güncelle
+                        const statusButton = bookCard.querySelector('.dropdown-toggle');
+                        if (statusButton) {
+                            const statusIcon = statusButton.querySelector('.status-icon');
+                            const statusText = statusButton.querySelector('.status-text');
+                            
+                            if (statusIcon) statusIcon.textContent = GetStatusIcon(status);
+                            if (statusText) statusText.textContent = GetStatusText(status);
+                        }
+                    }
+                    
+                    // Kitap durumu sayılarını güncelle
+                    setTimeout(() => {
+                        updateBookStatusCounts();
+                    }, 500);
+                    
+                    // Şuan okuyor bölümü kaldırıldı
+                    
+                    // Kitaplık sekmesindeki kitapları da güncelle
+                    updateLibraryTabs(bookId, status, data);
+                    
+                    // Başarı mesajı göster
+                    showAlert('success', data.message);
+                    
+                    // 2 saniye sonra sayfayı yeniden yükle (değişikliklerin tam olarak görünmesi için)
+                    setTimeout(() => {
+                        location.reload();
+                    }, 1500);
+                } else {
+                    showAlert('danger', data.message || 'Hata oluştu');
+                }
+            })
+            .catch(error => {
+                console.error('Kitap durumu güncellenirken hata:', error);
+                showAlert('danger', 'Bir hata oluştu');
+            });
+        }
+
+        // Durum metni ve simgesi için yardımcı fonksiyonlar
+        function GetStatusText(status) {
+            switch (status) {
+                case 1: return "Okuyacaklarım";
+                case 2: return "Okuyorum";
+                case 3: return "Okuduklarım";
+                default: return "Durum Yok";
+            }
+        }
+        
+        function GetStatusIcon(status) {
+            switch (status) {
+                case 1: return "📚";
+                case 2: return "📖";
+                case 3: return "✅";
+                default: return "📚";
+            }
+        }
+
+        // Kitaplık sekmesindeki kitapları güncelle
+        function updateLibraryTabs(bookId, newStatus, data) {
+            // Eğer kitaplık sayfası açıksa, oradaki kitapları da güncelle
+            if (window.opener && !window.opener.closed) {
+                try {
+                    // Kitaplık sayfasına mesaj gönder
+                    window.opener.postMessage({
+                        type: 'BOOK_STATUS_UPDATED',
+                        bookId: bookId,
+                        newStatus: newStatus,
+                        statusIcon: GetStatusIcon(newStatus),
+                        statusText: GetStatusText(newStatus)
+                    }, '*');
+                } catch (e) {
+                    console.log('Kitaplık sayfası güncellenemedi');
+                }
+            }
+            
+            // Aynı pencerede kitaplık sekmesi açıksa
+            const libraryTabs = document.querySelectorAll('.nav-link[href*="MyBooks"]');
+            if (libraryTabs.length > 0) {
+                // Kitaplık sekmesindeki kitapları güncelle
+                updateLibraryTabContent(bookId, newStatus, data);
+            }
+        }
+
+        // Kitaplık sekmesi içeriğini güncelle
+        function updateLibraryTabContent(bookId, newStatus, data) {
+            // Tüm kitaplık sekmelerindeki kitap kartlarını bul
+            const allBookCards = document.querySelectorAll('.book-card[data-book-id="' + bookId + '"]');
+            
+            allBookCards.forEach(bookCard => {
+                // Kitap durumunu güncelle
+                bookCard.className = `book-card status-${newStatus}`;
+                
+                // Durum butonunu güncelle
+                const statusButton = bookCard.querySelector('.btn-status');
+                if (statusButton) {
+                    statusButton.innerHTML = `
+                        <span class="status-icon">${GetStatusIcon(newStatus)}</span>
+                        <span class="status-text d-none d-md-inline">${GetStatusText(newStatus)}</span>
+                    `;
+                }
+                
+                // Dropdown menüdeki aktif durumu güncelle
+                const dropdownItems = bookCard.querySelectorAll('.dropdown-item');
+                dropdownItems.forEach(item => {
+                    if (parseInt(item.dataset.status) === newStatus) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        }
+
+        function showAlert(type, message) {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+            alertDiv.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-triangle'}"></i> ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            `;
+            document.querySelector('.profile-container').prepend(alertDiv);
+            
+            setTimeout(() => {
+                alertDiv.remove();
+            }, 3000);
+        }
+        
+        // Kullanıcının alıntılarını yükle
+        function loadUserQuotes() {
+            const quotesList = document.getElementById('userQuotesList');
+            if (!quotesList) return;
+            
+            const userId = @Model.Id;
+            
+            // Loading göster
+            quotesList.innerHTML = '<div class="loading-quotes"><p>Alıntılar yükleniyor...</p></div>';
+            
+            // AJAX ile kullanıcının alıntılarını getir
+            fetch(`/Book/GetUserQuotes/${userId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        displayUserQuotes(data.quotes);
+                    } else {
+                        quotesList.innerHTML = '<div class="no-quotes"><div class="no-quotes-icon">❌</div><h4>Hata</h4><p>Alıntılar yüklenirken bir hata oluştu.</p></div>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Kullanıcı alıntıları yüklenirken hata:', error);
+                    quotesList.innerHTML = '<div class="no-quotes"><div class="no-quotes-icon">❌</div><h4>Hata</h4><p>Alıntılar yüklenirken bir hata oluştu.</p></div>';
+                });
+        }
+        
+        // Kullanıcının alıntılarını görüntüle
+        function displayUserQuotes(quotes) {
+            const quotesList = document.getElementById('userQuotesList');
+            if (!quotesList) return;
+            
+            if (!quotes || quotes.length === 0) {
+                quotesList.innerHTML = `
+                    <div class="no-quotes">
+                        <div class="no-quotes-icon">💬</div>
+                        <h4>Henüz Alıntı Yok</h4>
+                        <p>Henüz hiç alıntı eklememişsiniz. İlk alıntınızı ekleyin!</p>
+                        <a href="@Url.Action("AddQuote", "Profile")" class="btn btn-primary">
+                            <i class="icon">✏️</i> İlk Alıntımı Ekle
+                        </a>
+                    </div>
+                `;
+                return;
+            }
+            
+            const quotesHTML = quotes.map(quote => createUserQuoteCard(quote)).join('');
+            quotesList.innerHTML = quotesHTML;
+            
+            // Silme butonlarına event listener ekle
+            document.querySelectorAll('.quote-action-btn.delete').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const quoteId = this.dataset.quoteId;
+                    deleteUserQuote(quoteId);
+                });
+            });
+        }
+        
+        // Kullanıcı alıntı kartı oluştur
+        function createUserQuoteCard(quote) {
+            const metaItems = [];
+            
+            if (quote.author) {
+                metaItems.push(`<div class="quote-meta-item"><span class="quote-meta-icon">✍️</span> ${quote.author}</div>`);
+            }
+            
+            if (quote.source) {
+                metaItems.push(`<div class="quote-meta-item"><span class="quote-meta-icon">📖</span> ${quote.source}</div>`);
+            }
+            
+            if (quote.pageNumber > 0) {
+                metaItems.push(`<div class="quote-meta-item"><span class="quote-meta-icon">📄</span> Sayfa ${quote.pageNumber}</div>`);
+            }
+            
+            const metaHTML = metaItems.length > 0 ? `<div class="quote-meta">${metaItems.join('')}</div>` : '';
+            
+            const notesHTML = quote.notes ? `
+                <div class="quote-notes">
+                    <h5>📝 Notlar</h5>
+                    <p>${quote.notes}</p>
+                </div>
+            ` : '';
+            
+            return `
+                <div class="quote-card" data-quote-id="${quote.id}">
+                    <div class="quote-header">
+                        <div class="quote-book-info">
+                            <img src="${quote.bookCoverImage}" alt="${quote.bookTitle}" class="quote-book-cover">
+                            <div class="quote-book-details">
+                                <h5 class="quote-book-title">${quote.bookTitle}</h5>
+                                <p class="quote-book-author">${quote.bookAuthor}</p>
+                            </div>
+                        </div>
+                        <div class="quote-actions">
+                            <button class="quote-action-btn delete" data-quote-id="${quote.id}" title="Alıntıyı Sil">
+                                🗑️
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="quote-content">
+                        <p class="quote-text">"${quote.content}"</p>
+                    </div>
+                    
+                    ${metaHTML}
+                    ${notesHTML}
+                    
+                    <div class="quote-footer">
+                        <span class="quote-date">${quote.createdAt}</span>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Kullanıcı alıntısını sil
+        function deleteUserQuote(quoteId) {
+            if (!confirm('Bu alıntıyı silmek istediğinizden emin misiniz?')) {
+                return;
+            }
+            
+            const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
+            if (!token) {
+                showAlert('danger', 'Güvenlik token\'ı bulunamadı.');
+                return;
+            }
+            
+            // AJAX ile alıntı sil
+            fetch('/Book/DeleteQuote', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: `id=${quoteId}&__RequestVerificationToken=${token}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showAlert('success', data.message);
+                    
+                    // Alıntı kartını kaldır
+                    const quoteCard = document.querySelector(`[data-quote-id="${quoteId}"]`);
+                    if (quoteCard) {
+                        quoteCard.style.animation = 'fadeOut 0.3s ease-out';
+                        setTimeout(() => {
+                            quoteCard.remove();
+                            
+                            // Eğer hiç alıntı kalmadıysa boş durumu göster
+                            const remainingQuotes = document.querySelectorAll('.quote-card');
+                            if (remainingQuotes.length === 0) {
+                                loadUserQuotes();
+                            }
+                        }, 300);
+                    }
+                } else {
+                    showAlert('danger', data.message || 'Alıntı silinirken bir hata oluştu.');
+                }
+            })
+            .catch(error => {
+                console.error('Alıntı silinirken hata:', error);
+                showAlert('danger', 'Alıntı silinirken bir hata oluştu.');
+            });
+        }
+    </script>
+}
+
+@functions {
+    string GetStatusIcon(Entities.ReadingStatus status)
+    {
+        return status switch
+        {
+            Entities.ReadingStatus.WantToRead => "📚",
+            Entities.ReadingStatus.CurrentlyReading => "📖",
+            Entities.ReadingStatus.Read => "✅",
+            _ => "📚"
+        };
+    }
+    
+    string GetStatusText(Entities.ReadingStatus status)
+    {
+        return status switch
+        {
+            Entities.ReadingStatus.WantToRead => "Okuyacaklarım",
+            Entities.ReadingStatus.CurrentlyReading => "Okuyorum",
+            Entities.ReadingStatus.Read => "Okuduklarım",
+            _ => "Durum Yok"
+        };
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "bookId": "QdoZEAAAQBAJ",
+  "cachedAt": "2025-08-21T11:35:46.610792Z",
+  "book": {
+    "id": "QdoZEAAAQBAJ",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/QdoZEAAAQBAJ",
+    "volumeInfo": {
+      "title": "Kad\u0131nlar ve Sigmund Freud",
+      "subtitle": "",
+      "authors": [
+        "Emine Ebru"
+      ],
+      "publisher": "Kafek\u00FClt\u00FCr Yayincilik",
+      "publishedDate": "",
+      "description": "\u003Cp\u003ESigmund Freud, belki de babas\u0131 say\u0131ld\u0131\u011F\u0131 psikanalize en \u00E7ok ihtiya\u00E7 duyan ki\u015Filerden biriydi. Bir\u00E7ok korkusu, nevrozu, hastal\u0131\u011F\u0131 vard\u0131. \u00D6zellikle de elinden bir t\u00FCrl\u00FC d\u00FC\u015F\u00FCrmedi\u011Fi, neticede onu kanser eden purodan da vazge\u00E7emedi. Freud\u0027un tuhaf ya\u015Fant\u0131s\u0131n\u0131n ve belki de bir tek kendisinin anlayabilece\u011Fi garip d\u00FC\u015F\u00FCnce yap\u0131s\u0131n\u0131n, hayat\u0131n\u0131n her alan\u0131nda yans\u0131mas\u0131n\u0131 g\u00F6rmek m\u00FCmk\u00FCn.\u003C/p\u003E\u003Cp\u003EKad\u0131nlara ili\u015Fkin ara\u015Ft\u0131rmalarda da onun kadar g\u00FC\u00E7l\u00FC bir iradeye az rastlan\u0131r ve hi\u00E7biri hem kad\u0131nl\u0131k teorileri hem de ki\u015Fisel \u00F6nyarg\u0131y\u0131 evrensel beyana y\u00FCkseltti\u011Fi iddias\u0131yla bu kadar \u015Fiddetli bir \u015Fekilde sald\u0131r\u0131ya u\u011Framam\u0131\u015Ft\u0131r.\u003C/p\u003E\u003Cp\u003EFreud, kad\u0131n\u0131n geli\u015Fimini kuramla\u015Ft\u0131r\u0131rken analiz etti\u011Fi yeti\u015Fkin kad\u0131n klinik vakalar\u0131ndan yola \u00E7\u0131karak, aktar\u0131m arac\u0131l\u0131\u011F\u0131yla yorumlad\u0131\u011F\u0131 ve ya\u015Fam \u00F6yk\u00FClerinden soyutlad\u0131\u011F\u0131 genel ve standart bir kad\u0131n \u00F6znelli\u011Fi kurmu\u015F, ama kuramla\u015Ft\u0131rd\u0131\u011F\u0131 kad\u0131n\u0131n geli\u015Fimini g\u00F6zlemlememi\u015Ftir.\u003C/p\u003E",
+      "pageCount": 64,
+      "categories": [
+        "Psychology / Cognitive Neuroscience \u0026 Cognitive Neuropsychology"
+      ],
+      "averageRating": 0,
+      "ratingsCount": 0,
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/publisher/content?id=QdoZEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026imgtk=AFLRE71XLBE0Rm94ej4Tge8Y5AG0MhFVRkvNj6XAaA6Ex2RbYRnrnVy1laaH5Wh-Cb_RmLl8RWUQbh51YNK7np6k1OcqxX_dvGjxBsWUwV2sqlSCqIns-_x1R8jeiEXMaPamFYvQ5Nfs\u0026source=gbs_api",
+        "thumbnail": "http://books.google.com/books/publisher/content?id=QdoZEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026imgtk=AFLRE723z28FQcUhKED0Ymp5dfYBNvWdbDR_edg0KD7bpU6rluhr0l3UgjdtI5jzO7TZ56mzELDjx3vwVNfu2QDZuVscWDgZrqitM3FHitklQxV9N1ZHMoW1RwaZeIto7oNT-K5WLbYd\u0026source=gbs_api"
+      },
+      "language": "tr",
+      "previewLink": "http://books.google.com.tr/books?id=QdoZEAAAQBAJ\u0026hl=\u0026source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=QdoZEAAAQBAJ\u0026source=gbs_api",
+      "industryIdentifiers": null
+    }
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes/QdoZEAAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}
