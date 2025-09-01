@@ -5,6 +5,7 @@ C:\Users\merye\Desktop\kitapp\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuil
 C:\Users\merye\Desktop\kitapp\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
 C:\Users\merye\Desktop\kitapp\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
 C:\Users\merye\Desktop\kitapp\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\merye\Desktop\kitapp\Entities\obj\Debug\net8.0\Entities.sourcelink.json
 C:\Users\merye\Desktop\kitapp\Entities\obj\Debug\net8.0\Entities.dll
 C:\Users\merye\Desktop\kitapp\Entities\obj\Debug\net8.0\refint\Entities.dll
 C:\Users\merye\Desktop\kitapp\Entities\obj\Debug\net8.0\Entities.pdb

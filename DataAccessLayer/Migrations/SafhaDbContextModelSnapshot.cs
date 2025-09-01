@@ -35,6 +35,10 @@ namespace DataAccessLayer.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
+                    b.Property<string>("CoverImage")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
@@ -50,10 +54,17 @@ namespace DataAccessLayer.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
                     b.Property<bool>("IsAvailable")
                         .HasColumnType("boolean");
 
-                    b.Property<int?>("PageCount")
+                    b.Property<string>("Language")
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
+
+                    b.Property<int?>("Pages")
                         .HasColumnType("integer");
 
                     b.Property<int?>("PublicationYear")
@@ -81,6 +92,136 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Books");
                 });
 
+            modelBuilder.Entity("Entities.Follow", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("FollowerId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("FollowingId")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FollowingId");
+
+                    b.HasIndex("FollowerId", "FollowingId")
+                        .IsUnique();
+
+                    b.ToTable("Follows");
+                });
+
+            modelBuilder.Entity("Entities.Quote", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Author")
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("character varying(1000)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Notes")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<int>("PageNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0);
+
+                    b.Property<string>("Source")
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Quotes");
+                });
+
+            modelBuilder.Entity("Entities.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("character varying(2000)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<int>("Rating")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(5);
+
+                    b.Property<string>("Title")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Reviews");
+                });
+
             modelBuilder.Entity("Entities.User", b =>
                 {
                     b.Property<int>("Id")
@@ -92,6 +233,14 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Address")
                         .HasMaxLength(200)
                         .HasColumnType("character varying(200)");
+
+                    b.Property<string>("Bio")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<string>("CoverPhoto")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
@@ -106,12 +255,27 @@ namespace DataAccessLayer.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
+                    b.Property<int>("FollowerCount")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0);
+
+                    b.Property<int>("FollowingCount")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0);
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(true);
+
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
-                    b.Property<string>("PasswordHash")
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
@@ -119,6 +283,26 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("PhoneNumber")
                         .HasMaxLength(20)
                         .HasColumnType("character varying(20)");
+
+                    b.Property<string>("ProfilePicture")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<int>("ReadBookCount")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0);
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text")
+                        .HasDefaultValue("User");
+
+                    b.Property<int>("TargetBookCount")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0);
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
@@ -139,6 +323,56 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("Entities.UserBookStatus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int?>("CurrentPage")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime?>("FinishedReadingDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Notes")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<DateTime?>("StartedReadingDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int?>("UserId")
+                        .IsRequired()
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("UserId", "BookId")
+                        .IsUnique();
+
+                    b.ToTable("UserBookStatuses");
+                });
+
             modelBuilder.Entity("Entities.Book", b =>
                 {
                     b.HasOne("Entities.User", "User")
@@ -149,9 +383,104 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Entities.Follow", b =>
+                {
+                    b.HasOne("Entities.User", "Follower")
+                        .WithMany("Following")
+                        .HasForeignKey("FollowerId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Entities.User", "Following")
+                        .WithMany("Followers")
+                        .HasForeignKey("FollowingId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Follower");
+
+                    b.Navigation("Following");
+                });
+
+            modelBuilder.Entity("Entities.Quote", b =>
+                {
+                    b.HasOne("Entities.Book", "Book")
+                        .WithMany("Quotes")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entities.User", "User")
+                        .WithMany("Quotes")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Entities.Review", b =>
+                {
+                    b.HasOne("Entities.Book", "Book")
+                        .WithMany("Reviews")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entities.User", "User")
+                        .WithMany("Reviews")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Entities.UserBookStatus", b =>
+                {
+                    b.HasOne("Entities.Book", "Book")
+                        .WithMany("UserBookStatuses")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entities.User", "User")
+                        .WithMany("UserBookStatuses")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Entities.Book", b =>
+                {
+                    b.Navigation("Quotes");
+
+                    b.Navigation("Reviews");
+
+                    b.Navigation("UserBookStatuses");
+                });
+
             modelBuilder.Entity("Entities.User", b =>
                 {
                     b.Navigation("Books");
+
+                    b.Navigation("Followers");
+
+                    b.Navigation("Following");
+
+                    b.Navigation("Quotes");
+
+                    b.Navigation("Reviews");
+
+                    b.Navigation("UserBookStatuses");
                 });
 #pragma warning restore 612, 618
         }

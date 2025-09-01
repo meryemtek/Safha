@@ -3,6 +3,50 @@
   "WorkspaceRootPath": "C:\\Users\\merye\\Desktop\\kitapp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{94C4C9BC-21A5-4F7E-8C33-7BFAE97A5C79}|Entities\\Entities.csproj|c:\\users\\merye\\desktop\\kitapp\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94C4C9BC-21A5-4F7E-8C33-7BFAE97A5C79}|Entities\\Entities.csproj|solutionrelative:entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94C4C9BC-21A5-4F7E-8C33-7BFAE97A5C79}|Entities\\Entities.csproj|c:\\users\\merye\\desktop\\kitapp\\entities\\interfaces\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94C4C9BC-21A5-4F7E-8C33-7BFAE97A5C79}|Entities\\Entities.csproj|solutionrelative:entities\\interfaces\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94C4C9BC-21A5-4F7E-8C33-7BFAE97A5C79}|Entities\\Entities.csproj|c:\\users\\merye\\desktop\\kitapp\\entities\\interfaces\\itrackable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94C4C9BC-21A5-4F7E-8C33-7BFAE97A5C79}|Entities\\Entities.csproj|solutionrelative:entities\\interfaces\\itrackable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94C4C9BC-21A5-4F7E-8C33-7BFAE97A5C79}|Entities\\Entities.csproj|c:\\users\\merye\\desktop\\kitapp\\entities\\interfaces\\iuserowned.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94C4C9BC-21A5-4F7E-8C33-7BFAE97A5C79}|Entities\\Entities.csproj|solutionrelative:entities\\interfaces\\iuserowned.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA1EC671-B0A8-4BA9-A669-2110E971EA94}|UI\\UI.csproj|c:\\users\\merye\\desktop\\kitapp\\ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA1EC671-B0A8-4BA9-A669-2110E971EA94}|UI\\UI.csproj|solutionrelative:ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA1EC671-B0A8-4BA9-A669-2110E971EA94}|UI\\UI.csproj|c:\\users\\merye\\desktop\\kitapp\\ui\\controllers\\librarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA1EC671-B0A8-4BA9-A669-2110E971EA94}|UI\\UI.csproj|solutionrelative:ui\\controllers\\librarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA1EC671-B0A8-4BA9-A669-2110E971EA94}|UI\\UI.csproj|c:\\users\\merye\\desktop\\kitapp\\ui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AA1EC671-B0A8-4BA9-A669-2110E971EA94}|UI\\UI.csproj|solutionrelative:ui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA1EC671-B0A8-4BA9-A669-2110E971EA94}|UI\\UI.csproj|c:\\users\\merye\\desktop\\kitapp\\ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA1EC671-B0A8-4BA9-A669-2110E971EA94}|UI\\UI.csproj|solutionrelative:ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA1EC671-B0A8-4BA9-A669-2110E971EA94}|UI\\UI.csproj|c:\\users\\merye\\desktop\\kitapp\\ui\\services\\googlebooksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA1EC671-B0A8-4BA9-A669-2110E971EA94}|UI\\UI.csproj|solutionrelative:ui\\services\\googlebooksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA1EC671-B0A8-4BA9-A669-2110E971EA94}|UI\\UI.csproj|c:\\users\\merye\\desktop\\kitapp\\ui\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA1EC671-B0A8-4BA9-A669-2110E971EA94}|UI\\UI.csproj|solutionrelative:ui\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84707C5B-5A65-4CCA-A711-5B59A3E20E5E}|DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\merye\\desktop\\kitapp\\dataaccesslayer\\entityframework\\context\\safhadbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84707C5B-5A65-4CCA-A711-5B59A3E20E5E}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\entityframework\\context\\safhadbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AA1EC671-B0A8-4BA9-A669-2110E971EA94}|UI\\UI.csproj|c:\\users\\merye\\desktop\\kitapp\\ui\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{AA1EC671-B0A8-4BA9-A669-2110E971EA94}|UI\\UI.csproj|solutionrelative:ui\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -43,19 +87,151 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "UI\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\Properties\\launchSettings.json",
-              "RelativeToolTip": "UI\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-07T14:38:33.374Z",
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\Entities\\Review.cs",
+              "RelativeDocumentMoniker": "Entities\\Review.cs",
+              "ToolTip": "C:\\Users\\merye\\Desktop\\kitapp\\Entities\\Review.cs",
+              "RelativeToolTip": "Entities\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T15:00:00.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "IUserOwned.cs",
+              "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\Entities\\Interfaces\\IUserOwned.cs",
+              "RelativeDocumentMoniker": "Entities\\Interfaces\\IUserOwned.cs",
+              "ToolTip": "C:\\Users\\merye\\Desktop\\kitapp\\Entities\\Interfaces\\IUserOwned.cs",
+              "RelativeToolTip": "Entities\\Interfaces\\IUserOwned.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T14:59:03.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ITrackable.cs",
+              "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\Entities\\Interfaces\\ITrackable.cs",
+              "RelativeDocumentMoniker": "Entities\\Interfaces\\ITrackable.cs",
+              "ToolTip": "C:\\Users\\merye\\Desktop\\kitapp\\Entities\\Interfaces\\ITrackable.cs",
+              "RelativeToolTip": "Entities\\Interfaces\\ITrackable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T14:58:58.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IEntity.cs",
+              "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\Entities\\Interfaces\\IEntity.cs",
+              "RelativeDocumentMoniker": "Entities\\Interfaces\\IEntity.cs",
+              "ToolTip": "C:\\Users\\merye\\Desktop\\kitapp\\Entities\\Interfaces\\IEntity.cs",
+              "RelativeToolTip": "Entities\\Interfaces\\IEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T14:58:53.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "UI\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "UI\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAUwC4AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T14:52:56.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LibraryController.cs",
+              "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\Controllers\\LibraryController.cs",
+              "RelativeDocumentMoniker": "UI\\Controllers\\LibraryController.cs",
+              "ToolTip": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\Controllers\\LibraryController.cs",
+              "RelativeToolTip": "UI\\Controllers\\LibraryController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T14:45:49.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\Program.cs",
+              "RelativeDocumentMoniker": "UI\\Program.cs",
+              "ToolTip": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\Program.cs",
+              "RelativeToolTip": "UI\\Program.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T14:37:19.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GoogleBooksService.cs",
+              "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\Services\\GoogleBooksService.cs",
+              "RelativeDocumentMoniker": "UI\\Services\\GoogleBooksService.cs",
+              "ToolTip": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\Services\\GoogleBooksService.cs",
+              "RelativeToolTip": "UI\\Services\\GoogleBooksService.cs",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAAAKkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T06:40:57.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SafhaDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\DataAccessLayer\\EntityFramework\\Context\\SafhaDbContextFactory.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\EntityFramework\\Context\\SafhaDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\merye\\Desktop\\kitapp\\DataAccessLayer\\EntityFramework\\Context\\SafhaDbContextFactory.cs",
+              "RelativeToolTip": "DataAccessLayer\\EntityFramework\\Context\\SafhaDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T14:33:16.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "UI\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "UI\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T14:32:09.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\appsettings.json",
+              "RelativeDocumentMoniker": "UI\\appsettings.json",
+              "ToolTip": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\appsettings.json",
+              "RelativeToolTip": "UI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-13T14:26:47.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "UI\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\merye\\Desktop\\kitapp\\UI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "UI\\Properties\\launchSettings.json",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-07T14:38:33.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Entities\\User.cs",
@@ -67,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 13,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\Entities\\Book.cs",
               "RelativeDocumentMoniker": "Entities\\Book.cs",
@@ -79,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "SafhaDbContext.cs",
               "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\DataAccessLayer\\EntityFramework\\Context\\SafhaDbContext.cs",
               "RelativeDocumentMoniker": "DataAccessLayer\\EntityFramework\\Context\\SafhaDbContext.cs",
@@ -91,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 15,
               "Title": "CrudOperations.cs",
               "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\Core\\CrudOperations.cs",
               "RelativeDocumentMoniker": "Core\\CrudOperations.cs",
@@ -103,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 16,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\Entities\\Class1.cs",
               "RelativeDocumentMoniker": "Entities\\Class1.cs",
@@ -115,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 17,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\merye\\Desktop\\kitapp\\DataAccessLayer\\Class1.cs",
               "RelativeDocumentMoniker": "DataAccessLayer\\Class1.cs",
