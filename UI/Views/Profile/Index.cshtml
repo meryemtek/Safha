@@ -5,28 +5,37 @@
     Layout = "_Layout";
 }
 
+<!-- Kullanıcı ID'sini JavaScript için gizli alan -->
+<input type="hidden" id="profileUserId" value="@Model.Id" />
+
 <div class="profile-container">
         <!-- Üst Profil Kartı -->
         <div class="profile-header-card">
             <div class="profile-cover">
                 <div class="cover-image" style="background-image: url('@(string.IsNullOrEmpty(Model.CoverPhoto) ? "/image/default-cover.jpg" : Model.CoverPhoto)')">
-                    <div class="cover-overlay">
-                        <button class="btn btn-edit-cover" onclick="document.getElementById('coverPhotoInput').click()">
-                            <i class="icon">📷</i> Kapak Fotoğrafını Değiştir
-                        </button>
-                    </div>
+                    @if (Model.IsOwnProfile)
+                    {
+                        <div class="cover-overlay">
+                            <button class="btn btn-edit-cover" onclick="document.getElementById('coverPhotoInput').click()">
+                                <i class="icon">📷</i> Kapak Fotoğrafını Değiştir
+                            </button>
+                        </div>
+                    }
                 </div>
             </div>
             
             <div class="profile-info-section">
                 <div class="profile-avatar-container">
-                    <div class="profile-avatar" onclick="document.getElementById('profilePhotoInput').click()">
+                    <div class="profile-avatar" @(Model.IsOwnProfile ? "onclick=\"document.getElementById('profilePhotoInput').click()\"" : "")>
                         <img src="@(string.IsNullOrEmpty(Model.ProfilePicture) ? "/image/default-avatar.jpg" : Model.ProfilePicture)" 
                              alt="@Model.DisplayName" class="avatar-image" />
-                        <div class="avatar-edit-overlay">
-                            <i class="icon">✏️</i>
-                            <span>Düzenle</span>
-                        </div>
+                        @if (Model.IsOwnProfile)
+                        {
+                            <div class="avatar-edit-overlay">
+                                <i class="icon">✏️</i>
+                                <span>Düzenle</span>
+                            </div>
+                        }
                     </div>
                 </div>
                 
@@ -59,9 +68,25 @@
                 </div>
                 
                 <div class="profile-actions">
-                    <a href="@Url.Action("Edit", "Profile")" class="btn btn-edit-profile">
-                        <i class="icon">✏️</i> Profili Düzenle
-                    </a>
+                    @if (Model.IsOwnProfile)
+                    {
+                        <a href="@Url.Action("Edit", "Profile")" class="btn btn-edit-profile">
+                            <i class="icon">✏️</i> Profili Düzenle
+                        </a>
+                    }
+                    else
+                    {
+                        <button id="followBtn" type="button" class="btn @(Model.IsFollowing ? "btn-following" : "btn-primary")" data-user-id="@Model.Id" data-following="@Model.IsFollowing.ToString().ToLower()">
+                            @if (Model.IsFollowing)
+                            {
+                                <text>Takibi Bırak</text>
+                            }
+                            else
+                            {
+                                <text>Takip Et</text>
+                            }
+                        </button>
+                    }
                 </div>
             </div>
         </div>
@@ -83,7 +108,7 @@
         <!-- Kitap Durumu Kartları -->
         <div class="book-status-section">
             <div class="status-header">
-                <h3><i class="fas fa-book"></i> Kitap Durumlarım</h3>
+                <h3><i class="fas fa-book"></i> @(Model.IsOwnProfile ? "Kitap Durumlarım" : "Kitap Durumları")</h3>
             </div>
             <div class="status-cards">
                 <div class="status-card reading">
@@ -91,7 +116,7 @@
                         <i class="fas fa-book-open"></i>
                     </div>
                     <div class="status-content">
-                        <h4>Okuyorum</h4>
+                        <h4>@(Model.IsOwnProfile ? "Okuyorum" : "Okuyor Oldukları")</h4>
                         <div class="status-count">@Model.CurrentlyReadingCount</div>
                         <a href="@Url.Action("MyBooks", "Book", new { statusFilter = 2 })" class="status-link">
                             Kitapları Görüntüle <i class="fas fa-arrow-right"></i>
@@ -104,7 +129,7 @@
                         <i class="fas fa-bookmark"></i>
                     </div>
                     <div class="status-content">
-                        <h4>Okuyacaklarım</h4>
+                        <h4>@(Model.IsOwnProfile ? "Okuyacaklarım" : "Okuyacakları")</h4>
                         <div class="status-count">@Model.WantToReadCount</div>
                         <a href="@Url.Action("MyBooks", "Book", new { statusFilter = 1 })" class="status-link">
                             Kitapları Görüntüle <i class="fas fa-arrow-right"></i>
@@ -117,7 +142,7 @@
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <div class="status-content">
-                        <h4>Okuduklarım</h4>
+                        <h4>@(Model.IsOwnProfile ? "Okuduklarım" : "Okudukları")</h4>
                         <div class="status-count">@Model.ReadBookCount</div>
                         <a href="@Url.Action("MyBooks", "Book", new { statusFilter = 3 })" class="status-link">
                             Kitapları Görüntüle <i class="fas fa-arrow-right"></i>
@@ -196,15 +221,18 @@
         <!-- Alıntılar Bölümü -->
         <div class="quotes-section-profile">
             <div class="quotes-header">
-                <h3><i class="fas fa-quote-left"></i> Alıntılarım</h3>
-                <a href="@Url.Action("AddQuote", "Profile")" class="btn btn-primary">
-                    <i class="icon">✏️</i> Yeni Alıntı Ekle
-                </a>
+                <h3><i class="fas fa-quote-left"></i> Kitap Alıntıları</h3>
+                @if (Model.IsOwnProfile)
+                {
+                    <a href="@Url.Action("AddQuote", "Profile")" class="btn btn-primary">
+                        <i class="icon">✏️</i> Yeni Alıntı Ekle
+                    </a>
+                }
             </div>
             
             <div class="quotes-list" id="userQuotesList">
                 <div class="loading-quotes">
-                    <p>Alıntılar yükleniyor...</p>
+                    <p>Kitap alıntıları yükleniyor...</p>
                 </div>
             </div>
         </div>
@@ -212,8 +240,14 @@
 </div>
 
 <!-- Gizli dosya input'ları -->
+@if (Model.IsOwnProfile)
+{
 <input type="file" id="profilePhotoInput" accept="image/*" style="display: none;" onchange="uploadPhoto(this, 'profile')" />
 <input type="file" id="coverPhotoInput" accept="image/*" style="display: none;" onchange="uploadPhoto(this, 'cover')" />
+}
+
+<!-- CSRF Token -->
+@Html.AntiForgeryToken()
 
 @section Styles {
     <link rel="stylesheet" href="~/css/profile.css" />
@@ -224,14 +258,22 @@
     <script>
         // Profil sayfası yüklendiğinde kitap durumlarını senkronize et
         document.addEventListener('DOMContentLoaded', function() {
-            // Kitap durumu sayılarını güncelle
-            updateBookStatusCounts();
+            console.log('Profil sayfası yüklendi, alıntılar yükleniyor...');
             
-            // Kitap durumu güncelleme butonlarına event listener ekle
-            setupBookStatusControls();
+            // Kitap durumu sayılarını güncelle (sadece kendi profilinde)
+            if (@(Model.IsOwnProfile.ToString().ToLower())) {
+                updateBookStatusCounts();
+            }
             
-            // Kullanıcının alıntılarını yükle
-            loadUserQuotes();
+            // Kitap durumu güncelleme butonlarına event listener ekle (sadece kendi profilinde)
+            if (@(Model.IsOwnProfile.ToString().ToLower())) {
+                setupBookStatusControls();
+            }
+            
+            // Kullanıcının alıntılarını yükle (kısa bir gecikme ile)
+            setTimeout(() => {
+                loadUserQuotes();
+            }, 500);
         });
 
 
@@ -269,6 +311,38 @@
             .catch(error => {
                 console.error('Kitap durumu sayıları alınırken hata:', error);
             });
+            // Takip/Takibi bırak butonu (başkasının profili ise)
+            const followBtn = document.getElementById('followBtn');
+            if (followBtn) {
+                followBtn.addEventListener('click', function() {
+                    const targetUserId = this.getAttribute('data-user-id');
+                    const isFollowing = this.getAttribute('data-following') === 'true';
+                    const url = isFollowing ? '/Profile/Unfollow' : '/Profile/Follow';
+                    const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+                    fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                            'X-Requested-With': 'XMLHttpRequest'
+                        },
+                        body: `userId=${targetUserId}&__RequestVerificationToken=${token}`
+                    })
+                    .then(r => r.json())
+                    .then(d => {
+                        if (d.success) {
+                            this.textContent = isFollowing ? 'Takip Et' : 'Takibi Bırak';
+                            this.setAttribute('data-following', (!isFollowing).toString());
+                            // Follower count'ı güncelle
+                            const followerLink = document.querySelector('.follow-stats a[href*="Followers"] .follow-count');
+                            if (followerLink && typeof d.followerCount !== 'undefined') {
+                                followerLink.textContent = d.followerCount;
+                            }
+                        }
+                        showAlert(d.success ? 'success' : 'danger', d.message || 'İşlem tamamlandı');
+                    })
+                    .catch(() => showAlert('danger', 'Bir hata oluştu'));
+                });
+            }
         }
 
         function setupBookStatusControls() {
@@ -445,27 +519,89 @@
         // Kullanıcının alıntılarını yükle
         function loadUserQuotes() {
             const quotesList = document.getElementById('userQuotesList');
-            if (!quotesList) return;
+            if (!quotesList) {
+                console.error('userQuotesList elementi bulunamadı');
+                return;
+            }
             
             const userId = @Model.Id;
             
             // Loading göster
-            quotesList.innerHTML = '<div class="loading-quotes"><p>Alıntılar yükleniyor...</p></div>';
+            quotesList.innerHTML = '<div class="loading-quotes"><p>Kitap alıntıları yükleniyor...</p></div>';
+            
+            console.log(`Kullanıcı alıntıları yükleniyor. UserId: ${userId}`);
+            
+            // Doğrudan URL ile istek yap (query string ile doğru bağlama)
+            const url = `/Profile/GetUserQuotes?userId=${userId}`;
+            console.log(`İstek URL: ${url}`);
             
             // AJAX ile kullanıcının alıntılarını getir
-            fetch(`/Book/GetUserQuotes/${userId}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
+            fetch(url, {
+                method: 'GET',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json',
+                    'Cache-Control': 'no-cache',
+                    'Pragma': 'no-cache'
+                },
+                credentials: 'same-origin'
+            })
+            .then(response => {
+                console.log('Sunucu yanıtı:', response.status, response.statusText);
+                if (!response.ok) {
+                    throw new Error('Sunucu yanıtı başarısız: ' + response.status + ' ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Alıntılar yanıtı:', data);
+                if (data.success) {
+                    console.log('Alıntılar başarıyla yüklendi:', data.quotes);
+                    if (data.quotes && data.quotes.length > 0) {
                         displayUserQuotes(data.quotes);
                     } else {
-                        quotesList.innerHTML = '<div class="no-quotes"><div class="no-quotes-icon">❌</div><h4>Hata</h4><p>Alıntılar yüklenirken bir hata oluştu.</p></div>';
+                        console.log('Alıntı bulunamadı');
+                        quotesList.innerHTML = `
+                            <div class="no-quotes">
+                                <div class="no-quotes-icon">💬</div>
+                                <h4>Henüz Kitap Alıntısı Yok</h4>
+                                <p>Henüz hiç kitap alıntısı eklememişsiniz. Okuduğunuz veya okumakta olduğunuz kitaplardan ilk alıntınızı ekleyin!</p>
+                        @if (Model.IsOwnProfile)
+                        {
+                        <a href="@Url.Action("AddQuote", "Profile")" class="btn btn-primary">
+                                    <i class="icon">✏️</i> İlk Kitap Alıntımı Ekle
+                        </a>
+                        }
+                            </div>
+                        `;
                     }
-                })
-                .catch(error => {
-                    console.error('Kullanıcı alıntıları yüklenirken hata:', error);
-                    quotesList.innerHTML = '<div class="no-quotes"><div class="no-quotes-icon">❌</div><h4>Hata</h4><p>Alıntılar yüklenirken bir hata oluştu.</p></div>';
-                });
+                } else {
+                    console.error('Alıntılar yüklenemedi:', data.message);
+                    quotesList.innerHTML = `
+                        <div class="no-quotes">
+                            <div class="no-quotes-icon">❌</div>
+                            <h4>Hata</h4>
+                            <p>Kitap alıntıları yüklenirken bir hata oluştu: ${data.message || 'Bilinmeyen hata'}</p>
+                            <button onclick="loadUserQuotes()" class="btn btn-primary">
+                                <i class="icon">🔄</i> Tekrar Dene
+                            </button>
+                        </div>
+                    `;
+                }
+            })
+            .catch(error => {
+                console.error('Kullanıcı alıntıları yüklenirken hata:', error);
+                quotesList.innerHTML = `
+                    <div class="no-quotes">
+                        <div class="no-quotes-icon">❌</div>
+                        <h4>Hata</h4>
+                        <p>Kitap alıntıları yüklenirken bir hata oluştu: ${error.message}</p>
+                        <button onclick="loadUserQuotes()" class="btn btn-primary">
+                            <i class="icon">🔄</i> Tekrar Dene
+                        </button>
+                    </div>
+                `;
+            });
         }
         
         // Kullanıcının alıntılarını görüntüle
@@ -477,11 +613,14 @@
                 quotesList.innerHTML = `
                     <div class="no-quotes">
                         <div class="no-quotes-icon">💬</div>
-                        <h4>Henüz Alıntı Yok</h4>
-                        <p>Henüz hiç alıntı eklememişsiniz. İlk alıntınızı ekleyin!</p>
+                        <h4>Henüz Kitap Alıntısı Yok</h4>
+                        <p>Henüz hiç kitap alıntısı eklememişsiniz. Okuduğunuz veya okumakta olduğunuz kitaplardan ilk alıntınızı ekleyin!</p>
+                        @if (Model.IsOwnProfile)
+                        {
                         <a href="@Url.Action("AddQuote", "Profile")" class="btn btn-primary">
-                            <i class="icon">✏️</i> İlk Alıntımı Ekle
+                            <i class="icon">✏️</i> İlk Kitap Alıntımı Ekle
                         </a>
+                        }
                     </div>
                 `;
                 return;
@@ -534,11 +673,9 @@
                                 <p class="quote-book-author">${quote.bookAuthor}</p>
                             </div>
                         </div>
-                        <div class="quote-actions">
-                            <button class="quote-action-btn delete" data-quote-id="${quote.id}" title="Alıntıyı Sil">
-                                🗑️
-                            </button>
-                        </div>
+                        ${quote.canDelete ? `<div class="quote-actions">
+                            <button class="quote-action-btn delete" data-quote-id="${quote.id}" title="Alıntıyı Sil">🗑️</button>
+                        </div>` : ''}
                     </div>
                     
                     <div class="quote-content">
@@ -561,28 +698,51 @@
                 return;
             }
             
-            const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
-            if (!token) {
-                showAlert('danger', 'Güvenlik token\'ı bulunamadı.');
-                return;
-            }
+            // Form oluştur ve token ekle
+            const form = document.createElement('form');
+            form.style.display = 'none';
+            form.method = 'POST';
+            form.action = '/Book/DeleteQuote';
+            
+            // CSRF token ekle
+            const tokenInput = document.createElement('input');
+            tokenInput.type = 'hidden';
+            tokenInput.name = '__RequestVerificationToken';
+            tokenInput.value = document.querySelector('input[name="__RequestVerificationToken"]')?.value || '';
+            form.appendChild(tokenInput);
+            
+            // Quote ID ekle
+            const idInput = document.createElement('input');
+            idInput.type = 'hidden';
+            idInput.name = 'id';
+            idInput.value = quoteId;
+            form.appendChild(idInput);
+            
+            // Form'u sayfaya ekle ve gönder
+            document.body.appendChild(form);
             
             // AJAX ile alıntı sil
-            fetch('/Book/DeleteQuote', {
+            fetch('/Profile/DeleteQuote', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'X-Requested-With': 'XMLHttpRequest'
                 },
-                body: `id=${quoteId}&__RequestVerificationToken=${token}`
+                body: new URLSearchParams(new FormData(form))
             })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Sunucu yanıtı başarısız: ' + response.status);
+                }
+                return response.json();
+            })
             .then(data => {
                 if (data.success) {
+                    console.log('Alıntı başarıyla silindi:', data);
                     showAlert('success', data.message);
                     
                     // Alıntı kartını kaldır
-                    const quoteCard = document.querySelector(`[data-quote-id="${quoteId}"]`);
+                    const quoteCard = document.querySelector(`.quote-card[data-quote-id="${quoteId}"]`);
                     if (quoteCard) {
                         quoteCard.style.animation = 'fadeOut 0.3s ease-out';
                         setTimeout(() => {
@@ -596,12 +756,17 @@
                         }, 300);
                     }
                 } else {
+                    console.error('Alıntı silinemedi:', data.message);
                     showAlert('danger', data.message || 'Alıntı silinirken bir hata oluştu.');
                 }
             })
             .catch(error => {
                 console.error('Alıntı silinirken hata:', error);
-                showAlert('danger', 'Alıntı silinirken bir hata oluştu.');
+                showAlert('danger', 'Alıntı silinirken bir hata oluştu: ' + error.message);
+            })
+            .finally(() => {
+                // Form'u temizle
+                document.body.removeChild(form);
             });
         }
     </script>

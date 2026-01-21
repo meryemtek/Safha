@@ -1,4 +1,4 @@
-﻿@model List<Entities.Book>
+@model List<Entities.Book>
 
 @{
     ViewData["Title"] = "Ana Sayfa";
@@ -20,68 +20,124 @@
         <!-- Gündem ve Kitap Alıntıları -->
         <div class="content-area">
             <div class="trending-section">
-                <h2>📖 Gündemdeki Alıntılar</h2>
+                <h2>📖 Son Alıntılar</h2>
                 <div class="quotes-grid">
-                    <div class="quote-card">
-                        <div class="quote-text">
-                            "Kitaplar, insanın en iyi arkadaşıdır. Sessizdirler ama her zaman dinlerler."
+                    @if (ViewBag.RecentQuotes != null && ((List<UI.Models.QuoteViewModel>)ViewBag.RecentQuotes).Any())
+                    {
+                        @foreach (var quote in (List<UI.Models.QuoteViewModel>)ViewBag.RecentQuotes)
+                        {
+                            <div class="quote-card">
+                                <div class="quote-header">
+                                    <div class="quote-user-info">
+                                        <a href="@Url.Action("View", "Profile", new { id = quote.UserId })">
+                                            <img src="@(string.IsNullOrEmpty(quote.UserProfilePicture) ? "/image/default-avatar.jpg" : quote.UserProfilePicture)" 
+                                                 alt="@quote.UserName" class="quote-user-avatar" />
+                                        </a>
+                                        <div class="quote-user-details">
+                                            <a href="@Url.Action("View", "Profile", new { id = quote.UserId })" class="quote-user-name">@quote.UserName</a>
+                                            <span class="quote-date">@quote.CreatedAt.ToString("dd MMM yyyy")</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="quote-text">
+                                    @quote.Content
+                                </div>
+                                
+                                <div class="quote-meta">
+                                    <div class="quote-book-info">
+                                        @if (!string.IsNullOrEmpty(quote.BookCoverImage))
+                                        {
+                                            <div class="book-cover-container">
+                                                <img src="@quote.BookCoverImage" alt="@quote.BookTitle" class="book-cover-image" />
+                                            </div>
+                                        }
+                                        <div class="book-details">
+                                            <div class="book-title">@quote.BookTitle</div>
+                                            <div class="author-name">@quote.BookAuthor</div>
+                                        </div>
+                                    </div>
+                                    @if (!string.IsNullOrEmpty(quote.Author) || quote.PageNumber > 0)
+                                    {
+                                        <div style="display: flex; gap: 8px; flex-wrap: wrap; font-size: 0.8125rem; color: #65676B;">
+                                            @if (!string.IsNullOrEmpty(quote.Author))
+                                            {
+                                                <span class="quote-author-info">
+                                                    <span class="quote-author-label">Alıntı:</span>
+                                                    <span class="quote-author-name">@quote.Author</span>
+                                                </span>
+                                            }
+                                            @if (quote.PageNumber > 0)
+                                            {
+                                                <span class="quote-page-info">
+                                                    <span class="quote-page-label">Sayfa</span>
+                                                    <span class="quote-page-number">@quote.PageNumber</span>
+                                                </span>
+                                            }
+                                        </div>
+                                    }
+                                </div>
+                                
+                                @if (!string.IsNullOrEmpty(quote.Notes))
+                                {
+                                    <div class="quote-notes">
+                                        @quote.Notes
+                                    </div>
+                                }
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="no-quotes">
+                            <div class="no-quotes-icon">💬</div>
+                            <h4>Henüz Alıntı Yok</h4>
+                            <p>Henüz hiç alıntı eklenmemiş. İlk alıntıyı siz ekleyin!</p>
                         </div>
-                        <div class="quote-author">
-                            <span class="book-title">Küçük Prens</span>
-                            <span class="author-name">- Antoine de Saint-Exupéry</span>
-                        </div>
-                    </div>
-                    
-                    <div class="quote-card">
-                        <div class="quote-text">
-                            "Okumak, ruhun gıdasıdır. Her kitap yeni bir dünya açar."
-                        </div>
-                        <div class="quote-author">
-                            <span class="book-title">Suç ve Ceza</span>
-                            <span class="author-name">- Fyodor Dostoyevski</span>
-                        </div>
-                    </div>
-                    
-                    <div class="quote-card">
-                        <div class="quote-text">
-                            "Bilgi, güçtür. Okumak ise bu gücü elde etmenin en güzel yoludur."
-                        </div>
-                        <div class="quote-author">
-                            <span class="book-title">1984</span>
-                            <span class="author-name">- George Orwell</span>
-                        </div>
-                    </div>
-                    
-                    <div class="quote-card">
-                        <div class="quote-text">
-                            "Her kitap, yeni bir maceraya açılan kapıdır."
-                        </div>
-                        <div class="quote-author">
-                            <span class="book-title">Hobbit</span>
-                            <span class="author-name">- J.R.R. Tolkien</span>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
             
             <div class="recent-activity">
                 <h3>🕒 Son Aktiviteler</h3>
                 <div class="activity-list">
-                    <div class="activity-item">
-                        <span class="activity-icon">📖</span>
-                        <span class="activity-text">Yeni kitap eklendi: "Dönüşüm"</span>
-                        <span class="activity-time">2 saat önce</span>
-                    </div>
-                    <div class="activity-item">
-                        <span class="activity-icon">⭐</span>
-                        <span class="activity-text">"Suç ve Ceza" kitabına 5 yıldız verildi</span>
-                        <span class="activity-time">4 saat önce</span>
-                    </div>
-                    <div class="activity-item">
-                        <span class="activity-icon">💬</span>
-                        <span class="activity-text">"Küçük Prens" için yeni yorum eklendi</span>
-                        <span class="activity-time">6 saat önce</span>
-                    </div>
+                    @if (ViewBag.RecentActivities != null && ((List<UI.Models.ActivityViewModel>)ViewBag.RecentActivities).Any())
+                    {
+                        @foreach (var activity in (List<UI.Models.ActivityViewModel>)ViewBag.RecentActivities)
+                        {
+                            <div class="activity-item">
+                                <span class="activity-icon">
+                                    @(activity.Status switch
+                                    {
+                                        Entities.ReadingStatus.WantToRead => "📚",
+                                        Entities.ReadingStatus.CurrentlyReading => "📖",
+                                        Entities.ReadingStatus.Read => "✅",
+                                        _ => "📖"
+                                    })
+                                </span>
+                                <span class="activity-text">
+                                    <strong>@activity.UserName</strong> 
+                                    @(activity.Status switch
+                                    {
+                                        Entities.ReadingStatus.WantToRead => "okumayı planladığı kitaplara",
+                                        Entities.ReadingStatus.CurrentlyReading => "şu anda okuduğu kitaplara",
+                                        Entities.ReadingStatus.Read => "okudukları listesine",
+                                        _ => "kitaplığına"
+                                    })
+                                    <strong>"@activity.BookTitle"</strong> kitabını ekledi
+                                </span>
+                                <span class="activity-time">@GetTimeAgo(activity.UpdatedAt)</span>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="no-activities">
+                            <div class="no-activities-icon">🕒</div>
+                            <h4>Henüz Aktivite Yok</h4>
+                            <p>Henüz hiç aktivite gerçekleşmemiş.</p>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
@@ -89,6 +145,28 @@
 
 @section Styles {
     <link rel="stylesheet" href="~/css/home.css" />
+}
+
+@functions {
+    string GetTimeAgo(DateTime dateTime)
+    {
+        var timeSpan = DateTime.UtcNow - dateTime;
+        
+        if (timeSpan.TotalMinutes < 1)
+            return "Az önce";
+        else if (timeSpan.TotalMinutes < 60)
+            return $"{(int)timeSpan.TotalMinutes} dakika önce";
+        else if (timeSpan.TotalHours < 24)
+            return $"{(int)timeSpan.TotalHours} saat önce";
+        else if (timeSpan.TotalDays < 7)
+            return $"{(int)timeSpan.TotalDays} gün önce";
+        else if (timeSpan.TotalDays < 30)
+            return $"{(int)(timeSpan.TotalDays / 7)} hafta önce";
+        else if (timeSpan.TotalDays < 365)
+            return $"{(int)(timeSpan.TotalDays / 30)} ay önce";
+        else
+            return $"{(int)(timeSpan.TotalDays / 365)} yıl önce";
+    }
 }
 
 @section Scripts {

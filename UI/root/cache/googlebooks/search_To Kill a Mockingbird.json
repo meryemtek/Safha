@@ -1,0 +1,48 @@
+{
+  "query": "To Kill a Mockingbird",
+  "cachedAt": "2026-01-21T17:20:52.5068123Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "3t5dtAEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/3t5dtAEACAAJ",
+        "volumeInfo": {
+          "title": "To Kill a Mockingbird",
+          "subtitle": "",
+          "authors": [
+            "Harper Lee"
+          ],
+          "publisher": "",
+          "publishedDate": "1982",
+          "description": "The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it, in a mass market edition.",
+          "pageCount": 376,
+          "categories": [
+            "Alabama"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=3t5dtAEACAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=3t5dtAEACAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=3t5dtAEACAAJ\u0026dq=To\u002BKill\u002Ba\u002BMockingbird\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=3t5dtAEACAAJ\u0026dq=To\u002BKill\u002Ba\u002BMockingbird\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "0329001183"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9780329001186"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=To%20Kill%20a%20Mockingbird\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

@@ -1,0 +1,182 @@
+@model List<Entities.User>
+
+@{
+    ViewData["Title"] = "Kullanıcılar";
+    Layout = "_Layout";
+}
+
+<div class="users-container">
+    <div class="users-header">
+        <h2>Kullanıcılar</h2>
+        <p>Takip etmek için bir kullanıcı seçin</p>
+    </div>
+
+    <div class="users-list">
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var user in Model)
+            {
+                <div class="user-card">
+                    <a href="@Url.Action("View", "Profile", new { id = user.Id })" class="user-link">
+                        <div class="user-avatar">
+                            <img src="@(string.IsNullOrEmpty(user.ProfilePicture) ? "/image/default-avatar.jpg" : user.ProfilePicture)" 
+                                 alt="@user.Username" />
+                        </div>
+                        <div class="user-info">
+                            <h3 class="user-name">@user.FirstName @user.LastName</h3>
+                            <p class="user-username">@@@user.Username</p>
+                            @if (!string.IsNullOrEmpty(user.Bio))
+                            {
+                                <p class="user-bio">@(user.Bio.Length > 100 ? user.Bio.Substring(0, 100) + "..." : user.Bio)</p>
+                            }
+                            <div class="user-stats">
+                                <span><strong>@user.FollowerCount</strong> Takipçi</span>
+                                <span><strong>@user.FollowingCount</strong> Takip</span>
+                                <span><strong>@user.ReadBookCount</strong> Kitap</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="no-users">
+                <p>Henüz başka kullanıcı bulunmamaktadır.</p>
+            </div>
+        }
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .users-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #F5EBE0;
+            min-height: calc(100vh - 80px);
+        }
+
+        .users-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #E6D8C3;
+        }
+
+        .users-header h2 {
+            color: #3E2723;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .users-header p {
+            color: #8D6E63;
+            font-size: 1.1rem;
+        }
+
+        .users-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .user-card {
+            background: #FAF3EB;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #E6D8C3;
+            transition: all 0.3s ease;
+        }
+
+        .user-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(62, 39, 35, 0.15);
+        }
+
+        .user-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
+            text-decoration: none;
+            color: #3E2723;
+        }
+
+        .user-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #E6D8C3;
+            margin-bottom: 15px;
+        }
+
+        .user-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .user-info {
+            text-align: center;
+            width: 100%;
+        }
+
+        .user-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #3E2723;
+            margin-bottom: 5px;
+        }
+
+        .user-username {
+            color: #8D6E63;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .user-bio {
+            color: #5D4037;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .user-stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #E6D8C3;
+            font-size: 0.9rem;
+        }
+
+        .user-stats span {
+            color: #8D6E63;
+        }
+
+        .user-stats strong {
+            color: #3E2723;
+        }
+
+        .no-users {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            color: #8D6E63;
+            font-size: 1.1rem;
+        }
+
+        @@media (max-width: 768px) {
+            .users-list {
+                grid-template-columns: 1fr;
+            }
+
+            .users-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+}

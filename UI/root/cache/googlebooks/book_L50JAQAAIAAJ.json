@@ -1,0 +1,31 @@
+{
+  "bookId": "L50JAQAAIAAJ",
+  "cachedAt": "2026-01-21T17:22:06.202335Z",
+  "book": {
+    "id": "L50JAQAAIAAJ",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/L50JAQAAIAAJ",
+    "volumeInfo": {
+      "title": "\u015Eiir okuma k\u0131lavuzu",
+      "subtitle": "",
+      "authors": [
+        "\u0130smet \u00D6zel"
+      ],
+      "publisher": "Yery\u00FCz\u00FC Yay\u0131nlar\u0131",
+      "publishedDate": "1980",
+      "description": "",
+      "pageCount": 82,
+      "categories": null,
+      "averageRating": 0,
+      "ratingsCount": 0,
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=L50JAQAAIAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026imgtk=AFLRE72hJL9NYmBxcqAA4BKvcFXq99NWEOdMUiKqBL1p2hvXhRn4WztQ3WJ5MAn2hBGRKaKArnLbaPFg3MTXIofiPb8BH5IwnMBVo4Xytk_AgWJVeKImTSN3NhJy9psTg2id4EA4BAiy\u0026source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=L50JAQAAIAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026imgtk=AFLRE72ytzIIoEUoms-XHPEFYqVRVDg8LmUe_QWJ9KQxnrWWVWnEhPLFa40jH14AYg7ptuJezHXcqTJ6V32uZvzYq32A8T7QLenxOCfKHuri699Bpb0Rr3Q0vEn1Z9ml2L8dy-id2cqE\u0026source=gbs_api"
+      },
+      "language": "tr",
+      "previewLink": "http://books.google.com.tr/books?id=L50JAQAAIAAJ\u0026hl=\u0026source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=L50JAQAAIAAJ\u0026source=gbs_api",
+      "industryIdentifiers": null
+    }
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes/L50JAQAAIAAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

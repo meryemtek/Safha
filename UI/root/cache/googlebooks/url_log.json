@@ -1,295 +1,111 @@
 {
-  "createdAt": "2025-08-15T10:58:32.5774734Z",
-  "lastUpdated": "2025-08-25T23:56:58.1193112Z",
-  "totalRequests": 36,
+  "createdAt": "2026-01-21T17:20:30.7409001Z",
+  "lastUpdated": "2026-01-21T17:22:06.204273Z",
+  "totalRequests": 13,
   "urlEntries": [
     {
-      "url": "https://www.googleapis.com/books/v1/volumes?q=zaman%C4%B1n%20zeynebi\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "url": "https://www.googleapis.com/books/v1/volumes?q=Pride%20and%20Prejudice\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
       "type": "search",
-      "query": "zaman\u0131n zeynebi",
+      "query": "Pride and Prejudice",
       "bookId": "",
-      "timestamp": "2025-08-18T11:04:17.9271055Z",
-      "cacheFileName": "search_zaman\u0131n zeynebi.json"
+      "timestamp": "2026-01-21T17:20:50.0876183Z",
+      "cacheFileName": "search_Pride and Prejudice.json"
     },
     {
-      "url": "https://www.googleapis.com/books/v1/volumes?q=yoldaki%20i%C5%9Faretler\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "url": "https://www.googleapis.com/books/v1/volumes?q=Animal%20Farm\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
       "type": "search",
-      "query": "yoldaki i\u015Faretler",
+      "query": "Animal Farm",
       "bookId": "",
-      "timestamp": "2025-08-20T07:02:59.937569Z",
-      "cacheFileName": "search_yoldaki i\u015Faretler.json"
+      "timestamp": "2026-01-21T17:20:50.8812726Z",
+      "cacheFileName": "search_Animal Farm.json"
     },
     {
-      "url": "https://www.googleapis.com/books/v1/volumes/NGLac6caQXoC?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "NGLac6caQXoC",
-      "timestamp": "2025-08-15T13:28:30.7089261Z",
-      "cacheFileName": "book_NGLac6caQXoC.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes?q=k%C4%B1rm%C4%B1z%C4%B1%20pazartesi\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "url": "https://www.googleapis.com/books/v1/volumes?q=Harry%20Potter\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
       "type": "search",
-      "query": "k\u0131rm\u0131z\u0131 pazartesi",
+      "query": "Harry Potter",
       "bookId": "",
-      "timestamp": "2025-08-18T09:04:09.7597132Z",
-      "cacheFileName": "search_k\u0131rm\u0131z\u0131 pazartesi.json"
+      "timestamp": "2026-01-21T17:20:51.7271493Z",
+      "cacheFileName": "search_Harry Potter.json"
     },
     {
-      "url": "https://www.googleapis.com/books/v1/volumes?q=martin%20eden\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "url": "https://www.googleapis.com/books/v1/volumes?q=To%20Kill%20a%20Mockingbird\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
       "type": "search",
-      "query": "martin eden",
+      "query": "To Kill a Mockingbird",
       "bookId": "",
-      "timestamp": "2025-08-20T09:01:44.6812386Z",
-      "cacheFileName": "search_martin eden.json"
+      "timestamp": "2026-01-21T17:20:52.5082419Z",
+      "cacheFileName": "search_To Kill a Mockingbird.json"
     },
     {
-      "url": "https://www.googleapis.com/books/v1/volumes/fwcnCgAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "fwcnCgAAQBAJ",
-      "timestamp": "2025-08-18T10:58:07.5222806Z",
-      "cacheFileName": "book_fwcnCgAAQBAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes/lWZ0oAEACAAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "lWZ0oAEACAAJ",
-      "timestamp": "2025-08-18T11:04:20.5270217Z",
-      "cacheFileName": "book_lWZ0oAEACAAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes?q=gurur%20ve%20%C3%B6nyarg%C4%B1\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "url": "https://www.googleapis.com/books/v1/volumes?q=Wuthering%20Heights\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
       "type": "search",
-      "query": "gurur ve \u00F6nyarg\u0131",
+      "query": "Wuthering Heights",
       "bookId": "",
-      "timestamp": "2025-08-18T11:14:31.7579146Z",
-      "cacheFileName": "search_gurur ve \u00F6nyarg\u0131.json"
+      "timestamp": "2026-01-21T17:20:53.2141129Z",
+      "cacheFileName": "search_Wuthering Heights.json"
     },
     {
-      "url": "https://www.googleapis.com/books/v1/volumes?q=seyyid%20kutub\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "url": "https://www.googleapis.com/books/v1/volumes?q=1984\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
       "type": "search",
-      "query": "seyyid kutub",
+      "query": "1984",
       "bookId": "",
-      "timestamp": "2025-08-18T11:14:44.8709764Z",
-      "cacheFileName": "search_seyyid kutub.json"
+      "timestamp": "2026-01-21T17:20:53.802709Z",
+      "cacheFileName": "search_1984.json"
     },
     {
-      "url": "https://www.googleapis.com/books/v1/volumes/V4xQEQAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "V4xQEQAAQBAJ",
-      "timestamp": "2025-08-18T11:14:47.7405169Z",
-      "cacheFileName": "book_V4xQEQAAQBAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes/PKlfswEACAAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "PKlfswEACAAJ",
-      "timestamp": "2025-08-18T11:37:10.1866154Z",
-      "cacheFileName": "book_PKlfswEACAAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes/jKTBDwAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "jKTBDwAAQBAJ",
-      "timestamp": "2025-08-18T13:22:36.233055Z",
-      "cacheFileName": "book_jKTBDwAAQBAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes?q=su%C3%A7%20ve%20ceza\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "url": "https://www.googleapis.com/books/v1/volumes?q=The%20Great%20Gatsby\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
       "type": "search",
-      "query": "su\u00E7 ve ceza",
+      "query": "The Great Gatsby",
       "bookId": "",
-      "timestamp": "2025-08-20T07:20:59.7920063Z",
-      "cacheFileName": "search_su\u00E7 ve ceza.json"
+      "timestamp": "2026-01-21T17:20:54.547611Z",
+      "cacheFileName": "search_The Great Gatsby.json"
     },
     {
-      "url": "https://www.googleapis.com/books/v1/volumes/BFl9DwAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "BFl9DwAAQBAJ",
-      "timestamp": "2025-08-18T14:55:42.6536832Z",
-      "cacheFileName": "book_BFl9DwAAQBAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes?q=a%C5%9Fk%C4%B1n%20g%C3%B6zya%C5%9Flar%C4%B1\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "url": "https://www.googleapis.com/books/v1/volumes?q=The%20Hobbit\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
       "type": "search",
-      "query": "a\u015Fk\u0131n g\u00F6zya\u015Flar\u0131",
+      "query": "The Hobbit",
       "bookId": "",
-      "timestamp": "2025-08-19T07:08:30.243039Z",
-      "cacheFileName": "search_a\u015Fk\u0131n g\u00F6zya\u015Flar\u0131.json"
+      "timestamp": "2026-01-21T17:20:55.2285745Z",
+      "cacheFileName": "search_The Hobbit.json"
     },
     {
-      "url": "https://www.googleapis.com/books/v1/volumes/kTnuswEACAAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "url": "https://www.googleapis.com/books/v1/volumes/BZ1lPblizCsC?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
       "type": "book",
       "query": "",
-      "bookId": "kTnuswEACAAJ",
-      "timestamp": "2025-08-19T07:08:47.6790485Z",
-      "cacheFileName": "book_kTnuswEACAAJ.json"
+      "bookId": "BZ1lPblizCsC",
+      "timestamp": "2026-01-21T17:20:59.1818211Z",
+      "cacheFileName": "book_BZ1lPblizCsC.json"
     },
     {
-      "url": "https://www.googleapis.com/books/v1/volumes/nwVOtwAACAAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "nwVOtwAACAAJ",
-      "timestamp": "2025-08-20T07:22:35.5721731Z",
-      "cacheFileName": "book_nwVOtwAACAAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes/VJReDwAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "VJReDwAAQBAJ",
-      "timestamp": "2025-08-20T09:01:57.2383046Z",
-      "cacheFileName": "book_VJReDwAAQBAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes?q=freud\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "url": "https://www.googleapis.com/books/v1/volumes?q=Jane%20Eyre\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
       "type": "search",
-      "query": "freud",
+      "query": "Jane Eyre",
       "bookId": "",
-      "timestamp": "2025-08-25T21:09:07.3063772Z",
-      "cacheFileName": "search_freud.json"
+      "timestamp": "2026-01-21T17:21:52.4838646Z",
+      "cacheFileName": "search_Jane Eyre.json"
     },
     {
-      "url": "https://www.googleapis.com/books/v1/volumes/dH3oDwAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "dH3oDwAAQBAJ",
-      "timestamp": "2025-08-20T09:02:32.4997958Z",
-      "cacheFileName": "book_dH3oDwAAQBAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes/xvkgEAAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "xvkgEAAAQBAJ",
-      "timestamp": "2025-08-20T13:24:25.0418123Z",
-      "cacheFileName": "book_xvkgEAAAQBAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes?q=do%C4%9Fan%20c%C3%BCcelo%C4%9Flu\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "url": "https://www.googleapis.com/books/v1/volumes?q=Lord%20of%20the%20Rings\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
       "type": "search",
-      "query": "do\u011Fan c\u00FCcelo\u011Flu",
+      "query": "Lord of the Rings",
       "bookId": "",
-      "timestamp": "2025-08-25T23:56:09.6369009Z",
-      "cacheFileName": "search_do\u011Fan c\u00FCcelo\u011Flu.json"
+      "timestamp": "2026-01-21T17:21:53.4828648Z",
+      "cacheFileName": "search_Lord of the Rings.json"
     },
     {
-      "url": "https://www.googleapis.com/books/v1/volumes/en42MwEACAAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "en42MwEACAAJ",
-      "timestamp": "2025-08-20T13:30:39.0221765Z",
-      "cacheFileName": "book_en42MwEACAAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes/4ZTrCnoHPx0C?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "4ZTrCnoHPx0C",
-      "timestamp": "2025-08-20T13:35:02.839879Z",
-      "cacheFileName": "book_4ZTrCnoHPx0C.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes/njrmzgEACAAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "njrmzgEACAAJ",
-      "timestamp": "2025-08-21T11:32:07.8349204Z",
-      "cacheFileName": "book_njrmzgEACAAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes/7LZ0EAAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "7LZ0EAAAQBAJ",
-      "timestamp": "2025-08-21T11:35:34.8318442Z",
-      "cacheFileName": "book_7LZ0EAAAQBAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes/QdoZEAAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "QdoZEAAAQBAJ",
-      "timestamp": "2025-08-21T11:35:46.6130252Z",
-      "cacheFileName": "book_QdoZEAAAQBAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes?q=seyyidkutub\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "url": "https://www.googleapis.com/books/v1/volumes?q=ismet%20%C3%B6zel\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
       "type": "search",
-      "query": "seyyidkutub",
+      "query": "ismet \u00F6zel",
       "bookId": "",
-      "timestamp": "2025-08-21T14:24:39.2909191Z",
-      "cacheFileName": "search_seyyidkutub.json"
+      "timestamp": "2026-01-21T17:22:03.413196Z",
+      "cacheFileName": "search_ismet \u00F6zel.json"
     },
     {
-      "url": "https://www.googleapis.com/books/v1/volumes/MoJVEAAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
+      "url": "https://www.googleapis.com/books/v1/volumes/L50JAQAAIAAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
       "type": "book",
       "query": "",
-      "bookId": "MoJVEAAAQBAJ",
-      "timestamp": "2025-08-22T12:47:22.1284259Z",
-      "cacheFileName": "book_MoJVEAAAQBAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes/cjCZzgEACAAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "cjCZzgEACAAJ",
-      "timestamp": "2025-08-22T13:00:11.7740856Z",
-      "cacheFileName": "book_cjCZzgEACAAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes/wuPfzgEACAAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "wuPfzgEACAAJ",
-      "timestamp": "2025-08-22T13:01:41.8819336Z",
-      "cacheFileName": "book_wuPfzgEACAAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes?q=saat\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "search",
-      "query": "saat",
-      "bookId": "",
-      "timestamp": "2025-08-22T13:41:39.537697Z",
-      "cacheFileName": "search_saat.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes/u46n6XAg9gEC?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "u46n6XAg9gEC",
-      "timestamp": "2025-08-22T13:41:46.7493987Z",
-      "cacheFileName": "book_u46n6XAg9gEC.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes?q=franz%20kafka\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "search",
-      "query": "franz kafka",
-      "bookId": "",
-      "timestamp": "2025-08-25T21:00:57.760954Z",
-      "cacheFileName": "search_franz kafka.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes/tPkyEAAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "tPkyEAAAQBAJ",
-      "timestamp": "2025-08-22T14:35:54.6264578Z",
-      "cacheFileName": "book_tPkyEAAAQBAJ.json"
-    },
-    {
-      "url": "https://www.googleapis.com/books/v1/volumes/CiLlAwAAQBAJ?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q",
-      "type": "book",
-      "query": "",
-      "bookId": "CiLlAwAAQBAJ",
-      "timestamp": "2025-08-25T23:56:58.1192959Z",
-      "cacheFileName": "book_CiLlAwAAQBAJ.json"
+      "bookId": "L50JAQAAIAAJ",
+      "timestamp": "2026-01-21T17:22:06.2042596Z",
+      "cacheFileName": "book_L50JAQAAIAAJ.json"
     }
   ]
 }

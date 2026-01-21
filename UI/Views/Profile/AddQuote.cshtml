@@ -7,12 +7,12 @@
 
 <div class="add-quote-container">
     <div class="add-quote-header">
-        <h1>Yeni Alıntı Ekle</h1>
-        <p>Kitaptan alıntı yapmak istediğiniz metni ve bilgileri girin</p>
+        <h1>Yeni Kitap Alıntısı Ekle</h1>
+        <p>Okuduğunuz veya okumakta olduğunuz kitaptan alıntı yapmak istediğiniz metni ve bilgileri girin</p>
     </div>
     
     <div class="add-quote-form-container">
-        <form asp-action="AddQuote" method="post" class="add-quote-form">
+        <form asp-action="AddQuoteAjax" method="post" class="add-quote-form">
             @Html.AntiForgeryToken()
             
             <div class="form-section">
@@ -68,7 +68,7 @@
             </div>
             
             <div class="form-section">
-                <h3>Kitap Seçimi</h3>
+                <h3>Kitap Seçimi (Zorunlu)</h3>
                 
                 <div class="form-group">
                     <label asp-for="BookId" class="form-label">Kitap *</label>
@@ -80,6 +80,7 @@
                         }
                     </select>
                     <span asp-validation-for="BookId" class="text-danger"></span>
+                    <div class="form-text">Sadece okuduğunuz veya okumakta olduğunuz kitaplardan alıntı yapabilirsiniz. "Okumak istiyorum" durumundaki kitaplardan alıntı yapamazsınız.</div>
                 </div>
             </div>
             
@@ -88,7 +89,7 @@
                     <i class="icon">←</i> Geri Dön
                 </a>
                 <button type="submit" class="btn btn-primary">
-                    <i class="icon">💾</i> Alıntı Ekle
+                    <i class="icon">💾</i> Kitap Alıntısı Ekle
                 </button>
             </div>
         </form>

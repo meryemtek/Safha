@@ -1,0 +1,48 @@
+{
+  "query": "The Great Gatsby",
+  "cachedAt": "2026-01-21T17:20:54.545882Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "B-MOEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/B-MOEAAAQBAJ",
+        "volumeInfo": {
+          "title": "The Great Gatsby",
+          "subtitle": "",
+          "authors": [
+            "F. Scott Fitzgerald"
+          ],
+          "publisher": "Simon and Schuster",
+          "publishedDate": "2021-01-26",
+          "description": "\u0022Leaves the reader in a mood of chastened wonder . . . A revelation of life . . . A work of art.\u0022 \u2014Los Angeles Times Set in during the Roaring Twenties, this masterful story by F. Scott Fitzgerald is told through the eyes of Nick Carraway, a young man who moves to Long Island and attempts to learn the bond business in New York City after the war. There, he co-mingles on Long Island with his affluent and wealthy socialite cousin Daisy Buchanan, her brute of a husband Tom, and friend Jordan Baker. Nick\u0027s new residence sits across the bay from Daisy and Tom\u0027s house, and right next to a mysterious mansion. He begins to hear rumors of an infamous man named Gatsby who resides there. Eventually, when Gatsby learns of Nick\u0027s ties to Daisy, he extends Nick an invitation to one of his lavish parties. Gatsby\u0027s plan to court Daisy, in an attempt to revive a previous love affair, eventually bubbles to the surface and tragedy ensues. Dubbed the Great American Novel more than any other piece of literature to date, The Great Gatsby is sure to captivate readers with it\u0027s exquisitely crafted prose and poignant message about trying to relive the past. Packaged in handsome and affordable trade editions, Clydesdale Classics is series of essential literary works. From the musings of literary geniuses such as Mark Twain in The Adventures of Huckleberry Finn, to the striking personal narratives from Harriet Jacobs in Incidents in the Life of a Slave Girl, this new series is a comprehensive collection of our literary history through the words of the exceptional few.",
+          "pageCount": 166,
+          "categories": [
+            "Fiction"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=B-MOEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=B-MOEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=B-MOEAAAQBAJ\u0026printsec=frontcover\u0026dq=The\u002BGreat\u002BGatsby\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=B-MOEAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781949846416"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1949846415"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=The%20Great%20Gatsby\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

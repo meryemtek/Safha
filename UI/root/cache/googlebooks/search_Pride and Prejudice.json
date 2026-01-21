@@ -1,0 +1,48 @@
+{
+  "query": "Pride and Prejudice",
+  "cachedAt": "2026-01-21T17:20:50.0700715Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "BZ1lPblizCsC",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/BZ1lPblizCsC",
+        "volumeInfo": {
+          "title": "Pride and Prejudice",
+          "subtitle": "",
+          "authors": [
+            "Jane Austen"
+          ],
+          "publisher": "Qanita",
+          "publishedDate": "2011-02-01",
+          "description": "\u0022Sejak awal, perangaimu, keangkuhanmu, sikap acuh tak acuhmu, jadi landasan kebencianku padamu. Belum sebulan mengenalmu, aku sudah tahu bahwa kau adalah pria yang takkan mungkin kunikahi.\u0022 Di mata Elizabeth, Mr. Darcy tidak pernah menjadi sosok yang memesona. Baginya, laki-laki itu angkuh, sombong, dan menyebalkan. Elizabeth membenci tatapannya yang merendahkan, cara bicaranya yang meremehkan, dan segala hal tentang bangsawan kaya raya itu. Kebencian itu semakin bertambah ketika Elizabeth tahu bahwa Mr. Darcy telah melakukan hal yang menurutnya tak bisa dimaafkan.\u00FF Butuh lama bagi Elizabeth untuk memahami sisi lain dari Mr. Darcy dan menerima kenyataan akan kebaikannya yang tersembunyi. Dan, ketika akhirnya gadis itu menyadari perasaannya kepada Mr. Darcy telah berkembang menjadi cinta, dia pun jadi ragu, akankah dia bisa menebus prasangkanya yang sangat buruk pada laki-laki itu? Lalu, akankah cintanya yang baru tumbuh itu menjadi sia-sia? Dalam Pride and Prejudice, Jane Austen menuangkan detail yang memikat mengenai kaum menengah ke atas pada abad ke-19. Karakter-karakternya yang memukau, juga narasinya yang cerdas, menjadikan novel ini sebagai salah satu roman terpopuler sepanjang masa. [Mizan, Qanita, Novel, Memoar, Indonesia]",
+          "pageCount": 596,
+          "categories": [
+            "Fiction"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=BZ1lPblizCsC\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=BZ1lPblizCsC\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+          },
+          "language": "id",
+          "previewLink": "http://books.google.com.tr/books?id=BZ1lPblizCsC\u0026dq=Pride\u002Band\u002BPrejudice\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=BZ1lPblizCsC\u0026dq=Pride\u002Band\u002BPrejudice\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "6028579548"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9786028579544"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=Pride%20and%20Prejudice\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

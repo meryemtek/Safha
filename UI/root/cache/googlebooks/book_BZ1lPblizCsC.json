@@ -1,0 +1,43 @@
+{
+  "bookId": "BZ1lPblizCsC",
+  "cachedAt": "2026-01-21T17:20:59.1770523Z",
+  "book": {
+    "id": "BZ1lPblizCsC",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/BZ1lPblizCsC",
+    "volumeInfo": {
+      "title": "Pride and Prejudice",
+      "subtitle": "",
+      "authors": [
+        "Jane Austen"
+      ],
+      "publisher": "Qanita",
+      "publishedDate": "2011-02-01",
+      "description": "\u003Cp\u003E\u003Ci\u003E\u0026quot;Sejak awal, perangaimu, keangkuhanmu, sikap acuh tak acuhmu, jadi landasan kebencianku padamu. Belum sebulan mengenalmu, aku sudah tahu bahwa kau adalah pria yang takkan mungkin kunikahi.\u0026quot;\u003C/i\u003E\u003C/p\u003E\u003Cp\u003EDi mata Elizabeth, Mr. Darcy tidak pernah menjadi sosok yang memesona. Baginya, laki-laki itu angkuh, sombong, dan menyebalkan. Elizabeth membenci tatapannya yang merendahkan, cara bicaranya yang meremehkan, dan segala hal tentang bangsawan kaya raya itu. Kebencian itu semakin bertambah ketika Elizabeth tahu bahwa Mr. Darcy telah melakukan hal yang menurutnya tak bisa dimaafkan.\u00FF\u003C/p\u003E\u003Cp\u003EButuh lama bagi Elizabeth untuk memahami sisi lain dari Mr. Darcy dan menerima kenyataan akan kebaikannya yang tersembunyi. Dan, ketika akhirnya gadis itu menyadari perasaannya kepada Mr. Darcy telah berkembang menjadi cinta, dia pun jadi ragu, akankah dia bisa menebus prasangkanya yang sangat buruk pada laki-laki itu? Lalu, akankah cintanya yang baru tumbuh itu menjadi sia-sia?\u003C/p\u003E\u003Cp\u003EDalam \u003Ci\u003EPride and Prejudice\u003C/i\u003E, Jane Austen menuangkan detail yang memikat mengenai kaum menengah ke atas pada abad ke-19. Karakter-karakternya yang memukau, juga narasinya yang cerdas, menjadikan novel ini sebagai salah satu roman terpopuler sepanjang masa.\u003C/p\u003E\u003Cp\u003E[Mizan, Qanita, Novel, Memoar, Indonesia] \u003Cbr\u003E\u003C/p\u003E",
+      "pageCount": 588,
+      "categories": [
+        "Fiction / General",
+        "Juvenile Fiction / General"
+      ],
+      "averageRating": 0,
+      "ratingsCount": 0,
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=BZ1lPblizCsC\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026imgtk=AFLRE739t9OoHI2-6dMKuS6gbIw1WdtLK3_NztoDMbqa3_4OP7-yCVATsOypQFjarUg_IPFaFstJ8_Xo8w8VH7GXAYjWhhoMWPtla9GO3MHewGl5mtUHrYo62E4_urjQQMSThL7Wd96h\u0026source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=BZ1lPblizCsC\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026imgtk=AFLRE70oHpy7qq0l4Z2gRoSSPe_NuaA3rurWWY_rr9wbhvvEu2AvY6I7pv-cBtEctzA74o8ACJ44y-SmhSKlDVKK1mx67cyAfq8J2y6cF2g5IDN_HplyDYTHZAkASnAEoSBXWCuy0R1h\u0026source=gbs_api"
+      },
+      "language": "id",
+      "previewLink": "http://books.google.com.tr/books?id=BZ1lPblizCsC\u0026hl=\u0026source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=BZ1lPblizCsC\u0026source=gbs_api",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_10",
+          "identifier": "6028579548"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9786028579544"
+        }
+      ]
+    }
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes/BZ1lPblizCsC?key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

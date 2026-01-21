@@ -1,0 +1,48 @@
+{
+  "query": "1984",
+  "cachedAt": "2026-01-21T17:20:53.8009385Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "M2PXEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/M2PXEAAAQBAJ",
+        "volumeInfo": {
+          "title": "1984",
+          "subtitle": "",
+          "authors": [
+            "George Orwell"
+          ],
+          "publisher": "Do\u011Fan Yay\u0131nlar\u0131",
+          "publishedDate": "2023-06-08",
+          "description": "\u0022Parti\u0027ye sadakat d\u0131\u015F\u0131nda sadakat olmayacak. B\u00FCy\u00FCk Birader a\u015Fk\u0131 d\u0131\u015F\u0131nda a\u015Fk olmayacak. D\u00FC\u015Fman\u0131n cesedinin ba\u015F\u0131nda at\u0131lan d\u0131\u015F\u0131nda kahkaha olmayacak. Sanat, edebiyat, bilim olmayacak. Kadiri mutlak hale geldi\u011Fimizde bilime ihtiya\u00E7 kalmayacak. G\u00FCzellikle \u00E7irkinlikaras\u0131nda fark kalmayacak. Merak duymak, ya\u015Famaktan keyif almak olmayacak. Rakip t\u00FCm zevkler ortadan kald\u0131r\u0131lacak. Ama giderek artan ve gitgide sinsi hale gelen iktidar sarho\u015Flu\u011Fu her zaman var olacak Winston, sak\u0131n unutma, her zaman. Her an, her zaman bir zafer co\u015Fkusu, yere serilmi\u015F bir d\u00FC\u015Fman\u0131 ezip ge\u00E7me duygusu olacak ama. Sana gelece\u011Fin resmini \u00E7izmemi istiyorsan, bir postal\u0131n bir insan y\u00FCz\u00FCne bast\u0131\u011F\u0131n\u0131 hayal et \u2014ama ebediyen.\u0022 Okyanusya\u0027da sava\u015F \u00E7\u0131\u011Fl\u0131klar\u0131n\u0131n, haf\u0131zas\u0131z bir tarihin, Telebakarlar\u0131n, D\u00FC\u015F\u00FCnce Polisi\u0027nin ve her \u015Feyi bilen ve g\u00F6ren B\u00FCy\u00FCk Bira der\u0027in olmad\u0131\u011F\u0131 tek yer a\u015Fkt\u0131 belki de. Her \u015Feyin sahibi olan Parti\u0027ye kar\u015F\u0131 direni\u015F, Cinsellikle M\u00FCcadele Gen\u00E7lik Kollar\u0131\u0027ndan Julia\u0027n\u0131n, Hakikat Bakanl\u0131\u011F\u0131 personeli Winston Smith\u0027in eline tutu\u015Fturdu\u011Fu k\u00E2\u011F\u0131tta yazan, sihirli \u0022Seni seviyorum\u0022 c\u00FCmlesinde ve uygun ad\u0131m bir d\u00FCnyan\u0131n, parti \u00FCniformalar\u0131n\u0131n yok edemedi\u011Fi haz duygusundayd\u0131. Winston kat\u0131la\u015Fm\u0131\u015F bedenini a\u015Fk\u0131n, d\u00FC\u015F\u00FCncelerini isyan\u0131n kollar\u0131na b\u0131rak\u0131rken, nas\u0131l oldu\u011Funu anlad\u0131\u011F\u0131 ama neden oldu\u011Funu anla- mad\u0131\u011F\u0131 d\u00FCnyan\u0131n \u00F6l\u00FCleri olduklar\u0131n\u0131 biliyordu. George Orwell\u0027den \u00E7a\u011Flar\u0131 a\u015Fan bir ba\u015Fyap\u0131t 1984.",
+          "pageCount": 261,
+          "categories": [
+            "Fiction"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=M2PXEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=M2PXEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=M2PXEAAAQBAJ\u0026pg=PT1\u0026dq=1984\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=M2PXEAAAQBAJ\u0026dq=1984\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9786258495904"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "6258495907"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=1984\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

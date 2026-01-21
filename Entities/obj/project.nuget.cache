@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "pioCRD6dv6Q=",
+  "dgSpecHash": "2Wqzl9/DLog=",
   "success": true,
   "projectFilePath": "C:\\Users\\merye\\Desktop\\kitapp\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\merye\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.19\\microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
-    "C:\\Users\\merye\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.19\\microsoft.windowsdesktop.app.ref.8.0.19.nupkg.sha512",
-    "C:\\Users\\merye\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.19\\microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512"
+    "C:\\Users\\merye\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.23\\microsoft.netcore.app.ref.8.0.23.nupkg.sha512",
+    "C:\\Users\\merye\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.23\\microsoft.windowsdesktop.app.ref.8.0.23.nupkg.sha512",
+    "C:\\Users\\merye\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.23\\microsoft.aspnetcore.app.ref.8.0.23.nupkg.sha512"
   ],
   "logs": []
 }

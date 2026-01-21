@@ -1,0 +1,48 @@
+{
+  "query": "Wuthering Heights",
+  "cachedAt": "2026-01-21T17:20:53.2119177Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "S2Yvf-tWNdUC",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/S2Yvf-tWNdUC",
+        "volumeInfo": {
+          "title": "Wuthering Heights in Plain and Simple English (Includes Study Guide, Complete Unabridged Book, Historical Context, Biography And",
+          "subtitle": "",
+          "authors": [
+            "Emily Bront\u00EB"
+          ],
+          "publisher": "BookCaps Study Guides",
+          "publishedDate": "2012-12-10",
+          "description": "Emily Bront\u00EB\u2019s \u201CWuthering Heights\u201D is considered one of the greatest novels ever wrote. It also can be difficult to understand--it is loaded with themes, imagery, and symbols. If you need a little help understanding it, let BookCaps help with this study guide. Along with chapter-by-chapter summaries and analysis, this book features the full text of Bront\u00EB\u0027s classic novel is also included. BookCap Study Guides are not meant to be purchased as alternatives to reading the book.",
+          "pageCount": 614,
+          "categories": [
+            "Reference"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=S2Yvf-tWNdUC\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=S2Yvf-tWNdUC\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=S2Yvf-tWNdUC\u0026printsec=frontcover\u0026dq=Wuthering\u002BHeights\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=S2Yvf-tWNdUC\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9781621074564"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "1621074560"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=Wuthering%20Heights\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

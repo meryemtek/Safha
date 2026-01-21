@@ -1,21 +1,22 @@
 .profile-container {
     width: 100%;
-    color: #fff;
+    color: #3E2723;
 }
 
 /* Ana İçerik */
 .profile-container {
     width: 100%;
-    background: #4a2002;
+    background: #F5EBE0;
 }
 
 /* Profil Üst Kartı */
 .profile-header-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    background: #FAF3EB;
+    border-radius: 12px;
     overflow: hidden;
     margin-bottom: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #E6D8C3;
+    box-shadow: 0 2px 8px rgba(62, 39, 35, 0.08);
 }
 
 .profile-cover {
@@ -51,8 +52,8 @@
 }
 
 .btn-edit-cover {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
+    background-color: rgba(62, 39, 35, 0.8);
+    color: #FAF3EB;
     border: none;
     border-radius: 5px;
     padding: 8px 15px;
@@ -117,22 +118,25 @@
 .profile-name {
     font-size: 1.8rem;
     margin-bottom: 5px;
+    color: #3E2723;
+    font-weight: 700;
 }
 
 .profile-username {
-    color: rgba(255, 255, 255, 0.7);
+    color: #8D6E63;
     margin-bottom: 10px;
 }
 
 .profile-bio {
     margin-bottom: 15px;
     line-height: 1.5;
+    color: #5D4037;
 }
 
 .profile-meta {
     display: flex;
     gap: 15px;
-    color: rgba(255, 255, 255, 0.7);
+    color: #8D6E63;
     font-size: 0.9rem;
 }
 
@@ -143,8 +147,8 @@
 }
 
 .btn-edit-profile {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    background-color: #6D4C41;
+    color: #FAF3EB;
     border: none;
     border-radius: 5px;
     padding: 8px 15px;
@@ -157,7 +161,58 @@
 }
 
 .btn-edit-profile:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #5D4037;
+}
+
+/* Takip Butonu */
+.btn-primary {
+    background-color: #6D4C41;
+    color: #FAF3EB;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #5D4037;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(62, 39, 35, 0.2);
+}
+
+.btn-primary:disabled {
+    background-color: #A1887F;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-following {
+    background-color: #8D6E63;
+    color: #FAF3EB;
+    border: 2px solid #6D4C41;
+    border-radius: 5px;
+    padding: 8px 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-following:hover {
+    background-color: #D32F2F;
+    border-color: #B71C1C;
+    color: #FFFFFF;
 }
 
 /* İstatistikler */
@@ -172,14 +227,14 @@
 }
 
 .stat-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: #FAF3EB;
     border-radius: 15px;
     padding: 25px;
     display: flex;
     align-items: center;
     gap: 20px;
     transition: all 0.4s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #E6D8C3;
     position: relative;
     overflow: hidden;
 }
@@ -191,15 +246,15 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: #8B4513;
+    background: #6D4C41;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .stat-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 30px rgba(62, 39, 35, 0.15);
+    border-color: #D4C5B0;
 }
 
 .stat-card:hover::before {
@@ -222,13 +277,13 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: #8B4513;
-    color: #fff;
+    background: #6D4C41;
+    color: #FAF3EB;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.8rem;
-    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+    box-shadow: 0 4px 15px rgba(109, 76, 65, 0.3);
     position: relative;
 }
 
@@ -240,7 +295,7 @@
     right: -2px;
     bottom: -2px;
     border-radius: 50%;
-    background: #8B4513;
+    background: #6D4C41;
     font-size: 1.8rem;
     z-index: -1;
     opacity: 0.3;
@@ -256,10 +311,10 @@
 .stat-value {
     font-size: 2.2rem;
     font-weight: 800;
-    color: #fff;
+    color: #3E2723;
     line-height: 1;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(45deg, #fff, #f0f0f0);
+    text-shadow: 0 2px 4px rgba(62, 39, 35, 0.1);
+    background: linear-gradient(45deg, #3E2723, #5D4037);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -267,7 +322,7 @@
 
 .stat-label {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #5D4037;
     margin-top: 8px;
     font-weight: 500;
     text-transform: uppercase;
@@ -276,11 +331,11 @@
 
 /* Okuma Hedefi */
 .reading-goal-section {
-    background: rgba(255, 255, 255, 0.1);
+    background: #FAF3EB;
     border-radius: 15px;
     padding: 30px;
     margin-bottom: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #E6D8C3;
     position: relative;
     overflow: hidden;
 }
@@ -292,7 +347,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: #8B4513;
+    background: #6D4C41;
 }
 
 .goal-header {
@@ -309,8 +364,8 @@
     align-items: center;
     gap: 12px;
     font-weight: 600;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #3E2723;
+    text-shadow: 0 2px 4px rgba(62, 39, 35, 0.1);
 }
 
 .goal-header h3 i {
@@ -320,27 +375,27 @@
 
 .goal-progress {
     font-size: 1.2rem;
-    color: #fff;
+    color: #3E2723;
     font-weight: 500;
-    background: rgba(255, 255, 255, 0.1);
+    background: #F5EBE0;
     padding: 8px 15px;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #E6D8C3;
 }
 
 .progress-bar {
     height: 12px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #F5EBE0;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E6D8C3;
+    box-shadow: inset 0 2px 4px rgba(62, 39, 35, 0.1);
 }
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #4caf50, #8bc34a, #4caf50);
+    background: linear-gradient(90deg, #6D4C41, #8D6E63, #6D4C41);
     border-radius: 10px;
     transition: width 0.8s ease;
     position: relative;
@@ -354,7 +409,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(139, 69, 19, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(109, 76, 65, 0.3), transparent);
     animation: shimmer 2s infinite;
 }
 
@@ -366,9 +421,9 @@
 .goal-percentage {
     text-align: right;
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #5D4037;
     font-weight: 500;
-    background: rgba(255, 255, 255, 0.1);
+    background: #F5EBE0;
     padding: 5px 12px;
     border-radius: 15px;
     display: inline-block;
@@ -377,10 +432,10 @@
 /* Kitap Durumu Kartları */
 .book-status-section {
     margin-bottom: 40px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #FAF3EB;
     border-radius: 15px;
     padding: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #E6D8C3;
 }
 
 .status-header {
@@ -390,18 +445,18 @@
 
 .status-header h3 {
     font-size: 1.5rem;
-    color: #fff;
+    color: #3E2723;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
     margin: 0;
     font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 4px rgba(62, 39, 35, 0.1);
 }
 
 .status-header h3 i {
-    color: #8B4513;
+    color: #6D4C41;
     font-size: 1.3rem;
 }
 
@@ -412,13 +467,13 @@
 }
 
 .status-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: #FAF3EB;
     border-radius: 15px;
     padding: 25px;
     display: flex;
     flex-direction: column;
     transition: all 0.4s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #E6D8C3;
     position: relative;
     overflow: hidden;
 }
@@ -436,8 +491,8 @@
 
 .status-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 30px rgba(62, 39, 35, 0.15);
+    border-color: #D4C5B0;
 }
 
 .status-card:hover::before {
@@ -445,15 +500,15 @@
 }
 
 .status-card.reading {
-    --status-color: #8B4513;
+    --status-color: #6D4C41;
 }
 
 .status-card.to-read {
-    --status-color: #A0522D;
+    --status-color: #8D6E63;
 }
 
 .status-card.completed {
-    --status-color: #CD853F;
+    --status-color: #A1887F;
 }
 
 .status-icon {
@@ -466,8 +521,8 @@
     align-items: center;
     margin-bottom: 20px;
     font-size: 1.8rem;
-    color: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #FAF3EB;
+    box-shadow: 0 4px 15px rgba(62, 39, 35, 0.2);
     position: relative;
 }
 
@@ -488,7 +543,7 @@
 .status-content h4 {
     font-size: 1.2rem;
     margin-bottom: 15px;
-    color: #fff;
+    color: #3E2723;
     font-weight: 600;
     text-align: center;
 }
@@ -497,17 +552,17 @@
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 20px;
-    color: #fff;
+    color: #3E2723;
     text-align: center;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(45deg, #fff, #f0f0f0);
+    text-shadow: 0 2px 4px rgba(62, 39, 35, 0.1);
+    background: linear-gradient(45deg, #3E2723, #5D4037);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .status-link {
-    color: rgba(255, 255, 255, 0.8);
+    color: #5D4037;
     text-decoration: none;
     font-size: 0.95rem;
     display: flex;
@@ -517,15 +572,15 @@
     transition: all 0.3s ease;
     padding: 10px 15px;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #F5EBE0;
+    border: 1px solid #E6D8C3;
     font-weight: 500;
 }
 
 .status-link:hover {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.3);
+    color: #3E2723;
+    background: #E6D8C3;
+    border-color: #D4C5B0;
     transform: translateY(-2px);
 }
 
@@ -545,7 +600,7 @@
 
 .tabs-header {
     display: flex;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #E6D8C3;
     margin-bottom: 20px;
 }
 
@@ -553,7 +608,7 @@
     padding: 10px 20px;
     background: none;
     border: none;
-    color: rgba(255, 255, 255, 0.7);
+    color: #8D6E63;
     cursor: pointer;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -564,13 +619,13 @@
 }
 
 .tab-button:hover {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.05);
+    color: #3E2723;
+    background-color: #F5EBE0;
 }
 
 .tab-button.active {
-    color: #fff;
-    border-bottom: 2px solid #fff;
+    color: #3E2723;
+    border-bottom: 2px solid #3E2723;
 }
 
 /* Kitaplık Alt Sekmeleri */
@@ -586,7 +641,7 @@
     padding: 8px 15px;
     background: none;
     border: none;
-    color: rgba(255, 255, 255, 0.7);
+    color: #8D6E63;
     cursor: pointer;
     font-size: 0.9rem;
     transition: all 0.3s ease;
@@ -598,13 +653,13 @@
 }
 
 .subtab-button:hover {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.05);
+    color: #3E2723;
+    background-color: #F5EBE0;
 }
 
 .subtab-button.active {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
+    color: #3E2723;
+    background-color: #E6D8C3;
 }
 
 /* Tab İçerikleri */
@@ -620,32 +675,32 @@
 /* Şu an Okuyor ve Tüm Kitaplar Bölümleri */
 .currently-reading-section,
 .all-books-section {
-    background: rgba(255, 255, 255, 0.1);
+    background: #FAF3EB;
     border-radius: 15px;
     padding: 25px;
     margin-bottom: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #E6D8C3;
 }
 
 .section-header {
     margin-bottom: 25px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #E6D8C3;
     padding-bottom: 15px;
 }
 
 .section-header h3 {
     font-size: 1.5rem;
-    color: #fff;
+    color: #3E2723;
     display: flex;
     align-items: center;
     gap: 12px;
     margin: 0;
     font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 4px rgba(62, 39, 35, 0.1);
 }
 
 .currently-reading-section .section-header h3 {
-    color: #17a2b8;
+    color: #3E2723;
 }
 
 @keyframes fadeIn {
@@ -665,11 +720,11 @@
 }
 
 .book-card {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #FAF3EB;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #E6D8C3;
 }
 
 .book-card.status-1 {
@@ -706,21 +761,23 @@
 .book-title {
     font-size: 1rem;
     margin-bottom: 5px;
+    color: #3E2723;
 }
 
 .book-author {
-    color: rgba(255, 255, 255, 0.7);
+    color: #5D4037;
     font-size: 0.9rem;
     margin-bottom: 10px;
 }
 
 .book-genre {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #F5EBE0;
     padding: 3px 10px;
     border-radius: 20px;
     font-size: 0.8rem;
     margin-bottom: 15px;
+    color: #6D4C41;
 }
 
 /* Kitap Durumu Kontrolleri */
@@ -729,9 +786,9 @@
 }
 
 .book-status-controls .dropdown-toggle {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #fff;
+    background: #F5EBE0;
+    border: 1px solid #E6D8C3;
+    color: #3E2723;
     font-size: 0.9rem;
     padding: 8px 16px;
     border-radius: 6px;
@@ -739,35 +796,35 @@
 }
 
 .book-status-controls .dropdown-toggle:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
+    background: #E6D8C3;
+    border-color: #D4C5B0;
 }
 
 .book-status-controls .dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(109, 76, 65, 0.25);
 }
 
 .book-status-controls .dropdown-menu {
-    background: rgba(0, 0, 0, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #FAF3EB;
+    border: 1px solid #E6D8C3;
     border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 25px rgba(62, 39, 35, 0.15);
 }
 
 .book-status-controls .dropdown-item {
-    color: #fff;
+    color: #3E2723;
     padding: 10px 16px;
     transition: all 0.3s ease;
 }
 
 .book-status-controls .dropdown-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    background: #F5EBE0;
+    color: #3E2723;
 }
 
 .book-status-controls .dropdown-item.active {
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
+    background: #E6D8C3;
+    color: #3E2723;
     font-weight: 600;
 }
 
@@ -793,16 +850,17 @@
 
 .empty-state h3 {
     margin-bottom: 10px;
+    color: #3E2723;
 }
 
 .empty-state p {
-    color: rgba(255, 255, 255, 0.7);
+    color: #8D6E63;
     margin-bottom: 20px;
 }
 
 .btn-add-book {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    background-color: #6D4C41;
+    color: #FAF3EB;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -815,7 +873,7 @@
 }
 
 .btn-add-book:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #5D4037;
 }
 
 /* Aktivite Zaman Çizelgesi */
@@ -836,7 +894,7 @@
     top: 40px;
     bottom: -30px;
     width: 2px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #E6D8C3;
 }
 
 .timeline-item:last-child:before {
@@ -846,18 +904,19 @@
 .timeline-icon {
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #F5EBE0;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
     z-index: 1;
+    color: #6D4C41;
 }
 
 .timeline-content {
     flex: 1;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #F5EBE0;
     border-radius: 10px;
     padding: 15px;
 }
@@ -865,16 +924,17 @@
 .timeline-content h4 {
     margin-top: 0;
     margin-bottom: 5px;
+    color: #3E2723;
 }
 
 .timeline-content p {
     margin-bottom: 10px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #5D4037;
 }
 
 .timeline-date {
     font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: #8D6E63;
 }
 
 /* Hakkında Bölümü */
@@ -885,7 +945,7 @@
 .about-item {
     display: flex;
     margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #F5EBE0;
     border-radius: 10px;
     padding: 15px;
 }
@@ -893,12 +953,13 @@
 .about-icon {
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #E6D8C3;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    color: #6D4C41;
 }
 
 .about-content {
@@ -908,11 +969,12 @@
 .about-content h4 {
     margin-top: 0;
     margin-bottom: 5px;
+    color: #3E2723;
 }
 
 .about-content p {
     margin-bottom: 0;
-    color: rgba(255, 255, 255, 0.8);
+    color: #5D4037;
 }
 
 /* Responsive */
@@ -1057,11 +1119,11 @@
 
 /* Alıntılar Bölümü Profil Sayfası */
 .quotes-section-profile {
-    background: rgba(255, 255, 255, 0.1);
+    background: #FAF3EB;
     border-radius: 15px;
     padding: 25px;
     margin-bottom: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #E6D8C3;
 }
 
 .quotes-section-profile .quotes-header {
@@ -1070,12 +1132,12 @@
     align-items: center;
     margin-bottom: 25px;
     padding-bottom: 15px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid #E6D8C3;
 }
 
 .quotes-section-profile .quotes-header h3 {
     margin: 0;
-    color: #fff;
+    color: #3E2723;
     font-size: 1.5rem;
     font-weight: 600;
     display: flex;
@@ -1084,17 +1146,18 @@
 }
 
 .quotes-section-profile .quotes-header .btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #6D4C41 0%, #5D4037 100%);
     border: none;
     border-radius: 8px;
     padding: 10px 20px;
     font-weight: 600;
     transition: all 0.3s ease;
+    color: #FAF3EB;
 }
 
 .quotes-section-profile .quotes-header .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 4px 12px rgba(109, 76, 65, 0.4);
 }
 
 .quotes-section-profile .quotes-list {
@@ -1104,7 +1167,7 @@
 .quotes-section-profile .loading-quotes {
     text-align: center;
     padding: 40px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #8D6E63;
 }
 
 .quotes-section-profile .loading-quotes p {
@@ -1115,7 +1178,7 @@
 .quotes-section-profile .no-quotes {
     text-align: center;
     padding: 60px 20px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #8D6E63;
 }
 
 .quotes-section-profile .no-quotes-icon {
@@ -1126,7 +1189,7 @@
 
 .quotes-section-profile .no-quotes h4 {
     margin: 0 0 10px 0;
-    color: #fff;
+    color: #3E2723;
     font-weight: 600;
 }
 
@@ -1137,23 +1200,24 @@
 }
 
 .quotes-section-profile .no-quotes .btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #6D4C41 0%, #5D4037 100%);
     border: none;
     border-radius: 8px;
     padding: 12px 24px;
     font-weight: 600;
     transition: all 0.3s ease;
+    color: #FAF3EB;
 }
 
 .quotes-section-profile .no-quotes .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 4px 12px rgba(109, 76, 65, 0.4);
 }
 
 /* Profil Sayfası Alıntı Kartları */
 .quotes-section-profile .quote-card {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #FAF3EB;
+    border: 1px solid #E6D8C3;
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
@@ -1162,9 +1226,9 @@
 }
 
 .quotes-section-profile .quote-card:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: #F5EBE0;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(62, 39, 35, 0.1);
 }
 
 .quotes-section-profile .quote-header {
@@ -1185,19 +1249,19 @@
     height: 80px;
     border-radius: 8px;
     object-fit: cover;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid #E6D8C3;
 }
 
 .quotes-section-profile .quote-book-details h5 {
     margin: 0 0 5px 0;
-    color: #fff;
+    color: #3E2723;
     font-size: 1.1rem;
     font-weight: 600;
 }
 
 .quotes-section-profile .quote-book-details p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.8);
+    color: #5D4037;
     font-size: 0.9rem;
 }
 
@@ -1209,7 +1273,7 @@
 .quotes-section-profile .quote-action-btn {
     background: none;
     border: none;
-    color: rgba(255, 255, 255, 0.8);
+    color: #8D6E63;
     cursor: pointer;
     padding: 6px 10px;
     border-radius: 6px;
@@ -1218,13 +1282,30 @@
 }
 
 .quotes-section-profile .quote-action-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    background: #F5EBE0;
+    color: #3E2723;
 }
 
 .quotes-section-profile .quote-action-btn.delete:hover {
     background: rgba(220, 53, 69, 0.2);
     color: #ff6b6b;
+}
+
+.quotes-section-profile .btn-delete-quote {
+    background: none;
+    border: none;
+    color: #8D6E63;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-size: 1.1rem;
+}
+
+.quotes-section-profile .btn-delete-quote:hover {
+    background: rgba(220, 53, 69, 0.2);
+    color: #ff6b6b;
+    transform: scale(1.1);
 }
 
 .quotes-section-profile .quote-content {
@@ -1234,13 +1315,13 @@
 .quotes-section-profile .quote-text {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #fff;
+    color: #3E2723;
     font-style: italic;
     margin: 0;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #F5EBE0;
     border-radius: 8px;
-    border-left: 4px solid #667eea;
+    border-left: 4px solid #6D4C41;
 }
 
 .quotes-section-profile .quote-meta {
@@ -1254,7 +1335,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #8D6E63;
     font-size: 0.9rem;
 }
 
@@ -1287,11 +1368,11 @@
 .quotes-section-profile .quote-footer {
     margin-top: 15px;
     padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #E6D8C3;
 }
 
 .quotes-section-profile .quote-date {
-    color: rgba(255, 255, 255, 0.6);
+    color: #8D6E63;
     font-size: 0.85rem;
 }
 
@@ -1308,8 +1389,8 @@
     width: 40px;
     height: 40px;
     margin: -20px 0 0 -20px;
-    border: 4px solid rgba(255, 255, 255, 0.2);
-    border-top: 4px solid #667eea;
+    border: 4px solid #E6D8C3;
+    border-top: 4px solid #6D4C41;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -1368,30 +1449,30 @@
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    color: #fff;
+    color: #3E2723;
     padding: 10px 15px;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #F5EBE0;
     transition: all 0.3s ease;
     min-width: 80px;
 }
 
 .follow-stat-item:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: #E6D8C3;
     transform: translateY(-2px);
-    color: #fff;
+    color: #3E2723;
     text-decoration: none;
 }
 
 .follow-count {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ffc107;
+    color: #6D4C41;
 }
 
 .follow-label {
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #8D6E63;
     margin-top: 2px;
 }
 
@@ -1400,7 +1481,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    color: #fff;
+    color: #3E2723;
 }
 
 .followers-header {
@@ -1409,12 +1490,12 @@
     align-items: center;
     margin-bottom: 30px;
     padding-bottom: 20px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid #E6D8C3;
 }
 
 .followers-header h2 {
     margin: 0;
-    color: #ffc107;
+    color: #3E2723;
     font-size: 2rem;
 }
 
@@ -1429,14 +1510,14 @@
     align-items: center;
     gap: 20px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #FAF3EB;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #E6D8C3;
     transition: all 0.3s ease;
 }
 
 .follower-item:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: #F5EBE0;
     transform: translateY(-2px);
 }
 
@@ -1445,7 +1526,7 @@
     height: 60px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid rgba(255, 193, 7, 0.3);
+    border: 3px solid #E6D8C3;
 }
 
 .follower-avatar img {
@@ -1460,19 +1541,19 @@
 
 .follower-name {
     margin: 0 0 5px 0;
-    color: #ffc107;
+    color: #3E2723;
     font-size: 1.2rem;
 }
 
 .follower-fullname {
     margin: 0 0 8px 0;
-    color: rgba(255, 255, 255, 0.9);
+    color: #5D4037;
     font-size: 1rem;
 }
 
 .follower-bio {
     margin: 0;
-    color: rgba(255, 255, 255, 0.7);
+    color: #8D6E63;
     font-size: 0.9rem;
     line-height: 1.4;
 }
@@ -1487,7 +1568,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    color: #fff;
+    color: #3E2723;
 }
 
 .following-header {
@@ -1496,12 +1577,12 @@
     align-items: center;
     margin-bottom: 30px;
     padding-bottom: 20px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid #E6D8C3;
 }
 
 .following-header h2 {
     margin: 0;
-    color: #ffc107;
+    color: #3E2723;
     font-size: 2rem;
 }
 
@@ -1516,14 +1597,14 @@
     align-items: center;
     gap: 20px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #FAF3EB;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #E6D8C3;
     transition: all 0.3s ease;
 }
 
 .following-item:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: #F5EBE0;
     transform: translateY(-2px);
 }
 
@@ -1532,7 +1613,7 @@
     height: 60px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid rgba(255, 193, 7, 0.3);
+    border: 3px solid #E6D8C3;
 }
 
 .following-avatar img {
@@ -1547,19 +1628,19 @@
 
 .following-name {
     margin: 0 0 5px 0;
-    color: #ffc107;
+    color: #3E2723;
     font-size: 1.2rem;
 }
 
 .following-fullname {
     margin: 0 0 8px 0;
-    color: rgba(255, 255, 255, 0.9);
+    color: #5D4037;
     font-size: 1rem;
 }
 
 .following-bio {
     margin: 0;
-    color: rgba(255, 255, 255, 0.7);
+    color: #8D6E63;
     font-size: 0.9rem;
     line-height: 1.4;
 }
@@ -1574,9 +1655,9 @@
 .no-following {
     text-align: center;
     padding: 60px 20px;
-    background: rgba(255, 255, 255, 0.05);
+    background: #F5EBE0;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #E6D8C3;
 }
 
 .no-followers-icon,
@@ -1584,19 +1665,20 @@
     font-size: 4rem;
     margin-bottom: 20px;
     opacity: 0.7;
+    color: #BCAAA4;
 }
 
 .no-followers h3,
 .no-following h3 {
     margin: 0 0 15px 0;
-    color: #ffc107;
+    color: #3E2723;
     font-size: 1.5rem;
 }
 
 .no-followers p,
 .no-following p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.7);
+    color: #8D6E63;
     font-size: 1rem;
     line-height: 1.6;
     max-width: 400px;

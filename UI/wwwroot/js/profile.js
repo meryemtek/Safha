@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Profil resmi ve kapak fotoğrafı yükleme işlevselliği
     initializePhotoUploads();
+    
+    // Takip butonu işlevselliği
+    initializeFollowButton();
+    
+    // Kullanıcı alıntılarını yükle
+    loadUserQuotes();
 });
 
 // Tab değiştirme işlevselliği
@@ -311,3 +317,201 @@ window.addEventListener('resize', addMobileMenuToggle);
 
 // Sayfa yüklendiğinde mobil menü toggle'ı ekle
 document.addEventListener('DOMContentLoaded', addMobileMenuToggle);
+
+// Takip butonu işlevselliği
+function initializeFollowButton() {
+    const followBtn = document.getElementById('followBtn');
+    if (!followBtn) return;
+    
+    followBtn.addEventListener('click', async function() {
+        const userId = this.getAttribute('data-user-id');
+        const isFollowing = this.getAttribute('data-following') === 'true';
+        const btn = this;
+        
+        // Butonu devre dışı bırak
+        btn.disabled = true;
+        const originalText = btn.textContent;
+        btn.textContent = 'İşleniyor...';
+        
+        try {
+            const action = isFollowing ? 'Unfollow' : 'Follow';
+            
+            // FormData kullanarak gönder
+            const formData = new URLSearchParams();
+            formData.append('userId', userId);
+            
+            const response = await fetch(`/Profile/${action}?userId=${userId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: formData
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                // Buton durumunu güncelle
+                if (isFollowing) {
+                    btn.textContent = 'Takip Et';
+                    btn.setAttribute('data-following', 'false');
+                    btn.classList.remove('btn-following');
+                    btn.classList.add('btn-primary');
+                } else {
+                    btn.textContent = 'Takibi Bırak';
+                    btn.setAttribute('data-following', 'true');
+                    btn.classList.remove('btn-primary');
+                    btn.classList.add('btn-following');
+                }
+                
+                // Takipçi sayılarını güncelle
+                updateFollowerCounts(data.followerCount, data.followingCount);
+                
+                // Başarı mesajı göster
+                showSuccessMessage(data.message);
+            } else {
+                // Hata mesajı göster
+                showErrorMessage(data.message);
+                btn.textContent = originalText;
+                console.error('Takip işlemi başarısız:', data.message);
+            }
+        } catch (error) {
+            console.error('Takip işlemi hatası:', error);
+            showErrorMessage('Bir hata oluştu. Lütfen tekrar deneyin.');
+            btn.textContent = originalText;
+        } finally {
+            // Butonu tekrar aktif et
+            btn.disabled = false;
+        }
+    });
+}
+
+// Takipçi sayılarını güncelle
+function updateFollowerCounts(followerCount, followingCount) {
+    // Takipçi sayısını güncelle
+    const followerCountElements = document.querySelectorAll('.follow-count');
+    if (followerCountElements.length > 0 && followerCount !== undefined) {
+        followerCountElements[0].textContent = followerCount;
+    }
+}
+
+// Kullanıcı alıntılarını yükle
+function loadUserQuotes() {
+    const quotesList = document.getElementById('userQuotesList');
+    if (!quotesList) return;
+    
+    // Profil sayfasındaki kullanıcı ID'sini al
+    const followBtn = document.getElementById('followBtn');
+    let profileUserId = null;
+    
+    if (followBtn) {
+        // Başka birinin profili görüntüleniyorsa
+        profileUserId = followBtn.getAttribute('data-user-id');
+    } else {
+        // Kendi profilimizi görüntülüyorsak, URL'den veya meta tag'den al
+        profileUserId = getUserIdFromPage();
+    }
+    
+    if (!profileUserId) {
+        console.log('Kullanıcı ID bulunamadı');
+        return;
+    }
+    
+    fetch(`/Profile/GetUserQuotes/${profileUserId}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success && data.quotes && data.quotes.length > 0) {
+                quotesList.innerHTML = data.quotes.map(quote => `
+                    <div class="quote-card" data-quote-id="${quote.id}">
+                        <div class="quote-header">
+                            <div class="quote-book-info">
+                                <img src="${quote.bookCoverImage}" alt="${quote.bookTitle}" class="quote-book-cover">
+                                <div class="quote-book-details">
+                                    <h4 class="quote-book-title">${quote.bookTitle}</h4>
+                                    <p class="quote-book-author">${quote.bookAuthor}</p>
+                                </div>
+                            </div>
+                            ${quote.canDelete ? `<button class="btn-delete-quote" onclick="deleteQuote(${quote.id})">🗑️</button>` : ''}
+                        </div>
+                        <div class="quote-body">
+                            <p class="quote-content">"${quote.content}"</p>
+                            ${quote.author ? `<p class="quote-author">— ${quote.author}</p>` : ''}
+                            ${quote.pageNumber ? `<p class="quote-page">Sayfa: ${quote.pageNumber}</p>` : ''}
+                            ${quote.notes ? `<p class="quote-notes"><strong>Notlar:</strong> ${quote.notes}</p>` : ''}
+                        </div>
+                        <div class="quote-footer">
+                            <span class="quote-date">📅 ${quote.createdAt}</span>
+                        </div>
+                    </div>
+                `).join('');
+            } else {
+                quotesList.innerHTML = '<div class="no-quotes"><p>Henüz alıntı eklenmemiş.</p></div>';
+            }
+        })
+        .catch(error => {
+            console.error('Alıntılar yüklenirken hata:', error);
+            quotesList.innerHTML = '<div class="no-quotes"><p>Alıntılar yüklenirken bir hata oluştu.</p></div>';
+        });
+}
+
+// Sayfadan kullanıcı ID'sini al (yedek metod)
+function getUserIdFromPage() {
+    // Hidden field'den kullanıcı ID'sini al
+    const userIdElement = document.getElementById('profileUserId');
+    if (userIdElement) {
+        return userIdElement.value;
+    }
+    
+    // URL'den veya başka bir yerden kullanıcı ID'sini almaya çalış (yedek)
+    const url = window.location.href;
+    const match = url.match(/\/Profile\/View\/(\d+)/);
+    return match ? match[1] : null;
+}
+
+// Alıntı silme fonksiyonu
+function deleteQuote(quoteId) {
+    if (!confirm('Bu alıntıyı silmek istediğinizden emin misiniz?')) {
+        return;
+    }
+    
+    const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+    
+    fetch('/Profile/DeleteQuote', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'RequestVerificationToken': token
+        },
+        body: JSON.stringify({ id: quoteId })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Alıntı kartını DOM'dan kaldır
+            const quoteCard = document.querySelector(`[data-quote-id="${quoteId}"]`);
+            if (quoteCard) {
+                quoteCard.style.transition = 'all 0.3s ease';
+                quoteCard.style.opacity = '0';
+                quoteCard.style.transform = 'translateX(-20px)';
+                
+                setTimeout(() => {
+                    quoteCard.remove();
+                    
+                    // Eğer hiç alıntı kalmadıysa "henüz alıntı yok" mesajını göster
+                    const quotesList = document.getElementById('userQuotesList');
+                    if (quotesList && quotesList.children.length === 0) {
+                        quotesList.innerHTML = '<div class="no-quotes"><p>Henüz alıntı eklenmemiş.</p></div>';
+                    }
+                }, 300);
+            }
+            
+            showSuccessMessage(data.message);
+        } else {
+            showErrorMessage(data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Alıntı silinirken hata:', error);
+        showErrorMessage('Alıntı silinirken bir hata oluştu.');
+    });
+}

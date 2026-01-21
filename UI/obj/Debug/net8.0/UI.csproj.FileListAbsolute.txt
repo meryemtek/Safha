@@ -1,66 +1,5 @@
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\bin\Debug\net8.0\appsettings.json
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\bin\Debug\net8.0\UI.staticwebassets.runtime.json
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\bin\Debug\net8.0\UI.staticwebassets.endpoints.json
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\bin\Debug\net8.0\UI.exe
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\bin\Debug\net8.0\UI.deps.json
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\bin\Debug\net8.0\UI.runtimeconfig.json
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\bin\Debug\net8.0\UI.dll
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\bin\Debug\net8.0\UI.pdb
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\UI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\UI.AssemblyInfoInputs.cache
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\UI.AssemblyInfo.cs
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\UI.csproj.CoreCompileInputs.cache
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\UI.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\UI.RazorAssemblyInfo.cache
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\UI.RazorAssemblyInfo.cs
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\rjimswa.dswa.cache.json
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\scopedcss\bundle\UI.styles.css
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\scopedcss\projectbundle\UI.bundle.scp.css
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\staticwebassets.build.json.cache
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\UI.dll
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\refint\UI.dll
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\UI.pdb
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\UI.genruntimeconfig.cache
-C:\Users\merye\Desktop\kutuphane_\kitapp\UI\obj\Debug\net8.0\ref\UI.dll
 C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\appsettings.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_4ZTrCnoHPx0C.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_7LZ0EAAAQBAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_BFl9DwAAQBAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_dH3oDwAAQBAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_en42MwEACAAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_fwcnCgAAQBAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_jKTBDwAAQBAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_kTnuswEACAAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_lWZ0oAEACAAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_NGLac6caQXoC.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_njrmzgEACAAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_nwVOtwAACAAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_PKlfswEACAAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_QdoZEAAAQBAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_V4xQEQAAQBAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_VJReDwAAQBAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_xvkgEAAAQBAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_aşkın gözyaşları.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_doğan cüceloğlu.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_freud.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_gurur ve önyargı.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_kırmızı pazartesi.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_martin eden.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_seyyid kutub.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_suç ve ceza.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_yoldaki işaretler.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_zamanın zeynebi.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\url_log.json
 C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\UI.staticwebassets.runtime.json
 C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\UI.staticwebassets.endpoints.json
 C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\UI.exe
@@ -172,12 +111,17 @@ C:\Users\merye\Desktop\kitapp\UI\obj\Debug\net8.0\refint\UI.dll
 C:\Users\merye\Desktop\kitapp\UI\obj\Debug\net8.0\UI.pdb
 C:\Users\merye\Desktop\kitapp\UI\obj\Debug\net8.0\UI.genruntimeconfig.cache
 C:\Users\merye\Desktop\kitapp\UI\obj\Debug\net8.0\ref\UI.dll
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_seyyidkutub.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_MoJVEAAAQBAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_cjCZzgEACAAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_wuPfzgEACAAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_u46n6XAg9gEC.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_saat.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_tPkyEAAAQBAJ.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_franz kafka.json
-C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_CiLlAwAAQBAJ.json
+C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\url_log.json
+C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_BZ1lPblizCsC.json
+C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\book_L50JAQAAIAAJ.json
+C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_1984.json
+C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_Animal Farm.json
+C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_Harry Potter.json
+C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_ismet özel.json
+C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_Jane Eyre.json
+C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_Lord of the Rings.json
+C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_Pride and Prejudice.json
+C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_The Great Gatsby.json
+C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_The Hobbit.json
+C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_To Kill a Mockingbird.json
+C:\Users\merye\Desktop\kitapp\UI\bin\Debug\net8.0\root\cache\googlebooks\search_Wuthering Heights.json

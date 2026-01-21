@@ -1,0 +1,327 @@
+{
+  "query": "ismet \u00F6zel",
+  "cachedAt": "2026-01-21T17:22:03.4104219Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "rZeO0AEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/rZeO0AEACAAJ",
+        "volumeInfo": {
+          "title": "\u0130smet \u00D6zel \u00F6zel say\u0131s\u0131 1",
+          "subtitle": "",
+          "authors": null,
+          "publisher": "",
+          "publishedDate": "2024",
+          "description": "",
+          "pageCount": 0,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": null,
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=rZeO0AEACAAJ\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=rZeO0AEACAAJ\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "6256610180"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9786256610187"
+            }
+          ]
+        }
+      },
+      {
+        "id": "L50JAQAAIAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/L50JAQAAIAAJ",
+        "volumeInfo": {
+          "title": "\u015Eiir okuma k\u0131lavuzu",
+          "subtitle": "",
+          "authors": [
+            "\u0130smet \u00D6zel"
+          ],
+          "publisher": "",
+          "publishedDate": "1980",
+          "description": "",
+          "pageCount": 92,
+          "categories": [
+            "Poetry"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=L50JAQAAIAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=L50JAQAAIAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=L50JAQAAIAAJ\u0026q=ismet\u002B%C3%B6zel\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026cd=2\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=L50JAQAAIAAJ\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "UCAL:B3191885"
+            }
+          ]
+        }
+      },
+      {
+        "id": "kChkAAAAMAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/kChkAAAAMAAJ",
+        "volumeInfo": {
+          "title": "Gen\u00E7 bir \u015Fairden, gen\u00E7 bir \u015Faire mektuplar",
+          "subtitle": "",
+          "authors": [
+            "Ataol Behramo\u011Flu",
+            "\u0130smet \u00D6zel"
+          ],
+          "publisher": "",
+          "publishedDate": "1995",
+          "description": "",
+          "pageCount": 250,
+          "categories": [
+            "Authors, Turkish"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=kChkAAAAMAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=kChkAAAAMAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=kChkAAAAMAAJ\u0026q=ismet\u002B%C3%B6zel\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026cd=3\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=kChkAAAAMAAJ\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "UOM:39015034404833"
+            }
+          ]
+        }
+      },
+      {
+        "id": "LjXrZwEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/LjXrZwEACAAJ",
+        "volumeInfo": {
+          "title": "Ben \u0130smet \u00D6zel \u015Fair ...",
+          "subtitle": "bir portre denemesi",
+          "authors": [
+            "Re\u015Fit G\u00FCng\u00F6r Kalkan"
+          ],
+          "publisher": "",
+          "publishedDate": "2010",
+          "description": "",
+          "pageCount": 429,
+          "categories": [
+            "Authors, Turkish"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": null,
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=LjXrZwEACAAJ\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026cd=4\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=LjXrZwEACAAJ\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "6056140156"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9786056140150"
+            }
+          ]
+        }
+      },
+      {
+        "id": "SsU3AQAAIAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/SsU3AQAAIAAJ",
+        "volumeInfo": {
+          "title": "\u0130smet \u00D6zel",
+          "subtitle": "\u0219iire dam\u0131t\u0131lm\u0131\u0219 hayat",
+          "authors": [
+            "\u0130brahim T\u00FCzer"
+          ],
+          "publisher": "",
+          "publishedDate": "2008",
+          "description": "",
+          "pageCount": 612,
+          "categories": [
+            "Authors, Turkish"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=SsU3AQAAIAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=SsU3AQAAIAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=SsU3AQAAIAAJ\u0026q=ismet\u002B%C3%B6zel\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026cd=5\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=SsU3AQAAIAAJ\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "STANFORD:36105215746897"
+            }
+          ]
+        }
+      },
+      {
+        "id": "MYlPAQAAIAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/MYlPAQAAIAAJ",
+        "volumeInfo": {
+          "title": "\u0130laveler ve vaat edilmi\u015F bir \u015Fiir",
+          "subtitle": "",
+          "authors": [
+            "\u0130smet \u00D6zel"
+          ],
+          "publisher": "",
+          "publishedDate": "2008",
+          "description": "",
+          "pageCount": 148,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=MYlPAQAAIAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=MYlPAQAAIAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=MYlPAQAAIAAJ\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026cd=6\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=MYlPAQAAIAAJ\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "STANFORD:36105218228620"
+            }
+          ]
+        }
+      },
+      {
+        "id": "VEVkAAAAMAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/VEVkAAAAMAAJ",
+        "volumeInfo": {
+          "title": "\u0130smet \u00D6zel\u0027in ament\u00FC\u0027s\u00FC",
+          "subtitle": "metindilbilimsel bir \u00E7\u00F6z\u00FCmleme",
+          "authors": [
+            "Hasan Akta\u015F"
+          ],
+          "publisher": "",
+          "publishedDate": "2000",
+          "description": "Turkish literature; \u00D6zel, \u0130smet, 1944-; history and criticism.",
+          "pageCount": 104,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=VEVkAAAAMAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=VEVkAAAAMAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=VEVkAAAAMAAJ\u0026q=ismet\u002B%C3%B6zel\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026cd=7\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=VEVkAAAAMAAJ\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "UOM:39015051929662"
+            }
+          ]
+        }
+      },
+      {
+        "id": "RRzmoAEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/RRzmoAEACAAJ",
+        "volumeInfo": {
+          "title": "Bir masal \u0130smet \u00D6zel\u0027i",
+          "subtitle": "",
+          "authors": [
+            "Selahattin Yusuf"
+          ],
+          "publisher": "",
+          "publishedDate": "2014",
+          "description": "",
+          "pageCount": 160,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": null,
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=RRzmoAEACAAJ\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026cd=8\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=RRzmoAEACAAJ\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "9759964252"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9789759964252"
+            }
+          ]
+        }
+      },
+      {
+        "id": "BqeQ0AEACAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/BqeQ0AEACAAJ",
+        "volumeInfo": {
+          "title": "\u0130smet \u00D6zel \u00F6zel say\u0131s\u0131 2",
+          "subtitle": "",
+          "authors": null,
+          "publisher": "",
+          "publishedDate": "2024",
+          "description": "",
+          "pageCount": 0,
+          "categories": null,
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": null,
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=BqeQ0AEACAAJ\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026cd=9\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=BqeQ0AEACAAJ\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "6256610199"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9786256610194"
+            }
+          ]
+        }
+      },
+      {
+        "id": "aoehEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/aoehEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Sezai Karako\u00E7 ve Dirilten \u015Eiir (Karabatak #65)",
+          "subtitle": "",
+          "authors": [
+            "karabatak.org"
+          ],
+          "publisher": "\u015Eule Yay\u0131nlar\u0131",
+          "publishedDate": "",
+          "description": "Sezai Karako\u00E7 ve Dirilten \u015Eiir Ali Ural H\u0131z\u0131r\u2019a sahilde randevu veren bir \u015Fair, diriltici \u015Fiiri ar\u0131yor demektir. Deniz k\u0131y\u0131s\u0131nda bulu\u015Fmak istemektedir onunla \u00E7\u00FCnk\u00FC deniz sonsuzlu\u011Fu, su hayat\u0131 imlemektedir. B\u00FCy\u00FCk bir randevudur bu. B\u00FCy\u00FCk ve s\u00FCrekli. Bir kere g\u00F6r\u00FC\u015Fmek yetmez hay\u0131r, k\u0131rk d\u00FC\u011F\u00FCm at\u0131lacakt\u0131r \u00E7\u00F6z\u00FClmesin diye kutsal akit. K\u0131rk defa Yenikap\u0131 sahiline y\u00FCr\u00FCyecektir \u015Fair, k\u0131rk alt\u0131n saat elde edebilmek i\u00E7in. Marcel Proust, \u201CYakalanan Zaman\u201D roman\u0131nda \u201CBir saat, sadece bir saat de\u011Fildir, kokularla, seslerle, projelerle ve iklimlerle dolu bir kapt\u0131r. Ger\u00E7eklik dedi\u011Fimiz \u015Fey, bizi ayn\u0131 anda sarmalayan bu izlenimlerle hat\u0131ralar aras\u0131ndaki ba\u011Flant\u0131d\u0131r,\u201D derken acaba sanat\u0131n yery\u00FCz\u00FC b\u00FCt\u00FCnl\u00FC\u011F\u00FC i\u00E7inde \u201CH\u0131z\u0131r\u2019la K\u0131rk Saat\u201D \u015Fiirinin olu\u015Fumuna dair bir ipucu mu veriyordu bize. M\u0131knat\u0131s\u0131n yan\u0131nda duran demir, m\u0131knat\u0131s g\u00FCc\u00FC kazan\u0131r. \u015Eiirin dirili\u015Fini insanl\u0131\u011F\u0131n dirili\u015Finde g\u00F6ren bir \u015Fairin hayalde dahi olsa H\u0131z\u0131r\u2019la bir araya gelmesi, ondan \u00F6d\u00FCn\u00E7 ald\u0131\u011F\u0131 bir k\u00E2se \u00E2b\u0131hayatla Tanr\u0131\u2019n\u0131n \u00E7\u00F6lle\u015Fmi\u015F/\u00E7\u00F6lle\u015Ftirilmi\u015F beldelerine yolculuk yapmas\u0131 aray\u0131\u015F kurgusunun ne m\u00FCstesna bir \u00F6rne\u011Fidir. Bu \u00F6yle bir seferdir ki insanl\u0131k tarihinin b\u00FCt\u00FCn diriltici anlar\u0131 e\u015Flik eder ona. Peygamberler ve veliler bir g\u00F6r\u00FCn\u00FCp bir kaybolurlar yolcunun yan\u0131nda. \u0130slam co\u011Frafyalar\u0131 sahnenin de\u011Fi\u015Fen dekorlar\u0131d\u0131r s\u00FCrekli. B\u00F6yle bir fonda \u015Fiirin karabu\u011Fdaylar\u0131n\u0131 \u00E2b\u0131hayatla \u00E7imlendirmektedir \u015Fair. H\u0131z\u0131r de\u011Filse de H\u0131z\u0131rla\u015Fm\u0131\u015Ft\u0131r mesafeler a\u015Fabilmek i\u00E7in. H\u0131z\u0131r de\u011Filse de H\u0131z\u0131rla\u015Fm\u0131\u015Ft\u0131r kelimeleri. \u201CDudaklar\u0131ndan bu\u011Fdaylar d\u00F6k\u00FCl\u00FCyor/ D\u00FC\u015Fer d\u00FC\u015Fmez \u00E7imlenen bu\u011Fdaylar/ Bire on de\u011Fil/ Y\u00FCz de\u011Fil bire/ Birdenbire, birden bine/ \u00C7\u0131ld\u0131rtan sahralar\u0131,\u201D m\u0131sralar\u0131mdaki \u015Fairdir o. Sezai Karako\u00E7\u2019un aram\u0131zdan ayr\u0131l\u0131\u015F\u0131n\u0131n \u00FCzerinden bir y\u0131l ge\u00E7ti, derken kalemimiz t\u00F6kezliyor. Sahi aram\u0131zdan ayr\u0131ld\u0131 m\u0131 o? Aram\u0131zda de\u011Filse de biz onun \u00E7\u00F6llerden bu\u011Fday ba\u015Faklar\u0131 gibi f\u0131\u015Fk\u0131ran \u015Fiirlerinin aras\u0131nday\u0131z. \u015Eiirlerinin bayraktarl\u0131\u011F\u0131n\u0131 yapt\u0131\u011F\u0131 dirili\u015F d\u00FC\u015F\u00FCncesinin yan\u0131nda. \u015Eiiri, diriltici bir sur sesine d\u00F6n\u00FC\u015Ft\u00FCrd\u00FC Karako\u00E7. Bu \u00E7abas\u0131n\u0131 yaln\u0131z m\u0131sralar\u0131nda de\u011Fil, b\u00FCt\u00FCn metinlerinde g\u00F6rmek m\u00FCmk\u00FCn. Ona g\u00F6re, \u015Fairin bir g\u00F6revi vard\u0131r. Tanr\u0131\u2019y\u0131 b\u00FCt\u00FCn insan karde\u015Fleri ad\u0131na o y\u00FCceltecektir. S\u00F6z\u00FCn a\u011F\u0131rl\u0131\u011F\u0131 onun omuzlar\u0131na y\u00FCklenmi\u015Ftir. Karabatak\u2019\u0131n 65. Say\u0131s\u0131nda dosya konumuz, \u201CSezai Karako\u00E7 ve Dirilten \u015Eiir\u201D. Borcumuzu \u00F6demek i\u00E7in de\u011Fil, \u00F6denemez borcumuzu hat\u0131rlamak i\u00E7in yapt\u0131k bu dosyay\u0131. Hasan Akay, Y\u0131lmaz Da\u015F\u00E7\u0131o\u011Flu, Mustafa \u00D6z\u00E7elik, Celal Fedai, Sevde Merve Ery\u0131lmaz, H\u00FCseyin Ak\u0131n, Ertu\u011Frul Ayd\u0131n, Ercan Y\u0131lmaz, Jale Nur Turgut, O\u011Fuz \u015Eenses, Vahdettin Oktay Beyazl\u0131, G\u00F6khan Erg\u00FCr, Y\u00FCksel Kanar, \u00D6mer Yal\u00E7\u0131nova, Ahmet Akarsu, Muhammed Enis \u00D6zel, Eray Sar\u0131\u00E7am, Serhat Demirel, Meryem K\u0131l\u0131\u00E7, \u00DCnal \u00C7elik, Ali K. Metin, Ali Seyyah ve \u0130smail Ayd\u0131n bu b\u00FCy\u00FCk hat\u0131rlay\u0131\u015Fta yerlerini ald\u0131lar. 65. say\u0131m\u0131z\u0131n r\u00F6portaj konu\u011Fu: Y\u0131lmaz Da\u015F\u00E7\u0131o\u011Flu. Serhat Demirel\u2019in sorular\u0131n\u0131 cevaplayan Da\u015F\u00E7\u0131o\u011Flu, \u201C\u0130nsan varsa \u015Fiir var olacakt\u0131r,\u201D diyerek \u015Fiirin ebed\u00EE ve ezel\u00EE varl\u0131\u011F\u0131na i\u015Faret ediyor. Projekt\u00F6r sayfam\u0131z\u0131n konu\u011Fu G\u00FCldane Ersoy. \u201CGer\u00E7e\u011Fin sanal\u0131, kahramanl\u0131\u011F\u0131n yapay\u0131; i\u015Fte \u00F6n\u00FCm\u00FCze sunulan gelecek,\u201D diyen Ersoy, projekt\u00F6r\u00FC sahte kahramanlardan ger\u00E7ek kahramanlar \u00FCzerine \u00E7eviriyor. Karabatak dergisi d\u00FC\u015F\u00FCnce d\u00FCnyam\u0131zda a\u011F\u0131rl\u0131\u011F\u0131 olan isimlerle yol almaya devam ediyor. \u00D6mer Lekesiz, insanlar \u00F6l\u00FCr ama hayat ve eser devam eder, diyerek \u00F6yk\u00FCc\u00FCl\u00FC\u011F\u00FCn\u00FC mit, efsane, tarih, medeniyet, k\u00FClt\u00FCr temelleri \u00FCzerine kuran Y\u00FCcel Balku\u2019yu hat\u0131rlat\u0131yor okura. D. Mehmet Do\u011Fan, dilimiz gibi b\u00FCy\u00FCk bir medeniyet miras\u0131 olan musikimizin kar\u015F\u0131la\u015Ft\u0131\u011F\u0131 yoku\u015Flara tutuyor b\u00FCy\u00FCtecini. Hasan Akay \u201CS\u0131f\u0131r Noktas\u0131ndaki Birlik\u201D denemesinde kavramlar\u0131n insanlar\u0131n anlam d\u00FCnyalar\u0131ndaki farkl\u0131l\u0131klar\u0131na dikkat \u00E7ekiyor. H\u00FCseyin Yorulmaz, Orhan Okay\u2019\u0131n 5. \u00F6l\u00FCm y\u0131ld\u00F6n\u00FCm\u00FC m\u00FCnasebetiyle \u201CEdebiyat\u0131m\u0131z\u0131n \u00C7elebi Hocas\u0131 Orhan Okay\u201D ba\u015Fl\u0131kl\u0131 \u00E7al\u0131\u015Fmas\u0131n\u0131n ilk b\u00F6l\u00FCm\u00FCn\u00FCn \u00F6zetini payla\u015F\u0131yor bizimle. Ve Karabatak \u015Fiir ve \u00F6yk\u00FC kanatlar\u0131yla bir kez daha \u00E7\u0131k\u0131yor sulardan.",
+          "pageCount": 228,
+          "categories": [
+            "Literary Criticism"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=aoehEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=aoehEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=aoehEAAAQBAJ\u0026pg=PA134\u0026dq=ismet\u002B%C3%B6zel\u0026hl=\u0026cd=10\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=aoehEAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": null
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=ismet%20%C3%B6zel\u0026maxResults=10\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

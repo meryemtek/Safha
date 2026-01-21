@@ -92,7 +92,9 @@ async Task SeedTestData(SafhaDbContext context)
     if (!context.Users.Any())
     {
         var hashedPassword = HashPassword("test123");
-        var user = new User
+        
+        // İlk kullanıcı
+        var user1 = new User
         {
             Username = "testuser",
             FirstName = "Test",
@@ -104,21 +106,59 @@ async Task SeedTestData(SafhaDbContext context)
             CreatedAt = DateTime.UtcNow,
             UpdatedAt = DateTime.UtcNow
         };
-        context.Users.Add(user);
+        context.Users.Add(user1);
+        
+        // İkinci kullanıcı
+        var user2 = new User
+        {
+            Username = "ahmet",
+            FirstName = "Ahmet",
+            LastName = "Yılmaz",
+            Email = "ahmet@example.com",
+            Password = hashedPassword,
+            Role = "User",
+            IsActive = true,
+            CreatedAt = DateTime.UtcNow,
+            UpdatedAt = DateTime.UtcNow
+        };
+        context.Users.Add(user2);
+        
+        // Üçüncü kullanıcı
+        var user3 = new User
+        {
+            Username = "ayse",
+            FirstName = "Ayşe",
+            LastName = "Demir",
+            Email = "ayse@example.com",
+            Password = hashedPassword,
+            Role = "User",
+            IsActive = true,
+            CreatedAt = DateTime.UtcNow,
+            UpdatedAt = DateTime.UtcNow
+        };
+        context.Users.Add(user3);
+        
         await context.SaveChangesAsync();
 
+        // Test kitabı ekle
         var book = new Book
         {
             Title = "Test Kitap",
             Author = "Test Yazar",
             Description = "Bu bir test kitabıdır",
-            UserId = user.Id,
+            UserId = user1.Id,
             IsActive = true,
             CreatedAt = DateTime.UtcNow,
             UpdatedAt = DateTime.UtcNow
         };
         context.Books.Add(book);
         await context.SaveChangesAsync();
+        
+        Console.WriteLine($"Test kullanıcıları oluşturuldu:");
+        Console.WriteLine($"1. {user1.Username} (ID: {user1.Id})");
+        Console.WriteLine($"2. {user2.Username} (ID: {user2.Id})");
+        Console.WriteLine($"3. {user3.Username} (ID: {user3.Id})");
+        Console.WriteLine($"Tüm kullanıcılar için şifre: test123");
     }
 }
 

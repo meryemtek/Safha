@@ -34,5 +34,6 @@ namespace Entities
        
         public User User { get; set; } = null!;
         public Book Book { get; set; } = null!;
+        public ICollection<QuoteLike> Likes { get; set; } = new List<QuoteLike>();
     }
 }

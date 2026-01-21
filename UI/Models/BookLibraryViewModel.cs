@@ -14,6 +14,7 @@ namespace UI.Models
         
         // BookStatusSummary'den alınan istatistik bilgileri
         public int TotalBooks { get; set; }
+        public int AllBooksCount { get; set; } // Filtresiz toplam kitap sayısı
         public int CurrentlyReadingCount { get; set; }
         public int WantToReadCount { get; set; }
         public int ReadCount { get; set; }

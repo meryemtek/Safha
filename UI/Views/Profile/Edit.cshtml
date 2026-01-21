@@ -20,24 +20,24 @@
                     <h3>📷 Fotoğraflar</h3>
                     
                     <div class="cover-photo-upload">
-                        <label>Kapak Fotoğrafı</label>
-                        <div class="cover-photo-preview" id="coverPhotoPreview">
-                            <input type="file" name="CoverPhotoFile" id="coverPhotoInput" accept="image/*" />
+                        <label class="upload-label-text">Kapak Fotoğrafı</label>
+                        <div class="cover-photo-preview" id="coverPhotoPreview" style="@(!string.IsNullOrEmpty(Model.CurrentCoverPhoto) ? $"background-image: url('{Model.CurrentCoverPhoto}')" : "")" onclick="document.getElementById('coverPhotoInput').click();">
+                            <input type="file" name="CoverPhotoFile" id="coverPhotoInput" accept="image/*" style="display: none;" />
                             <div class="upload-overlay">
                                 <i class="icon">📷</i>
-                                <span>Fotoğraf ekle</span>
+                                <span>@(!string.IsNullOrEmpty(Model.CurrentCoverPhoto) ? "Fotoğrafı değiştir" : "Fotoğraf ekle")</span>
                             </div>
                         </div>
                         <small>Önerilen boyut: 1200x300 piksel</small>
                     </div>
                     
                     <div class="profile-photo-upload">
-                        <label>Profil Fotoğrafı</label>
-                        <div class="profile-photo-preview" id="profilePhotoPreview">
-                            <input type="file" name="ProfilePictureFile" id="profilePhotoInput" accept="image/*" />
+                        <label class="upload-label-text">Profil Fotoğrafı</label>
+                        <div class="profile-photo-preview" id="profilePhotoPreview" style="@(!string.IsNullOrEmpty(Model.CurrentProfilePicture) ? $"background-image: url('{Model.CurrentProfilePicture}')" : "")" onclick="document.getElementById('profilePhotoInput').click();">
+                            <input type="file" name="ProfilePictureFile" id="profilePhotoInput" accept="image/*" style="display: none;" />
                             <div class="upload-overlay">
                                 <i class="icon">👤</i>
-                                <span>Fotoğraf ekle</span>
+                                <span>@(!string.IsNullOrEmpty(Model.CurrentProfilePicture) ? "Fotoğrafı değiştir" : "Fotoğraf ekle")</span>
                             </div>
                         </div>
                         <small>Önerilen boyut: 400x400 piksel</small>
@@ -121,55 +121,200 @@
 }
 
 @section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Profil fotoğrafı önizleme
+            const editForm = document.querySelector('.edit-form');
             const profileInput = document.getElementById('profilePhotoInput');
             const profilePreview = document.getElementById('profilePhotoPreview');
-            
-            profileInput.addEventListener('change', function() {
-                if (this.files && this.files[0]) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        profilePreview.style.backgroundImage = `url(${e.target.result})`;
-                        profilePreview.classList.add('has-image');
-                    }
-                    reader.readAsDataURL(this.files[0]);
-                }
-            });
-            
-            // Kapak fotoğrafı önizleme
             const coverInput = document.getElementById('coverPhotoInput');
             const coverPreview = document.getElementById('coverPhotoPreview');
-            
-            coverInput.addEventListener('change', function() {
-                if (this.files && this.files[0]) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        coverPreview.style.backgroundImage = `url(${e.target.result})`;
-                        coverPreview.classList.add('has-image');
-                    }
-                    reader.readAsDataURL(this.files[0]);
-                }
-            });
-            
-            // Biyografi karakter sayacı
             const bioTextarea = document.getElementById('Bio');
             const bioCharCount = document.getElementById('bioCharCount');
+            const submitButton = document.querySelector('button[type="submit"]');
             
-            bioTextarea.addEventListener('input', function() {
-                const currentLength = this.value.length;
-                bioCharCount.textContent = currentLength;
+            // Profil fotoğrafı önizleme ve validasyon
+            if (profileInput && profilePreview) {
+                console.log('Profil fotoğrafı input ve preview bulundu');
                 
-                if (currentLength > 450) {
-                    bioCharCount.classList.add('text-warning');
-                } else {
-                    bioCharCount.classList.remove('text-warning');
+                // Label'a tıklama event'i ekle (ekstra güvenlik için)
+                if (profilePreview.tagName === 'LABEL') {
+                    profilePreview.addEventListener('click', function(e) {
+                        console.log('Profil fotoğrafı label tıklandı');
+                        // Label otomatik olarak input'u tetikler, ama manuel de tetikleyelim
+                        if (profileInput) {
+                            setTimeout(function() {
+                                profileInput.click();
+                            }, 10);
+                        }
+                    });
                 }
-            });
+                
+                profileInput.addEventListener('change', function() {
+                    if (this.files && this.files[0]) {
+                        const file = this.files[0];
+                        
+                        // Dosya tipi kontrolü
+                        if (!file.type.match('image.*')) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Hata!',
+                                text: 'Lütfen geçerli bir resim dosyası seçin (JPG, PNG, GIF)'
+                            });
+                            this.value = '';
+                            return;
+                        }
+                        
+                        // Dosya boyutu kontrolü (5MB)
+                        if (file.size > 5 * 1024 * 1024) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Hata!',
+                                text: 'Dosya boyutu 5MB\'dan küçük olmalıdır'
+                            });
+                            this.value = '';
+                            return;
+                        }
+                        
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            profilePreview.style.backgroundImage = `url(${e.target.result})`;
+                            profilePreview.classList.add('has-image');
+                        }
+                        reader.readAsDataURL(file);
+                    }
+                });
+            }
             
-            // Sayfa yüklendiğinde mevcut biyografi uzunluğunu göster
-            bioCharCount.textContent = bioTextarea.value.length;
+            // Kapak fotoğrafı önizleme ve validasyon
+            if (coverInput && coverPreview) {
+                console.log('Kapak fotoğrafı input ve preview bulundu');
+                
+                // Label'a tıklama event'i ekle (ekstra güvenlik için)
+                if (coverPreview.tagName === 'LABEL') {
+                    coverPreview.addEventListener('click', function(e) {
+                        console.log('Kapak fotoğrafı label tıklandı');
+                        // Label otomatik olarak input'u tetikler, ama manuel de tetikleyelim
+                        if (coverInput) {
+                            setTimeout(function() {
+                                coverInput.click();
+                            }, 10);
+                        }
+                    });
+                }
+                
+                coverInput.addEventListener('change', function() {
+                    if (this.files && this.files[0]) {
+                        const file = this.files[0];
+                        
+                        // Dosya tipi kontrolü
+                        if (!file.type.match('image.*')) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Hata!',
+                                text: 'Lütfen geçerli bir resim dosyası seçin (JPG, PNG, GIF)'
+                            });
+                            this.value = '';
+                            return;
+                        }
+                        
+                        // Dosya boyutu kontrolü (5MB)
+                        if (file.size > 5 * 1024 * 1024) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Hata!',
+                                text: 'Dosya boyutu 5MB\'dan küçük olmalıdır'
+                            });
+                            this.value = '';
+                            return;
+                        }
+                        
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            coverPreview.style.backgroundImage = `url(${e.target.result})`;
+                            coverPreview.classList.add('has-image');
+                        }
+                        reader.readAsDataURL(file);
+                    }
+                });
+            }
+            
+            // Biyografi karakter sayacı
+            if (bioTextarea && bioCharCount) {
+                bioTextarea.addEventListener('input', function() {
+                    const currentLength = this.value.length;
+                    bioCharCount.textContent = currentLength;
+                    
+                    if (currentLength > 450) {
+                        bioCharCount.classList.add('text-warning');
+                    } else {
+                        bioCharCount.classList.remove('text-warning');
+                    }
+                });
+                
+                // Sayfa yüklendiğinde mevcut biyografi uzunluğunu göster
+                if (bioTextarea.value) {
+                    bioCharCount.textContent = bioTextarea.value.length;
+                }
+            }
+            
+            // Form submit işlemi
+            if (editForm) {
+                editForm.addEventListener('submit', function(e) {
+                    // Form validasyonu
+                    const firstName = document.querySelector('input[name="FirstName"]');
+                    const lastName = document.querySelector('input[name="LastName"]');
+                    
+                    if (!firstName || !firstName.value.trim()) {
+                        e.preventDefault();
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Hata!',
+                            text: 'Ad alanı zorunludur'
+                        });
+                        firstName.focus();
+                        return false;
+                    }
+                    
+                    if (!lastName || !lastName.value.trim()) {
+                        e.preventDefault();
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Hata!',
+                            text: 'Soyad alanı zorunludur'
+                        });
+                        lastName.focus();
+                        return false;
+                    }
+                    
+                    // Submit butonunu devre dışı bırak ve loading göster
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        const originalText = submitButton.innerHTML;
+                        submitButton.innerHTML = '<i class="icon">⏳</i> Kaydediliyor...';
+                        
+                        // Form gönderildikten sonra butonu tekrar aktif et (eğer hata olursa)
+                        setTimeout(function() {
+                            submitButton.disabled = false;
+                            submitButton.innerHTML = originalText;
+                        }, 10000);
+                    }
+                });
+            }
+            
+            // Başarı mesajını göster (TempData'dan)
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <text>
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Başarılı!',
+                    text: '@TempData["SuccessMessage"]',
+                    timer: 3000,
+                    showConfirmButton: false
+                });
+                </text>
+            }
         });
     </script>
 }

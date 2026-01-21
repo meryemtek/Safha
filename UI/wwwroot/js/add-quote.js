@@ -1,141 +1,114 @@
 // Alıntı Ekleme Sayfası JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-    // Form validasyonu
     const form = document.querySelector('.add-quote-form');
-    const contentTextarea = document.querySelector('#Content');
-    const bookSelect = document.querySelector('#BookId');
     
-    // Karakter sayacı
-    if (contentTextarea) {
-        const charCount = document.createElement('div');
-        charCount.className = 'char-count';
-        charCount.style.cssText = `
-            text-align: right;
-            font-size: 0.875rem;
-            color: #6c757d;
-            margin-top: 5px;
-        `;
-        contentTextarea.parentNode.appendChild(charCount);
-        
-        function updateCharCount() {
-            const current = contentTextarea.value.length;
-            const max = 1000;
-            charCount.textContent = `${current}/${max}`;
-            
-            if (current > max * 0.9) {
-                charCount.style.color = '#dc3545';
-            } else if (current > max * 0.7) {
-                charCount.style.color = '#ffc107';
-            } else {
-                charCount.style.color = '#6c757d';
-            }
-        }
-        
-        contentTextarea.addEventListener('input', updateCharCount);
-        updateCharCount();
-    }
-    
-    // Form gönderimi
     if (form) {
         form.addEventListener('submit', function(e) {
-            let isValid = true;
+            e.preventDefault();
             
-            // Alıntı metni kontrolü
-            if (!contentTextarea.value.trim()) {
-                showFieldError(contentTextarea, 'Alıntı metni zorunludur');
-                isValid = false;
-            } else if (contentTextarea.value.length > 1000) {
-                showFieldError(contentTextarea, 'Alıntı metni 1000 karakterden uzun olamaz');
-                isValid = false;
-            } else {
-                clearFieldError(contentTextarea);
-            }
+            // Form verilerini topla
+            const formData = new FormData(form);
             
-            // Kitap seçimi kontrolü
-            if (!bookSelect.value) {
-                showFieldError(bookSelect, 'Kitap seçimi zorunludur');
-                isValid = false;
-            } else {
-                clearFieldError(bookSelect);
-            }
+            // Submit butonunu devre dışı bırak
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="icon">⏳</i> Ekleniyor...';
             
-            if (!isValid) {
-                e.preventDefault();
-                showNotification('Lütfen form hatalarını düzeltin', 'error');
-            }
+            // AJAX ile gönder
+            fetch('/Profile/AddQuoteAjax', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => {
+                console.log('Sunucu yanıtı:', response.status, response.statusText);
+                if (!response.ok) {
+                    throw new Error('Sunucu yanıtı başarısız: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Alıntı ekleme yanıtı:', data);
+                
+                if (data.success) {
+                    // Başarı mesajı göster
+                    showSuccessMessage(data.message);
+                    
+                    // 1 saniye sonra profil sayfasına yönlendir (daha kısa süre)
+                    setTimeout(() => {
+                        try {
+                            // Yönlendirme URL'sini kontrol et
+                            const redirectUrl = data.redirectUrl || '/Profile';
+                            console.log('Yönlendirme URL:', redirectUrl);
+                            
+                            // Sayfa yönlendirmesini güvenli şekilde yap
+                            window.location.replace(redirectUrl);
+                        } catch (redirectError) {
+                            console.error('Yönlendirme hatası:', redirectError);
+                            // Yönlendirme başarısız olursa manuel olarak yönlendir
+                            window.location.href = '/Profile';
+                        }
+                    }, 1000);
+                } else {
+                    // Hata mesajı göster
+                    showErrorMessage(data.message || 'Alıntı eklenirken bir hata oluştu');
+                    
+                    // Submit butonunu tekrar aktif et
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }
+            })
+            .catch(error => {
+                console.error('Alıntı ekleme hatası:', error);
+                showErrorMessage('Alıntı eklenirken bir hata oluştu: ' + error.message);
+                
+                // Submit butonunu tekrar aktif et
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            });
         });
     }
-    
-    // Alan hata gösterme
-    function showFieldError(field, message) {
-        clearFieldError(field);
-        
-        field.classList.add('is-invalid');
-        
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'text-danger';
-        errorDiv.textContent = message;
-        field.parentNode.appendChild(errorDiv);
-    }
-    
-    // Alan hatasını temizleme
-    function clearFieldError(field) {
-        field.classList.remove('is-invalid');
-        
-        const existingError = field.parentNode.querySelector('.text-danger');
-        if (existingError) {
-            existingError.remove();
-        }
-    }
-    
-    // Bildirim gösterme
-    function showNotification(message, type = 'info') {
-        const notification = document.createElement('div');
-        notification.className = `notification notification-${type}`;
-        notification.innerHTML = `
-            <div class="notification-content">
-                <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
-                <span>${message}</span>
-            </div>
-        `;
-        
-        notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: ${type === 'success' ? '#28a745' : type === 'error' ? '#dc3545' : '#17a2b8'};
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            transform: translateX(400px);
-            transition: transform 0.3s ease;
-            max-width: 300px;
-        `;
-        
-        document.body.appendChild(notification);
-        
-        setTimeout(() => {
-            notification.style.transform = 'translateX(0)';
-        }, 100);
-        
-        setTimeout(() => {
-            notification.style.transform = 'translateX(400px)';
-        }, 3000);
-        
-        setTimeout(() => {
-            if (notification.parentNode) {
-                document.body.removeChild(notification);
-            }
-        }, 3300);
-    }
-    
-    // Form alanlarına focus olunduğunda hata mesajlarını temizle
-    const formFields = form.querySelectorAll('.form-control');
-    formFields.forEach(field => {
-        field.addEventListener('focus', function() {
-            clearFieldError(this);
-        });
-    });
 });
+
+function showSuccessMessage(message) {
+    // Mevcut mesajları temizle
+    clearMessages();
+    
+    // Başarı mesajı oluştur
+    const successDiv = document.createElement('div');
+    successDiv.className = 'alert alert-success alert-dismissible fade show';
+    successDiv.innerHTML = `
+        <i class="icon">✅</i> ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    
+    // Mesajı sayfanın üstüne ekle
+    const container = document.querySelector('.add-quote-container');
+    container.insertBefore(successDiv, container.firstChild);
+}
+
+function showErrorMessage(message) {
+    // Mevcut mesajları temizle
+    clearMessages();
+    
+    // Hata mesajı oluştur
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'alert alert-danger alert-dismissible fade show';
+    errorDiv.innerHTML = `
+        <i class="icon">❌</i> ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    
+    // Mesajı sayfanın üstüne ekle
+    const container = document.querySelector('.add-quote-container');
+    container.insertBefore(errorDiv, container.firstChild);
+}
+
+function clearMessages() {
+    // Mevcut alert mesajlarını temizle
+    const alerts = document.querySelectorAll('.alert');
+    alerts.forEach(alert => alert.remove());
+}

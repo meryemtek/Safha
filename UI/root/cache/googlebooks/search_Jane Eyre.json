@@ -1,0 +1,42 @@
+{
+  "query": "Jane Eyre",
+  "cachedAt": "2026-01-21T17:21:52.4806302Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "lSMGAAAAQAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/lSMGAAAAQAAJ",
+        "volumeInfo": {
+          "title": "Jane Eyre",
+          "subtitle": "",
+          "authors": [
+            "Charlotte Bront\u00EB"
+          ],
+          "publisher": "",
+          "publishedDate": "1864",
+          "description": "Bronte\u2019s novel about a shy, quiet governess who becomes a tutor in a great house and falls in love with its lonely and mysterious master is one of the great classics of English literature. Unique in its attention to the thoughts and feelings of a female protagonist, Jane Eyre was ahead of its time as a proto-feminist text. When it was published in 1847, however, Bronte was attacked by critics for what they felt was anti-Christian sentiment in her unflinching critique of the oppressions of Victorian society.",
+          "pageCount": 506,
+          "categories": null,
+          "averageRating": 4.5,
+          "ratingsCount": 154,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=lSMGAAAAQAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=lSMGAAAAQAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=lSMGAAAAQAAJ\u0026printsec=frontcover\u0026dq=Jane\u002BEyre\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=lSMGAAAAQAAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "OXFORD:590121570"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=Jane%20Eyre\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

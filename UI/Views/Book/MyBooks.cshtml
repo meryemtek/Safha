@@ -92,30 +92,6 @@
     <!-- Kitaplık İstatistikleri -->
     <div class="library-stats">
         <div class="stat-card">
-            <div class="stat-icon">
-                <i class="fas fa-book"></i>
-            </div>
-            <div class="stat-content">
-                <span class="stat-number">@Model.TotalBooks</span>
-                <span class="stat-label">
-                    @if (Model.StatusFilter.HasValue)
-                    {
-                        @(Model.StatusFilter switch
-                        {
-                            1 => "Okuyacaklarım",
-                            2 => "Okuyorum",
-                            3 => "Okuduklarım",
-                            _ => "Toplam Kitap"
-                        })
-                    }
-                    else
-                    {
-                        <span>Toplam Kitap</span>
-                    }
-                </span>
-            </div>
-        </div>
-        <div class="stat-card">
             <div class="stat-icon reading">
                 <i class="fas fa-book-reader"></i>
             </div>
@@ -125,21 +101,21 @@
             </div>
         </div>
         <div class="stat-card">
-            <div class="stat-icon to-read">
-                <i class="fas fa-bookmark"></i>
-            </div>
-            <div class="stat-content">
-                <span class="stat-number">@Model.WantToReadCount</span>
-                <span class="stat-label">Okuyacaklarım</span>
-            </div>
-        </div>
-        <div class="stat-card">
             <div class="stat-icon completed">
                 <i class="fas fa-check-circle"></i>
             </div>
             <div class="stat-content">
                 <span class="stat-number">@Model.ReadCount</span>
                 <span class="stat-label">Okuduklarım</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon to-read">
+                <i class="fas fa-bookmark"></i>
+            </div>
+            <div class="stat-content">
+                <span class="stat-number">@Model.WantToReadCount</span>
+                <span class="stat-label">Okuyacaklarım</span>
             </div>
         </div>
     </div>
@@ -222,6 +198,9 @@
     </div>
 </div>
 
+<!-- CSRF Token -->
+@Html.AntiForgeryToken()
+
 @section Styles {
     <link rel="stylesheet" href="~/css/my-books.css" />
 }
@@ -236,7 +215,48 @@
         // Kitap silme fonksiyonu
         function deleteBook(bookId) {
             if (confirm('Bu kitabı silmek istediğinizden emin misiniz?')) {
-                // Silme işlemi burada yapılacak
+                const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
+                if (!token) {
+                    showAlert('danger', 'Güvenlik token\'ı bulunamadı.');
+                    return;
+                }
+                
+                // AJAX ile kitap sil
+                fetch('/Book/Delete', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    body: `id=${bookId}&__RequestVerificationToken=${token}`
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        showAlert('success', data.message);
+                        
+                        // Kitap kartını kaldır
+                        const bookCard = document.querySelector(`[data-book-id="${bookId}"]`);
+                        if (bookCard) {
+                            bookCard.style.animation = 'fadeOut 0.3s ease-out';
+                            setTimeout(() => {
+                                bookCard.remove();
+                                
+                                // Eğer hiç kitap kalmadıysa sayfayı yenile
+                                const remainingBooks = document.querySelectorAll('.book-card');
+                                if (remainingBooks.length === 0) {
+                                    location.reload();
+                                }
+                            }, 300);
+                        }
+                    } else {
+                        showAlert('danger', data.message || 'Kitap silinirken bir hata oluştu.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Kitap silinirken hata:', error);
+                    showAlert('danger', 'Kitap silinirken bir hata oluştu.');
+                });
             }
         }
         
@@ -247,7 +267,121 @@
         
         // Kitap durumu güncelleme fonksiyonu
         function updateBookStatus(bookId, status) {
-            // Durum güncelleme işlemi burada yapılacak
+            const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
+            if (!token) {
+                showAlert('danger', 'Güvenlik token\'ı bulunamadı.');
+                return;
+            }
+            
+            // Loading göster
+            const bookCard = document.querySelector(`[data-book-id="${bookId}"]`);
+            const statusButton = bookCard?.querySelector('.btn-status');
+            if (statusButton) {
+                const originalText = statusButton.innerHTML;
+                statusButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Güncelleniyor...';
+                statusButton.disabled = true;
+            }
+            
+            // AJAX ile durum güncelle
+            fetch('/Book/UpdateReadingStatus', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: `bookId=${bookId}&readingStatus=${status}&__RequestVerificationToken=${token}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showAlert('success', data.message);
+                    
+                    // Kitap kartını güncelle
+                    if (bookCard) {
+                        // Durum butonunu güncelle
+                        const statusIcon = bookCard.querySelector('.status-icon');
+                        const statusText = bookCard.querySelector('.status-text');
+                        
+                        if (statusIcon && statusText) {
+                            statusIcon.innerHTML = data.statusIcon;
+                            statusText.textContent = data.statusText;
+                        }
+                        
+                        // Kart sınıfını güncelle
+                        bookCard.className = bookCard.className.replace(/to-read-status|reading-status|completed-status/g, '');
+                        switch(data.status) {
+                            case 1:
+                                bookCard.classList.add('to-read-status');
+                                break;
+                            case 2:
+                                bookCard.classList.add('reading-status');
+                                break;
+                            case 3:
+                                bookCard.classList.add('completed-status');
+                                break;
+                        }
+                        
+                        // Dropdown'daki aktif durumu güncelle
+                        const dropdownItems = bookCard.querySelectorAll('.dropdown-item');
+                        dropdownItems.forEach(item => {
+                            item.classList.remove('active');
+                            if (parseInt(item.dataset.status) === data.status) {
+                                item.classList.add('active');
+                            }
+                        });
+                    }
+                    
+                    // İstatistikleri güncelle
+                    updateStats();
+                } else {
+                    showAlert('danger', data.message || 'Kitap durumu güncellenirken bir hata oluştu.');
+                }
+            })
+            .catch(error => {
+                console.error('Kitap durumu güncellenirken hata:', error);
+                showAlert('danger', 'Kitap durumu güncellenirken bir hata oluştu.');
+            })
+            .finally(() => {
+                // Loading'i kaldır
+                if (statusButton) {
+                    statusButton.disabled = false;
+                    // Orijinal metni geri yükle (eğer hata varsa)
+                    if (statusButton.innerHTML.includes('Güncelleniyor')) {
+                        statusButton.innerHTML = statusButton.innerHTML.replace('Güncelleniyor...', 'Durum');
+                    }
+                }
+            });
+        }
+        
+        // İstatistikleri güncelle
+        function updateStats() {
+            // Sayfayı yenile (basit çözüm)
+            setTimeout(() => {
+                location.reload();
+            }, 1000);
+        }
+        
+        // Alert gösterme
+        function showAlert(type, message) {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+            alertDiv.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-triangle'}"></i> ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            `;
+            
+            // Alert'i sayfanın üstüne ekle
+            const container = document.querySelector('.library-container');
+            if (container) {
+                container.insertBefore(alertDiv, container.firstChild);
+            }
+            
+            // 3 saniye sonra otomatik kaldır
+            setTimeout(() => {
+                if (alertDiv.parentNode) {
+                    alertDiv.remove();
+                }
+            }, 3000);
         }
     </script>
 } 

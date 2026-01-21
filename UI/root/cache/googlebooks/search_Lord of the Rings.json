@@ -1,0 +1,45 @@
+{
+  "query": "Lord of the Rings",
+  "cachedAt": "2026-01-21T17:21:53.4806171Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "ptHZAAAAMAAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/ptHZAAAAMAAJ",
+        "volumeInfo": {
+          "title": "The Lord of the Rings",
+          "subtitle": "",
+          "authors": [
+            "j.r.r. tolkien",
+            "John Ronald Reuel Tolkien"
+          ],
+          "publisher": "Mariner Books",
+          "publishedDate": "2001",
+          "description": "Contains the complete set of the six books of Lord of the Rings.",
+          "pageCount": 1176,
+          "categories": [
+            "Fiction"
+          ],
+          "averageRating": 4.5,
+          "ratingsCount": 11,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=ptHZAAAAMAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=ptHZAAAAMAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=ptHZAAAAMAAJ\u0026q=Lord\u002Bof\u002Bthe\u002BRings\u0026dq=Lord\u002Bof\u002Bthe\u002BRings\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "http://books.google.com.tr/books?id=ptHZAAAAMAAJ\u0026dq=Lord\u002Bof\u002Bthe\u002BRings\u0026hl=\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "PSU:000045256417"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=Lord%20of%20the%20Rings\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

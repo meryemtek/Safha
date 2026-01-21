@@ -31,7 +31,7 @@
                         }
                     </div>
                     <div class="follower-actions">
-                        <a href="@Url.Action("Index", "Profile", new { userId = follower.Id })" class="btn btn-primary btn-sm">
+                        <a href="@Url.Action("View", "Profile", new { id = follower.Id })" class="btn btn-primary btn-sm">
                             <i class="fas fa-eye"></i> Profili Görüntüle
                         </a>
                     </div>
@@ -52,4 +52,12 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/profile.css" />
 }
+
+
+
+
+
+
+
+
 

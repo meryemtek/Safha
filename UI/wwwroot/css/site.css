@@ -1,0 +1,51 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem #212529, 0 0 0 0.25rem rgba(33, 37, 41, 0.25);
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #FAF3EB;
+  color: #3E2723;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Genel Renk Paleti - Sütlü Kahve ve Acı Kahve */
+:root {
+  --primary: #4E342E;
+  --dark: #3E2723;
+  --light: #F5EBE0;
+  --white: #FAF3EB;
+  --text-primary: #3E2723;
+  --text-secondary: #5D4037;
+  --text-muted: #8D6E63;
+  --border: #E6D8C3;
+}
+
+/* Buton Stilleri */
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #FAF3EB;
+}
+
+.btn-primary:hover {
+  background: var(--dark);
+  border-color: var(--dark);
+  opacity: 1;
+}
+

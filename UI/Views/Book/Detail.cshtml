@@ -238,9 +238,18 @@
                     <h3>Kitap Alıntıları</h3>
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <button class="btn btn-primary" onclick="showAddQuoteModal()">
-                            <i class="icon">✏️</i> Alıntı Ekle
-                        </button>
+                        @if (ViewBag.LibraryStatus == 2 || ViewBag.LibraryStatus == 3)
+                        {
+                            <button class="btn btn-primary" onclick="showAddQuoteModal()">
+                                <i class="icon">✏️</i> Alıntı Ekle
+                            </button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-primary" disabled title="Sadece 'Okuyorum' veya 'Okuduklarım' durumundaki kitaplara alıntı eklenebilir.">
+                                <i class="icon">✏️</i> Alıntı Ekle
+                            </button>
+                        }
                     }
                 </div>
                 

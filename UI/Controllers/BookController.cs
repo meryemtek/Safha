@@ -53,6 +53,10 @@ namespace UI.Controllers
 
                 if (string.IsNullOrEmpty(query))
                 {
+                    // Arama yapılmadığında popüler kitapları göster
+                    var popularBooks = await GetPopularBooks();
+                    ViewBag.PopularBooks = popularBooks;
+                    
                     if (isAjaxRequest)
                     {
                         return Json(new VolumesResponse());
@@ -95,6 +99,57 @@ namespace UI.Controllers
                 ViewBag.TotalPages = 0;
                 
                 return View(new VolumesResponse());
+            }
+        }
+
+        // Popüler kitapları getiren yardımcı metot
+        private async Task<List<Volume>> GetPopularBooks()
+        {
+            try
+            {
+                var popularQueries = new[]
+                {
+                    "Harry Potter",
+                    "Lord of the Rings",
+                    "The Hobbit",
+                    "1984",
+                    "Animal Farm",
+                    "The Great Gatsby",
+                    "To Kill a Mockingbird",
+                    "Pride and Prejudice",
+                    "Jane Eyre",
+                    "Wuthering Heights"
+                };
+
+                var popularBooks = new List<Volume>();
+                var random = new Random();
+                
+                // Rastgele 8 popüler kitap seç
+                var selectedQueries = popularQueries.OrderBy(x => random.Next()).Take(8).ToList();
+
+                foreach (var query in selectedQueries)
+                {
+                    try
+                    {
+                        var result = await _googleBooksService.SearchBooksAsync(query, 1, 0);
+                        if (result?.Items != null && result.Items.Any())
+                        {
+                            popularBooks.Add(result.Items.First());
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Popüler kitap arama hatası ({query}): {ex.Message}");
+                        continue;
+                    }
+                }
+
+                return popularBooks;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Popüler kitaplar getirme hatası: {ex.Message}");
+                return new List<Volume>();
             }
         }
 
@@ -616,7 +671,8 @@ namespace UI.Controllers
                 CurrentlyReadingCount = bookStatusSummary.CurrentlyReadingCount,
                 WantToReadCount = bookStatusSummary.WantToReadCount,
                 ReadCount = bookStatusSummary.ReadCount,
-                TotalBooks = bookStatusSummary.TotalBooks
+                TotalBooks = filteredBooks.Count, // Filtrelenmiş kitap sayısı
+                AllBooksCount = bookStatusSummary.TotalBooks // Tüm kitapların toplam sayısı
             };
 
             return View(model);
@@ -1126,155 +1182,10 @@ namespace UI.Controllers
             }
         }
         
-        // POST: /Book/AddQuote - Alıntı ekle
-        [HttpPost]
-        [Authorize]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddQuote(AddQuoteViewModel model)
-        {
-            try
-            {
-                if (!ModelState.IsValid)
-                {
-                    var errors = ModelState.Values
-                        .SelectMany(v => v.Errors)
-                        .Select(e => e.ErrorMessage)
-                        .ToList();
-                    return Json(new { success = false, message = "Validasyon hatası", errors = errors });
-                }
-                
-                var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
-                if (userId == 0)
-                {
-                    return Json(new { success = false, message = "Kullanıcı kimliği bulunamadı" });
-                }
-                
-                // Kitabın var olup olmadığını kontrol et
-                var book = await _bookService.GetByIdAsync(model.BookId);
-                if (book == null)
-                {
-                    return Json(new { success = false, message = "Kitap bulunamadı" });
-                }
-                
-                // Yeni alıntı oluştur
-                var quote = new Quote
-                {
-                    Content = model.Content,
-                    Author = model.Author,
-                    Source = model.Source,
-                    PageNumber = model.PageNumber,
-                    Notes = model.Notes,
-                    BookId = model.BookId,
-                    UserId = userId,
-                    CreatedAt = DateTime.UtcNow,
-                    IsActive = true
-                };
-                
-                await _quoteService.CreateAsync(quote);
-                
-                // Kullanıcı bilgilerini al
-                var user = await _context.Users.FindAsync(userId);
-                
-                var quoteViewModel = new
-                {
-                    id = quote.Id,
-                    content = quote.Content,
-                    author = quote.Author,
-                    source = quote.Source,
-                    pageNumber = quote.PageNumber,
-                    notes = quote.Notes,
-                    createdAt = quote.CreatedAt.ToString("dd MMM yyyy"),
-                    userName = user?.FirstName + " " + user?.LastName,
-                    userProfilePicture = string.IsNullOrEmpty(user?.ProfilePicture) ? "/image/default-avatar.jpg" : user.ProfilePicture,
-                    canDelete = true
-                };
-                
-                return Json(new { 
-                    success = true, 
-                    message = "Alıntı başarıyla eklendi!", 
-                    quote = quoteViewModel 
-                });
-            }
-            catch (Exception ex)
-            {
-                return Json(new { success = false, message = $"Alıntı eklenirken hata oluştu: {ex.Message}" });
-            }
-        }
+
         
-        // DELETE: /Book/DeleteQuote/{id} - Alıntı sil
-        [HttpPost]
-        [Authorize]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteQuote(int id)
-        {
-            try
-            {
-                var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
-                if (userId == 0)
-                {
-                    return Json(new { success = false, message = "Kullanıcı kimliği bulunamadı" });
-                }
-                
-                // Alıntının var olup olmadığını ve kullanıcının yetkisini kontrol et
-                var quote = await _quoteService.GetByIdAsync(id);
-                if (quote == null)
-                {
-                    return Json(new { success = false, message = "Alıntı bulunamadı" });
-                }
-                
-                if (quote.UserId != userId)
-                {
-                    return Json(new { success = false, message = "Bu alıntıyı silme yetkiniz yok" });
-                }
-                
-                // Soft delete - sadece IsActive'i false yap
-                quote.IsActive = false;
-                quote.UpdatedAt = DateTime.UtcNow;
-                
-                await _quoteService.UpdateAsync(quote);
-                
-                return Json(new { success = true, message = "Alıntı başarıyla silindi!" });
-            }
-            catch (Exception ex)
-            {
-                return Json(new { success = false, message = $"Alıntı silinirken hata oluştu: {ex.Message}" });
-            }
-        }
+
         
-        // GET: /Book/GetUserQuotes/{userId} - Kullanıcının alıntılarını getir
-        [HttpGet]
-        public async Task<IActionResult> GetUserQuotes(int userId)
-        {
-            try
-            {
-                var quotes = await _context.Quotes
-                    .Include(q => q.Book)
-                    .Where(q => q.UserId == userId && q.IsActive)
-                    .OrderByDescending(q => q.CreatedAt)
-                    .ToListAsync();
-                
-                var quoteViewModels = quotes.Select(q => new
-                {
-                    id = q.Id,
-                    content = q.Content,
-                    author = q.Author,
-                    source = q.Source,
-                    pageNumber = q.PageNumber,
-                    notes = q.Notes,
-                    createdAt = q.CreatedAt.ToString("dd MMM yyyy"),
-                    bookTitle = q.Book?.Title ?? "Bilinmeyen Kitap",
-                    bookAuthor = q.Book?.Author ?? "Bilinmeyen Yazar",
-                    bookCoverImage = string.IsNullOrEmpty(q.Book?.CoverImage) ? "/image/default-book-cover.jpg" : q.Book.CoverImage,
-                    canDelete = User.Identity.IsAuthenticated && 
-                               int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0") == userId
-                });
-                
-                return Json(new { success = true, quotes = quoteViewModels });
-            }
-            catch (Exception ex)
-            {
-                return Json(new { success = false, message = $"Kullanıcı alıntıları alınırken hata oluştu: {ex.Message}" });
-            }
-        }
+
     }
 }

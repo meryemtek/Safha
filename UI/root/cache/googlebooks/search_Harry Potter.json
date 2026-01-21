@@ -1,0 +1,48 @@
+{
+  "query": "Harry Potter",
+  "cachedAt": "2026-01-21T17:20:51.7250889Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "UaxYEAAAQBAJ",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/UaxYEAAAQBAJ",
+        "volumeInfo": {
+          "title": "Harry Potter ve S\u0131rlar Odas\u0131 \u2013 2",
+          "subtitle": "",
+          "authors": [
+            "J.K. Rowling"
+          ],
+          "publisher": "Yap\u0131 Kredi Yay\u0131nlar\u0131",
+          "publishedDate": "2022-01-12",
+          "description": "S\u0131rlar Odas\u0131 A\u00E7\u0131ld\u0131. V\u00E2risin D\u00FC\u015Fmanlar\u0131, Kendinizi Kollay\u0131n. K\u00FC\u00E7\u00FCk sefil ev cini Dobby, Privet Drive\u2019da bir anda ortaya \u00E7\u0131k\u0131p Harry Potter\u2019\u0131n Hogwarts\u2019a kesinlikle geri d\u00F6nmemesi i\u00E7in \u0131srar edince Harry, bunun ard\u0131nda ezeli d\u00FC\u015Fman\u0131 Draco Malfoy\u2019un olabilece\u011Finden \u015F\u00FCphelenir. Ron Weasley\u2019nin korkun\u00E7 Dursley\u2019lerden kurtard\u0131\u011F\u0131 \u2013sihirli bir u\u00E7an arabayla\u2013 Harry, yaz\u0131n kalan g\u00FCnlerini Kovuk\u2019ta ge\u00E7irir. Weasley\u2019lerle ya\u015Fam dikkat da\u011F\u0131t\u0131c\u0131 bir s\u00FCr\u00FC sihirli \u015Feyle doludur, Harry k\u0131sa s\u00FCrede Dobby\u2019nin \u00E7\u0131lg\u0131n uyar\u0131lar\u0131n\u0131 unutur. Ama okulda karanl\u0131k bir koridorda Dobby\u2019nin korkun\u00E7 \u015Feyler olaca\u011F\u0131na dair \u00F6ng\u00F6r\u00FClerini yineleyen korkun\u00E7 bir mesaj bulunur\u2026 J.K. Rowling\u2019in klasikle\u015Fen serisinin ikinci kitab\u0131n\u0131n bu resimli \u00F6zel bask\u0131s\u0131nda, Kate Greenaway Madalyas\u0131 sahibi Jim Kay, b\u00FCy\u00FCc\u00FCler d\u00FCnyas\u0131n\u0131 b\u00FCy\u00FCl\u00FC ayr\u0131nt\u0131larla canland\u0131r\u0131yor\u2026 Hem hayranlar hem de yeni okurlar i\u00E7in m\u00FCkemmel.",
+          "pageCount": 9,
+          "categories": [
+            "Antiques \u0026 Collectibles"
+          ],
+          "averageRating": 0,
+          "ratingsCount": 0,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=UaxYEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=UaxYEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "tr",
+          "previewLink": "http://books.google.com.tr/books?id=UaxYEAAAQBAJ\u0026printsec=frontcover\u0026dq=Harry\u002BPotter\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=UaxYEAAAQBAJ\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9789750837593"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "9750837592"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=Harry%20Potter\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

@@ -1,0 +1,48 @@
+{
+  "query": "The Hobbit",
+  "cachedAt": "2026-01-21T17:20:55.2263299Z",
+  "results": {
+    "kind": "books#volumes",
+    "totalItems": 1000000,
+    "items": [
+      {
+        "id": "U799AY3yfqcC",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/U799AY3yfqcC",
+        "volumeInfo": {
+          "title": "The Hobbit",
+          "subtitle": "",
+          "authors": [
+            "J. R. R. Tolkien"
+          ],
+          "publisher": "HarperCollins UK",
+          "publishedDate": "2009-04-20",
+          "description": "This is the story of how a Baggins had an adventure, and found himself doing and saying things altogether unexpected... \u2018A flawless masterpiece\u2019 The Times",
+          "pageCount": 329,
+          "categories": [
+            "Fiction"
+          ],
+          "averageRating": 4.5,
+          "ratingsCount": 102,
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=U799AY3yfqcC\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=U799AY3yfqcC\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.tr/books?id=U799AY3yfqcC\u0026printsec=frontcover\u0026dq=The\u002BHobbit\u0026hl=\u0026cd=1\u0026source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=U799AY3yfqcC\u0026source=gbs_api",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9780007322602"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "0007322607"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "requestUrl": "https://www.googleapis.com/books/v1/volumes?q=The%20Hobbit\u0026maxResults=1\u0026startIndex=0\u0026key=AIzaSyB1Hatltf3etS0_WJTvTANyyV_S4Fs7l_Q"
+}

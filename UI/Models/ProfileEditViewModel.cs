@@ -40,6 +40,10 @@ namespace UI.Models
         [Display(Name = "Kapak Fotoğrafı")]
         public IFormFile? CoverPhotoFile { get; set; }
         
+        // Mevcut profil resmi ve kapak fotoğrafı URL'leri
+        public string? CurrentProfilePicture { get; set; }
+        public string? CurrentCoverPhoto { get; set; }
+        
         // Computed properties
         public string FullName => $"{FirstName} {LastName}";
     }

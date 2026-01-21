@@ -1,37 +1,43 @@
 /* Profil Düzenleme Sayfası Stilleri */
 .profile-edit-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 30px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px 20px;
+    background: #f8f9f5;
     min-height: 100vh;
+}
+
+.profile-edit-container::before {
+    display: none;
 }
 
 .edit-header {
     text-align: center;
     margin-bottom: 40px;
-    color: white;
+    color: #2d3436;
 }
 
 .edit-header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 0 0 15px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 12px;
+    color: #3d5a3d;
+    letter-spacing: -0.5px;
 }
 
 .edit-header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 1rem;
     margin: 0;
+    font-weight: 400;
+    color: #6b7d6b;
 }
 
 .edit-form-container {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
+    background: #ffffff;
+    border-radius: 12px;
     padding: 40px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7e3;
 }
 
 .edit-form {
@@ -42,23 +48,29 @@
 
 /* Fotoğraf Yükleme Bölümü */
 .photo-upload-section {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .upload-card {
-    background: #f8f9fa;
-    border-radius: 15px;
-    padding: 25px;
-    border: 2px dashed #dee2e6;
+    background: #f8f9f5;
+    border-radius: 12px;
+    padding: 30px;
+    border: 2px dashed #d4d7d1;
+    transition: all 0.3s ease;
+}
+
+.upload-card::before {
+    display: none;
 }
 
 .upload-card h3 {
-    color: #333;
-    margin: 0 0 20px;
+    color: #2d3436;
+    margin: 0 0 25px;
     font-size: 1.3rem;
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 700;
 }
 
 .cover-photo-upload,
@@ -71,8 +83,8 @@
     margin-bottom: 0;
 }
 
-.cover-photo-upload label,
-.profile-photo-upload label {
+.cover-photo-upload .upload-label-text,
+.profile-photo-upload .upload-label-text {
     display: block;
     font-weight: 600;
     color: #333;
@@ -83,37 +95,51 @@
 .cover-photo-preview,
 .profile-photo-preview {
     position: relative;
-    border: 2px dashed #dee2e6;
+    border: 2px dashed #d4d7d1;
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: #fff;
+    background: #ffffff;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Preview div'leri tıklanabilir */
+.cover-photo-preview,
+.profile-photo-preview {
+    cursor: pointer !important;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .cover-photo-preview {
-    height: 120px;
+    height: 140px;
     background-size: cover;
     background-position: center;
 }
 
 .profile-photo-preview {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     background-size: cover;
     background-position: center;
+    margin: 0 auto;
 }
 
 .cover-photo-preview:hover,
 .profile-photo-preview:hover {
-    border-color: #667eea;
+    border-color: #6b8e23;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+    box-shadow: 0 4px 16px rgba(107, 142, 35, 0.2);
+    border-style: solid;
 }
 
-.cover-photo-preview input,
-.profile-photo-preview input {
+/* File input overlay - görünmez ama tıklanabilir */
+.file-input-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -121,6 +147,8 @@
     height: 100%;
     opacity: 0;
     cursor: pointer;
+    z-index: 10;
+    font-size: 0;
 }
 
 .upload-overlay {
@@ -129,18 +157,25 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(102, 126, 234, 0.1);
+    background: rgba(107, 142, 35, 0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #667eea;
+    color: #6b8e23;
     transition: all 0.3s ease;
+    pointer-events: none !important;
+    z-index: 1;
+    user-select: none;
+    -webkit-user-select: none;
 }
+
+/* Input label içinde gizli olduğu için özel stil gerekmiyor */
+
 
 .cover-photo-preview:hover .upload-overlay,
 .profile-photo-preview:hover .upload-overlay {
-    background: rgba(102, 126, 234, 0.2);
+    background: rgba(107, 142, 35, 0.1);
 }
 
 .upload-overlay .icon {
@@ -176,19 +211,27 @@
 }
 
 .form-section {
-    background: #f8f9fa;
-    border-radius: 15px;
-    padding: 25px;
-    border-left: 4px solid #667eea;
+    background: #f8f9f5;
+    border-radius: 12px;
+    padding: 30px;
+    border-left: 4px solid #6b8e23;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.form-section::before {
+    display: none;
 }
 
 .form-section h3 {
-    color: #333;
+    color: #2d3436;
     margin: 0 0 20px;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 700;
 }
 
 .form-row {
@@ -216,22 +259,30 @@
 
 .form-control {
     width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #e9ecef;
+    padding: 12px 16px;
+    border: 2px solid #d4d7d1;
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
     background: white;
+    font-weight: 400;
 }
 
 .form-control:focus {
     outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    border-color: #6b8e23;
+    box-shadow: 0 0 0 3px rgba(107, 142, 35, 0.1);
+    background: #ffffff;
+}
+
+.form-control:hover {
+    border-color: #b8beb4;
+    background: #ffffff;
 }
 
 .form-control::placeholder {
-    color: #adb5bd;
+    color: #8b9a8b;
+    font-weight: 400;
 }
 
 textarea.form-control {
@@ -262,7 +313,7 @@ textarea.form-control {
 }
 
 .btn {
-    padding: 12px 30px;
+    padding: 12px 32px;
     border: none;
     border-radius: 8px;
     font-weight: 600;
@@ -276,25 +327,32 @@ textarea.form-control {
 }
 
 .btn-cancel {
-    background: #6c757d;
+    background: #8b9a8b;
     color: white;
+    box-shadow: none;
 }
 
 .btn-cancel:hover {
-    background: #5a6268;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+    background: #6b7d6b;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(107, 125, 107, 0.3);
     color: white;
 }
 
 .btn-save {
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #6b8e23, #556b2f);
     color: white;
+    box-shadow: 0 2px 8px rgba(107, 142, 35, 0.3);
+}
+
+.btn-save::before {
+    display: none;
 }
 
 .btn-save:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #5a7a1f, #4a5b28);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(107, 142, 35, 0.4);
 }
 
 /* Responsive Tasarım */
@@ -390,19 +448,14 @@ textarea.form-control {
 }
 
 /* Hover Efektleri */
-.form-control:hover {
-    border-color: #adb5bd;
-}
-
 .upload-card:hover {
-    border-color: #667eea;
-    background: #f0f2ff;
+    border-color: #6b8e23;
+    background: #f0f2ed;
 }
 
 .form-section:hover {
-    background: #f0f2ff;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+    background: #f0f2ed;
+    transform: translateY(-1px);
 }
 
 /* Validation Stilleri */

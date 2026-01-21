@@ -5,7 +5,7 @@
 
 <div class="sidebar">
     <div class="sidebar-header">
-        <h2>SAFHA</h2>
+        <h2 style="color: #3E2723; font-style: italic;">SAFHA</h2>
         <p>Kitap Dünyası</p>
     </div>
     
@@ -29,10 +29,16 @@
                     <span>Kitaplığım</span>
                 </a>
             </li>
-            <li class="nav-item @(currentController == "Profile" ? "active" : "")">
+            <li class="nav-item @(currentController == "Profile" && currentAction == "Users" ? "active" : "")">
+                <a href="/Profile/Users">
+                    <i class="nav-icon">👥</i>
+                    <span>Kullanıcılar</span>
+                </a>
+            </li>
+            <li class="nav-item @(currentController == "Profile" && currentAction == "Index" ? "active" : "")">
                 <a href="/Profile/Index">
                     <i class="nav-icon">👤</i>
-                    <span>Profil</span>
+                    <span>Profilim</span>
                 </a>
             </li>
         </ul>

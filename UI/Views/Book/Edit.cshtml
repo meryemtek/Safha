@@ -1,0 +1,146 @@
+@model Entities.Book
+
+@{
+    ViewData["Title"] = "Kitap Düzenle";
+    Layout = "_Layout";
+}
+
+<div class="edit-book-container">
+    <div class="edit-book-header">
+        <h1><i class="fas fa-edit"></i> Kitap Düzenle</h1>
+        <p>Kitap bilgilerini güncelleyin</p>
+    </div>
+    
+    <div class="edit-book-form-container">
+        <form asp-action="Edit" method="post" class="edit-book-form">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+            
+            <div class="form-section">
+                <h3>Temel Bilgiler</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Title" class="form-label">Kitap Adı *</label>
+                        <input asp-for="Title" class="form-control" 
+                               placeholder="Kitap adını girin" maxlength="200" required />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Author" class="form-label">Yazar *</label>
+                        <input asp-for="Author" class="form-control" 
+                               placeholder="Yazar adını girin" maxlength="100" required />
+                        <span asp-validation-for="Author" class="text-danger"></span>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="ISBN" class="form-label">ISBN</label>
+                        <input asp-for="ISBN" class="form-control" 
+                               placeholder="ISBN numarası (opsiyonel)" maxlength="50" />
+                        <span asp-validation-for="ISBN" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="PublicationYear" class="form-label">Yayın Yılı</label>
+                        <input asp-for="PublicationYear" class="form-control" type="number" 
+                               placeholder="Yayın yılı (opsiyonel)" min="1000" max="@DateTime.Now.Year" />
+                        <span asp-validation-for="PublicationYear" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3>Detay Bilgileri</h3>
+                
+                <div class="form-group">
+                    <label asp-for="Description" class="form-label">Açıklama</label>
+                    <textarea asp-for="Description" class="form-control" rows="4" 
+                              placeholder="Kitap hakkında açıklama (opsiyonel)" maxlength="500"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                    <div class="form-text">Maksimum 500 karakter</div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Publisher" class="form-label">Yayınevi</label>
+                        <input asp-for="Publisher" class="form-control" 
+                               placeholder="Yayınevi adı (opsiyonel)" maxlength="100" />
+                        <span asp-validation-for="Publisher" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Genre" class="form-label">Tür</label>
+                        <input asp-for="Genre" class="form-control" 
+                               placeholder="Kitap türü (opsiyonel)" maxlength="50" />
+                        <span asp-validation-for="Genre" class="text-danger"></span>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Pages" class="form-label">Sayfa Sayısı</label>
+                        <input asp-for="Pages" class="form-control" type="number" 
+                               placeholder="Sayfa sayısı (opsiyonel)" min="1" max="9999" />
+                        <span asp-validation-for="Pages" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Language" class="form-label">Dil</label>
+                        <input asp-for="Language" class="form-control" 
+                               placeholder="Kitap dili (opsiyonel)" maxlength="50" />
+                        <span asp-validation-for="Language" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <a href="@Url.Action("MyBooks", "Book")" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Geri Dön
+                </a>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save"></i> Değişiklikleri Kaydet
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/edit-book.css" />
+}
+
+@section Scripts {
+    <script>
+        // Form validasyonu
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.edit-book-form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    // Temel validasyon
+                    const title = document.querySelector('input[name="Title"]').value.trim();
+                    const author = document.querySelector('input[name="Author"]').value.trim();
+                    
+                    if (!title || !author) {
+                        e.preventDefault();
+                        alert('Kitap adı ve yazar alanları zorunludur.');
+                        return false;
+                    }
+                    
+                    // Loading göster
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Kaydediliyor...';
+                });
+            }
+        });
+    </script>
+}
+
+
+
+
+
